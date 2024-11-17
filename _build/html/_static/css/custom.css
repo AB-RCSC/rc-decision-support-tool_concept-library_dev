@@ -1,0 +1,277 @@
+/* Target the content container */
+/*set the article content max width to the same width as the top navigation bar.*/
+
+/*https://pydata-sphinx-theme.readthedocs.io/en/stable/user_guide/styling.html*/
+/*https://developer.mozilla.org/en-US/docs/Web/CSS/display*/
+/*https://pydata-sphinx-theme.readthedocs.io/en/stable/user_guide/static_assets.html*/
+/*https://sphinx-design.readthedocs.io/en/pydata-theme/css_variables.html*/
+/*https://sphinx-design.readthedocs.io/en/pydata-theme/css_classes.html*/
+/*https://jupyterbook.org/en/stable/content/components.html#custom-div-blocks*/
+/*Block quoteshttps://jupyter-notebook.readthedocs.io/en/stable/custom_css.html*/
+/*    font-family: Helvetica Neue;/*
+/*    font-style: italic;/*
+
+/*If you’d like the article content to take up more width than its default, use the max-width CSS property with the following selectors*/
+.bd-main .bd-content .bd-article-container {
+    max-width: 120%;  /* default is 60em */
+  }
+
+/*This will affect both the article content and the top navigation bar.*/
+.bd-page-width {
+    max-width: 90%;  /* default is 88rem */
+}
+
+h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 1;
+    pst-header-height: 1rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2F5496
+}
+h3 {
+    font-size: 1.5rem;
+    font-weight: normal;
+    line-height: 1.1;
+}
+
+div.b {
+    line-height: 1.15;
+}
+
+html {
+  ---pst-header-height: 1rem;
+   --pst-font-size-base: 16px;
+}
+
+root {
+  ---pst-sidebar-font-size: 2em;
+    line-height: 1.15;
+  --sd-font-weight-normal
+}
+
+div.img_grid {
+  :width: 100%;
+  :align: center;
+}
+
+div.h_bold {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #2F5496;
+}
+
+span.underline {
+    text-decoration: underline;
+    color: #2F5496;
+}
+
+/* Block Quotes*/
+blockquote {
+  color: white;
+  border-left: 150px solid  white;
+  border-right: 150px solid  white;
+  background-color: white;
+  padding: 5px;
+}
+
+div.indent {
+  color: white;
+  border-left: 8px solid  white;
+  background-color: white;
+  padding: 20px;
+}
+
+div.hanging {
+padding-left: 2em
+text-indent: -2em
+}
+
+div.admonition.admonition-youtube {
+  border-color: hsl(0deg 100% 50%); /* YouTube red */
+}
+
+div.admonition.admonition-youtube > .admonition-title {
+  background-color: hsl(0deg 99% 18%);
+  color: white;
+}
+
+div.admonition.admonition-youtube > .admonition-title::after {
+  color: hsl(0deg 100% 50%);
+  content: "\f26c"; /* fa-solid fa-tv */
+}
+
+.insert_youtube {  
+    background-image: url("/03_images/03_icons/watch-on-youtube.png");  
+    width: 44px;  
+    height: 44px;  
+}
+
+.bdg-test {
+  --bs-badge-font-size: .75em;
+  --bs-badge-font-weight: $font-weight-bold;
+  --bs-badge-color: $white;
+  --bs-badge-padding-y: .35em;
+  --bs-badge-padding-x: .65em;
+  --bs-badge-border-radius: $border-radius;
+}
+
+html[data-theme="dark"] {
+    --pst-color-primary: bd-blue-700;
+}
+
+.tooltip-inner {
+    max-width: 400px !important; //define whatever width you want
+}
+
+.btn-bd-tip {
+  --bs-btn-padding-x: 0;
+  --bs-btn-padding-y: 0;
+  --bs-btn-border-width: 1px;
+  --bs-btn-border-radius: 1px;
+  --bs-btn-font-weight: 475;
+  --bs-btn-font-size: .95em;
+  --bs-btn-color: var(--bs-white);
+  --bs-btn-bg: var(--bs-white);
+  --bs-btn-border-color: var(--bs-white);
+  --bs-btn-hover-color: var(--bs-white);
+  --bs-btn-hover-bg: #{shade-color($bd-blue-700, 10%)};
+  --bs-btn-hover-border-color: #{shade-color($bd-blue-700, 10%)};
+  --bs-btn-focus-shadow-rgb: var(--bd-blue-700-rgb);
+  --bs-btn-active-color: var(--bs-btn-hover-color);
+  --bs-btn-active-bg: #{shade-color($bd-blue-700, 20%)};
+  --bs-btn-active-border-color: #{shade-color($bd-blue-700, 20%)};
+}
+
+.btn-bd-tip-info-hidden {
+  --bs-btn-margin-top: -0.25rem !important;
+  --bs-btn-padding-x: 0rem;
+  --bs-btn-padding-y: 0rem;
+  --bs-btn-padding-x-sm: 0;
+  --bs-btn-padding-y-sm: 0;
+  --bs-btn-border-radius: 0;
+  --bs-btn-border-width: 10;
+  --bs-btn-font-weight: 600;
+  --bs-btn-font-size: .9em;
+  --bs-btn-color: var(--bs-white);
+  --bs-btn-bg: var(--bs-white);
+  --bs-btn-border-color: var(--bs-white);
+  --bs-btn-hover-color: var(--bs-white);
+  --bs-btn-hover-bg: #{shade-color($bd-blue-700, 10%)};
+  --bs-btn-hover-border-color: #{shade-color($bd-blue-700, 10%)};
+  --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+  --bs-btn-active-color: var(--bs-btn-hover-color);
+  --bs-btn-active-bg: #{shade-color($bd-violet, 20%)};
+  --bs-btn-active-border-color: #{shade-color($bd-violet, 20%)};
+}
+
+
+.btn-bd-hidden {
+  --bs-btn-padding-x: 0;
+  --bs-btn-padding-y: 0;
+  --bs-btn-border-width: 0px;
+  --bs-btn-border-radius: 0px;
+  --bs-btn-font-size: .95em;
+  --bs-btn-color: var(--bs-white);
+  --bs-btn-bg: var(--bs-white);
+}
+.btn-bd-text2 {
+  --bs-btn-margin-top: -0.25rem !important;
+  --bs-btn-padding-x: 0rem;
+  --bs-btn-padding-y: 0rem;
+  --bs-btn-padding-x-sm: 0;
+  --bs-btn-padding-y-sm: 0;
+  --bs-btn-border-radius: 0;
+  --bs-btn-border-width: 10;
+  --bs-btn-font-weight: 600;
+  --bs-btn-font-size: .9em;
+  --bs-btn-color: var(--bs-white);
+  --bs-btn-bg: var(--bs-white);
+  --bs-btn-border-color: var(--bs-white);
+  --bs-btn-hover-color: var(--bs-white);
+  --bs-btn-hover-bg: #{shade-color($bd-blue-700, 10%)};
+  --bs-btn-hover-border-color: #{shade-color($bd-blue-700, 10%)};
+  --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+  --bs-btn-active-color: var(--bs-btn-hover-color);
+  --bs-btn-active-bg: #{shade-color($bd-violet, 20%)};
+  --bs-btn-active-border-color: #{shade-color($bd-violet, 20%)};
+}
+
+.class-transparent {
+ --sd-color-card-background: transparent;
+}
+
+.class-light-yellow {
+  --sd-color-card-background: #EEDD88;
+}
+.class-mint {
+  --sd-color-card-background: #44AA99;
+}
+.class-olive {
+  --sd-color-card-background: #AAAA00;
+}
+.class-olive2 {
+  --sd-color-card-background: #999933;
+}
+.class-orange {
+  --sd-color-card-background: #EE8866;
+}
+.class-pale-blue {
+  --sd-color-card-background: #77AADD;
+}
+.class-pale-cyan {
+  --sd-color-card-background: #BBCCEE;
+}
+.class-pale-green {
+  --sd-color-card-background: #CCDDAA;
+}
+.class-pale-grey {
+  --sd-color-card-background: #DDDDDD;
+}
+.class-pale-red {
+  --sd-color-card-background: #FFCCCC;
+}
+.class-pale-yellow {
+  --sd-color-card-background: #EEEEBB;
+}
+.class-pear {
+  --sd-color-card-background: #BBCC33;
+}
+.class-sand {
+  --sd-color-card-background: #DDCC77;
+}
+.class-yellow {
+  --sd-color-card-background: #CCBB44;
+}
+
+.class-prog1 {
+  --sd-color-card-background: #F7F056;
+}
+
+.class-prog2 {
+  --sd-color-card-background: #F7CB45;
+}
+
+.class-prog3 {
+  --sd-color-card-background: #F7CB45;
+}
+
+.class-prog4 {
+  --sd-color-card-background: #D9CCE3;
+}
+
+.class-prog5 {
+  --sd-color-card-background: #EEDD88;
+}
+
+.class-prog6 {
+  --sd-color-card-background: #7BAFDE;
+}
+
+.class-prog7 {
+  --sd-color-card-background: #CCDDAA;
+}
