@@ -1,0 +1,687 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Relative abundance indices &#8212; Remote Camera Decision Support Tool - Concept Library</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/tippy.css?v=a7d99af9" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=b4f226de" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '02_dialog-boxes/03_04_mod_rai';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none"></div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="relative-abundance-indices">
+<span id="i-mod-rai"></span><h1>Relative abundance indices<a class="headerlink" href="#relative-abundance-indices" title="Link to this heading">#</a></h1>
+<!--
+:::{hint}
+replace me with text
+:::
+-->
+<p><strong>Relative abundance indices</strong>: An index of relative abundance. When observational data is converted to a detection rate (i.e., the frequency [count] of independent detections of a species within a distinct time period). An index can be a count of animals or any sign that is expected to vary with population size (Caughley, 1977; O’Brien, 2011).</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Assumptions, Pros, Cons</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Assumptions</div>
+<ul class="simple">
+<li><p class="sd-card-text">Many <a href="09_glossary.html#mod_assumption" target="_blank" data-bs-toggle="tooltip" data-bs-title="Explicitly stated (or implicitly premised) conventions, choices and other specifications (e.g., about the data, wildlife ecology*/behaviour, the relationships between variables, etc.) on which a particular modelling approach is based that allows the model to provide valid inference.">assumption<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a> s exist (since used for many approaches) (Wearn &amp; Glover-Kapfer, 2017)</p></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Pros</div>
+<ul class="simple">
+<li><p class="sd-card-text">Simple to calculate and technically possible (even with small sample sizes when robust methods might fail) (Wearn &amp; Glover-Kapfer, 2017)</p></li>
+<li><p class="sd-card-text"><a href="09_glossary.html#mod_rai" target="_blank" data-bs-toggle="tooltip" data-bs-title="An index of relative abundance. When observational data is converted to a detection rate (i.e., the frequency [count] of independent detections of a species within a distinct time period). An index can be a count of animals or any sign that is expected to vary with population size (Caughley, 1977; O'Brien, 2011).">Relative abundance indices<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a>  often do correlate with <a href="09_glossary.html#obj_abundance" target="_blank" data-bs-toggle="tooltip" data-bs-title="The number of individuals in a population (Wearn & Glover-Kapfer, 2017).">abundance<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a>  (Wearn &amp; Glover-Kapfer, 2017)</p></li>
+<li><p class="sd-card-text">Calibration with independent  estimates is possible (Wearn &amp; Glover-Kapfer, 2017)</p></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Cons</div>
+<ul class="simple">
+<li><p class="sd-card-text">Difficult to draw inferences (a large number of <a href="09_glossary.html#mod_assumption" target="_blank" data-bs-toggle="tooltip" data-bs-title="Explicitly stated (or implicitly premised) conventions, choices and other specifications (e.g., about the data, wildlife ecology*/behaviour, the relationships between variables, etc.) on which a particular modelling approach is based that allows the model to provide valid inference.">assumptions<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a> ); comparisons across space, time, species, and studies are difficult (Wearn &amp; Glover-Kapfer, 2017)</p></li>
+<li><p class="sd-card-text">Requires stringent study design (e.g., random sampling, standardized methods) (Wearn &amp; Glover-Kapfer, 2017)</p></li>
+<li><p class="sd-card-text"><a href="09_glossary.html#detection_rate" target="_blank" data-bs-toggle="tooltip" data-bs-title="The frequency of independent detections within a specified time period.">Detection rates<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a>  from cameras cannot be used as an index to compare <a href="09_glossary.html#obj_rel_abund" target="_blank" data-bs-toggle="tooltip" data-bs-title="The number of animals detected from one camera/area compared to another camera/area.">relative abundance<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a>  across species (Rowcliffe &amp; Carbone, 2008)</p></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</details><div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-0">
+Overview</label><div class="sd-tab-content docutils">
+<p>This section will be available soon! In the meantime, check out the information in the other tabs!</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/00_coming_soon.png"><img alt="../_images/00_coming_soon.png" src="../_images/00_coming_soon.png" style="width: 300px;" /></a>
+</figure>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-1">
+In-depth</label><div class="sd-tab-content docutils">
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>This content was adapted from: The Density Handbook</strong>, “<a class="reference external" href="https://www.researchgate.net/publication/368601884_Using_Camera_Traps_to_Estimate_Medium_and_Large_Mammal_Density_Comparison_of_Methods_and_Recommendations_for_Wildlife_Managers">Using Camera Traps to Estimate Medium and Large Mammal Density: Comparison of Methods and Recommendations for Wildlife Managers</a>” (Clarke et al., 2023)</p>
+</div>
+<p>In ecology, relative abundance (RA) is any count of animals or animal sign (e.g., number of deer sighted, number of bird vocalizations per unit time, number of moose tracks per kilometer of transect) that is assumed to correlate with absolute abundance (O’Brien, 2011). RA is a controversial index for two reasons: 1) there is often no documented relationship between the number of animals or signs observed and population size (i.e., index validation), and 2) detection probability is assumed to be constant between the areas, times or species being compared (O’Brien, 2011; Thompson et al., 1998).
+To the first point: the relationship between the number of animals or signs and abundance is rarely established (Burton et al., 2015). Researchers often assume that counts and population size scale linearly – but many other kinds of relationships are possible. When the assumed relationship between counts and abundance diverges from the actual relationship, inferences from RA are not very meaningful (Thompson et al., 1998). Validating a count-abundance relationship requires comparison with a robust, accurate estimate of absolute density (e.g., Krebs et al., 1987; Rovero &amp; Marshall, 2009; Villette et al., 2016).
+To the second point: consider the canonical equation,</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/clarke_et_al_2023_eqn_rai1.png"><img alt="../_images/clarke_et_al_2023_eqn_rai1.png" src="../_images/clarke_et_al_2023_eqn_rai1.png" style="width: 80px;" /></a>
+</figure>
+<p>where <em>𝑁</em> is population size, <em>𝐶</em> is the count of animals or signs and <em>𝑝</em> is detection probability (Anderson, 2001; Brennan, 2019). This equation underlies many estimators of abundance, including capture-recapture (CR; see <a class="sd-sphinx-override sd-badge sd-outline-primary sd-text-primary reference external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/03_10_mod_cr_cmr.html"><span>Capture-recapture (CR) / Capture-mark-recapture (CMR)</span></a>) and distance sampling (DS; see <a class="sd-sphinx-override sd-badge sd-outline-primary sd-text-primary reference external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/03_20_mod_ds.html"><span>Distance sampling</span></a>) methods (O’Brien, 2011). RA comparisons assume that detection probability <em>𝑝</em> is constant across space, time or species, and can therefore be ignored (Anderson, 2001; O’Brien, 2011; Sollmann et al., 2013b), such that:</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/clarke_et_al_2023_eqn_rai2.png"><img alt="../_images/clarke_et_al_2023_eqn_rai2.png" src="../_images/clarke_et_al_2023_eqn_rai2.png" style="width: 80px;" /></a>
+</figure>
+<p>so count essentially becomes a surrogate for population size.
+Assuming constant detection probability <em>𝑝</em> is problematic, since the likelihood an animal or sign is counted during a survey will vary with observational, environmental, and habitat- and species-specific factors, which in turn can vary with time (Anderson, 2001). For example: at site A, animals may be difficult to spot in dense vegetation, while at site B, animals may be easy to spot in open grassland; and the effects of vegetation on observability may differ seasonally. If the effects of vegetation on detectability are not accounted for, how can we be sure that differences in animal counts at site A and B are due to true differences in abundance, and not simply artefacts of detection bias (Sollmann et al., 2013b)?
+In a camera trapping context, RA is the comparison of detection rates across space, time or species – where detection rates are typically reported as the number of images per 100 trap days, but can also be reported in terms of the total number of detections, other units of effort (e.g., camera trap hours), proportion of stations with detections, etc. (Burton et al., 2015). As with other kinds of RA surveys, comparisons of camera trap detection rates can confound abundance with animal behaviour and observability (Anderson, 2001; Burton et al., 2015).
+RA has been criticized as an abundance estimator. Anderson (2001) condemned the index as “unprofessional,” while O’Brien (2011) called it a “metric of last resort.” Sollmann et al. (2013b) used simulations to determine that camera trap RA analyses did not detect changes in big cat density, and called use of the index for wildlife management “alarming.” Nevertheless, some researchers have had success with the method and/or have argued for its conceptual and practical advantages (e.g., ; Johnson, 1980; Palmer et al., 2018; Rovero &amp; Marshall, 2009). Broadley et al. (2019) used simulations to show that RA could be sensitive to density-dependent movement, but generally tracked abundance well. Banks-Leite (2014) emphasized the importance of careful sampling design and protocols to control for variation in detectability, arguing that researchers should not solely rely on statistical corrections.
+Ultimately, there is no “silver bullet” and researchers must carefully consider their inferential objectives and potential sources of sampling and estimation bias when choosing response variables and modelling frameworks for camera trap data.</p>
+</div>
+<input id="sd-tab-item-2" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-2">
+Visual resources</label><div class="sd-tab-content docutils">
+<div class="sd-container-fluid sd-sphinx-override sd-m-0 sd-p-0 docutils">
+<div class="sd-row sd-row-cols-3 sd-row-cols-xs-3 sd-row-cols-sm-3 sd-row-cols-md-3 sd-row-cols-lg-3 sd-g-1 sd-g-xs-1 sd-g-sm-1 sd-g-md-1 sd-g-lg-1 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Gilbert et al., 2020</div>
+<figure class="align-default">
+<img alt="../_images/gilbert_et_al_2020_fig3.png" class="img-grid" src="../_images/gilbert_et_al_2020_fig3.png" />
+</figure>
+<p class="sd-card-text">Modified from Gilbert et al. (2020) - Fig 3.</p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Dénes et al., 2015</div>
+<figure class="align-default">
+<img alt="../_images/denes_et_al_2015_fig1_clipped.png" class="img-grid" src="../_images/denes_et_al_2015_fig1_clipped.png" />
+</figure>
+<p class="sd-card-text"><strong>Dénes et al. (2015) - Fig. 1.</strong> Mechanisms that cause different types of zero observations in count surveys and how species rarity, detectability and sampling effort affect them.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-kebab-horizontal no-title" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14a2 2 0 1 1-.001-3.999A2 2 0 0 1 20 14ZM6 12a2 2 0 1 1-3.999.001A2 2 0 0 1 6 12Zm8 0a2 2 0 1 1-3.999.001A2 2 0 0 1 14 12Z"></path></svg></span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">(a) False zeroes are due to either imperfect detection or temporary absence. True zeroes can occur when the sample unit is unoccupied by the species, due to demographic stochasticity or due to ecological mechanisms such as unsuitable habitat or interspecific competition. (b) For common and detectable species (lower right), the majority of zeroes can be expected to result from ecological processes. As species detectability decreases, new false zeroes arise due to detection error (lower left). Species rarity results in fewer detections (dark green bars), additional true zeroes arise from unoccupied sample units (white bars) and increased demographic stochasticity (beige bars). (c) When the area sampled and/or the time of visit are small/ short relative to the species home range or movements, individuals may not be available for detection during the survey, resulting in additional false zeroes and fewer non-zero observations.</p>
+</div>
+</details></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Blasco-Moreno et al., 2019</div>
+<figure class="align-default">
+<img alt="../_images/blasco_moreno_2019_fig1.png" class="img-grid" src="../_images/blasco_moreno_2019_fig1.png" />
+</figure>
+<p class="sd-card-text"><strong>Blasco-Moreno et al. (2019) - Fig 1.</strong> Different sources of zeros that could emerge in count data.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-kebab-horizontal no-title" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14a2 2 0 1 1-.001-3.999A2 2 0 0 1 20 14ZM6 12a2 2 0 1 1-3.999.001A2 2 0 0 1 6 12Zm8 0a2 2 0 1 1-3.999.001A2 2 0 0 1 14 12Z"></path></svg></span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The example shows the presence (&gt;0) or absence (0) of herbivores on a plant species. Zeros due to the lack of experience of the observer (a–b) or resulting from a poor experimental design (c–h) are called False Zeros and should be minimized when performing the experiment. Structural Zeros, that is, zeros related to the ecological system under study (i–k), and Random Zeros emerging from the sampling variability (l) are known as True Zeros. Classifying a zero as a design error or structural zero depends on whether the event is part of the hypotheses tested. Only when the study includes the possibility of a zero value as part of the hypotheses (e.g. the study aims to test whether the interaction is occurring) the resulting zeros would be structural and should be included in the statistical analysis. The following text explains different scenarios that would result in a zero value, and, in brackets, how errors due to false zeros can be minimized: (a) the insects or the damage exerted are so small that the observer cannot detect them [sample when the insects are expected to be well developed]; (b) the observer does not see the herbivore (e.g. it is mistaken for a seed) or the damage is associated to other causes not related to herbivory (e.g. mechanical damage during sampling, pathogens, etc.) [the observer should be trained properly]; (c) the distributional areas of herbivores and plants are not coincident [know the species distribution before sampling]; (d) a herbivore is not present in a certain location within its distributional area, for example due to the microclimatic conditions [sample in habitats with adequate environmental conditions for a herbivore, or perform replicate surveys in different areas]; (e) a single survey is conducted, and is not coincident with the herbivore phenology [know the herbivore life cycle or perform long‐term surveys]; (f) a long‐term survey is conducted, but the low sampling frequency does not enable capture of the presence of the herbivore [sample on a more frequent basis]; (g) herbivores are not found because they are absent at the time of sampling [record plant damage instead of the presence of insects]; (h) herbivores are so infrequent that the design cannot capture their presence [perform extensive sampling with a high number of replicates]; (i) phenology of plants and herbivores are not completely coincident at a temporal level; (j) herbivores do not recognize a plant as a potential host; (k) herbivores recognize a plant as a host but prefer to feed on another species and (l) the herbivore population is not large enough to saturate the available plant resources.</p>
+</div>
+</details></div>
+</div>
+</div>
+</div>
+</div>
+<div class="sd-container-fluid sd-sphinx-override sd-m-0 sd-p-0 docutils">
+<div class="sd-row sd-row-cols-3 sd-row-cols-xs-3 sd-row-cols-sm-3 sd-row-cols-md-3 sd-row-cols-lg-3 sd-g-1 sd-g-xs-1 sd-g-sm-1 sd-g-md-1 sd-g-lg-1 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Dénes et al., 2015</div>
+<figure class="align-default">
+<img alt="../_images/denes_et_al_2015_fig2_clipped.png" class="img-grid" src="../_images/denes_et_al_2015_fig2_clipped.png" />
+</figure>
+<p class="sd-card-text">** Denes et al. (2015) - Fig. 2** Summary of the main modelling approaches for estimating abundance of unmarked animal populations described in the text.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-kebab-horizontal no-title" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14a2 2 0 1 1-.001-3.999A2 2 0 0 1 20 14ZM6 12a2 2 0 1 1-3.999.001A2 2 0 0 1 6 12Zm8 0a2 2 0 1 1-3.999.001A2 2 0 0 1 14 12Z"></path></svg></span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Red boxes represent important model assumptions (in bold) and sampling design requirements (in italic), green boxes represent the types of input data used by each model, lilac and orange ellipses represent established and emerging methods, respectively, and blue diamonds represent additional parameters estimated. w indicates models that estimate potential occupancy probability, / indicates models that estimate probability of temporary emigration from the sample unit, and q indicates models that account for correlation in detection of individuals. p is site-level detection probability, c and x are arrival rate and survival probability parameters, respectively, r is the spatial correlation in counts, and Ω is the probability that a species is present in the supercommunity.</p>
+</div>
+</details></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+rtxt_figure5_ref_id</div>
+<figure class="align-default">
+<img alt="../_images/zi_models_mindmap.png" class="img-grid" src="../_images/zi_models_mindmap.png" />
+</figure>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Clarke et al., 2023</div>
+<figure class="align-default">
+<img alt="../_images/clarke_et_al_2023_eqn_rai1.png" class="img-grid" src="../_images/clarke_et_al_2023_eqn_rai1.png" />
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sd-container-fluid sd-sphinx-override sd-m-0 sd-p-0 docutils">
+<div class="sd-row sd-row-cols-3 sd-row-cols-xs-3 sd-row-cols-sm-3 sd-row-cols-md-3 sd-row-cols-lg-3 sd-g-1 sd-g-xs-1 sd-g-sm-1 sd-g-md-1 sd-g-lg-1 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+DE-CTR ACCEL (2016)</div>
+<div>
+<div style=“position:relative;padding-top:56.25%;”>
+<iframe src=“https://www.youtube.com/embed/CvM6j8hE8lE?si=E_kNQm9YYwgUECM3“ loading=“lazy” frameborder=“0” allowfullscreen
+style=“position:absolute;top:0;left:0;width:100%;height:100%;”></iframe>
+</div>
+</div>
+Using Hurdle Models to Analyze Zero-Inflated Count Data
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Cao (2021)</div>
+<div>
+<div style=“position:relative;padding-top:56.25%;”>
+<iframe src=“https://www.youtube.com/embed/q2NRQBcihQY?si=r9NeRpegoj47uVn-“ loading=“lazy” frameborder=“0” allowfullscreen
+style=“position:absolute;top:0;left:0;width:100%;height:100%;”></iframe>
+</div>
+</div>
+Hurdle models
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+TileStats, 2021</div>
+<div>
+<div style=“position:relative;padding-top:56.25%;”>
+<iframe src=“https://www.youtube.com/embed/ztNQvAabgtU?si=9rY7DVbBWN_ByPvf“ loading=“lazy” frameborder=“0” allowfullscreen
+style=“position:absolute;top:0;left:0;width:100%;height:100%;”></iframe>
+</div>
+</div>
+Zero-inflated Poisson (ZIP) regression
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sd-container-fluid sd-sphinx-override sd-m-0 sd-p-0 docutils">
+<div class="sd-row sd-row-cols-3 sd-row-cols-xs-3 sd-row-cols-sm-3 sd-row-cols-md-3 sd-row-cols-lg-3 sd-g-1 sd-g-xs-1 sd-g-sm-1 sd-g-md-1 sd-g-lg-1 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+MarinStatsLectures-R Programming &amp; Statistics, 2020a</div>
+<div>
+<div style=“position:relative;padding-top:56.25%;”>
+<iframe src=“https://www.youtube.com/embed/A8H6gc9Eq0w?si=Ade-D5-J5JtCZwil“ loading=“lazy” frameborder=“0” allowfullscreen
+style=“position:absolute;top:0;left:0;width:100%;height:100%;”></iframe>
+</div>
+</div>
+Poisson Regression Review
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+MarinStatsLectures-R Programming &amp; Statistics, 2020b</div>
+<div>
+<div style=“position:relative;padding-top:56.25%;”>
+<iframe src=“https://www.youtube.com/embed/eIY--zc5f24?si=dgtSF_vfwUxuG1Mi“ loading=“lazy” frameborder=“0” allowfullscreen
+style=“position:absolute;top:0;left:0;width:100%;height:100%;”></iframe>
+</div>
+</div>
+Poisson Regression: Zero Inflation (Excessive Zeros)
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Russell, 2020</div>
+<div>
+<div style=“position:relative;padding-top:56.25%;”>
+<iframe src=“vid6_url“ loading=“lazy” frameborder=“0” allowfullscreen
+style=“position:absolute;top:0;left:0;width:100%;height:100%;”></iframe>
+</div>
+</div>
+Fitting Poisson and zero-inflated Poisson models.
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<input id="sd-tab-item-3" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-3">
+Shiny apps/Widgets</label><div class="sd-tab-content docutils">
+<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Microbiome Analysis: Relative Abundance Boxplots</div>
+<p class="sd-card-text">A Shiny app allows you to visualize data by using R scripts without having to interact with the R script itself. This Shiny app will allow you to plot your Relative Abundance microbiome data in an easy-to-view format. If this is your first time utilizing this Shiny app, follow the step below to start visualising your data now!</p>
+<iframe
+width=“100%”
+height=“900”
+src=“https://guthub.org/shiny/sample-apps/absboxplot/ “
+loading=“lazy”
+frameborder=“0”
+allow=“accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture”
+allowfullscreen>
+</iframe>
+</div>
+</div>
+</div>
+<input id="sd-tab-item-4" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-4">
+Analytical tools &amp; Resources</label><div class="sd-tab-content docutils">
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Type</p></th>
+<th class="head text-left"><p>Name</p></th>
+<th class="head text-left"><p>Note</p></th>
+<th class="head text-left"><p>URL</p></th>
+<th class="head text-left"><p>Reference</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p>R resource</p></td>
+<td class="text-left"><p>abmi.camera.extras: Animal Density from Camera Data &gt; Probabilistic gaps</p></td>
+<td class="text-left"><p></p></td>
+<td class="text-left"><p>Main resource page: <a class="reference external" href="https://mabecker89.github.io/abmi.camera.extras/index.html">https://mabecker89.github.io/abmi.camera.extras/index.html</a>;<br>[Probabilistic gaps]<a class="reference external" href="https://mabecker89.github.io/abmi.camera.extras/articles/gaps.html">https://mabecker89.github.io/abmi.camera.extras/articles/gaps.html</a></p></td>
+<td class="text-left"><p>Becker, M. Huggard, D. J., &amp; Alberta Biodiversity Monitoring Institute [ABMI]. (2020). <em>abmi.camera.extras.</em> R package version 0.0.1. <a class="reference external" href="https://mabecker89.github.io/abmi.camera.extras">https://mabecker89.github.io/abmi.camera.extras</a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>App/Program</p></td>
+<td class="text-left"><p>Introduction to Camera Trap Data Management and Analysis in R &gt; Chapter 12 Activity</p></td>
+<td class="text-left"><p></p></td>
+<td class="text-left"><p><a class="reference external" href="https://bookdown.org/c_w_beirne/wildCo-Data-Analysis/activity.html">https://bookdown.org/c_w_beirne/wildCo-Data-Analysis/activity.html</a></p></td>
+<td class="text-left"><p>WildCo Lab (2021d). <em>Chapter 12 Activity</em>. <a class="reference external" href="https://bookdown.org/c_w_beirne/wildCo-Data-Analysis/activity.html">https://bookdown.org/c_w_beirne/wildCo-Data-Analysis/activity.html</a></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>App/Program</p></td>
+<td class="text-left"><p>R package “activity”</p></td>
+<td class="text-left"><p>Provides functions to express clock time data relative to anchor points (typically solar); fit kernel density functions to animal activity time data; plot activity distributions; quantify overall levels of activity; statistically compare activity metrics through bootstrapping; evaluate variation in linear variables with time (or other circular variables).</p></td>
+<td class="text-left"><p><a class="reference external" href="https://cran.r-project.org/web/packages/activity/index.html">https://cran.r-project.org/web/packages/activity/index.html</a></p></td>
+<td class="text-left"><p>Rowcliffe, M. (2023). *Package ‘activity. * R package version 1.3.4. <a class="reference external" href="https://cran.r-project.org/web/packages/activity/index.html">https://cran.r-project.org/web/packages/activity/index.html</a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>R package</p></td>
+<td class="text-left"><p>R package “overlap”</p></td>
+<td class="text-left"><p>Estimates of Coefficient of Overlapping for Animal Activity Patterns</p></td>
+<td class="text-left"><p><a class="reference external" href="https://cran.r-project.org/web/packages/overlap/index.html">https://cran.r-project.org/web/packages/overlap/index.html</a></p></td>
+<td class="text-left"><p>Campbell, A. (2024). <em>Package ‘overlap’</em>. R package version 0.3.9. <a class="reference external" href="https://cran.r-project.org/web/packages/overlap/index.html">https://cran.r-project.org/web/packages/overlap/index.html</a></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Tutorial</p></td>
+<td class="text-left"><p>Chapter 6 Modeling Relative Abundance</p></td>
+<td class="text-left"><p></p></td>
+<td class="text-left"><p><a class="reference external" href="https://cornelllabofornithology.github.io/ebird-best-practices/abundance.html">https://cornelllabofornithology.github.io/ebird-best-practices/abundance.html</a></p></td>
+<td class="text-left"><p>Strimas-Mackey, M., Hochachka, W. M., Ruiz-Gutierrez, V., Robinson, O. J., Miller, E. T., Auer, T., Kelling, S., Fink, D., &amp; Johnston, A. (2023). Best Practices for Using eBird Data. Version 2.0. <a class="reference external" href="https://ebird.github.io/ebird-best-practices">https://ebird.github.io/ebird-best-practices</a>. Cornell Lab of Ornithology, Ithaca, New York. <a class="reference external" href="https://doi.org/10.5281/zenodo.3620739">https://doi.org/10.5281/zenodo.3620739</a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>R package</p></td>
+<td class="text-left"><p>glmmTMB: Generalized Linear Mixed Models using Template Model Builder</p></td>
+<td class="text-left"><p>resource6_note</p></td>
+<td class="text-left"><p><a class="reference external" href="https://cran.r-project.org/web/packages/glmmTMB/index.html">https://cran.r-project.org/web/packages/glmmTMB/index.html</a></p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>R package</p></td>
+<td class="text-left"><p>R package “zicounts”</p></td>
+<td class="text-left"><p>Counts data models: zero-inflation as well as interval icensored</p></td>
+<td class="text-left"><p><a class="github reference external" href="https://github.com/cran/zicounts">cran/zicounts</a></p></td>
+<td class="text-left"><p>rbib_resource7_ref_id</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>R package</p></td>
+<td class="text-left"><p>R package “DHARMa”</p></td>
+<td class="text-left"><p>Can be used to assess goodness-of-fit of a mixed effect model via quantile–quantile (Q–Q) plots of standardized residuals</p></td>
+<td class="text-left"><p><a class="reference external" href="https://CRAN.R-project.org/package=DHARMa">https://CRAN.R-project.org/package=DHARMa</a></p></td>
+<td class="text-left"><p>Hartig, F. (2019). <em>DHARMa: Residual Diagnostics for Hierarchical (Multi-Level/Mixed) Regression Models.</em> R package version 0.2.2, <a class="reference external" href="https://CRAN.R-project.org/package=DHARMa">https://CRAN.R-project.org/package=DHARMa</a></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>R package</p></td>
+<td class="text-left"><p>R package “Pscl”</p></td>
+<td class="text-left"><p>resource9_note</p></td>
+<td class="text-left"><p>&lt; <a class="reference external" href="https://cran.r-project.org/web/packages/pscl/index.html">https://cran.r-project.org/web/packages/pscl/index.html</a>&gt;</p></td>
+<td class="text-left"><p>Jackman,  (2024). <em>R package ’Pscl’</em>. R package version 1.5.9. <a class="reference external" href="https://cran.r-project.org/web/packages/pscl/index.html">https://cran.r-project.org/web/packages/pscl/index.html</a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>R package</p></td>
+<td class="text-left"><p>R package “countreg”</p></td>
+<td class="text-left"><p>Can be used to assess goodness-of-fit of a mixed effect hurdle model via rootograms (Kleiber &amp; Zeileis, 2016)</p></td>
+<td class="text-left"><p><a class="reference external" href="https://rdrr.io/rforge/countreg/">https://rdrr.io/rforge/countreg/</a><br></p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><a class="reference external" href="https://rdrr.io/rforge/countreg/f/inst/doc/countreg.pdf">https://rdrr.io/rforge/countreg/f/inst/doc/countreg.pdf</a>&gt;<br><a class="reference external" href="https://www.zeileis.org/papers/Kleiber+Zeileis-2016.pdf">https://www.zeileis.org/papers/Kleiber+Zeileis-2016.pdf</a></p></td>
+<td class="text-left"><p>Zeileis, A., Kleiber, C., &amp; Jackman, S. (2008). Regression Models for Count Data in R. <em>Journal of Statistical Software, 27</em>(8). <a class="reference external" href="https://doi.org/10.18637/jss.v027.i08">https://doi.org/10.18637/jss.v027.i08</a></p></td>
+<td class="text-left"><p></p></td>
+<td class="text-left"><p></p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>resource11_type</p></td>
+<td class="text-left"><p>A guide to modeling outcomes that have lots of zeros with Bayesian hurdle lognormal and hurdle Gaussian regression models</p></td>
+<td class="text-left"><p>resource11_note</p></td>
+<td class="text-left"><p><a class="reference external" href="https://www.andrewheiss.com/blog/2022/05/09/hurdle-lognormal-gaussian-brms">https://www.andrewheiss.com/blog/2022/05/09/hurdle-lognormal-gaussian-brms</a></p></td>
+<td class="text-left"><p>rbib_resource11_ref_id</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>resource12_type</p></td>
+<td class="text-left"><p>resource12_name</p></td>
+<td class="text-left"><p>resource12_note</p></td>
+<td class="text-left"><p>resource12_url</p></td>
+<td class="text-left"><p>rbib_resource12_ref_id</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>resource13_type</p></td>
+<td class="text-left"><p>resource13_name</p></td>
+<td class="text-left"><p>resource13_note</p></td>
+<td class="text-left"><p>resource13_url</p></td>
+<td class="text-left"><p>rbib_resource13_ref_id</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>resource14_type</p></td>
+<td class="text-left"><p>resource14_name</p></td>
+<td class="text-left"><p>resource14_note</p></td>
+<td class="text-left"><p>resource14_url</p></td>
+<td class="text-left"><p>rbib_resource14_ref_id</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>resource15_type</p></td>
+<td class="text-left"><p>resource15_name</p></td>
+<td class="text-left"><p>resource15_note</p></td>
+<td class="text-left"><p>resource15_url</p></td>
+<td class="text-left"><p>rbib_resource15_ref_id</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>resource16_type</p></td>
+<td class="text-left"><p>resource16_name</p></td>
+<td class="text-left"><p>resource16_note</p></td>
+<td class="text-left"><p>resource16_url</p></td>
+<td class="text-left"><p>rbib_resource16_ref_id</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>resource17_type</p></td>
+<td class="text-left"><p>resource17_name</p></td>
+<td class="text-left"><p>resource17_note</p></td>
+<td class="text-left"><p>resource17_url</p></td>
+<td class="text-left"><p>rbib_resource17_ref_id</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>resource18_type</p></td>
+<td class="text-left"><p>resource18_name</p></td>
+<td class="text-left"><p>resource18_note</p></td>
+<td class="text-left"><p>resource18_url</p></td>
+<td class="text-left"><p>rbib_resource18_ref_id</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>resource19_type</p></td>
+<td class="text-left"><p>resource19_name</p></td>
+<td class="text-left"><p>resource19_note</p></td>
+<td class="text-left"><p>resource19_url</p></td>
+<td class="text-left"><p>rbib_resource19_ref_id</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>resource20_type</p></td>
+<td class="text-left"><p>resource20_name</p></td>
+<td class="text-left"><p>resource20_note</p></td>
+<td class="text-left"><p>resource20_url</p></td>
+<td class="text-left"><p>rbib_resource20_ref_id</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<input id="sd-tab-item-5" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-5">
+References</label><div class="sd-tab-content docutils">
+<p>Anderson, D. R. (2001). The Need to Get the Basics Right in Wildlife Field Studies. <em>Wildlife Society Bulletin, 29</em>(4), 1294-1297. <a class="reference external" href="https://www.jstor.org/stable/3784156">https://www.jstor.org/stable/3784156</a></p>
+<p>Banks‐Leite, C., Pardini, R., Boscolo, D., Cassano, C. R., Püttker, T., Barros, C. S., &amp; Barlow, J. (2014). Assessing the utility of statistical adjustments for imperfect detection in tropical conservation science. <em>Journal of Applied Ecology, 51</em>(4), 849-859. <a class="reference external" href="https://doi.org/10.1111/1365-2664.12272">https://doi.org/10.1111/1365-2664.12272</a></p>
+<p>Blasco‐Moreno, A., Pérez‐Casany, M., Puig, P., Morante, M., Castells, E., &amp; O’Hara, R. B. (2019). What Does a Zero Mean? Understanding False, Random and Structural Zeros in Ecology. <em>Methods in Ecology and Evolution, 10</em>(7), 949-959. <a class="reference external" href="https://doi.org/10.1111/2041-210x.13185">https://doi.org/10.1111/2041-210x.13185</a></p>
+<p>Brennan, L. A. (2019). <em>Quantitative Analyses in Wildlife Science</em>. Johns Hopkins University Press, Baltimore. <a class="reference external" href="https://www.press.jhu.edu/books/title/11858/quantitative-analyses-wildlife-science">https://www.press.jhu.edu/books/title/11858/quantitative-analyses-wildlife-science</a></p>
+<p>Broadley, K., Burton, A. C., Avgar, T., &amp; Boutin, S. (2019). Density‐dependent space use affects interpretation of camera trap detection rates. <em>Ecology and Evolution, 9</em>(24), 14031-14041. <a class="reference external" href="https://doi.org/10.1002/ece3.5840">https://doi.org/10.1002/ece3.5840</a>.</p>
+<p>Burton, A. C., Neilson, E., Moreira, D., Ladle, A., Steenweg, R., Fisher, J. T., Bayne, E., Boutin, S., &amp; Stephens, P. (2015). Camera trap Trapping: A Review and Recommendations for Linking Surveys to Ecological Processes. <em>Journal of Applied Ecology</em>, <em>52</em>(3), 675-685. <a class="reference external" href="https://doi.org/10.1111/1365-2664.12432">https://doi.org/10.1111/1365-2664.12432</a></p>
+<p>Carbone, C., Christie, S., Conforti, K., Coulson, T., Franklin, N., Ginsberg, J. R., Griffiths, M., Holden, J., Kawanishi, K., Kinnaird, M., Laidlaw, R., Lynam, A., Macdonald, D. W., Martyr, D., McDougal, C., Nath, L., O’Brien, T., Seidensticker, J., Smith, D. J. L., Wan Shahruddin, W. N. (2001). The use of photographic rates to estimate densities of tigers and other cryptic mammals. <em>Animal Conservation, 4</em>(1), 75-79. <a class="reference external" href="https://doi.org/10.1017/S1367943001001081">https://doi.org/10.1017/S1367943001001081</a></p>
+<p>Cao, A. (2021, Jun 14) <em>Hurdle models.</em>  [Video]. YouTube. <a class="reference external" href="https://www.youtube.com/watch?v=q2NRQBcihQY">https://www.youtube.com/watch?v=q2NRQBcihQY</a></p>
+<p>Clark, T. G., Bradburn, M. J., Love, S. B., &amp; Altman, D. G. (2003). Survival Analysis Part I: Basic Concepts and First Analyses. <em>British Journal of Cancer, 89</em>(2), 232-38. <a class="reference external" href="https://doi.org/10.1038/sj.bjc.6601118">https://doi.org/10.1038/sj.bjc.6601118</a></p>
+<p>DE-CTR ACCEL (2016, Dec 21) <em>Using Hurdle Models to Analyze Zero-Inflated Count Data.</em>  [Video]. YouTube. <a class="reference external" href="https://www.youtube.com/watch?v=CvM6j8hE8lE">https://www.youtube.com/watch?v=CvM6j8hE8lE</a></p>
+<p>Dénes, F. V., Silveira, L. F., Beissinger, S. R., &amp; Isaac, N. (2015). Estimating Abundance of Unmarked Animal Populations: Accounting for Imperfect Detection and Other Sources of Zero Inflation. <em>Methods in Ecology and Evolution, 6</em>(5), 543-556. <a class="reference external" href="https://doi.org/10.1111/2041-210x.12333">https://doi.org/10.1111/2041-210x.12333</a></p>
+<p>Gilbert, N. A., Clare, J. D. J., Stenglein, J. L., &amp; Zuckerberg, B. (2020). Abundance Estimation of Unmarked Animals based on Camera-Trap Data. <em>Conservation Biology, 35</em>(1), 88-100. <a class="reference external" href="https://doi.org/10.1111/cobi.13517">https://doi.org/10.1111/cobi.13517</a></p>
+<p>Hartig, F. (2019). <em>DHARMa: Residual Diagnostics for Hierarchical (Multi-Level/Mixed) Regression Models.</em> R package version 0.2.2, <a class="reference external" href="https://CRAN.R-project.org/package=DHARMa">https://CRAN.R-project.org/package=DHARMa</a></p>
+<p>Heilbron, D. C. (1994). Zero-Altered and other Regression Models for Count Data with Added Zeros. <em>Biometrical Journal, 36</em>(5), 531-547. <a class="reference external" href="https://doi.org/https://doi.org/10.1002/bimj.4710360505">https://doi.org/https://doi.org/10.1002/bimj.4710360505</a></p>
+<p>Kleiber, C., &amp; Zeileis, A. (2016). Visualizing Count Data Regressions Using Rootograms. <em>The American Statistician, 70</em>(3), 296-303. <a class="reference external" href="https://doi.org/10.1080/00031305.2016.1173590">https://doi.org/10.1080/00031305.2016.1173590</a></p>
+<p>Krebs, C. J., Gilbert, B. S., Boutin, S., &amp; Boonstra, R. (1987). Estimation of snowshoe hare population density from turd transects. <em>Canadian Journal of Zoology, 65</em>(3), 565-567. <a class="reference external" href="https://doi.org/10.1139/z87-087">https://doi.org/10.1139/z87-087</a></p>
+<p>Johnson, D. H. (1980). The Comparison of Usage and Availability Measurements for Evaluating Resource Preference. <em>Ecology, 61</em>(1), 65-71. <a class="reference external" href="https://doi.org/10.2307/1937156">https://doi.org/10.2307/1937156</a></p>
+<p>MarinStatsLectures-R Programming &amp; Statistics (2020a, Mar 17). <em>Poisson Regression Review.</em> [Video]. YouTube. <a class="reference external" href="https://www.youtube.com/watch?v=A8H6gc9Eq0w">https://www.youtube.com/watch?v=A8H6gc9Eq0w</a></p>
+<p>MarinStatsLectures-R Programming &amp; Statistics (2020b, Mar 17). <em>Poisson Regression: Zero Inflation (Excessive Zeros).</em> [Video]. YouTube. <a class="reference external" href="https://www.youtube.com/watch?v=eIY--zc5f24">https://www.youtube.com/watch?v=eIY–zc5f24</a></p>
+<p>Markle, D. F., Janik, A., Peterson, J. T., Choudhury, A., Simon, D. C., Tkach, V. V., Terwilliger, M. R., Sanders, J. L., &amp; Kent, M. L. (2020). Odds Ratios and Hurdle Models: A Long-Term Analysis of Parasite Infection Patterns in Endangered Young-Of-The-Year Suckers from Upper Klamath Lake, Oregon, USA. <em>International Journal for Parasitology, 50</em>(4), 315-330. <a class="reference external" href="https://doi.org/10.1016/j.ijpara.2020.02.001">https://doi.org/10.1016/j.ijpara.2020.02.001</a></p>
+<p>Martin, T. G., Wintle, B. A., Rhodes, J. R., Kuhnert, P. M., Field, S. A., Low-Choy, S. J., Tyre, A. J., &amp; Possingham, H. P. (2005). Zero Tolerance Ecology: Improving Ecological Inference by Modelling the Source of Zero Observations. <em>Ecology Letters, 8</em>(11), 1235-1246. <a class="reference external" href="https://doi.org/10.1111/j.1461-0248.2005.00826.x">https://doi.org/10.1111/j.1461-0248.2005.00826.x</a></p>
+<p>Mullahy, J. (1986). Specification and Testing of Some Modified Count Data Models. <em>Journal of Econometrics, 3</em>3(3), 341-365. <a class="reference external" href="https://doi.org/10.1016/0304-4076(86)90002-3">https://doi.org/10.1016/0304-4076(86)90002-3</a></p>
+<p>O’Brien, T. G., Kinnaird, M. F., &amp; Wibisono, H. T. (2003). Crouching tigers, hidden prey: Sumatran tiger and prey populations in a tropical forest landscape. <em>Animal Conservation, 6</em>(2), 131-139. <a class="reference external" href="https://doi.org/10.1017/s1367943003003172">https://doi.org/10.1017/s1367943003003172</a></p>
+<p>Palmer, M. S., Swanson, A., Kosmala, M., Arnold, T., &amp; Packer, C. (2018). Evaluating relative abundance indices for terrestrial herbivores from large‐scale camera trap Surveys. <em>African Journal of Ecology</em>, 56, 791-803. <a class="reference external" href="https://onlinelibrary.wiley.com/doi/abs/10.1111/aje.12566">https://onlinelibrary.wiley.com/doi/abs/10.1111/aje.12566</a></p>
+<p>Rovero, F., &amp; Marshall, A. R. (2009). Camera Trapping Photographic Rate as an Index of Density in Forest Ungulates. <em>Journal of Applied Ecology, 46</em>(5), 1011-1017. <a class="reference external" href="https://www.jstor.org/stable/25623081">https://www.jstor.org/stable/25623081</a></p>
+<p>Russell, M. (2020, Nov 29). <em>Fitting Poisson and zero-inflated Poisson models.</em> [Video]. YouTube. <a class="reference external" href="https://www.youtube.com/watch?v=cD9V1ApYqCk">https://www.youtube.com/watch?v=cD9V1ApYqCk</a></p>
+<p>Sollmann, R., Gardner, B., Parsons, A. W., Stocking, J. J., McClintock, B. T., Simons, T. R., Pollock, K. H., &amp; O’Connell, A. F. (2013b). A Spatial Mark-Resight Model Augmented with Telemetry Data. <em>Ecology, 94</em>(3), 553-559. <a class="reference external" href="https://doi.org/10.1890/12-1256.1">https://doi.org/10.1890/12-1256.1</a></p>
+<p>Thompson, W. L., White, G. C., &amp; Gowan, C. (1998). “Chapter 3 - Enumeration Methods.” In <em>Monitoring Vertebrate Populations</em>, edited by Thompson, W. L., White, G. C., &amp; Gowan, C., 75-121. San Diego: Academic Press. <a class="reference external" href="https://doi.org/10.1016/B978-0126889604/50003-4">https://doi.org/10.1016/B978-0126889604/50003-4</a></p>
+<p>TileStats (2021, Apr 18). <em>Zero-inflated Poisson (ZIP) regression.</em> [Video]. YouTube. <a class="reference external" href="https://www.youtube.com/watch?v=ztNQvAabgtU">https://www.youtube.com/watch?v=ztNQvAabgtU</a></p>
+<p>Villette, P., Krebs, C. J., Jung, T. S., &amp; Boonstra, R. (2016). Can camera trapping provide accurate estimates of small mammal (<em>Myodes rutilus</em> and <em>Peromyscus maniculatus</em>  density in the boreal forest? <em>Journal of Mammalogy, 97</em>(1), 32-40. <a class="reference external" href="https://doi.org/10.1093/jmammal/gyv150">https://doi.org/10.1093/jmammal/gyv150</a></p>
+<p>Welsh, A. H., Cunningham, R. B., &amp; Chambers, R. L. (2000). Methodology for estimating the abundance of rare animals: Seabird nesting on North East Herald Cay. <em>Biometrics, 56</em>(1), 22-30. <a class="reference external" href="https://doi.org/10.1111/j.0006-341X.2000.00022.x">https://doi.org/10.1111/j.0006-341X.2000.00022.x</a></p>
+<p>Zeileis, A., Kleiber, C., &amp; Jackman, S. (2008). Regression Models for Count Data in R. <em>Journal of Statistical Software, 27</em>(8). <a class="reference external" href="https://doi.org/10.18637/jss.v027.i08">https://doi.org/10.18637/jss.v027.i08</a></p>
+<p>+check others</p>
+</div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./02_dialog-boxes"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+              
+              
+              
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="component-author">
+By Alberta Remote Camera Steering Committee (RCSC)
+</p>
+</div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

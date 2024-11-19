@@ -13,12 +13,12 @@
 
 /*If you’d like the article content to take up more width than its default, use the max-width CSS property with the following selectors*/
 .bd-main .bd-content .bd-article-container {
-    max-width: 120%;  /* default is 60em */
+    max-width: 95%;  /* default is 60em */
   }
 
 /*This will affect both the article content and the top navigation bar.*/
 .bd-page-width {
-    max-width: 90%;  /* default is 88rem */
+    max-width: 95%;  /* default is 88rem */
 }
 
 h1 {

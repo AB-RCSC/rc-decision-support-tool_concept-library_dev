@@ -1,0 +1,751 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Spatial capture-recapture (SCR) / Spatially explicit capture recapture (SECR) &#8212; Remote Camera Decision Support Tool - Concept Library</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/tippy.css?v=a7d99af9" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=b4f226de" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '02_dialog-boxes/03_11_mod_scr_secr';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none"></div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="spatial-capture-recapture-scr-spatially-explicit-capture-recapture-secr">
+<span id="i-mod-scr-secr"></span><h1>Spatial capture-recapture (SCR) / Spatially explicit capture recapture (SECR)<a class="headerlink" href="#spatial-capture-recapture-scr-spatially-explicit-capture-recapture-secr" title="Link to this heading">#</a></h1>
+<!--
+:::{hint}
+replace me with text
+:::
+-->
+<p><strong>Spatially explicit capture-recapture (SECR) / Spatial capture-recapture (SCR) (Borchers &amp; Efford, 2008; Efford, 2004; Royle &amp; Young, 2008; Royle et al., 2009)</strong>: The SECR (or SCR) method is used to estimate the density of marked populations; an extension of traditional capture-recapture (CR; Karanth, 1995; Karanth &amp; Nichols, 1998) models (Karanth, 1995; Karanth &amp; Nichols, 1998) that explicitly accounts for camera location and animal movement (Burgar et al., 2018). SECR models use spatially referenced individual capture histories to infer where animals’ home range centres are, assuming that detection probability decreases with increasing distance between cameras and home range centres (Clarke et al., 2023). SECR models can be implemented using different statistical frameworks, including Bayesian estimation (Royle and Young, 2008; Morin et al., 2022).</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Assumptions, Pros, Cons</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Assumptions</div>
+<ul class="simple">
+<li><p class="sd-card-text">Demographic closure (i.e., no births or deaths) (Wearn &amp; Glover-Kapfer, 2017)</p></li>
+<li><p class="sd-card-text"><a href="09_glossary.html#detection_probability" target="_blank" data-bs-toggle="tooltip" data-bs-title="The probability (likelihood) that an individual of the population of interest is included in the count at time or location *i*.">Detection probability<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a>  of different individuals is equal (Wearn &amp; Glover-Kapfer, 2017)</p></li>
+<li><p class="sd-card-text">or, for SECR, individuals have equal <a href="09_glossary.html#detection_probability" target="_blank" data-bs-toggle="tooltip" data-bs-title="The probability (likelihood) that an individual of the population of interest is included in the count at time or location *i*.">Detection probability<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a>  at a given distance from the centre of their <a href="09_glossary.html#home_range" target="_blank" data-bs-toggle="tooltip" data-bs-title="the area within which an animal normally lives and finds what it needs to survive and reproduce.">home range<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a>  (Wearn &amp; Glover-Kapfer, 2017)</p></li>
+<li><p class="sd-card-text">Detections of different individuals are independent (Wearn &amp; Glover-Kapfer, 2017)</p></li>
+<li><p class="sd-card-text">Behaviour is unaffected by cameras and <a href="09_glossary.html#typeid_marked" target="_blank" data-bs-toggle="tooltip" data-bs-title="Individuals, populations, or species (varies with modelling approach and context) that can be identified using natural or artificial markings (e.g., coat patterns, scars, tags, collars).">marking<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a>  (Wearn &amp; Glover-Kapfer, 2017)</p></li>
+<li><p class="sd-card-text">Individuals do not lose marks (Wearn &amp; Glover-Kapfer, 2017)</p></li>
+<li><p class="sd-card-text">Individuals are not misidentified (Wearn &amp; Glover-Kapfer, 2017)</p></li>
+<li><p class="sd-card-text"><a href="09_glossary.html#survey" target="_blank" data-bs-toggle="tooltip" data-bs-title="A unique deployment period (temporal extent) within a project (recorded as 'Survey Name').">Surveys<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a>  are independent (Wearn &amp; Glover-Kapfer, 2017)</p></li>
+<li><p class="sd-card-text">For conventional models, geographic closure (i.e., no immigration or emigration) (Wearn &amp; Glover-Kapfer, 2017)</p></li>
+<li><p class="sd-card-text">Spatially explicit models have further assumptions about animal movement (Wearn &amp; Glover-Kapfer, 2017; Rowcliffe et al., 2008; Royle et al., 2009; O’Brien et al., 2011); these include:</p></li>
+<li><p class="sd-card-text">Home ranges are stable (Wearn &amp; Glover-Kapfer, 2017)</p></li>
+<li><p class="sd-card-text">Movement is unaffected by the cameras (Wearn &amp; Glover-Kapfer, 2017)</p></li>
+<li><p class="sd-card-text"><a href="09_glossary.html#cam_location" target="_blank" data-bs-toggle="tooltip" data-bs-title="The location where a single camera was placed (recorded as 'Camera Location Name').">Camera locations<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a>  are <a href="09_glossary.html#sampledesign_random" target="_blank" data-bs-toggle="tooltip" data-bs-title="Cameras occur at randomized camera locations (or sample stations) across the area of interest, sometimes with a predetermined minimum distance between camera locations (or sample stations).">randomly placed<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a>  with respect to the distribution and orientation of <a href="09_glossary.html#home_range" target="_blank" data-bs-toggle="tooltip" data-bs-title="the area within which an animal normally lives and finds what it needs to survive and reproduce.">home ranges<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a>  (Wearn &amp; Glover-Kapfer, 2017)</p></li>
+<li><p class="sd-card-text">Distribution of <a href="09_glossary.html#home_range" target="_blank" data-bs-toggle="tooltip" data-bs-title="the area within which an animal normally lives and finds what it needs to survive and reproduce.">home range<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a>  centres follows a defined distribution (Poisson, or other, e.g., negative binomial) (Wearn &amp; Glover-Kapfer, 2017)</p></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Pros</div>
+<ul class="simple">
+<li><p class="sd-card-text">Produces direct estimates of  or population size for explicit spatial regions (Chandler &amp; Royle, 2013)</p></li>
+<li><p class="sd-card-text">Allows researchers to mark a subset of the population / to take advantage of natural markings (Wearn &amp; Glover-Kapfer, 2017)</p></li>
+<li><p class="sd-card-text">Estimates are fully comparable across space, time, species and studies (Wearn &amp; Glover-Kapfer, 2017)</p></li>
+<li><p class="sd-card-text"> estimates obtained in a single model, fully incorporate spatial information of locations and individuals (Wearn &amp; Glover-Kapfer, 2017)</p></li>
+<li><p class="sd-card-text">Both likelihood-based and Bayesian versions of the model have been implemented in relatively easy-to-use software DENSITY and SPACECAP, respectively, as well as associated R packages) (Wearn &amp; Glover-Kapfer, 2017)</p></li>
+<li><p class="sd-card-text">Flexibility in study design (e.g., ‘holes’ in the trapping grid) (Wearn &amp; Glover-Kapfer, 2017)</p></li>
+<li><p class="sd-card-text">Open <a href="09_glossary.html#mod_secr" target="_blank" data-bs-toggle="tooltip" data-bs-title="The SECR (or SCR) method is used to estimate the density of marked populations; an extension of traditional capture-recapture (CR; Karanth, 1995; Karanth & Nichols, 1998) models (Karanth, 1995; Karanth & Nichols, 1998) that explicitly accounts for camera location and animal movement (Burgar et al., 2018). SECR models use spatially referenced individual capture histories to infer where animals' home range centres are, assuming that detection probability decreases with increasing distance between cameras and home range centres (Clarke et al., 2023). SECR models can be implemented using different statistical frameworks, including Bayesian estimation (Royle and Young, 2008; Morin et al., 2022).">SECR<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a>  (Efford, 2004; Borchers &amp; Efford, 2008; Royle &amp; Young, 2008; Royle et al., 2009) models exist that allow for estimation of recruitment and survival rates (Wearn &amp; Glover-Kapfer, 2017)</p></li>
+<li><p class="sd-card-text">Avoid ad-hoc definitions of study area and edge effects (Doran-Myers, 2018)</p></li>
+<li><p class="sd-card-text">SECR (Efford, 2004; Borchers &amp; Efford, 2008; Royle &amp; Young, 2008; Royle et al., 2009) accounts for variation in individual <a class="reference internal" href="#/9_glossary#detection_probability"><span class="xref myst"><a href="09_glossary.html#detection_probability" target="_blank" data-bs-toggle="tooltip" data-bs-title="The probability (likelihood) that an individual of the population of interest is included in the count at time or location *i*.">Detection probability<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a> </span></a>; can produce spatial variation in ; <a href="09_glossary.html#mod_secr" target="_blank" data-bs-toggle="tooltip" data-bs-title="The SECR (or SCR) method is used to estimate the density of marked populations; an extension of traditional capture-recapture (CR; Karanth, 1995; Karanth & Nichols, 1998) models (Karanth, 1995; Karanth & Nichols, 1998) that explicitly accounts for camera location and animal movement (Burgar et al., 2018). SECR models use spatially referenced individual capture histories to infer where animals' home range centres are, assuming that detection probability decreases with increasing distance between cameras and home range centres (Clarke et al., 2023). SECR models can be implemented using different statistical frameworks, including Bayesian estimation (Royle and Young, 2008; Morin et al., 2022).">SECR<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a>  (Efford, 2004; Borchers &amp; Efford, 2008; Royle &amp; Young, 2008; Royle et al., 2009) more sensitive to detect moderate-to-major populations changes (+/-20-80%) (Royle &amp; Young, 2008; Royle et al., 2009)</p></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Cons</div>
+<ul class="simple">
+<li><p class="sd-card-text">Requires that individuals are identifiable (Wearn &amp; Glover-Kapfer, 2017)</p></li>
+<li><p class="sd-card-text">Requires that a minimum number of individuals are trapped (each recaptured multiple times ideally) (Wearn &amp; Glover-Kapfer, 2017)</p></li>
+<li><p class="sd-card-text">Requires that each individual is captured at a number of <a href="09_glossary.html#cam_location" target="_blank" data-bs-toggle="tooltip" data-bs-title="The location where a single camera was placed (recorded as 'Camera Location Name').">camera locations<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a>  (Wearn &amp; Glover-Kapfer, 2017)</p></li>
+<li><p class="sd-card-text">Multiple cameras per station may be required to identify individuals; difficult to implement at large spatial scales as it requires a high  of cameras (Morin et al., 2022)</p></li>
+<li><p class="sd-card-text">May not be precise enough for long-term monitoring (Green et al., 2020)</p></li>
+<li><p class="sd-card-text">Cameras must be close enough that animals are detected at multiple <a href="09_glossary.html#cam_location" target="_blank" data-bs-toggle="tooltip" data-bs-title="The location where a single camera was placed (recorded as 'Camera Location Name').">camera locations<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a>  (Wearn &amp; Glover-Kapfer, 2017) (may be challenging to implement at large scales as many cameras are needed)’ (Chandler &amp; Royle, 2013)</p></li>
+<li><p class="sd-card-text">½ MMDM (Mean Maximum Distance Moved) will usually lead to an underestimation of <a href="09_glossary.html#home_range" target="_blank" data-bs-toggle="tooltip" data-bs-title="the area within which an animal normally lives and finds what it needs to survive and reproduce.">home range<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a>  size and thus overestimation of  (Parmenter et al., 2003; Noss et al., 2012; Wearn &amp; Glover-Kapfer, 2017)</p></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</details><div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-0">
+Overview</label><div class="sd-tab-content docutils">
+<p>This section will be available soon! In the meantime, check out the information in the other tabs!</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/00_coming_soon.png"><img alt="../_images/00_coming_soon.png" src="../_images/00_coming_soon.png" style="width: 300px;" /></a>
+</figure>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-1">
+In-depth</label><div class="sd-tab-content docutils">
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>This content was adapted from: The Density Handbook</strong>, “<a class="reference external" href="https://www.researchgate.net/publication/368601884_Using_Camera_Traps_to_Estimate_Medium_and_Large_Mammal_Density_Comparison_of_Methods_and_Recommendations_for_Wildlife_Managers">Using Camera Traps to Estimate Medium and Large Mammal Density: Comparison of Methods and Recommendations for Wildlife Managers</a>” (Clarke et al., 2023)</p>
+</div>
+<p>Spatial capture-recapture (SCR) models can be applied to any survey method where animals are individually identifiable and trap locations are known: live trapping and tagging, DNA sampling, camera trapping, etc. (Royle et al., 2014). Here, we will discuss camera trap SCR.
+SCR models break populations down into the activity, or home range, centres of individual animals. Let us first imagine we know the number and location of all individuals’ activity centres in a population. If we did, we could easily estimate density:</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/clarke_et_al_2023_eqn_scr1.png"><img alt="../_images/clarke_et_al_2023_eqn_scr1.png" src="../_images/clarke_et_al_2023_eqn_scr1.png" style="width: 130px;" /></a>
+</figure>
+<p>assuming each member of the population has an activity centre, and so the number of activity centres is equivalent to population size; and since the area encompassing all activity centres is the total area sampled by the camera array (i.e., the sampling frame; Sollmann, 2018). In reality, we do not know the number and location of activity centres – indeed, the estimated number and location of activity centres is the SCR model output.
+To resolve the number and location of activity centres – and thus estimate density – SCR models combine information about 1) where animals are detected in space (using an observation model) and 2) how animals are distributed in space (using a spatial process model; Figure 4; Royle, 2016).</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/clarke_et_al_2023_fig4_clipped.png"><img alt="../_images/clarke_et_al_2023_fig4_clipped.png" src="../_images/clarke_et_al_2023_fig4_clipped.png" style="width: 80px;" /></a>
+</figure>
+<p><strong>Clarke et al., 2023 - Fig. 4</strong> SCR models are made up of two sub-models: an observation model, which describes where individual animals are detected (i.e., their detection histories); and a spatial process model, which describes how animals’ activity centres are distributed.
+The observation model uses the record of where each individual was detected (i.e., individuals’ detection histories) to infer the location of each individual’s respective activity centre (Figure 5A; Chandler &amp; Royle, 2013; Royle, 2016). It relies on the inverse relationship between detection probability and cameratrap-to-activity-centre distance: as the distance between a camera and an individual’s activity centre increases, the likelihood that individual will be detected there decreases (Figure 5B; Royle et al., 2014). So, animals will be detected most frequently at camera traps near their activity centres, and least frequently (or not at all) at camera traps far from their activity centres. Because the locations of activity centres are unknown, we use a spatial process model to approximate their distribution. Point-process models are a common choice (Royle, 2016). A point-process model is a random pattern of points in space (Baddeley, n.d.); it can be homogenous (completely spatially random) or inhomogeneous (the density of points depends on landscape/habitat covariates; (Royle, 2016).
+Taken together: SCR essentially “downscales” density – a population-level estimator – to the level of the individual. The model asks: where does each animal live (Royle, 2016)? Although the location of animals’ activity centres is not known, we can use information about where individuals are captured (detection histories) and how activity centres are distributed in space (point-process model) to infer where they live, and thus estimate density (Royle, 2016). SCR can be implemented using many statistical frameworks, including full likelihood estimation (Borchers &amp; Efford, 2008), dataaugmented maximum likelihood estimation (Royle et al., 2014), and data-augmented Bayesian estimation (Royle &amp; Young, 2008; Morin et al., 2022).
+When deploying cameras for SCR analysis, practitioners must balance the area covered by the camera array with trap spacing to maximize both the number of unique individuals captured and the number of spatial recaptures of each individual. A larger sampling area will yield a higher count of unique individuals; closely-spaced traps will yield a higher number of spatial recaptures (i.e., detections of the same individual at different camera traps; Royle et al., 2014). Both are important for SCR density estimation. Cameras should also be deployed across habitat types with different levels of use (Morin et al., 2022; Sun et al., 2014). Grid and clustered sampling designs can help meet all these needs (Clarke, 2019; Sun et al., 2014). Note that optimal camera trap placement and spacing will change with focal species, landscape and project limitations.
+See Clark (2019), Dupont et al., (2021), Fleming et al., (2021), McFarlane et al., (2020), Nawaz et al., (2021), Romairone et al., 2018, Sollmann et al., (2012) and Sun et al., (2014) for more detailed explorations of SCR study design.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/clarke_et_al_2023_fig5_clipped.png"><img alt="../_images/clarke_et_al_2023_fig5_clipped.png" src="../_images/clarke_et_al_2023_fig5_clipped.png" style="width: 80px;" /></a>
+</figure>
+<p><strong>Clarke et al. (2023) – Fig. 5</strong> Adapted from Morin et al., (2022) and Royle et al., (2014). A) A diagram of how the individual activity centres (circles) that make up a population might overlap with a camera array (grey crosses). The red circle highlights an example individual’s activity centre. The red arrows point towards camera stations where the red individual was detected; the numbers beside the camera stations show how many times the red individual was detected at each station. Note, the number and location of individual’s activity centres is not known, but rather inferred from the spatial pattern of detections (i.e., the number of detections of each individual at camera stations of known location). B) An example graph showing how the probability the red individual is detected at a camera station decreases with distance from its activity centre. This is reflected in A); as the distance between the red individual’s activity centre and a camera station increases, the number of detections dwindles. σ is the spatial scale parameter; it describes how detection probability decreases with increasing distance.
+Another aspect of sampling design practitioners must consider is the number and configuration of cameras deployed at a station to identify animals to the individual. Left and right flanks may need to be photographed simultaneously, for example, to avoid assigning different identities to each side (Augustine et al., 2018); as another example, chest markings may need to be photographed from multiple angles at bait stations to be able to resolve identity (Proctor et al., 2022).</p>
+</div>
+<input id="sd-tab-item-2" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-2">
+Visual resources</label><div class="sd-tab-content docutils">
+<div class="sd-container-fluid sd-sphinx-override sd-m-0 sd-p-0 docutils">
+<div class="sd-row sd-row-cols-3 sd-row-cols-xs-3 sd-row-cols-sm-3 sd-row-cols-md-3 sd-row-cols-lg-3 sd-g-1 sd-g-xs-1 sd-g-sm-1 sd-g-md-1 sd-g-lg-1 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Clarke et al., 2023</div>
+<figure class="align-default">
+<img alt="../_images/clarke_et_al_2023_eqn_scr1.png" class="img-grid" src="../_images/clarke_et_al_2023_eqn_scr1.png" />
+</figure>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Clarke et al., 2023</div>
+<figure class="align-default">
+<img alt="../_images/clarke_et_al_2023_fig4_clipped.png" class="img-grid" src="../_images/clarke_et_al_2023_fig4_clipped.png" />
+</figure>
+<p class="sd-card-text"><strong>Clarke et al. (2023) – Fig. 4.</strong> SCR models are made up of two sub-models: an observation model, which describes where individual animals are detected (i.e., their detection histories); and a spatial process model, which describes how animals’ activity centres are distributed.</p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Clarke et al., 2023</div>
+<figure class="align-default">
+<img alt="../_images/clarke_et_al_2023_fig4_clipped.png" class="img-grid" src="../_images/clarke_et_al_2023_fig4_clipped.png" />
+</figure>
+<p class="sd-card-text"><strong>Clarke et al. (2023) - Fig. 5</strong> Adapted from Morin et al., (2022) and Royle et al., (2014). A) A diagram of how the individual activity centres (circles) that make up a population might overlap with a camera array (grey crosses).</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-kebab-horizontal no-title" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14a2 2 0 1 1-.001-3.999A2 2 0 0 1 20 14ZM6 12a2 2 0 1 1-3.999.001A2 2 0 0 1 6 12Zm8 0a2 2 0 1 1-3.999.001A2 2 0 0 1 14 12Z"></path></svg></span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The red circle highlights an example individual’s activity centre. The red arrows point towards camera stations where the red individual was detected; the numbers beside the camera stations show how many times the red individual was detected at each station. Note, the number and location of individual’s activity centres is not known, but rather inferred from the spatial pattern of detections (i.e., the number of detections of each individual at camera stations of known location). B) An example graph showing how the probability the red individual is detected at a camera station decreases with distance from its activity centre. This is reflected in A); as the distance between the red individual’s activity centre and a camera station increases, the number of detections dwindles. σ is the spatial scale parameter; it describes how detection probability decreases with increasing distance.</p>
+</div>
+</details></div>
+</div>
+</div>
+</div>
+</div>
+<div class="sd-container-fluid sd-sphinx-override sd-m-0 sd-p-0 docutils">
+<div class="sd-row sd-row-cols-3 sd-row-cols-xs-3 sd-row-cols-sm-3 sd-row-cols-md-3 sd-row-cols-lg-3 sd-g-1 sd-g-xs-1 sd-g-sm-1 sd-g-md-1 sd-g-lg-1 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Efford, 2024b</div>
+<figure class="align-default">
+<img alt="../_images/efford_2024_fig1.png" class="img-grid" src="../_images/efford_2024_fig1.png" />
+</figure>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+University of Cape Town, 2017</div>
+<figure class="align-default">
+<img alt="../_images/secr_creemmural_org_secr.png" class="img-grid" src="../_images/secr_creemmural_org_secr.png" />
+</figure>
+<p class="sd-card-text"><strong>University of Cape Town, 2024c - Slide 6</strong> Observation process - The expected frequency of encountering an individual depends
+on the individual’s location in space.</p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Jiménez et al., 2021</div>
+<figure class="align-default">
+<img alt="../_images/jimenez_et_al_2021_fig1_clipped.png" class="img-grid" src="../_images/jimenez_et_al_2021_fig1_clipped.png" />
+</figure>
+<p class="sd-card-text"><strong>Jiménez et al. (2021) - Fig. 1</strong> Graphical depiction of the random thinning spatial capture–recapture model. Random thinning SCR is hierarchical model with two processes: ecological (population size and location—<em>s</em><sub>i</sub>—of individuals) and observation.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-kebab-horizontal no-title" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14a2 2 0 1 1-.001-3.999A2 2 0 0 1 20 14ZM6 12a2 2 0 1 1-3.999.001A2 2 0 0 1 6 12Zm8 0a2 2 0 1 1-3.999.001A2 2 0 0 1 14 12Z"></path></svg></span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">In this model (like in standard SCR), the detection rate of each individual depends on (i) Euclidean distance between individual’s locations and traps (centroids of polygonal grid in the study case); (ii) baseline detection rate (λ<sub>ID</sub>) that here depends on sampling effort (length of transect in each polygon); and (iii) the scale parameter (σ) from the half-normal detection function, that describes the animal movement. In the observation process, we obtain two types of data: encounters with identification (<em>y</em><sup>ID</sup>) and non-ID data (<em>y</em><sup>noID</sup>) or counts. Random thinning SCR model uses ID data (in red) like in standard SCR to make inferences about population size and individuals’ distribution (including nonobserved individuals, in gray), but also uses the counts (in orange) with a constraint (<em>y</em><sup>noID</sup> = <em>y</em><sup>true</sup> − <em>y</em><sup>ID</sup>) using a Metropolis–Hastings algorithm—in a mechanistic approach—to make a probabilistic reconstruction of the true encounter frequencies (<em>y</em><sup>true</sup>), thus assigning identities to non-ID samples.</p>
+</div>
+</details></div>
+</div>
+</div>
+</div>
+</div>
+<div class="sd-container-fluid sd-sphinx-override sd-m-0 sd-p-0 docutils">
+<div class="sd-row sd-row-cols-3 sd-row-cols-xs-3 sd-row-cols-sm-3 sd-row-cols-md-3 sd-row-cols-lg-3 sd-g-1 sd-g-xs-1 sd-g-sm-1 sd-g-md-1 sd-g-lg-1 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+rtxt_figure10_ref_id</div>
+<figure class="align-default">
+<img alt="../_images/figure10_filename.png" class="img-grid" src="../_images/figure10_filename.png" />
+</figure>
+<p class="sd-card-text">figure10_caption</p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+rtxt_figure11_ref_id</div>
+<figure class="align-default">
+<img alt="../_images/figure11_filename.png" class="img-grid" src="../_images/figure11_filename.png" />
+</figure>
+<p class="sd-card-text">figure11_caption</p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+rtxt_figure12_ref_id</div>
+<figure class="align-default">
+<img alt="../_images/figure12_filename.png" class="img-grid" src="../_images/figure12_filename.png" />
+</figure>
+<p class="sd-card-text">figure12_caption</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sd-container-fluid sd-sphinx-override sd-m-0 sd-p-0 docutils">
+<div class="sd-row sd-row-cols-3 sd-row-cols-xs-3 sd-row-cols-sm-3 sd-row-cols-md-3 sd-row-cols-lg-3 sd-g-1 sd-g-xs-1 sd-g-sm-1 sd-g-md-1 sd-g-lg-1 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Royle, 2016</div>
+<div>
+<div style=“position:relative;padding-top:56.25%;”>
+<iframe src=“https://www.youtube.com/embed/4HKFimATq9E“ loading=“lazy” frameborder=“0” allowfullscreen
+style=“position:absolute;top:0;left:0;width:100%;height:100%;”></iframe>
+</div>
+</div>
+J. Andrew Royle, ’Spatial Capture-Recapture Modelling’
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Snow Leopard Network, 2020a</div>
+<div>
+<div style=“position:relative;padding-top:56.25%;”>
+<iframe src=“https://www.youtube.com/embed/IHVez1a_hqg?si=1ePCJKv0v1SiKwSi“ loading=“lazy” frameborder=“0” allowfullscreen
+style=“position:absolute;top:0;left:0;width:100%;height:100%;”></iframe>
+</div>
+</div>
+PAWS: Spatial Capture Recapture Data Analysis Part 1
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Snow Leopard Network, 2020b</div>
+<div>
+<div style=“position:relative;padding-top:56.25%;”>
+<iframe src=“https://www.youtube.com/embed/IHVez1a_hqg“ loading=“lazy” frameborder=“0” allowfullscreen
+style=“position:absolute;top:0;left:0;width:100%;height:100%;”></iframe>
+</div>
+</div>
+PAWS: Spatial Capture Recapture Data Analysis Part 2
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sd-container-fluid sd-sphinx-override sd-m-0 sd-p-0 docutils">
+<div class="sd-row sd-row-cols-3 sd-row-cols-xs-3 sd-row-cols-sm-3 sd-row-cols-md-3 sd-row-cols-lg-3 sd-g-1 sd-g-xs-1 sd-g-sm-1 sd-g-md-1 sd-g-lg-1 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Royle, 2020</div>
+<div>
+<div style=“position:relative;padding-top:56.25%;”>
+<iframe src=“https://www.youtube.com/embed/yRRDi07FtPg?si=vmGQslB9Wv9MnkYC“ loading=“lazy” frameborder=“0” allowfullscreen
+style=“position:absolute;top:0;left:0;width:100%;height:100%;”></iframe>
+</div>
+</div>
+Introduction to Spatial Capture-Recapture with the oSCR Package
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+oscrpackage206, 2020</div>
+<div>
+<div style=“position:relative;padding-top:56.25%;”>
+<iframe src=“../03_images/03_image_files/oscrpackage206.png“ loading=“lazy” frameborder=“0” allowfullscreen
+style=“position:absolute;top:0;left:0;width:100%;height:100%;”></iframe>
+</div>
+</div>
+**oSCR Package**: Channel for the R package for the analysis of spatial encounter histories for inferences about spatial population ecology.
+- [Introduction to Spatial Capture-Recapture](https://www.youtube.com/watch?v=yRRDi07FtPg)
+- [Multi-session Spatial Capture-Recapture models](https://www.youtube.com/watch?v=GzYYnl8n6rI)
+- [Incorporating telemetry in SCR models](https://www.youtube.com/watch?v=LzqyUbbZNTU)
+- [Basic SCR models and the oSCR package](https://www.youtube.com/watch?v=vP5G7YhRRuM)
+- [Modeling spatial variation in density with SCR](https://www.youtube.com/watch?v=k_eFDUD5xGU)
+- [Design of Spatial Capture-Recapture studies](https://www.youtube.com/watch?v=wX0uIolgo38)
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+rtxt_vid6_ref_id</div>
+<div>
+<div style=“position:relative;padding-top:56.25%;”>
+<iframe src=“vid6_url“ loading=“lazy” frameborder=“0” allowfullscreen
+style=“position:absolute;top:0;left:0;width:100%;height:100%;”></iframe>
+</div>
+</div>
+vid6_caption
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<input id="sd-tab-item-3" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-3">
+Shiny apps/Widgets</label><div class="sd-tab-content docutils">
+<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Secrdesign app 1.5</div>
+<p class="sd-card-text">Efford, M. G., &amp; Boulanger, J. (2019). Fast Evaluation of Study Designs for Spatially Explicit Capture-Recapture. <em>Methods in Ecology and Evolution</em>, 10(9), 1529-1535. <a class="reference external" href="https://doi.org/10.1111/2041-210X.13239">https://doi.org/10.1111/2041-210X.13239</a></p>
+<iframe
+width=“100%”
+height=“900”
+src=“https://www.stats.otago.ac.nz/secrdesignapp“
+loading=“lazy”
+frameborder=“0”
+allow=“accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture”
+allowfullscreen>
+</iframe>
+</div>
+</div>
+</div>
+<input id="sd-tab-item-4" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-4">
+Analytical tools &amp; Resources</label><div class="sd-tab-content docutils">
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Type</p></th>
+<th class="head text-left"><p>Name</p></th>
+<th class="head text-left"><p>Note</p></th>
+<th class="head text-left"><p>URL</p></th>
+<th class="head text-left"><p>Reference</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p>Article</p></td>
+<td class="text-left"><p>Fast Evaluation of Study Designs for Spatially Explicit Capture–Recapture</p></td>
+<td class="text-left"><p></p></td>
+<td class="text-left"><p><a class="reference external" href="https://doi.org/10.1111/2041-210X.13239">https://doi.org/10.1111/2041-210X.13239</a></p></td>
+<td class="text-left"><p>Efford, M. G., &amp; Boulanger, J. (2019). Fast Evaluation of Study Designs for Spatially Explicit Capture-Recapture. <em>Methods in Ecology and Evolution</em>, 10(9), 1529-1535. <a class="reference external" href="https://doi.org/10.1111/2041-210X.13239">https://doi.org/10.1111/2041-210X.13239</a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>App/Program</p></td>
+<td class="text-left"><p>Program SPACECAP</p></td>
+<td class="text-left"><p>Note: this program is not longer available from cran (<a class="reference external" href="https://cran.r-project.org/web/packages/SPACECAP/index.html">https://cran.r-project.org/web/packages/SPACECAP/index.html</a>).</p></td>
+<td class="text-left"><p><a class="reference external" href="https://www.mbr-pwrc.usgs.gov/software/spacecap.html">https://www.mbr-pwrc.usgs.gov/software/spacecap.html</a></p></td>
+<td class="text-left"><p>Singh, P., Gopalaswamy, A. M., Royle, A. J., Kumar, N. S. &amp; Karanth, K. U. (2010). SPACECAP: A Program to Estimate Animal Abundance and Density using Bayesian Spatially-Explicit Capture-Recapture Models. <em>Wildlife Conservation Society - India Program</em>, Centre for Wildlife Studies, Bangalure, India. Version 1.0. <a class="reference external" href="https://www.mbr-pwrc.usgs.gov/software/spacecap.html">https://www.mbr-pwrc.usgs.gov/software/spacecap.html</a></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>resource3_type</p></td>
+<td class="text-left"><p>resource3_name</p></td>
+<td class="text-left"><p>resource3_note</p></td>
+<td class="text-left"><p>&lt;&gt;</p></td>
+<td class="text-left"><p>rbib_resource3_ref_id</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>R package</p></td>
+<td class="text-left"><p>Package ‘secr’</p></td>
+<td class="text-left"><p></p></td>
+<td class="text-left"><p>Package info: <a class="reference external" href="https://CRAN.R-project.org/package=secr">https://CRAN.R-project.org/package=secr</a><br>Guide: <a class="reference external" href="https://cran.r-project.org/web/packages/secr/vignettes/secr-overview.pdf">https://cran.r-project.org/web/packages/secr/vignettes/secr-overview.pdf</a></p></td>
+<td class="text-left"><p>Efford, M. (2024a). <em>Package ‘secr’: Spatially Explicit Capture-Recapture</em> R package version 4.6.9. <a class="reference external" href="https://CRAN.R-project.org/package=secr">https://CRAN.R-project.org/package=secr</a>;<br><br>Efford, M. (2024b). <em>secr 4.6 - spatially explicit capture-recapture in R.</em> <a class="reference external" href="https://cran.r-project.org/web/packages/secr/vignettes/secr-overview.pdf">https://cran.r-project.org/web/packages/secr/vignettes/secr-overview.pdf</a></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>App/Program</p></td>
+<td class="text-left"><p>DENSITY</p></td>
+<td class="text-left"><p>Software for analysing capture-recapture data from passive detector arrays.</p></td>
+<td class="text-left"><p><a class="reference external" href="https://doi.org/10.32800/abc.2004.27.021">https://doi.org/10.32800/abc.2004.27.021</a></p></td>
+<td class="text-left"><p>Efford, M. G., Dawson, D. K., &amp; Robbins, C. S. (2004). DENSITY: Software for analysing capture-recapture data from passive detector arrays. <em>Animal Biodiversity and Conservation, 27</em>(1), 217-228. <a class="reference external" href="https://doi.org/10.32800/abc.2004.27.0217">https://doi.org/10.32800/abc.2004.27.0217</a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Powerpoint slides</p></td>
+<td class="text-left"><p>SEEC Toolbox seminars - Spatial Capture-Recapture (SCR) models</p></td>
+<td class="text-left"><p>‘Greg Distiller provides a comprehensive introduction to SCR models and how to perform these in R’</p></td>
+<td class="text-left"><p><a class="reference external" href="https://science.uct.ac.za/seec/stats-toolbox-seminars-spatial-and-species-distribution-toolboxes/spatial-capture-recapture-scr-modelling">https://science.uct.ac.za/seec/stats-toolbox-seminars-spatial-and-species-distribution-toolboxes/spatial-capture-recapture-scr-modelling</a></p></td>
+<td class="text-left"><p>University of Cape Town. (2024b). <em>SEEC Toolbox seminars - Spatial Capture-Recapture (SCR) models.</em> <a class="reference external" href="https://science.uct.ac.za/seec/stats-toolbox-seminars-spatial-and-species-distribution-toolboxes/spatial-capture-recapture-scr-modelling">https://science.uct.ac.za/seec/stats-toolbox-seminars-spatial-and-species-distribution-toolboxes/spatial-capture-recapture-scr-modelling</a></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>R package</p></td>
+<td class="text-left"><p>Package ‘oSCR’</p></td>
+<td class="text-left"><p>The ‘sim.SCR’ function</p></td>
+<td class="text-left"><p></p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>may be particularly useful.</p></td>
+<td class="text-left"><p>Article: <a class="reference external" href="https://onlinelibrary.wiley.com/doi/10.1111/ecog.04551">https://onlinelibrary.wiley.com/doi/10.1111/ecog.04551</a>;<br><br>R package: <a class="github reference external" href="https://github.com/jaroyle/oSCR">jaroyle/oSCR</a></p></td>
+<td class="text-left"><p>Sutherland, C., Royle, J. A., &amp; Linden, D. W. (2019). oSCR: A spatial capture-recapture R package for inference about spatial ecological processes. <em>Ecography, 42</em>(9), 1459-1469. <a class="reference external" href="https://doi.org/10.1111/ecog.04551">https://doi.org/10.1111/ecog.04551</a></p></td>
+<td class="text-left"><p></p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Tutorial</p></td>
+<td class="text-left"><p>oSCR package [online resources]</p></td>
+<td class="text-left"><p>This site contains tutorials; supplemental materials for the book Spatial Capture-Recapture by Royle, Chandler, Sollmann &amp; Gardner (2013).</p></td>
+<td class="text-left"><p><a class="reference external" href="https://sites.google.com/site/spatialcapturerecapture/oscr-package/2-getting-started-with-oscr">https://sites.google.com/site/spatialcapturerecapture/oscr-package/2-getting-started-with-oscr</a></p></td>
+<td class="text-left"><p>Royle, J. Chandler, R. B., Sollmann, R., Gardner, B. (2013). <em>Spatial capture-recapture</em>. Academic Press, Waltham, MA, USA. 612 pp., ISBN: 978-0-12-405939-9. <a class="reference external" href="https://pubs.usgs.gov/publication/70048654">https://pubs.usgs.gov/publication/70048654</a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>R package</p></td>
+<td class="text-left"><p>openCR: Open population capture-recapture models</p></td>
+<td class="text-left"><p></p></td>
+<td class="text-left"><p><a class="reference external" href="https://CRAN.R-project.org/package=openCR">https://CRAN.R-project.org/package=openCR</a></p></td>
+<td class="text-left"><p>Efford, M. (2023). <em>openCR: Open population capture-recapture models</em>. R package version 2.2.6. <a class="reference external" href="https://CRAN.R-project.org/package=openCR">https://CRAN.R-project.org/package=openCR</a></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Youtube channel</p></td>
+<td class="text-left"><p>oSCR Package</p></td>
+<td class="text-left"><p>Multiple videos available related to the SCR approach; some may be useful even for those not using the oSCR package.</p></td>
+<td class="text-left"><p><a class="reference external" href="https://www.youtube.com/channel/UCc87aAzhX7EUOalyCohzqsQ">https://www.youtube.com/channel/UCc87aAzhX7EUOalyCohzqsQ</a></p></td>
+<td class="text-left"><p>oscrpackage206 (2020) <em>oSCR Package.</em> [Channel]. YouTube. <a class="reference external" href="https://www.youtube.com/channel/UCc87aAzhX7EUOalyCohzqsQ">https://www.youtube.com/channel/UCc87aAzhX7EUOalyCohzqsQ</a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>resource11_type</p></td>
+<td class="text-left"><p>resource11_name</p></td>
+<td class="text-left"><p>resource11_note</p></td>
+<td class="text-left"><p>resource11_url</p></td>
+<td class="text-left"><p>rbib_resource11_ref_id</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>resource12_type</p></td>
+<td class="text-left"><p>resource12_name</p></td>
+<td class="text-left"><p>resource12_note</p></td>
+<td class="text-left"><p>resource12_url</p></td>
+<td class="text-left"><p>rbib_resource12_ref_id</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>resource13_type</p></td>
+<td class="text-left"><p>resource13_name</p></td>
+<td class="text-left"><p>resource13_note</p></td>
+<td class="text-left"><p>resource13_url</p></td>
+<td class="text-left"><p>rbib_resource13_ref_id</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>resource14_type</p></td>
+<td class="text-left"><p>resource14_name</p></td>
+<td class="text-left"><p>resource14_note</p></td>
+<td class="text-left"><p>resource14_url</p></td>
+<td class="text-left"><p>rbib_resource14_ref_id</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>resource15_type</p></td>
+<td class="text-left"><p>resource15_name</p></td>
+<td class="text-left"><p>resource15_note</p></td>
+<td class="text-left"><p>resource15_url</p></td>
+<td class="text-left"><p>rbib_resource15_ref_id</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>resource16_type</p></td>
+<td class="text-left"><p>resource16_name</p></td>
+<td class="text-left"><p>resource16_note</p></td>
+<td class="text-left"><p>resource16_url</p></td>
+<td class="text-left"><p>rbib_resource16_ref_id</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>resource17_type</p></td>
+<td class="text-left"><p>resource17_name</p></td>
+<td class="text-left"><p>resource17_note</p></td>
+<td class="text-left"><p>resource17_url</p></td>
+<td class="text-left"><p>rbib_resource17_ref_id</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>resource18_type</p></td>
+<td class="text-left"><p>resource18_name</p></td>
+<td class="text-left"><p>resource18_note</p></td>
+<td class="text-left"><p>resource18_url</p></td>
+<td class="text-left"><p>rbib_resource18_ref_id</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>resource19_type</p></td>
+<td class="text-left"><p>resource19_name</p></td>
+<td class="text-left"><p>resource19_note</p></td>
+<td class="text-left"><p>resource19_url</p></td>
+<td class="text-left"><p>rbib_resource19_ref_id</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>resource20_type</p></td>
+<td class="text-left"><p>resource20_name</p></td>
+<td class="text-left"><p>resource20_note</p></td>
+<td class="text-left"><p>resource20_url</p></td>
+<td class="text-left"><p>rbib_resource20_ref_id</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<input id="sd-tab-item-5" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-5">
+References</label><div class="sd-tab-content docutils">
+<p>Augustine, B. C., Royle, J. A., Kelly, M. J., Satter, C. B., Alonso, R. S., Boydston, E. E., &amp; Crooks, K. R. (2018). Spatial Capture-Recapture with Partial Identity: An Application to Camera Traps. <em>The Annals of Applied Statistics, 12</em>(1), 67-95. <a class="reference external" href="https://doi.org/10.1214/17AOAS1091">https://doi.org/10.1214/17AOAS1091</a></p>
+<p>Baddeley, A. (N.D.) <em>Spatial Point Processes and Their Applications.</em> School of Mathematics &amp; Statistics, University of Western Australia. <a class="reference external" href="https://www.researchgate.net/profile/Mohamed-Mourad-Lafifi/post/One-dimensional-spatial-point-processes/attachment/59d641b279197b807799d9fb/AS%3A436024913469445%401480967848679/download/07-baddeley-point-process-poisson-coverage-sensor-simulation.pdf">https://www.researchgate.net/profile/Mohamed-Mourad-Lafifi/post/One-dimensional-spatial-point-processes/attachment/59d641b279197b807799d9fb/AS%3A436024913469445%401480967848679/download/07-baddeley-point-process-poisson-coverage-sensor-simulation.pdf</a></p>
+<p>Borchers, D. L., &amp; Efford, M. G. (2008). Spatially Explicit Maximum Likelihood Methods for Capture-Recapture Studies. <em>Biometrics, 64</em>(2), 377-385. <a class="reference external" href="https://doi.org/10.1111/j.1541-0420.2007.00927.x">https://doi.org/10.1111/j.1541-0420.2007.00927.x</a></p>
+<p>Chandler, R. B., &amp; Royle, J. A. (2013). Spatially explicit models for inference about Density in unmarked or partially marked populations. <em>The Annals of Applied Statistics, 7</em>(2), 936-954. <a class="reference external" href="https://doi.org/10.1214/12-aoas610">https://doi.org/10.1214/12-aoas610</a></p>
+<p>Clarke, J. D. (2019).comparing Clustered Sampling Designs for Spatially Explicit Estimation of Population Density. <em>Population Ecology, 61</em>, 93-101. <a class="reference external" href="https://doi.org/10.1002/1438-390X.1011">https://doi.org/10.1002/1438-390X.1011</a></p>
+<p>Clarke, J., Bohm, H., Burton, C., Constantinou, A. (2023). <em>Using Camera Traps to Estimate Medium and Large Mammal Density: Comparison of Methods and Recommendations for Wildlife Managers</em>. <a class="reference external" href="https://doi.org/10.13140/RG.2.2.18364.72320">https://doi.org/10.13140/RG.2.2.18364.72320</a></p>
+<p>Dupont, G., Royle, J. A., Nawaz, M. A., &amp; Sutherland, C. (2021). Optimal sampling design for spatial capture-recapture. <em>Ecology, 102</em>(3), e03262. <a class="reference external" href="https://doi.org/10.1002/ecy.3262">https://doi.org/10.1002/ecy.3262</a></p>
+<p>Efford, M. G., Dawson, D. K., &amp; Robbins, C. S. (2004). DENSITY: Software for analysing capture-recapture data from passive detector arrays. <em>Animal Biodiversity and Conservation, 27</em>(1), 217-228. <a class="reference external" href="https://doi.org/10.32800/abc.2004.27.0217">https://doi.org/10.32800/abc.2004.27.0217</a></p>
+<p>Efford, M. G., &amp; Boulanger, J. (2019). Fast Evaluation of Study Designs for Spatially Explicit Capture-Recapture. <em>Methods in Ecology and Evolution</em>, 10(9), 1529-1535. <a class="reference external" href="https://doi.org/10.1111/2041-210X.13239">https://doi.org/10.1111/2041-210X.13239</a></p>
+<p>Efford, M. (2023). <em>openCR: Open population capture-recapture models</em>. R package version 2.2.6. <a class="reference external" href="https://CRAN.R-project.org/package=openCR">https://CRAN.R-project.org/package=openCR</a></p>
+<p>Efford, M. (2024a). <em>Package ‘secr’: Spatially Explicit Capture-Recapture</em> R package version 4.6.9. <a class="reference external" href="https://CRAN.R-project.org/package=secr">https://CRAN.R-project.org/package=secr</a></p>
+<p>Efford, M. (2024b). <em>secr 4.6 - spatially explicit capture-recapture in R.</em> <a class="reference external" href="https://cran.r-project.org/web/packages/secr/vignettes/secr-overview.pdf">https://cran.r-project.org/web/packages/secr/vignettes/secr-overview.pdf</a></p>
+<p>Fleming, J., Grant, E. H. C., Sterrett, S. C., &amp; Sutherland, C. (2021). Experimental evaluation of spatial capture-recapture study design. <em>Ecological Applications, 31</em>(7), e02419. <a class="reference external" href="https://doi.org/10.1002/eap.2419">https://doi.org/10.1002/eap.2419</a></p>
+<p>Proctor, M. F., Garshelis, D. L., Thatte, P., Steinmetz, R., Crudge, B., McLellan, B. N., McShea, W. J., Ngoprasert, D., Nawaz, M. A., Te Wong, S., Sharma, S., Fuller, A. K., Dharaiya, N., Pigeon, K. E., Fredriksson, G., Wang, D., Li, S., &amp; Hwang, M. (2022). Review of field methods for monitoring Asian bears. <em>Global Ecology and Conservation, 35</em>, e02080. <a class="reference external" href="https://doi.org/10.1016/j.gecco.2022.e02080">https://doi.org/10.1016/j.gecco.2022.e02080</a></p>
+<p>McFarlane, S., Manseau, M., Steenweg, R., Hervieux, D., Hegel, T., Slater, S., &amp; Wilson, P. J. (2020). An assessment of sampling designs using SCR analyses to estimate abundance of boreal caribou. <em>Ecology and Evolution, 10</em>(20), 11631-11642. <a class="reference external" href="https://doi.org/10.1002/ece3.6797">https://doi.org/10.1002/ece3.6797</a></p>
+<p>Morin, D. J., Boulanger, J., Bischof, R., Lee, D. C., Ngoprasert, D., Fuller, A. K., McLellan, B., Steinmetz, R., Sharma, S., Garshelis, D., Gopalaswamy, A., Nawaz, M. A., &amp; Karanth, U. (2022).comparison of methods for estimating Density and population trends for low-Density Asian bears. <em>Global Ecology and Conservation, 35</em>, e02058 <a class="reference external" href="https://doi.org/10.1016/j.gecco.2022.e02058">https://doi.org/10.1016/j.gecco.2022.e02058</a></p>
+<p>Nawaz, M. A., Khan, B. U., Mahmood, A., Younas, M., Din, J. U., &amp; Sutherland, C. (2021). An empirical demonstration of the effect of study design on density estimations. <em>Scientific Reports, 11</em>(1), 13104. PubMed-not-MEDLINE. <a class="reference external" href="https://doi.org/10.1038/s41598-021-92361-2">https://doi.org/10.1038/s41598-021-92361-2</a></p>
+<p>oscrpackage206 (2020) <em>oSCR Package.</em> [Channel]. YouTube. <a class="reference external" href="https://www.youtube.com/channel/UCc87aAzhX7EUOalyCohzqsQ">https://www.youtube.com/channel/UCc87aAzhX7EUOalyCohzqsQ</a></p>
+<p>Sollmann, R., Gardner, B., &amp; Belant, J. L. (2012). How does Spatial Study Design Influence Density Estimates from Spatial capture-recapture models? <em>PLoS One, 7</em>, e34575. <a class="reference external" href="https://doi.org/10.1371/journal.pone.0034575">https://doi.org/10.1371/journal.pone.0034575</a></p>
+<p>Sun, C. C., Fuller, A. K., &amp; Royle., J. A. (2014). Trap Configuration and Spacing Influences Parameter Estimates in Spatial Capture-Recapture Models. <em>PLoS One, 9</em>(2): e88025. <a class="reference external" href="https://doi.org/10.1371/journal.pone.0088025">https://doi.org/10.1371/journal.pone.0088025</a></p>
+<p>Romairone, J., Jiménez, J., Luque-Larena, J. J., &amp; Mougeot, F. (2018). Spatial capture-recapture design and modelling for the study of small mammals. <em>PLOS ONE, 13</em>(6), e0198766. <a class="reference external" href="https://doi.org/10.1371/journal.pone.0198766">https://doi.org/10.1371/journal.pone.0198766</a></p>
+<p>Royle, J. A., Converse, S. J., &amp; Freckleton, R. (2014). Hierarchical spatial capture-recapture models: modelling population Density in stratified populations. <em>Methods in Ecology and Evolution, 5</em>(1), 37-43. <a class="reference external" href="https://doi.org/10.1111/2041-210x.12135">https://doi.org/10.1111/2041-210x.12135</a></p>
+<p>Royle, A. J. (2016, Oct 17). <em>‘Spatial Capture-Recapture Modelling.’ CompSustNet</em> [Video]. YouTube. <a class="reference external" href="https://www.youtube.com/watch?v=4HKFimATq9E">https://www.youtube.com/watch?v=4HKFimATq9E</a></p>
+<p>Royle, A. J. (2020, Oct 26) <em>Introduction to Spatial Capture-Recapture. oSCR Package</em>, [Video]. YouTube. <a class="reference external" href="https://www.youtube.com/watch?v=yRRDi07FtPg">https://www.youtube.com/watch?v=yRRDi07FtPg</a></p>
+<p>Royle, J. A., &amp; Young, K. V. (2008). A hierarchical model for spatial capture-recapture data. <em>Ecology, 89</em>(8), 2281-2289. <a class="reference external" href="https://doi.org/10.1890/07-0601.1">https://doi.org/10.1890/07-0601.1</a></p>
+<p>University of Cape Town. (2024a). <em>SEEC Toolbox seminars</em> <a class="reference external" href="https://science.uct.ac.za/seec/stats-toolbox-seminars">https://science.uct.ac.za/seec/stats-toolbox-seminars</a></p>
+<p>University of Cape Town. (2024b). <em>SEEC Toolbox seminars - Spatial Capture-Recapture (SCR) models.</em> <a class="reference external" href="https://science.uct.ac.za/seec/stats-toolbox-seminars-spatial-and-species-distribution-toolboxes/spatial-capture-recapture-scr-modelling">https://science.uct.ac.za/seec/stats-toolbox-seminars-spatial-and-species-distribution-toolboxes/spatial-capture-recapture-scr-modelling</a></p>
+</div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./02_dialog-boxes"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+              
+              
+              
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="component-author">
+By Alberta Remote Camera Steering Committee (RCSC)
+</p>
+</div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

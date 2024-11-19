@@ -1,4 +1,4 @@
----
+﻿---
 jupytext:
   formats: md:myst
   text_representation:
@@ -11,7 +11,7 @@ kernelspec:
   language: python
   name: python3
 editor_options:
-  markdown:
+      markdown:
     wrap: none
 ---
 (i_num_cams)=
@@ -30,7 +30,7 @@ If you’re unsure about how many cameras you have or you would like to see all 
 The number of cameras available will impact the appropriate modelling approaches (in combination with other aspects of your study, such as the detectability and/or rarity of your {{ target_species_tu }}) or the number of covariates you hope to include in your models.
 For example, 30 cameras may be enough to evaluate “occupancy” if your {{ target_species_tu }}) is relatively common, however, if your target species is rare, more sites will be required in order for your estimates to be reasonably precise ({{ rtxt_shannon_et_al_2014 }}; {{ rtxt_kays_et_al_2020 }}; {{ rtxt_wearn_gloverkapfer_2017 }}). More sites will be needed if covariates on occupancy or detection probability are to be added into models ({{ rtxt_wearn_gloverkapfer_2017 }}).
 :::{seealso}
-You can refer to [Appendix A - Table A2](https://ab-rcsc.github.io/RCSC-WildCAM_Remote-Camera-Survey-Guidelines-and-Metadata-Standards/1_survey-guidelines/1_10.1_AppendixA-Tables.html) to get a sense of the required number of cameras for each of the modelling approaches and according to the {{ survey_tu_objectives }}.
+You can refer to [Appendix A - Table A2]( https://ab-rcsc.github.io/RCSC-WildCAM_Remote-Camera-Survey-Guidelines-and-Metadata-Standards/1_survey-guidelines/1_10.1_AppendixA-Tables.html) to get a sense of the required number of cameras for each of the modelling approaches and according to the {{ survey_tu_objectives }}.
 **RCSC et al. (2024) - Appendix A - Table A2.** Summary of appropriate study design, {{ cam_spacing_tl }}, and {{ survey_tl }} effort (adapted from Wearn & Glover-Kapfer \[2017\] with additional references included) for various [modelling approaches](#mod_approach). **Note:** these guidelines use the best available information, however, there is uncertainty associated with each approach. To address this, the table contains ‘minimum,’ ‘ideal’ and ‘often’ used values, as well as qualifiers.
 <div>
 <div style=“position:relative;padding-top:56.25%;”>

@@ -12,7 +12,10 @@ parts:
   titlesonly: False
   chapters:
 #  - file: index_links_all_internal_2024-10-02.md
-  - file: 02_dialog-boxes/00_test/00_master_test.md
+  - file: 02_dialog-boxes/00_master_test.md
+  - file: 02_dialog-boxes/00_master_test_iframe.md
+  - file: 02_dialog-boxes/03_02_mod_divers_rich_iframe.md
+  - file: 02_dialog-boxes/08_references_iframe.md
 #  - file: itables_references2.ipynb
 ##### Objectives & Resources
   - file: 01_toc_pages/00_01_toc_objective_resources.md
@@ -28,6 +31,7 @@ parts:
     - file: 02_dialog-boxes/01_02_objective.md
 #    - file: 02_dialog-boxes/01_02_objective_ref.md
     - file: 02_dialog-boxes/01_03_num_cams.md
+#    - file: 02_dialog-boxes/01_03_num_cams_noframe.md
 ##### Study area & Site selection
   - file: 01_toc_pages/00_02_toc_study_area_site_selection_constraints.md
     title: Study area & Site selection
@@ -36,7 +40,7 @@ parts:
     - file: 02_dialog-boxes/02_02_design_cam_arrange.md
 #    - file: 02_dialog-boxes/01_04_study_area_mult.md
 #    - file: 02_dialog-boxes/01_05_cam_dens_gradient.md
-    - file: 02_dialog-boxes/01_06_cam_strat_covar.md
+#    - file: 02_dialog-boxes/01_06_cam_strat_covar.md
 #    - file: 02_dialog-boxes/01_07_cam_high_dens.md
 ##### Duration & Timing
   - file: 01_toc_pages/00_03_toc_duration_timing.md

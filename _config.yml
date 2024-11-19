@@ -158,7 +158,7 @@ html_css_files: ["tippy.css","ccs.custom.css"]
 sphinx:
   config:
     html_theme: pydata_sphinx_theme
-    html_show_sourcelink: False
+    html_show_sourcelink: False #2024-11-16 changed
     html_sidebars: {
        "index": ["navbar-logo","search-button-field","edit-this-page","page-toc"],
        "02_dialog-boxes/": [],
@@ -181,21 +181,23 @@ sphinx:
 #      primary_sidebar_end: false## CANT USE
 #      primary_sidebar_end: []
 #      globaltoc_includehidden: false
-      sidebarwidth: 10
-      secondary_sidebar_items: false
+#      sidebarwidth: 10
+      secondary_sidebar_items: FALSE
       secondary_sidebar_items: []##hide right-side sidebar
 #      sidebar_includehidden: false
       show_nav_level: 4
-      show_toc_level: 4
+      show_toc_level: 0
       navigation_depth: 4
-      collapse_navigation: TRUE
-      navbar_start: false
+      collapse_navigation: FALSE #2024-11-16 changed
+      navbar_start: FALSE
+      navbar_center: FALSE
+      navbar_end: FALSE
 #      navbar_start: ["navbar-logo", "title"]
-      navbar_start: []
+#      navbar_start: []
 #      navbar_center: ["navbar-logo"]
-      navbar_center: []
+#      navbar_center: []
 #      navbar_end: false     ## CANT USE
-      navbar_end: []
+#      navbar_end: []
 #      navbar_end: ["icon-links","sourcelink"
 #      navbar_persistent: false ## CANT USE
       navbar_persistent: []

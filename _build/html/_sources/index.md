@@ -469,13 +469,13 @@ editor_options:
 :gutter: 3
 
 :::{grid-item-card} 
-:link: 02_dialog-boxes/01_39_cam_makemod_same.html
+:link: 02_dialog-boxes/01_39_cam_equipment.html
 :img-background: ./03_images/01_ui/transparent.png
 :padding: 1
 :text-align: center
 :class-card: class-prog5
 
-*<font size='4'>{{ title_i_cam_makemod_same }}</font>*
+*<font size='4'>{{ title_i_cam_equipment }}</font>*
 :::
 
 :::{grid-item-card} 
@@ -519,7 +519,7 @@ editor_options:
 :text-align: center
 :class-card: class-prog5
 
-*<font size='4'>{{ title_i_targ_feature }}</font>*
+*<font size='4'>{{ title_i_cam_targ_feature }}</font>*
 :::
 
 ::::

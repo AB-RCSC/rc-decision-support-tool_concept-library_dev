@@ -11,7 +11,7 @@ kernelspec:
   language: python
   name: python3
 editor_options:
-  markdown:
+      markdown:
     wrap: none
 ---
 (i_design_camera_arrangement)=

@@ -1,4 +1,4 @@
----
+﻿---
 jupytext:
   formats: md:myst
   text_representation:
@@ -11,7 +11,7 @@ kernelspec:
   language: python
   name: python3
 editor_options:
-  markdown:
+      markdown:
     wrap: none
 ---
 (i_cam_strat_covar)=
@@ -97,7 +97,7 @@ Check back in the future!
 | Error! Reference source not found. | Error! Reference source not found. | Error! Reference source not found. | Error! Reference source not found. | {{ rbib_Error! Reference source not found. }} |
 | Error! Reference source not found. | Error! Reference source not found. | Error! Reference source not found. | Error! Reference source not found. | {{ rbib_Error! Reference source not found. }} |
 ::::::
-
+-->
 ::::::{tab-item} References
 {{ rbib_esteveo_et_al_2017 }}
 {{ rbib_gilbert_et_al_2020 }}
