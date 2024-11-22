@@ -36,8 +36,9 @@
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/colours.css?v=26cc69e2" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=69e22578" />
     <link rel="stylesheet" type="text/css" href="../_static/tippy.css?v=a7d99af9" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=3e766c6f" />
   
   <!-- So that users can add custom icons -->
   <script src="../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
@@ -213,10 +214,10 @@ In-depth</label><div class="sd-tab-content docutils">
 <a class="reference internal image-reference" href="../_images/clarke_et_al_2023_eqn_tifc1.png"><img alt="../_images/clarke_et_al_2023_eqn_tifc1.png" src="../_images/clarke_et_al_2023_eqn_tifc1.png" style="width: 200px;" /></a>
 </figure>
 <blockquote>
-<div><p><strong>Clarke et al. (2023) - Fig. 8</strong> A) Still from 中島啓裕’s (2021) video series. Example of overlaying a video recording of an animal on a reference image of the focal area (faint triangle) to determine staying time <em>T</em>. B) Still from Appendix S2 from Palencia et al. (2021). Example of superimposing the focal area on an image capture.
-where the numerator, animal-time, is the number of animals <em>N</em> multiplied by the time those animals spend in the viewshed <em>T<sub>O</sub></em>, summed over all detections; and the denominator, area-time, is the area of the viewshed <em>A<sub>V</sub></em> multiplied by the total camera operating time <em>T<sub>O</sub></em> (Becker et al., 2022). Using this equation, density must be calculated for each species at each camera station, then averaged across the camera network.
-To calculate <em>A<sub>V</sub></em>: in the field, markers (e.g., poles) must be placed at known distances from the camera to divide the viewshed into distance bins; during analysis, the proportion of detections in each bin is determined (Becker et al., 2022). The camera angle of view – which varies with make and model – is also needed to solve for <em>A<sub>V</sub></em>. In most cases, <em>T<sub>O</sub></em> will be the time from initial camera deployment to final camera collection (Becker et al., 2022). In case of displacement, damage or failure, cameras should be programmed to take time-lapse images, so end-of-operation time can be traced back to a specific day or hour (Becker et al., 2022).</p>
+<div><p><strong>Clarke et al. (2023) - Fig. 8</strong> A) Still from 中島啓裕’s (2021) video series. Example of overlaying a video recording of an animal on a reference image of the focal area (faint triangle) to determine staying time <em>T</em>. B) Still from Appendix S2 from Palencia et al. (2021). Example of superimposing the focal area on an image capture.</p>
 </div></blockquote>
+<p>where the numerator, animal-time, is the number of animals <em>N</em> multiplied by the time those animals spend in the viewshed <em>T<sub>O</sub></em>, summed over all detections; and the denominator, area-time, is the area of the viewshed <em>A<sub>V</sub></em> multiplied by the total camera operating time <em>T<sub>O</sub></em> (Becker et al., 2022). Using this equation, density must be calculated for each species at each camera station, then averaged across the camera network.</p>
+<p>To calculate <em>A<sub>V</sub></em>: in the field, markers (e.g., poles) must be placed at known distances from the camera to divide the viewshed into distance bins; during analysis, the proportion of detections in each bin is determined (Becker et al., 2022). The camera angle of view – which varies with make and model – is also needed to solve for <em>A<sub>V</sub></em>. In most cases, <em>T<sub>O</sub></em> will be the time from initial camera deployment to final camera collection (Becker et al., 2022). In case of displacement, damage or failure, cameras should be programmed to take time-lapse images, so end-of-operation time can be traced back to a specific day or hour (Becker et al., 2022).</p>
 <figure class="align-center">
 <a class="reference internal image-reference" href="../_images/clarke_et_al_2023_fig9_clipped.png"><img alt="../_images/clarke_et_al_2023_fig9_clipped.png" src="../_images/clarke_et_al_2023_fig9_clipped.png" style="width: 500px;" /></a>
 </figure>
@@ -225,8 +226,8 @@ To calculate <em>A<sub>V</sub></em>: in the field, markers (e.g., poles) must be
 </div></blockquote>
 <h2 class="rubric" id="simulations-and-field-experiments-clarke-et-al-2023">Simulations and Field Experiments (Clarke et al., 2023)</h2>
 </p>The TIFC model has been field-tested on several different species. For moose, TIFC produced similar density estimates as aerial distance sampling (DS) after TIFC-derived estimates were corrected for the time animals spent investigating equipment (camera and 5 m pole; {{ rtxt_becker_et_al_2022 }})). This study used image data collected in Alberta at 2,990 camera stations over the course of 6 years; despite the large sample size and long study duration, estimates were not very precise.
-A study of five ungulate species (moose, bison, elk, mule and white-tailed deer) in two enclosed parks in Alberta found that TIFC- and aerial survey-derived density estimates were similar for moose and bison, but that TIFC significantly overestimated elk density compared with aerial surveys ({{ rtxt_foca_2021 }}). Two potential reasons for the discrepancy in elk density are: 1) that aerial surveys underestimated density, since elk in the study area occupy forested habitats, do not form large herds during the survey period, and estimates were not corrected for sightability; and 2) cameras may have been disproportionately set in areas elk prefer ({{ rtxt_foca_2021 }}). Group travelling behaviour may also have affected elk TIFC estimates, since detection probability and time in the viewshed (*T<sub>V</sub>*) can change with group size ({{ rtxt_foca_2021 }}). Estimates of mule and white-tailed deer densities could not be compared with aerial survey results, since deer are not surveyed by air in this area. Foca’s (2021) TIFC analyses produced the first density estimates for deer in both parks.
-In Uganda, TIFC-derived estimates of antelope were comparable to results from camera trap spatial capture-recapture (SCR; {{ rtxt_brownlee_et_al_2022 }}; {{ rtxt_warbington_boyce_2020 }}). The model performed inconsistently for black bears, caribou, white-tailed deer and other species, however, compared to camera-based spatial count (SC), DNA markre capture and aerial survey methods (Fisher et al. in review).
+<p>A study of five ungulate species (moose, bison, elk, mule and white-tailed deer) in two enclosed parks in Alberta found that TIFC- and aerial survey-derived density estimates were similar for moose and bison, but that TIFC significantly overestimated elk density compared with aerial surveys (Foca, 2021). Two potential reasons for the discrepancy in elk density are: 1) that aerial surveys underestimated density, since elk in the study area occupy forested habitats, do not form large herds during the survey period, and estimates were not corrected for sightability; and 2) cameras may have been disproportionately set in areas elk prefer (Foca, 2021). Group travelling behaviour may also have affected elk TIFC estimates, since detection probability and time in the viewshed (<em>T<sub>V</sub></em>) can change with group size (Foca, 2021). Estimates of mule and white-tailed deer densities could not be compared with aerial survey results, since deer are not surveyed by air in this area. Foca’s (2021) TIFC analyses produced the first density estimates for deer in both parks.</p>
+<p>In Uganda, TIFC-derived estimates of antelope were comparable to results from camera trap spatial capture-recapture (SCR; Brownlee et al., 2022; Warbington &amp; Boyce, 2020). The model performed inconsistently for black bears, caribou, white-tailed deer and other species, however, compared to camera-based spatial count (SC), DNA markre capture and aerial survey methods (Fisher et al. in review).</p>
 </div>
 <input id="sd-tab-item-2" name="sd-tab-set-0" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-2">
@@ -315,14 +316,9 @@ rtxt_figure6_ref_id</div>
 <div class="sd-card-body docutils">
 <div class="sd-card-title sd-font-weight-bold docutils">
 Becker, 2024</div>
-<div>
-<div style=“position:relative;padding-top:56.25%;”>
-<iframe src=“https://drive.google.com/file/d/1IdxQScbzkHd2griu-dEYM4FTFjaXalKe/preview“ loading=“lazy” frameborder=“0” allowfullscreen
-style=“position:absolute;top:0;left:0;width:100%;height:100%;”></iframe>
-</div>
-</div>
-How to estimate density using TIFC;
-Video clip from presentation titled “Comparisons between moose densities with aerial surveys and integrated camera projects”
+<div><div style="position:relative;padding-top:56.25%;"><iframe src="https://drive.google.com/file/d/1IdxQScbzkHd2griu-dEYM4FTFjaXalKe/preview" loading="lazy" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>  </div></div>
+<p class="sd-card-text">How to estimate density using TIFC;
+Video clip from presentation titled “Comparisons between moose densities with aerial surveys and integrated camera projects”</p>
 </div>
 </div>
 </div>
@@ -331,13 +327,8 @@ Video clip from presentation titled “Comparisons between moose densities with 
 <div class="sd-card-body docutils">
 <div class="sd-card-title sd-font-weight-bold docutils">
 rtxt_vid2_ref_id</div>
-<div>
-<div style=“position:relative;padding-top:56.25%;”>
-<iframe src=“vid2_url“ loading=“lazy” frameborder=“0” allowfullscreen
-style=“position:absolute;top:0;left:0;width:100%;height:100%;”></iframe>
-</div>
-</div>
-vid2_caption
+<div><div style="position:relative;padding-top:56.25%;"><iframe src="vid2_url" loading="lazy" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>  </div></div>
+<p class="sd-card-text">vid2_caption</p>
 </div>
 </div>
 </div>
@@ -346,13 +337,8 @@ vid2_caption
 <div class="sd-card-body docutils">
 <div class="sd-card-title sd-font-weight-bold docutils">
 rtxt_vid3_ref_id</div>
-<div>
-<div style=“position:relative;padding-top:56.25%;”>
-<iframe src=“vid3_url“ loading=“lazy” frameborder=“0” allowfullscreen
-style=“position:absolute;top:0;left:0;width:100%;height:100%;”></iframe>
-</div>
-</div>
-vid3_caption
+<div><div style="position:relative;padding-top:56.25%;"><iframe src="vid3_url" loading="lazy" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>  </div></div>
+<p class="sd-card-text">vid3_caption</p>
 </div>
 </div>
 </div>

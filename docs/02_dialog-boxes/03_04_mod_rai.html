@@ -36,8 +36,9 @@
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/colours.css?v=26cc69e2" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=69e22578" />
     <link rel="stylesheet" type="text/css" href="../_static/tippy.css?v=a7d99af9" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=3e766c6f" />
   
   <!-- So that users can add custom icons -->
   <script src="../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
@@ -207,9 +208,9 @@ In-depth</label><div class="sd-tab-content docutils">
 <p class="admonition-title">Note</p>
 <p><strong>This content was adapted from: The Density Handbook</strong>, “<a class="reference external" href="https://www.researchgate.net/publication/368601884_Using_Camera_Traps_to_Estimate_Medium_and_Large_Mammal_Density_Comparison_of_Methods_and_Recommendations_for_Wildlife_Managers">Using Camera Traps to Estimate Medium and Large Mammal Density: Comparison of Methods and Recommendations for Wildlife Managers</a>” (Clarke et al., 2023)</p>
 </div>
-<p>In ecology, relative abundance (RA) is any count of animals or animal sign (e.g., number of deer sighted, number of bird vocalizations per unit time, number of moose tracks per kilometer of transect) that is assumed to correlate with absolute abundance (O’Brien, 2011). RA is a controversial index for two reasons: 1) there is often no documented relationship between the number of animals or signs observed and population size (i.e., index validation), and 2) detection probability is assumed to be constant between the areas, times or species being compared (O’Brien, 2011; Thompson et al., 1998).
-To the first point: the relationship between the number of animals or signs and abundance is rarely established (Burton et al., 2015). Researchers often assume that counts and population size scale linearly – but many other kinds of relationships are possible. When the assumed relationship between counts and abundance diverges from the actual relationship, inferences from RA are not very meaningful (Thompson et al., 1998). Validating a count-abundance relationship requires comparison with a robust, accurate estimate of absolute density (e.g., Krebs et al., 1987; Rovero &amp; Marshall, 2009; Villette et al., 2016).
-To the second point: consider the canonical equation,</p>
+<p>In ecology, relative abundance (RA) is any count of animals or animal sign (e.g., number of deer sighted, number of bird vocalizations per unit time, number of moose tracks per kilometer of transect) that is assumed to correlate with absolute abundance (O’Brien, 2011). RA is a controversial index for two reasons: 1) there is often no documented relationship between the number of animals or signs observed and population size (i.e., index validation), and 2) detection probability is assumed to be constant between the areas, times or species being compared (O’Brien, 2011; Thompson et al., 1998).</p>
+<p>To the first point: the relationship between the number of animals or signs and abundance is rarely established (Burton et al., 2015). Researchers often assume that counts and population size scale linearly – but many other kinds of relationships are possible. When the assumed relationship between counts and abundance diverges from the actual relationship, inferences from RA are not very meaningful (Thompson et al., 1998). Validating a count-abundance relationship requires comparison with a robust, accurate estimate of absolute density (e.g., Krebs et al., 1987; Rovero &amp; Marshall, 2009; Villette et al., 2016).</p>
+<p>To the second point: consider the canonical equation,</p>
 <figure class="align-center">
 <a class="reference internal image-reference" href="../_images/clarke_et_al_2023_eqn_rai1.png"><img alt="../_images/clarke_et_al_2023_eqn_rai1.png" src="../_images/clarke_et_al_2023_eqn_rai1.png" style="width: 80px;" /></a>
 </figure>
@@ -217,11 +218,11 @@ To the second point: consider the canonical equation,</p>
 <figure class="align-center">
 <a class="reference internal image-reference" href="../_images/clarke_et_al_2023_eqn_rai2.png"><img alt="../_images/clarke_et_al_2023_eqn_rai2.png" src="../_images/clarke_et_al_2023_eqn_rai2.png" style="width: 80px;" /></a>
 </figure>
-<p>so count essentially becomes a surrogate for population size.
-Assuming constant detection probability <em>𝑝</em> is problematic, since the likelihood an animal or sign is counted during a survey will vary with observational, environmental, and habitat- and species-specific factors, which in turn can vary with time (Anderson, 2001). For example: at site A, animals may be difficult to spot in dense vegetation, while at site B, animals may be easy to spot in open grassland; and the effects of vegetation on observability may differ seasonally. If the effects of vegetation on detectability are not accounted for, how can we be sure that differences in animal counts at site A and B are due to true differences in abundance, and not simply artefacts of detection bias (Sollmann et al., 2013b)?
-In a camera trapping context, RA is the comparison of detection rates across space, time or species – where detection rates are typically reported as the number of images per 100 trap days, but can also be reported in terms of the total number of detections, other units of effort (e.g., camera trap hours), proportion of stations with detections, etc. (Burton et al., 2015). As with other kinds of RA surveys, comparisons of camera trap detection rates can confound abundance with animal behaviour and observability (Anderson, 2001; Burton et al., 2015).
-RA has been criticized as an abundance estimator. Anderson (2001) condemned the index as “unprofessional,” while O’Brien (2011) called it a “metric of last resort.” Sollmann et al. (2013b) used simulations to determine that camera trap RA analyses did not detect changes in big cat density, and called use of the index for wildlife management “alarming.” Nevertheless, some researchers have had success with the method and/or have argued for its conceptual and practical advantages (e.g., ; Johnson, 1980; Palmer et al., 2018; Rovero &amp; Marshall, 2009). Broadley et al. (2019) used simulations to show that RA could be sensitive to density-dependent movement, but generally tracked abundance well. Banks-Leite (2014) emphasized the importance of careful sampling design and protocols to control for variation in detectability, arguing that researchers should not solely rely on statistical corrections.
-Ultimately, there is no “silver bullet” and researchers must carefully consider their inferential objectives and potential sources of sampling and estimation bias when choosing response variables and modelling frameworks for camera trap data.</p>
+<p>so count essentially becomes a surrogate for population size.</p>
+<p>Assuming constant detection probability <em>𝑝</em> is problematic, since the likelihood an animal or sign is counted during a survey will vary with observational, environmental, and habitat- and species-specific factors, which in turn can vary with time (Anderson, 2001). For example: at site A, animals may be difficult to spot in dense vegetation, while at site B, animals may be easy to spot in open grassland; and the effects of vegetation on observability may differ seasonally. If the effects of vegetation on detectability are not accounted for, how can we be sure that differences in animal counts at site A and B are due to true differences in abundance, and not simply artefacts of detection bias (Sollmann et al., 2013b)?</p>
+<p>In a camera trapping context, RA is the comparison of detection rates across space, time or species – where detection rates are typically reported as the number of images per 100 trap days, but can also be reported in terms of the total number of detections, other units of effort (e.g., camera trap hours), proportion of stations with detections, etc. (Burton et al., 2015). As with other kinds of RA surveys, comparisons of camera trap detection rates can confound abundance with animal behaviour and observability (Anderson, 2001; Burton et al., 2015).</p>
+<p>RA has been criticized as an abundance estimator. Anderson (2001) condemned the index as “unprofessional,” while O’Brien (2011) called it a “metric of last resort.” Sollmann et al. (2013b) used simulations to determine that camera trap RA analyses did not detect changes in big cat density, and called use of the index for wildlife management “alarming.” Nevertheless, some researchers have had success with the method and/or have argued for its conceptual and practical advantages (e.g., Rowcliffe &amp; Carbone, 2008; Johnson, 1980; Palmer et al., 2018; Rovero &amp; Marshall, 2009). Broadley et al. (2019) used simulations to show that RA could be sensitive to density-dependent movement, but generally tracked abundance well. Banks-Leite (2014) emphasized the importance of careful sampling design and protocols to control for variation in detectability, arguing that researchers should not solely rely on statistical corrections.</p>
+<p>Ultimately, there is no “silver bullet” and researchers must carefully consider their inferential objectives and potential sources of sampling and estimation bias when choosing response variables and modelling frameworks for camera trap data.</p>
 </div>
 <input id="sd-tab-item-2" name="sd-tab-set-0" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-2">
@@ -326,13 +327,8 @@ Clarke et al., 2023</div>
 <div class="sd-card-body docutils">
 <div class="sd-card-title sd-font-weight-bold docutils">
 DE-CTR ACCEL (2016)</div>
-<div>
-<div style=“position:relative;padding-top:56.25%;”>
-<iframe src=“https://www.youtube.com/embed/CvM6j8hE8lE?si=E_kNQm9YYwgUECM3“ loading=“lazy” frameborder=“0” allowfullscreen
-style=“position:absolute;top:0;left:0;width:100%;height:100%;”></iframe>
-</div>
-</div>
-Using Hurdle Models to Analyze Zero-Inflated Count Data
+<div><div style="position:relative;padding-top:56.25%;"><iframe src="https://www.youtube.com/embed/CvM6j8hE8lE?si=E_kNQm9YYwgUECM3" loading="lazy" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>  </div></div>
+<p class="sd-card-text">Using Hurdle Models to Analyze Zero-Inflated Count Data</p>
 </div>
 </div>
 </div>
@@ -341,13 +337,8 @@ Using Hurdle Models to Analyze Zero-Inflated Count Data
 <div class="sd-card-body docutils">
 <div class="sd-card-title sd-font-weight-bold docutils">
 Cao (2021)</div>
-<div>
-<div style=“position:relative;padding-top:56.25%;”>
-<iframe src=“https://www.youtube.com/embed/q2NRQBcihQY?si=r9NeRpegoj47uVn-“ loading=“lazy” frameborder=“0” allowfullscreen
-style=“position:absolute;top:0;left:0;width:100%;height:100%;”></iframe>
-</div>
-</div>
-Hurdle models
+<div><div style="position:relative;padding-top:56.25%;"><iframe src="https://www.youtube.com/embed/q2NRQBcihQY?si=r9NeRpegoj47uVn-" loading="lazy" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>  </div></div>
+<p class="sd-card-text">Hurdle models</p>
 </div>
 </div>
 </div>
@@ -356,13 +347,8 @@ Hurdle models
 <div class="sd-card-body docutils">
 <div class="sd-card-title sd-font-weight-bold docutils">
 TileStats, 2021</div>
-<div>
-<div style=“position:relative;padding-top:56.25%;”>
-<iframe src=“https://www.youtube.com/embed/ztNQvAabgtU?si=9rY7DVbBWN_ByPvf“ loading=“lazy” frameborder=“0” allowfullscreen
-style=“position:absolute;top:0;left:0;width:100%;height:100%;”></iframe>
-</div>
-</div>
-Zero-inflated Poisson (ZIP) regression
+<div><div style="position:relative;padding-top:56.25%;"><iframe src="https://www.youtube.com/embed/ztNQvAabgtU?si=9rY7DVbBWN_ByPvf" loading="lazy" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>  </div></div>
+<p class="sd-card-text">Zero-inflated Poisson (ZIP) regression</p>
 </div>
 </div>
 </div>
@@ -375,13 +361,8 @@ Zero-inflated Poisson (ZIP) regression
 <div class="sd-card-body docutils">
 <div class="sd-card-title sd-font-weight-bold docutils">
 MarinStatsLectures-R Programming &amp; Statistics, 2020a</div>
-<div>
-<div style=“position:relative;padding-top:56.25%;”>
-<iframe src=“https://www.youtube.com/embed/A8H6gc9Eq0w?si=Ade-D5-J5JtCZwil“ loading=“lazy” frameborder=“0” allowfullscreen
-style=“position:absolute;top:0;left:0;width:100%;height:100%;”></iframe>
-</div>
-</div>
-Poisson Regression Review
+<div><div style="position:relative;padding-top:56.25%;"><iframe src="https://www.youtube.com/embed/A8H6gc9Eq0w?si=Ade-D5-J5JtCZwil" loading="lazy" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>  </div></div>
+<p class="sd-card-text">Poisson Regression Review</p>
 </div>
 </div>
 </div>
@@ -390,13 +371,10 @@ Poisson Regression Review
 <div class="sd-card-body docutils">
 <div class="sd-card-title sd-font-weight-bold docutils">
 MarinStatsLectures-R Programming &amp; Statistics, 2020b</div>
-<div>
-<div style=“position:relative;padding-top:56.25%;”>
-<iframe src=“https://www.youtube.com/embed/eIY--zc5f24?si=dgtSF_vfwUxuG1Mi“ loading=“lazy” frameborder=“0” allowfullscreen
-style=“position:absolute;top:0;left:0;width:100%;height:100%;”></iframe>
+<div><div style="position:relative;padding-top:56.25%;"><iframe src="https://www.youtube.com/embed/eIY--zc5f24?si=dgtSF_vfwUxuG1Mi" loading="lazy" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
 </div>
 </div>
-Poisson Regression: Zero Inflation (Excessive Zeros)
+<p class="sd-card-text">Poisson Regression: Zero Inflation (Excessive Zeros)</p>
 </div>
 </div>
 </div>
@@ -405,13 +383,8 @@ Poisson Regression: Zero Inflation (Excessive Zeros)
 <div class="sd-card-body docutils">
 <div class="sd-card-title sd-font-weight-bold docutils">
 Russell, 2020</div>
-<div>
-<div style=“position:relative;padding-top:56.25%;”>
-<iframe src=“vid6_url“ loading=“lazy” frameborder=“0” allowfullscreen
-style=“position:absolute;top:0;left:0;width:100%;height:100%;”></iframe>
-</div>
-</div>
-Fitting Poisson and zero-inflated Poisson models.
+<div><div style="position:relative;padding-top:56.25%;"><iframe src="vid6_url" loading="lazy" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>  </div></div>
+<p class="sd-card-text">Fitting Poisson and zero-inflated Poisson models.</p>
 </div>
 </div>
 </div>
@@ -426,15 +399,7 @@ Shiny apps/Widgets</label><div class="sd-tab-content docutils">
 <div class="sd-card-title sd-font-weight-bold docutils">
 Microbiome Analysis: Relative Abundance Boxplots</div>
 <p class="sd-card-text">A Shiny app allows you to visualize data by using R scripts without having to interact with the R script itself. This Shiny app will allow you to plot your Relative Abundance microbiome data in an easy-to-view format. If this is your first time utilizing this Shiny app, follow the step below to start visualising your data now!</p>
-<iframe
-width=“100%”
-height=“900”
-src=“https://guthub.org/shiny/sample-apps/absboxplot/ “
-loading=“lazy”
-frameborder=“0”
-allow=“accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture”
-allowfullscreen>
-</iframe>
+<iframe width="100%" height="900" src="https://guthub.org/shiny/sample-apps/absboxplot/ " loading="lazy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 </div>
 </div>

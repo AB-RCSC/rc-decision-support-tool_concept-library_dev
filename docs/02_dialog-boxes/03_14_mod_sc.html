@@ -36,8 +36,9 @@
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/colours.css?v=26cc69e2" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=69e22578" />
     <link rel="stylesheet" type="text/css" href="../_static/tippy.css?v=a7d99af9" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=3e766c6f" />
   
   <!-- So that users can add custom icons -->
   <script src="../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
@@ -214,21 +215,21 @@ In-depth</label><div class="sd-tab-content docutils">
 <p class="admonition-title">Note</p>
 <p><strong>This content was adapted from: The Density Handbook</strong>, “<a class="reference external" href="https://www.researchgate.net/publication/368601884_Using_Camera_Traps_to_Estimate_Medium_and_Large_Mammal_Density_Comparison_of_Methods_and_Recommendations_for_Wildlife_Managers">Using Camera Traps to Estimate Medium and Large Mammal Density: Comparison of Methods and Recommendations for Wildlife Managers</a>” (Clarke et al., 2023)</p>
 </div>
-<p>A spatial count (SC) model is essentially a spatial capture-recapture (SCR; see <a class="sd-sphinx-override sd-badge sd-outline-primary sd-text-primary reference external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/03_11_mod_scr_secr.html"><span>Spatial capture-recapture (SCR) / Spatially explicit capture recapture (SECR)</span></a>) model with an extension to account for unmarked animals’ unknown identities (Royle et al., 2014). SC, then, is formulated in much the same way as SCR: populations are treated as collections of individual activity (or home range) centres, and spatial detection data is used to infer the number and locations of these activity centres (see <a class="sd-sphinx-override sd-badge sd-outline-primary sd-text-primary reference external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/03_11_mod_scr_secr.html"><span>Spatial capture-recapture (SCR) / Spatially explicit capture recapture (SECR)</span></a>). Instead of identifying animals and constructing individual detection histories (i.e., each individual’s spatial pattern of detections), however, SC uses trap-specific counts (i.e., the tally of animal detections at each trap of known location) and the correlation structure among trapspecific counts to estimate the number and location of activity centres (Royle et al., 2014, Sun et al., 2022).
-Like SCR, an SC model is composed of a spatial process model and an observation model. The spatial process model, which describes how activity centres are distributed across the landscape, is a homogeneous point-process model – a completely random pattern of points in space (Baddeley, no date; Royle, 2016). The observation model, which describes where individuals are detected on the landscape, is constructed as if we know each individual’s detection history and the size of the population (Chandler &amp; Royle, 2013). As Royle et al. (2014) put it: “[SC] is formulated in terms of the data we wish we had, i.e., the typical [detection] history data observed in [SCR] studies of marked animals.” We can construct an SC model in this way because trap-specific counts of animals arise from those animals’ detection histories; in other words, counts are a simplified version of the data that would have been collected, had individuals been identifiable (Chandler &amp; Royle, 2013, Sun et al., 2022).
-To relate trap-specific counts to detection histories, we use the equation:</p>
+<p>A spatial count (SC) model is essentially a spatial capture-recapture (SCR; see <a class="sd-sphinx-override sd-badge sd-outline-primary sd-text-primary reference external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/03_11_mod_scr_secr.html"><span>Spatial capture-recapture (SCR) / Spatially explicit capture recapture (SECR)</span></a>) model with an extension to account for unmarked animals’ unknown identities (Royle et al., 2014). SC, then, is formulated in much the same way as SCR: populations are treated as collections of individual activity (or home range) centres, and spatial detection data is used to infer the number and locations of these activity centres (see <a class="sd-sphinx-override sd-badge sd-outline-primary sd-text-primary reference external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/03_11_mod_scr_secr.html"><span>Spatial capture-recapture (SCR) / Spatially explicit capture recapture (SECR)</span></a>). Instead of identifying animals and constructing individual detection histories (i.e., each individual’s spatial pattern of detections), however, SC uses trap-specific counts (i.e., the tally of animal detections at each trap of known location) and the correlation structure among trapspecific counts to estimate the number and location of activity centres (Royle et al., 2014, Sun et al., 2022).</p>
+<p>Like SCR, an SC model is composed of a spatial process model and an observation model. The spatial process model, which describes how activity centres are distributed across the landscape, is a homogeneous point-process model – a completely random pattern of points in space (Baddeley, no date; Royle, 2016). The observation model, which describes where individuals are detected on the landscape, is constructed as if we know each individual’s detection history and the size of the population (Chandler &amp; Royle, 2013). As Royle et al. (2014) put it: “[SC] is formulated in terms of the data we wish we had, i.e., the typical [detection] history data observed in [SCR] studies of marked animals.” We can construct an SC model in this way because trap-specific counts of animals arise from those animals’ detection histories; in other words, counts are a simplified version of the data that would have been collected, had individuals been identifiable (Chandler &amp; Royle, 2013, Sun et al., 2022).</p>
+<p>To relate trap-specific counts to detection histories, we use the equation:</p>
 <figure class="align-center">
 <a class="reference internal image-reference" href="../_images/clarke_et_al_2023_eqn_sc1.png"><img alt="../_images/clarke_et_al_2023_eqn_sc1.png" src="../_images/clarke_et_al_2023_eqn_sc1.png" style="width: 80px;" /></a>
 </figure>
 <p>where <em>n<sub>𝑗𝑘</sub></em> is the count of animals at sampling location <em>𝑗</em> and during sampling period <em>𝑘</em>; <em>𝑁</em> is population size; and <em>𝑦<sub>𝑖𝑗𝑘</sub></em> is individual 𝑖’s detection history at sampling location <em>𝑗</em> and during sampling period <em>𝑘</em> (Royle et al., 2014). So, the trap- and period-specific count <em>n<sub>𝑗𝑘</sub></em>
-– the information we gather for SC – is the same as the sum of every individual’s encounter history at that trap – the information we gather for SCR (Royle et al., 2014).
-To approximate population size, we take a data augmentation approach. Population size <em>𝑁</em> is treated as a subset of some larger, hypothetical population of size <em>𝑀</em> (the “augmented” population; Royle &amp; Dorazio, 2012), such that:</p>
+– the information we gather for SC – is the same as the sum of every individual’s encounter history at that trap – the information we gather for SCR (Royle et al., 2014).</p>
+<p>To approximate population size, we take a data augmentation approach. Population size <em>𝑁</em> is treated as a subset of some larger, hypothetical population of size <em>𝑀</em> (the “augmented” population; Royle &amp; Dorazio, 2012), such that:</p>
 <figure class="align-center">
 <a class="reference internal image-reference" href="../_images/clarke_et_al_2023_eqn_sc2.png"><img alt="../_images/clarke_et_al_2023_eqn_sc2.png" src="../_images/clarke_et_al_2023_eqn_sc2.png" style="width: 80px;" /></a>
 </figure>
-<p>where <em>𝑀</em> ≫ <em>𝑁</em> and <em>𝜔<sub>𝑖</sub></em> is the probability of existence of individual <em>𝑖</em> within population <em>𝑁</em> (Chandler &amp; Royle, 2013, Sun et al., 2022). <em>𝜔<sub>𝑖</sub></em> is Bernoulli distributed – an animal can be present (i.e., <em>𝜔<sub>𝑖</sub></em> = 1) or absent (i.e., <em>𝜔<sub>𝑖</sub></em> = 0) – and depends on the number of detections at traps and the distance between traps and individuals’ activity centres (Chandler &amp; Royle, 2013, Sun et al., 2022).
-Note that, for SC, a “trap” is simply a tool or method for collecting count data. Trap types include hair snags, track plates, acoustic recording devices, human point-count observers and camera traps (Chandler &amp; Royle, 2013, Royle et al., 2014). We will refer to camera traps for the remainder of this section.
-The aim of SC sampling design is to infer the number and location of activity centres by inducing correlation (i.e., linear relation) between the number and location of detections (Burgar et al., 2019, Chandler &amp; Royle, 2013, Sollmann et al., 2018, Sun et al., 2022). To this end, camera traps must be deployed close enough together that individuals will be detected at multiple locations (Chandler &amp; Royle, 2013). Grid or clustered designs may be best (Burgar et al., 2019, Clarke, 2019, Sun et al., 2014).</p>
+<p>where <em>𝑀</em> ≫ <em>𝑁</em> and <em>𝜔<sub>𝑖</sub></em> is the probability of existence of individual <em>𝑖</em> within population <em>𝑁</em> (Chandler &amp; Royle, 2013, Sun et al., 2022). <em>𝜔<sub>𝑖</sub></em> is Bernoulli distributed – an animal can be present (i.e., <em>𝜔<sub>𝑖</sub></em> = 1) or absent (i.e., <em>𝜔<sub>𝑖</sub></em> = 0) – and depends on the number of detections at traps and the distance between traps and individuals’ activity centres (Chandler &amp; Royle, 2013, Sun et al., 2022).</p>
+<p>Note that, for SC, a “trap” is simply a tool or method for collecting count data. Trap types include hair snags, track plates, acoustic recording devices, human point-count observers and camera traps (Chandler &amp; Royle, 2013, Royle et al., 2014). We will refer to camera traps for the remainder of this section.</p>
+<p>The aim of SC sampling design is to infer the number and location of activity centres by inducing correlation (i.e., linear relation) between the number and location of detections (Burgar et al., 2019, Chandler &amp; Royle, 2013, Sollmann et al., 2018, Sun et al., 2022). To this end, camera traps must be deployed close enough together that individuals will be detected at multiple locations (Chandler &amp; Royle, 2013). Grid or clustered designs may be best (Burgar et al., 2019, Clarke, 2019, Sun et al., 2014).</p>
 <h2 class="rubric" id="simulations-and-field-experiments">Simulations and Field Experiments</h2>
 <p>The relatively few studies that have tested SC models suggest that they tend to produce fairly accurate but imprecise density estimates.</p>
 <ul class="simple">
@@ -236,7 +237,7 @@ The aim of SC sampling design is to infer the number and location of activity ce
 <li><p>Evans and Rittenhouse (2018) found that SC yielded accurate but less precise estimates of black bear density than camera trap SCR.</p></li>
 <li><p>Another study compared estimates of caribou density from SC with estimates from the spatial partial identity model (SPIM; see <a class="sd-sphinx-override sd-badge sd-outline-primary sd-text-primary reference external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/03_15_mod_catspim.html"><span>Spatial Partial Identity Model (Categorical SPIM; catSPIM)</span></a>and <a class="sd-sphinx-override sd-badge sd-outline-primary sd-text-primary reference external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/03_16_mod_2flankspim.html"><span>Spatial Partial Identity Model (2-flank SPIM)</span></a>). In this system, SC likely underestimated density compared with SPIM – perhaps because the model interpreted captures of many individuals as recaptures of a few individuals – and was less precise and more variable year-toyear (Sun et al., 2022).</p></li>
 <li><p>SC was used to estimate the densities of caribou, moose, wolf, coyote and black bear populations in the oil sands region of Alberta (Burgar et al., 2019). Estimates for all species were imprecise; some had confidence intervals with upper and lower bounds that differed more than 10-fold. The authors note, however, that other density estimation methods used in the region (e.g., aerial surveys) are not more precise than SC (Burgar et al., 2019). The researchers also simulated their data, finding that SC tended to underestimate density when the number of captures and spatial recaptures (i.e., spatially-correlated detections between cameras) were low.
-Box 1. The unmarked models that follow estimate density within the collective viewshed area (i.e., the combined fields-of-view of all cameras in a network) and assume that this estimate applies to the larger study area (). This is in contrast to spatial capture-recapture (SCR; see <a class="sd-sphinx-override sd-badge sd-outline-primary sd-text-primary reference external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/03_11_mod_scr_secr.html"><span>Spatial capture-recapture (SCR) / Spatially explicit capture recapture (SECR)</span></a>) models and derivatives – including spatial count (SC; see <a class="sd-sphinx-override sd-badge sd-outline-primary sd-text-primary reference external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/03_14_mod_sc.html"><span>Spatial count</span></a>), spatial mark-resight (SMR; see <a class="sd-sphinx-override sd-badge sd-outline-primary sd-text-primary reference external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/03_13_mod_smr.html"><span>Spatial mark-resight</span></a>) and the spatial partial identity model (SPIM; see <a class="sd-sphinx-override sd-badge sd-outline-primary sd-text-primary reference external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/03_15_mod_catspim.html"><span>Spatial Partial Identity Model (Categorical SPIM; catSPIM)</span></a>and <a class="sd-sphinx-override sd-badge sd-outline-primary sd-text-primary reference external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/03_16_mod_2flankspim.html"><span>Spatial Partial Identity Model (2-flank SPIM)</span></a>) – which estimate density over a defined area.</p></li>
+Box 1. The unmarked models that follow estimate density within the collective viewshed area (i.e., the combined fields-of-view of all cameras in a network) and assume that this estimate applies to the larger study area (Gilbert et al., 2020). This is in contrast to spatial capture-recapture (SCR; see <a class="sd-sphinx-override sd-badge sd-outline-primary sd-text-primary reference external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/03_11_mod_scr_secr.html"><span>Spatial capture-recapture (SCR) / Spatially explicit capture recapture (SECR)</span></a>) models and derivatives – including spatial count (SC; see <a class="sd-sphinx-override sd-badge sd-outline-primary sd-text-primary reference external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/03_14_mod_sc.html"><span>Spatial count</span></a>), spatial mark-resight (SMR; see <a class="sd-sphinx-override sd-badge sd-outline-primary sd-text-primary reference external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/03_13_mod_smr.html"><span>Spatial mark-resight</span></a>) and the spatial partial identity model (SPIM; see <a class="sd-sphinx-override sd-badge sd-outline-primary sd-text-primary reference external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/03_15_mod_catspim.html"><span>Spatial Partial Identity Model (Categorical SPIM; catSPIM)</span></a>and <a class="sd-sphinx-override sd-badge sd-outline-primary sd-text-primary reference external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/03_16_mod_2flankspim.html"><span>Spatial Partial Identity Model (2-flank SPIM)</span></a>) – which estimate density over a defined area.</p></li>
 </ul>
 </div>
 <input id="sd-tab-item-2" name="sd-tab-set-0" type="radio">
@@ -287,13 +288,8 @@ rtxt_figure3_ref_id</div>
 <div class="sd-card-body docutils">
 <div class="sd-card-title sd-font-weight-bold docutils">
 rtxt_vid1_ref_id</div>
-<div>
-<div style=“position:relative;padding-top:56.25%;”>
-<iframe src=“vid1_url“ loading=“lazy” frameborder=“0” allowfullscreen
-style=“position:absolute;top:0;left:0;width:100%;height:100%;”></iframe>
-</div>
-</div>
-vid1_caption
+<div><div style="position:relative;padding-top:56.25%;"><iframe src="vid1_url" loading="lazy" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>  </div></div>
+<p class="sd-card-text">vid1_caption</p>
 </div>
 </div>
 </div>
@@ -302,13 +298,8 @@ vid1_caption
 <div class="sd-card-body docutils">
 <div class="sd-card-title sd-font-weight-bold docutils">
 rtxt_vid2_ref_id</div>
-<div>
-<div style=“position:relative;padding-top:56.25%;”>
-<iframe src=“vid2_url“ loading=“lazy” frameborder=“0” allowfullscreen
-style=“position:absolute;top:0;left:0;width:100%;height:100%;”></iframe>
-</div>
-</div>
-vid2_caption
+<div><div style="position:relative;padding-top:56.25%;"><iframe src="vid2_url" loading="lazy" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>  </div></div>
+<p class="sd-card-text">vid2_caption</p>
 </div>
 </div>
 </div>
@@ -317,13 +308,8 @@ vid2_caption
 <div class="sd-card-body docutils">
 <div class="sd-card-title sd-font-weight-bold docutils">
 rtxt_vid3_ref_id</div>
-<div>
-<div style=“position:relative;padding-top:56.25%;”>
-<iframe src=“vid3_url“ loading=“lazy” frameborder=“0” allowfullscreen
-style=“position:absolute;top:0;left:0;width:100%;height:100%;”></iframe>
-</div>
-</div>
-vid3_caption
+<div><div style="position:relative;padding-top:56.25%;"><iframe src="vid3_url" loading="lazy" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>  </div></div>
+<p class="sd-card-text">vid3_caption</p>
 </div>
 </div>
 </div>
@@ -481,12 +467,14 @@ References</label><div class="sd-tab-content docutils">
 <p>Clarke, J. D. (2019).comparing Clustered Sampling Designs for Spatially Explicit Estimation of Population Density. <em>Population Ecology, 61</em>, 93-101. <a class="reference external" href="https://doi.org/10.1002/1438-390X.1011">https://doi.org/10.1002/1438-390X.1011</a></p>
 <p>Clarke, J., Bohm, H., Burton, C., Constantinou, A. (2023). <em>Using Camera Traps to Estimate Medium and Large Mammal Density: Comparison of Methods and Recommendations for Wildlife Managers</em>. <a class="reference external" href="https://doi.org/10.13140/RG.2.2.18364.72320">https://doi.org/10.13140/RG.2.2.18364.72320</a></p>
 <p>Evans, M. J. &amp; Rittenhouse, T. A. G. (2018). Evaluating Spatially Explicit Density Estimates of Unmarked Wildlife Detected by Remote Cameras. <em>The Journal of Applied Ecology 55</em>(6), 2565-74. <a class="reference external" href="https://doi.org/10.1111/1365-2664.13194">https://doi.org/10.1111/1365-2664.13194</a></p>
+<p>Gilbert, N. A., Clare, J. D. J., Stenglein, J. L., &amp; Zuckerberg, B. (2020). Abundance Estimation of Unmarked Animals based on Camera-Trap Data. <em>Conservation Biology, 35</em>(1), 88-100. <a class="reference external" href="https://doi.org/10.1111/cobi.13517">https://doi.org/10.1111/cobi.13517</a></p>
 <p>Royle, A. J. (2016, Oct 17). <em>‘Spatial Capture-Recapture Modelling.’ CompSustNet</em> [Video]. YouTube. <a class="reference external" href="https://www.youtube.com/watch?v=4HKFimATq9E">https://www.youtube.com/watch?v=4HKFimATq9E</a></p>
 <p>Royle, J. A., &amp; Dorazio, R. M. (2012). Parameter-expanded data augmentation for Bayesian analysis of capture-recapture models. <em>Journal of Ornithology, 152</em>(S2), 521-537. <a class="reference external" href="https://doi.org/10.1007/s10336-010-0619-4">https://doi.org/10.1007/s10336-010-0619-4</a></p>
 <p>Royle, J. A., Converse, S. J., &amp; Freckleton, R. (2014). Hierarchical spatial capture-recapture models: modelling population Density in stratified populations. <em>Methods in Ecology and Evolution, 5</em>(1), 37-43. <a class="reference external" href="https://doi.org/10.1111/2041-210x.12135">https://doi.org/10.1111/2041-210x.12135</a></p>
 <p>Sun, C. C., Fuller, A. K., &amp; Royle., J. A. (2014). Trap Configuration and Spacing Influences Parameter Estimates in Spatial Capture-Recapture Models. <em>PLoS One, 9</em>(2): e88025. <a class="reference external" href="https://doi.org/10.1371/journal.pone.0088025">https://doi.org/10.1371/journal.pone.0088025</a></p>
 <p>Sun, C., Burgar, J. M., Fisher, J. T., &amp; Burton, A. C. (2022). A Cautionary Tale Comparing Spatial Count and Partial Identity Models for Estimating Densities of Threatened and Unmarked Populations. <em>Global Ecology and Conservation, 38</em>, e02268. <a class="reference external" href="https://doi.org/10.1016/j.gecco.2022.e02268">https://doi.org/10.1016/j.gecco.2022.e02268</a></p>
 <p>Sollmann, R. (2018). A gentle introduction to camera‐trap data analysis. <em>African Journal of Ecology,</em> 56, 740-749. <a class="reference external" href="https://doi.org/10.1111/aje.12557">https://doi.org/10.1111/aje.12557</a></p>
+<p>Gilbert, N. A., Clare, J. D. J., Stenglein, J. L., &amp; Zuckerberg, B. (2020). Abundance Estimation of Unmarked Animals based on Camera-Trap Data. <em>Conservation Biology, 35</em>(1), 88-100. <a class="reference external" href="https://doi.org/10.1111/cobi.13517">https://doi.org/10.1111/cobi.13517</a></p>
 </div>
 </div>
 </section>

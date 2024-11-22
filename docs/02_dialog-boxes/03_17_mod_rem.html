@@ -36,8 +36,9 @@
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/colours.css?v=26cc69e2" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=69e22578" />
     <link rel="stylesheet" type="text/css" href="../_static/tippy.css?v=a7d99af9" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=3e766c6f" />
   
   <!-- So that users can add custom icons -->
   <script src="../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
@@ -222,14 +223,14 @@ In-depth</label><div class="sd-tab-content docutils">
 <p class="admonition-title">Note</p>
 <p><strong>This content was adapted from: The Density Handbook</strong>, “<a class="reference external" href="https://www.researchgate.net/publication/368601884_Using_Camera_Traps_to_Estimate_Medium_and_Large_Mammal_Density_Comparison_of_Methods_and_Recommendations_for_Wildlife_Managers">Using Camera Traps to Estimate Medium and Large Mammal Density: Comparison of Methods and Recommendations for Wildlife Managers</a>” (Clarke et al., 2023)</p>
 </div>
-<p>The random encounter model (REM) treats animals like ideal gas particles – that is, like randomly moving entities which are neither attracted to nor repelled by one another or landscape features (; Rowcliffe et al., 2008). If animals behave like ideal gas particles, the rate at which they “bump into” and trigger camera traps is a function of animal movement, population density and the area within which cameras detect animals (Nakashima et al., 2017). So, the more animals move, the more animals in a population, or the larger the viewshed – the more images will be captured (Palencia et al., 2022). This relationship can be used to estimate density, such that:</p>
+<p>The random encounter model (REM) treats animals like ideal gas particles – that is, like randomly moving entities which are neither attracted to nor repelled by one another or landscape features (Gilbert et al., 2020; Rowcliffe et al., 2008). If animals behave like ideal gas particles, the rate at which they “bump into” and trigger camera traps is a function of animal movement, population density and the area within which cameras detect animals (Nakashima et al., 2017). So, the more animals move, the more animals in a population, or the larger the viewshed – the more images will be captured (Palencia et al., 2022). This relationship can be used to estimate density, such that:</p>
 <figure class="align-center">
 <a class="reference internal image-reference" href="../_images/clarke_et_al_2023_eqn_rem1.png"><img alt="../_images/clarke_et_al_2023_eqn_rem1.png" src="../_images/clarke_et_al_2023_eqn_rem1.png" style="width: 242.39999999999998px; height: 79.2px;" /></a>
 </figure>
-<p>where <em>𝑌</em> is the number of detection events, <em>𝑇</em> is the total sampling time and 𝑣 is animal movement speed (or the distance travelled by an individual in a day); and <em>𝑟</em> and <em>𝜃</em>, the mean radius and angle of the detection zone (i.e., the area within which animals are detected with certainty) are used to calculate the area of the detection zone (Nakashima et al., 2017; Pettigrew et al., 2021; Rowcliffe et al., 2008).
-Independent estimates of <em>𝑣</em> can be sourced from telemetric studies, estimated from intensive observation or calculated using camera trap data (Nakashima et al., 2017, Rowcliffe et al., 2008, Rowcliffe et al., 2016). To calculate 𝑣 using camera traps: for each observation, practitioners should determine how long it took the animal to pass through the viewshed (i.e., time between first and last image in a sequence), then measure the distance the animal travelled by either a) retracing their path in the field using photos as a guide or b) estimating their movement image-to-image during photo processing using markers (Pfeffer et al., 2018, Rowcliffe et al., 2016).
-<em>𝑟</em> and <em>𝜃</em> can be measured in a few different ways. The first is by field trial: the detection zone is delineated by approaching the camera trap from different angles and at different speeds, recording where the sensor is triggered (Figure 7; Rowcliffe et al., 2008). The second is using a distance sampling method described in Rowcliffe et al. (2011). The third is by setting a focal area of standard size and shape (i.e., of known 𝑟 and 𝜃), within which detection is assumed to be perfect; only animals captured within the focal area are considered for analyses (Nakashima et al., 2017). <em>𝜃</em> may also be specified by the manufacturer (Pettigrew et al., 2021).
-When the species of interest travels in packs or herds, density as calculated per the equation above represents group density (i.e., the number of groups per unit area; Rowcliffe et al., 2008). To convert group density to individual density, <em>𝐷</em> must be multiplied by an independent estimate of average group size (Rowcliffe et al., 2008).</p>
+<p>where <em>𝑌</em> is the number of detection events, <em>𝑇</em> is the total sampling time and 𝑣 is animal movement speed (or the distance travelled by an individual in a day); and <em>𝑟</em> and <em>𝜃</em>, the mean radius and angle of the detection zone (i.e., the area within which animals are detected with certainty) are used to calculate the area of the detection zone (Nakashima et al., 2017; Pettigrew et al., 2021; Rowcliffe et al., 2008).</p>
+<p>Independent estimates of <em>𝑣</em> can be sourced from telemetric studies, estimated from intensive observation or calculated using camera trap data (Nakashima et al., 2017, Rowcliffe et al., 2008, Rowcliffe et al., 2016). To calculate 𝑣 using camera traps: for each observation, practitioners should determine how long it took the animal to pass through the viewshed (i.e., time between first and last image in a sequence), then measure the distance the animal travelled by either a) retracing their path in the field using photos as a guide or b) estimating their movement image-to-image during photo processing using markers (Pfeffer et al., 2018, Rowcliffe et al., 2016).</p>
+<p><em>𝑟</em> and <em>𝜃</em> can be measured in a few different ways. The first is by field trial: the detection zone is delineated by approaching the camera trap from different angles and at different speeds, recording where the sensor is triggered (Figure 7; Rowcliffe et al., 2008). The second is using a distance sampling method described in Rowcliffe et al. (2011). The third is by setting a focal area of standard size and shape (i.e., of known 𝑟 and 𝜃), within which detection is assumed to be perfect; only animals captured within the focal area are considered for analyses (Nakashima et al., 2017). <em>𝜃</em> may also be specified by the manufacturer (Pettigrew et al., 2021).</p>
+<p>When the species of interest travels in packs or herds, density as calculated per the equation above represents group density (i.e., the number of groups per unit area; Rowcliffe et al., 2008). To convert group density to individual density, <em>𝐷</em> must be multiplied by an independent estimate of average group size (Rowcliffe et al., 2008).</p>
 <figure class="align-center">
 <a class="reference internal image-reference" href="../_images/clarke_et_al_2023_fig7_clipped.png"><img alt="../_images/clarke_et_al_2023_fig7_clipped.png" src="../_images/clarke_et_al_2023_fig7_clipped.png" style="width: 117.0px; height: 125.39999999999999px;" /></a>
 </figure>
@@ -237,17 +238,17 @@ When the species of interest travels in packs or herds, density as calculated pe
 <div><p><strong>Clarke et al. (2023) - Fig. 7</strong> Measuring <em>𝑟</em> and <em>𝜃</em> by field trial. The perimeter of the detection zone is determined by approaching the camera from different angles and at different speeds, and noting where the camera’s sensor (red flash) detects motion (red dots).</p>
 </div></blockquote>
 <h2 class="rubric" id="simulations-and-field-experiments-clarke-et-al-2023">Simulations and Field Experiments (Clarke et al., 2023)</h2>
-<p>Of all the unmarked density models, the REM has undergone the most empirical testing (Palencia et al., 2021). Rowcliffe et al. (2008) piloted the model in an enclosed animal park housing populations of known sizes, and found that the REM produced accurate density estimates for three out of four target species (two cervids and a marsupial). The model underestimated the density of the fourth species (a large rodent) because cameras were deployed in habitats it did not frequent – a violation of assumption 3 (Rowcliffe et al., 2008).
-The REM has proven robust in many study systems. Examples include:</p>
+<p>Of all the unmarked density models, the REM has undergone the most empirical testing (Palencia et al., 2021). Rowcliffe et al. (2008) piloted the model in an enclosed animal park housing populations of known sizes, and found that the REM produced accurate density estimates for three out of four target species (two cervids and a marsupial). The model underestimated the density of the fourth species (a large rodent) because cameras were deployed in habitats it did not frequent – a violation of assumption 3 (Rowcliffe et al., 2008).</p>
+<p>The REM has proven robust in many study systems. Examples include:</p>
 <ul class="simple">
 <li><p>Palencia et al. (2021) found that the REM yielded similar density estimates as two non-camera methods, line-transect sampling and drive counts, for red deer and wild boar, respectively. The researchers also compared the REM to two other camera methods (random encounter and staying time (REST) and distance sampling (DS) models) – of the three, the REM was the most consistent (Palencia et al., 2021). In this study, animal movement speed <em>𝑣</em> was determined using camera trap data.</p></li>
 <li><p>REM-derived density estimates of a mountain ungulate were highly consistent with visual count survey results (Kavčić et al., 2021). Animal movement speed was measured using camera trap data (Kavčić et al., 2021).</p></li>
 <li><p>A study on black bears in Québec found that the REM produced comparable results to DNA mark-recapture using hair samples, but that REM estimates were less precise (Pettigrew et al., 2021). The researchers estimated animal movement speed by averaging 19 years of telemetry data from four neighbouring black bear populations (Pettigrew et al., 2021).</p></li>
 <li><p>In the boreal forest of Washington state, REM and live-trapping spatial capturerecapture (SCR) produced similar density estimates for snowshoe hare (Jensen et al., 2022). The REM and the REST performed identically in this system; both models outperformed the time-to-event (TTE) model (Jensen et al., 2022). Measures of animal movement speed <em>𝑣</em> were pulled from camera data and combined with telemetry data from a study in the Yukon.</p></li>
-<li><p>The REM yielded similar density estimates as, and was more precise than, livetrapping SCR at almost 90% of sampling sites in a study of hedgehogs (Schaus et al., 2020). Moreover, the REM was powerful enough to detect a 25% population change in this system (Schaus et al., 2020). Animal movement speed was estimated from camera trap images.
-The REM has also significantly over and underestimated the densities of natural populations. In Africa, for example, estimates of lioness density using the REM were significantly higher than from pride censuses (Cusack et al., 2015). REM-derived densities skewed high because cameras were placed under shady trees, which attracted lions in the daytime (a violation of assumption 3), inflating the number of detection events <em>𝑌</em> (Cusack et al., 2015). When only nighttime detections were considered, however, REM-derived densities did not differ significantly from censusderived densities (Cusack et al., 2015). <em>𝑣</em>, animal movement speed, was determined via intensive observation. A study comparing the REM with fecal DNA mark-recapture found that the REM underestimated marten density by 60% or more (Balestrieri et al., 2016). Animal movement speed 𝑣 may have biased density low; the researchers estimated 𝑣 from studies of pine marten occupying a different kind of habitat, where individuals may have moved more (Balestrieri et al., 2016).
-Simulations suggest that, to achieve adequate precision using the REM, a minimum of 20 to 40 camera stations should be deployed for as long as needed to collect at least 10 to 20 image sets (Rowcliffe et al., 2008). For populations with variable detection: about 100 cameras are needed to obtain a level of precision appropriate for wildlife management (coefficient of variation (CV) of 0.20 or less; Palencia et al., 2021, Williams et al., 2002). To collect 10 to 20 image sets takes approximately 100 to 1,000 camera trap days for most mammal species; for rare species, cameras may need to be deployed for 1,000 camera trap days or more (Rowcliffe et al., 2008).</p></li>
+<li><p>The REM yielded similar density estimates as, and was more precise than, livetrapping SCR at almost 90% of sampling sites in a study of hedgehogs (Schaus et al., 2020). Moreover, the REM was powerful enough to detect a 25% population change in this system (Schaus et al., 2020). Animal movement speed was estimated from camera trap images.</p></li>
 </ul>
+<p>The REM has also significantly over and underestimated the densities of natural populations. In Africa, for example, estimates of lioness density using the REM were significantly higher than from pride censuses (Cusack et al., 2015). REM-derived densities skewed high because cameras were placed under shady trees, which attracted lions in the daytime (a violation of assumption 3), inflating the number of detection events <em>𝑌</em> (Cusack et al., 2015). When only nighttime detections were considered, however, REM-derived densities did not differ significantly from censusderived densities (Cusack et al., 2015). <em>𝑣</em>, animal movement speed, was determined via intensive observation. A study comparing the REM with fecal DNA mark-recapture found that the REM underestimated marten density by 60% or more (Balestrieri et al., 2016). Animal movement speed 𝑣 may have biased density low; the researchers estimated 𝑣 from studies of pine marten occupying a different kind of habitat, where individuals may have moved more (Balestrieri et al., 2016).</p>
+<p>Simulations suggest that, to achieve adequate precision using the REM, a minimum of 20 to 40 camera stations should be deployed for as long as needed to collect at least 10 to 20 image sets (Rowcliffe et al., 2008). For populations with variable detection: about 100 cameras are needed to obtain a level of precision appropriate for wildlife management (coefficient of variation (CV) of 0.20 or less; Palencia et al., 2021, Williams et al., 2002). To collect 10 to 20 image sets takes approximately 100 to 1,000 camera trap days for most mammal species; for rare species, cameras may need to be deployed for 1,000 camera trap days or more (Rowcliffe et al., 2008).</p>
 </div>
 <input id="sd-tab-item-2" name="sd-tab-set-0" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-2">
@@ -353,13 +354,8 @@ Rowcliffe et al., 2008</div>
 <div class="sd-card-body docutils">
 <div class="sd-card-title sd-font-weight-bold docutils">
 Palencia &amp; Project ENETWILD, 2022</div>
-<div>
-<div style=“position:relative;padding-top:56.25%;”>
-<iframe src=“https://www.youtube.com/embed/NUW4oLGeQwk?si=isAJ3uO31eANSkDv“ loading=“lazy” frameborder=“0” allowfullscreen
-style=“position:absolute;top:0;left:0;width:100%;height:100%;”></iframe>
-</div>
-</div>
-Camera Trap Methods for Density Estimation
+<div><div style="position:relative;padding-top:56.25%;"><iframe src="https://www.youtube.com/embed/NUW4oLGeQwk?si=isAJ3uO31eANSkDv" loading="lazy" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>  </div></div>
+<p class="sd-card-text">Camera Trap Methods for Density Estimation</p>
 </div>
 </div>
 </div>
@@ -368,13 +364,8 @@ Camera Trap Methods for Density Estimation
 <div class="sd-card-body docutils">
 <div class="sd-card-title sd-font-weight-bold docutils">
 rtxt_vid2_ref_id</div>
-<div>
-<div style=“position:relative;padding-top:56.25%;”>
-<iframe src=“vid2_url“ loading=“lazy” frameborder=“0” allowfullscreen
-style=“position:absolute;top:0;left:0;width:100%;height:100%;”></iframe>
-</div>
-</div>
-vid2_caption
+<div><div style="position:relative;padding-top:56.25%;"><iframe src="vid2_url" loading="lazy" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>  </div></div>
+<p class="sd-card-text">vid2_caption</p>
 </div>
 </div>
 </div>
@@ -383,13 +374,8 @@ vid2_caption
 <div class="sd-card-body docutils">
 <div class="sd-card-title sd-font-weight-bold docutils">
 rtxt_vid3_ref_id</div>
-<div>
-<div style=“position:relative;padding-top:56.25%;”>
-<iframe src=“vid3_url“ loading=“lazy” frameborder=“0” allowfullscreen
-style=“position:absolute;top:0;left:0;width:100%;height:100%;”></iframe>
-</div>
-</div>
-vid3_caption
+<div><div style="position:relative;padding-top:56.25%;"><iframe src="vid3_url" loading="lazy" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>  </div></div>
+<p class="sd-card-text">vid3_caption</p>
 </div>
 </div>
 </div>
@@ -543,6 +529,7 @@ Analytical tools &amp; Resources</label><div class="sd-tab-content docutils">
 References</label><div class="sd-tab-content docutils">
 <p>Balestrieri, A., Ruiz-González, A., Vergara, M., Capelli, E., Tirozzi, P., Alfino, S., Minuti, G., Prigioni, C., &amp; Saino, N. (2016). Pine marten density in lowland riparian woods: A test of the Random Encounter Model based on genetic data. <em>Mammalian Biology, 81</em>(5), 439-446. <a class="reference external" href="https://doi.org/10.1016/j.mambio.2016.05.005">https://doi.org/10.1016/j.mambio.2016.05.005</a></p>
 <p>Cusack, J., Dickman, A. J., Rowcliffe, J. M., Carbone, C., Macdonald, D. W., &amp; Coulson, T. (2015). Random versus Game Trail-based Camera trap Placement Strategy for Monitoring Terrestrial Mammal Communities. <em>PloS One</em>,<em>10</em>(5), e0126373. <a class="reference external" href="https://doi.org/10.1371/journal.pone.0126373">https://doi.org/10.1371/journal.pone.0126373</a></p>
+<p>Gilbert, N. A., Clare, J. D. J., Stenglein, J. L., &amp; Zuckerberg, B. (2020). Abundance Estimation of Unmarked Animals based on Camera-Trap Data. <em>Conservation Biology, 35</em>(1), 88-100. <a class="reference external" href="https://doi.org/10.1111/cobi.13517">https://doi.org/10.1111/cobi.13517</a></p>
 <p>Henrich, M., Hartig, F., Dormann, C. F., Kühl, H. S., Peters, W., Franke, F., Peterka, T., Šustr, P., &amp; Heurich, M. (2022). Deer Behavior Affects Density Estimates With Camera Traps, but Is Outweighed by Spatial Variability. <em>Frontiers in Ecology and Evolution, 10</em>, 881502. <a class="reference external" href="https://doi.org/10.3389/fevo.2022.881502">https://doi.org/10.3389/fevo.2022.881502</a></p>
 <p>Jensen, P. O., Wirsing, A. J., &amp; Thornton, D. H. (2022). Using camera traps to estimate density of snowshoe hare ( Lepus americanus ): A keystone boreal forest herbivore. <em>Journal of Mammalogy, 103</em>(3), 693-710. <a class="reference external" href="https://doi.org/10.1093/jmammal/gyac009">https://doi.org/10.1093/jmammal/gyac009</a></p>
 <p>Kavčić, K., Palencia, P., Apollonio, M., Vicente, J., &amp; Šprem, N. (2021). Random encounter model to estimate density of mountain-dwelling ungulate. <em>European Journal of Wildlife Research, 67</em>(5), 87. <a class="reference external" href="https://doi.org/10.1007/s10344-021-01530-1">https://doi.org/10.1007/s10344-021-01530-1</a></p>

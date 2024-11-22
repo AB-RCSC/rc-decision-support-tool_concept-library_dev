@@ -36,8 +36,9 @@
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/colours.css?v=26cc69e2" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=69e22578" />
     <link rel="stylesheet" type="text/css" href="../_static/tippy.css?v=a7d99af9" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=3e766c6f" />
   
   <!-- So that users can add custom icons -->
   <script src="../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
@@ -150,9 +151,9 @@ While technically “how rare” a species is will be change from place to place
 <li><p><strong>Rare</strong>: probability of occupancy &lt; 0.25 Kays et al., 2020</p></li>
 <li><p><strong>Very-rare</strong>: probability of occupancy &lt; 0.001 (Wearn &amp; Glover-Kapfer, 2017; Rowcliffe et al., 2008; O’Brien, 2010)</p></li>
 <li><p><strong>Unknown</strong>: select this option if you’re not sure of the rarity of your Target Species (single or multiple species)</p></li>
-<li><p><strong>Multiple</strong>: select this option if your study includes multiple Target Species that vary in rarity.
-Refer to the tabs below for more information.</p></li>
+<li><p><strong>Multiple</strong>: select this option if your study includes multiple Target Species that vary in rarity.</p></li>
 </ul>
+<p>Refer to the tabs below for more information.</p>
 </div>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
@@ -168,10 +169,10 @@ Overview</label><div class="sd-tab-content docutils">
 <p class="admonition-title">Note</p>
 <p>Species rarity can be generally thought of as a species characteristic, however, “not in the same sense that hair colour or wing venation… it’ an emergent trait of a species’ population and its environment rather than a trait of an individual organism” Kunin, 1997</p>
 </div>
-<p><strong><font size=“4”><span style=“color:#2F5496”>How does this relate to study design?</font></span></strong>
-**Species’ rarity can influence the ideal camera arrangement. ** For example, when monitoring rare or cryptic species that are unlikely to be detected with other designs, it may be appropriate to use a <em>Targeted design</em> where cameras are placed in areas that are known or suspected to have higher activity levels (e.g., game trails, mineral licks, etc.).
-<strong>Species’ rarity can influence the ideal number of cameras and <a href="09_glossary.html#survey" target="_blank" data-bs-toggle="tooltip" data-bs-title="A unique deployment period (temporal extent) within a project (recorded as 'Survey Name').">survey<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a>  length</strong> (Chatterjee et al., 2021). Low <a href="09_glossary.html#detection_probability" target="_blank" data-bs-toggle="tooltip" data-bs-title="The probability (likelihood) that an individual of the population of interest is included in the count at time or location *i*.">detection probability<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a>  of rare or cryptic species can result in imprecise estimates if there are too few cameras or if cameras are not deployed for long enough (e.g., Steenweg et al., 2019)). Chatterjee et al. (2021) suggested that for <a href="09_glossary.html#mod_occupancy" target="_blank" data-bs-toggle="tooltip" data-bs-title="A modelling approach used to account for imperfect detection by first evaluating the detection probability of a species via detection histories (i.e., present or absent) to determine the probability of the true presence or absence of a species at a site (MacKenzie et al., 2002).">occupancy models<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a>  (MacKenzie et al., 2002) of common species, to survey a minimum of 50 sites for 15–20 days. For rare, elusive species, they recommended surveying 100 sites at a minimum for 20–30 days (Chatterjee et al., 2021).
-<strong>Species’ rarity can influence the appropriate modelling approach.</strong> For measures of species richness or diversity, it is presumed that a camera is active long enough to detect rare species that may occur at a specific location (Wearn &amp; Glover-Kapfer, 2017). If this is not the case, the results will indicate that the species was not present when it was (i.e., a “false negative”).</p>
+<p><strong><font size="4"><span style="color:#2F5496">How does this relate to study design?</font></span></strong></p>
+<p>**Species’ rarity can influence the ideal camera arrangement. ** For example, when monitoring rare or cryptic species that are unlikely to be detected with other designs, it may be appropriate to use a <em>Targeted design</em> where cameras are placed in areas that are known or suspected to have higher activity levels (e.g., game trails, mineral licks, etc.).</p>
+<p><strong>Species’ rarity can influence the ideal number of cameras and <a href="09_glossary.html#survey" target="_blank" data-bs-toggle="tooltip" data-bs-title="A unique deployment period (temporal extent) within a project (recorded as 'Survey Name').">survey<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a>  length</strong> (Chatterjee et al., 2021). Low <a href="09_glossary.html#detection_probability" target="_blank" data-bs-toggle="tooltip" data-bs-title="The probability (likelihood) that an individual of the population of interest is included in the count at time or location *i*.">detection probability<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a>  of rare or cryptic species can result in imprecise estimates if there are too few cameras or if cameras are not deployed for long enough (e.g., Steenweg et al., 2019)). Chatterjee et al. (2021) suggested that for <a href="09_glossary.html#mod_occupancy" target="_blank" data-bs-toggle="tooltip" data-bs-title="A modelling approach used to account for imperfect detection by first evaluating the detection probability of a species via detection histories (i.e., present or absent) to determine the probability of the true presence or absence of a species at a site (MacKenzie et al., 2002).">occupancy models<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a>  (MacKenzie et al., 2002) of common species, to survey a minimum of 50 sites for 15–20 days. For rare, elusive species, they recommended surveying 100 sites at a minimum for 20–30 days (Chatterjee et al., 2021).</p>
+<p><strong>Species’ rarity can influence the appropriate modelling approach.</strong> For measures of species richness or diversity, it is presumed that a camera is active long enough to detect rare species that may occur at a specific location (Wearn &amp; Glover-Kapfer, 2017). If this is not the case, the results will indicate that the species was not present when it was (i.e., a “false negative”).</p>
 </div>
 <input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-1">
@@ -231,13 +232,8 @@ rtxt_figure3_ref_id</div>
 <div class="sd-card-body docutils">
 <div class="sd-card-title sd-font-weight-bold docutils">
 mecks100, 2018</div>
-<div>
-<div style=“position:relative;padding-top:56.25%;”>
-<iframe src=“https://www.youtube.com/embed/4gcmAUpo9TU?si=_S-JYDDskR8QbHs5“ loading=“lazy” frameborder=“0” allowfullscreen
-style=“position:absolute;top:0;left:0;width:100%;height:100%;”></iframe>
-</div>
-</div>
-Species accumulation and rarefaction curves
+<div><div style="position:relative;padding-top:56.25%;"><iframe src="https://www.youtube.com/embed/4gcmAUpo9TU?si=_S-JYDDskR8QbHs5" loading="lazy" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>  </div></div>
+<p class="sd-card-text">Species accumulation and rarefaction curves</p>
 </div>
 </div>
 </div>
@@ -246,13 +242,8 @@ Species accumulation and rarefaction curves
 <div class="sd-card-body docutils">
 <div class="sd-card-title sd-font-weight-bold docutils">
 Riffomonas Project, 2022b</div>
-<div>
-<div style=“position:relative;padding-top:56.25%;”>
-<iframe src=“https://www.youtube.com/embed/ywHVb0Q-qsM?si=_xJ5jbFc6MDEQlAh “ loading=“lazy” frameborder=“0” allowfullscreen
-style=“position:absolute;top:0;left:0;width:100%;height:100%;”></iframe>
-</div>
-</div>
-Generating a rarefaction curve from collector's curves in R within the tidyverse (CC198)
+<div><div style="position:relative;padding-top:56.25%;"><iframe src="https://www.youtube.com/embed/ywHVb0Q-qsM?si=_xJ5jbFc6MDEQlAh " loading="lazy" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>  </div></div>
+<p class="sd-card-text">Generating a rarefaction curve from collector’s curves in R within the tidyverse (CC198)</p>
 </div>
 </div>
 </div>
@@ -261,13 +252,8 @@ Generating a rarefaction curve from collector's curves in R within the tidyverse
 <div class="sd-card-body docutils">
 <div class="sd-card-title sd-font-weight-bold docutils">
 rtxt_vid3_ref_id</div>
-<div>
-<div style=“position:relative;padding-top:56.25%;”>
-<iframe src=“vid3_url“ loading=“lazy” frameborder=“0” allowfullscreen
-style=“position:absolute;top:0;left:0;width:100%;height:100%;”></iframe>
-</div>
-</div>
-vid3_caption
+<div><div style="position:relative;padding-top:56.25%;"><iframe src="vid3_url" loading="lazy" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>  </div></div>
+<p class="sd-card-text">vid3_caption</p>
 </div>
 </div>
 </div>
@@ -427,12 +413,14 @@ References</label><div class="sd-tab-content docutils">
 <p>Kunin, W. K. (1997). Introduction: on the causes and consequences of rare-common differences. In Kunin, W. K., &amp; Kevin, J. G. (Eds) *The Biology of Rarity. * (pp. 3-4). Chapman &amp; Hall. <a class="reference external" href="https://link.springer.com/book/10.1007/978-94-011-5874-9">https://link.springer.com/book/10.1007/978-94-011-5874-9</a></p>
 <p>Leroy, B. (2023). <em>Package ‘Rarity’: Calculation of Rarity Indices for Species and Assemblages of Species.</em> R package version 1.3-8, <a class="reference external" href="https://cran.r-project.org/web/packages/Rarity/">https://cran.r-project.org/web/packages/Rarity/</a></p>
 <p>Leroy, B. (2024). <em>Rarity Indices.</em> <a class="reference external" href="https://borisleroy.com/en/research/rarity-indices/">https://borisleroy.com/en/research/rarity-indices/</a></p>
+<p>MacKenzie, D. I., Nichols, J. D., Lachman, G. B., Droege, S., Royle, J. A., &amp; Langtimm, C. A. (2002). Estimating Site Occupancy Rates When Detection Probabilities Are Less Than One. <em>Ecology, 83</em>(8), 2248-2255. <a class="reference external" href="https://doi.org/10.2307/3072056">https://doi.org/10.2307/3072056</a></p>
 <p>O’Brien, K. M. (2010). <em>Wildlife Picture Index: Implementation Manual Version 1. 0.</em> WCS Working Paper No. 39. <a class="reference external" href="https://library.wcs.org/doi/ctl/view/mid/33065/pubid/DMX534800000.aspx">https://library.wcs.org/doi/ctl/view/mid/33065/pubid/DMX534800000.aspx</a></p>
 <p>Riffomonas Project (2022b, Mar 24). <em>Generating a rarefaction curve from collector’s curves in R within the tidyverse (CC198)</em> [Video]. YouTube. <a class="reference external" href="https://www.youtube.com/watch?v=ywHVb0Q-qsM">https://www.youtube.com/watch?v=ywHVb0Q-qsM</a></p>
 <p>Rowcliffe, J. M., Field, J., Turvey, S. T., &amp; Carbone, C. (2008). Estimating animal Density using camera traps without the need for individual recognition. <em>Journal of Applied Ecology</em>, <em>45</em>(4), 1228-1236. <a class="reference external" href="https://doi.org/10.1111/j.1365-2664.2008.01473.x">https://doi.org/10.1111/j.1365-2664.2008.01473.x</a></p>
 <p>Shannon, G., Lewis, J. S. &amp; Gerber, B. D. (2014). Recommended Survey Designs for Occupancy Modelling using Motion-activated Cameras: Insights from Empirical Wildlife Data. <em>PeerJ, 2</em>, e532. <a class="reference external" href="https://doi.org/10.7717/peerj.532">https://doi.org/10.7717/peerj.532</a></p>
 <p>Southwell, D. M., Einoder, L. D., Lahoz‐Monfort, J. J., Fisher, A., Gillespie, G. R., &amp; Wintle, B. A. (2019). Spatially explicit power analysis for detecting occupancy trends for multiple species. <em>Ecological Applications, 29</em>, e01950. <a class="reference external" href="https://doi.org/10.1002/eap.1950">https://doi.org/10.1002/eap.1950</a></p>
 <p>Steenweg, R., Hebblewhite, M., Whittington, J., &amp; Mckelvey, K. (2019). Species‐specific Differences in Detection and Occupancy Probabilities Help Drive Ability to Detect Trends in Occupancy. <em>Ecosphere, 10</em>(4), Article e02639. <a class="reference external" href="https://doi.org/10.1002/ecs2.2639">https://doi.org/10.1002/ecs2.2639</a></p>
+<p>mecks100 (2018, Feb 7). <em>Species accumulation and rarefaction curves</em> [Video]. YouTube. <a class="reference external" href="https://www.youtube.com/watch?v=4gcmAUpo9TU">https://www.youtube.com/watch?v=4gcmAUpo9TU</a></p>
 <p>Wearn, O. R., &amp; Glover-Kapfer, P. (2017). Camera-Trapping for Conservation: A Guide to Best-ractices. <em>WWF conservation technology series, 1</em>, 1-181. <a class="reference external" href="http://dx.doi.org/10.13140/RG.2.2.23409.17767">http://dx.doi.org/10.13140/RG.2.2.23409.17767</a></p>
 </div>
 </div>

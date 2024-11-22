@@ -11,16 +11,18 @@ kernelspec:
   language: python
   name: python3
 editor_options:
-      markdown:
+  markdown:
     wrap: none
 ---
 (i_mod_ste)=
 # {{ title_i_mod_ste }}
+
 <!--
 :::{hint}
 replace me with text
 :::
 -->
+
 **{{ term_mod_ste }}**: {{ term_def_mod_ste }}
 ```{include} pro_con_assump/mod_ste_apc.md
 ```
@@ -35,19 +37,25 @@ replace me with text
 ::::::{tab-item} In-depth
 ```{include} include/note_adapted_clarke_et_al_2023.md
 ```
+
 The space-to-event model (STE) is an extension of the time-to-event model (TTE; see {bdg-link-primary-line}`Time-to-event<https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/ 03_21_mod_tte.html>`) that measures the area, instead of the time, sampled before an image of an animal is observed ({{ rtxt_moeller_et_al_2018 }}). The conceptual underpinnings of the STE are the same as those of the TTE, with the exception that sampling occasions are collapsed into instantaneous samples using time-lapse images – photographs taken at predetermined periods of the day or night (e.g., every hour, every day at noon), regardless of whether animals are within frame (Figure 12; {{ rtxt_granados_2021 }}; {{ rtxt_moeller_et_al_2018 }}). Because they are collapsed into instants in time, there is no need to break sampling occasions down into sampling periods – and no need for measures of animal movement speed.
 
 :::{figure} ../03_images/03_image_files/clarke_et_al_2023_fig12_clipped.png
 :align: center
 :::
+
 > **Clarke et al. (2023) - Fig. 12** One of many time-lapse images taken at a camera station at noon. Notice, the camera trap captures an image at a predetermined time (12:00), regardless of whether an animal is within frame.
-The STE model is based on the simple logic that, as population density increases, the number of animal images captured by the cameras in a network increases, and thus the number of cameras that capture images increases – so, at a moment in time, the number of cameras from which images need to be “drawn” until an image of an animal is picked decreases ({{ rtxt_lukacs_2021 }}). To visualize how to model works: say an array of camera traps is deployed randomly across a study landscape, and set to take images every hour, on the hour (i.e., hourly sampling occasion). After image collection, for each occasion, images are “drawn” from cameras in random order, until an image of an animal is picked ({{ rtxt_moeller_et_al_2018 }}). An example encounter history after 7 sampling occasions (e.g., 7 hours), for which the average viewshed area *𝑎* is 20 m<sup>2</sup>, might look like: {NA, 40 m<sup>2</sup>, NA, NA, 1180 m<sup>2</sup>, NA, 800 m<sup>2</sup>}, where 40 m<sup>2</sup> indicates that images from 2 cameras had to be drawn before observing an animal, 1180 m<sup>2</sup> indicates images from 59 cameras had to be drawn, and so on; and NA indicates no animal detections for that occasion. This encounter history – which summarizes the space until detections – can then be plugged into a modified TTE equation to produce a density estimate ({{ rtxt_moeller_et_al_2018 }}).
+
+The STE model is based on the simple logic that, as population density increases, the number of animal images captured by the cameras in a network increases, and thus the number of cameras that capture images increases – so, at a moment in time, the number of cameras from which images need to be "drawn" until an image of an animal is picked decreases ({{ rtxt_lukacs_2021 }}). To visualize how to model works: say an array of camera traps is deployed randomly across a study landscape, and set to take images every hour, on the hour (i.e., hourly sampling occasion). After image collection, for each occasion, images are "drawn" from cameras in random order, until an image of an animal is picked ({{ rtxt_moeller_et_al_2018 }}). An example encounter history after 7 sampling occasions (e.g., 7 hours), for which the average viewshed area *𝑎* is 20 m<sup>2</sup>, might look like: {NA, 40 m<sup>2</sup>, NA, NA, 1180 m<sup>2</sup>, NA, 800 m<sup>2</sup>}, where 40 m<sup>2</sup> indicates that images from 2 cameras had to be drawn before observing an animal, 1180 m<sup>2</sup> indicates images from 59 cameras had to be drawn, and so on; and NA indicates no animal detections for that occasion. This encounter history – which summarizes the space until detections – can then be plugged into a modified TTE equation to produce a density estimate ({{ rtxt_moeller_et_al_2018 }}).
+
 As with the TTE, the average area of a camera viewshed is calculated using the equation:
 
 :::{figure} ../03_images/03_image_files/clarke_et_al_2023_eqn_tte2_ste1.png
 :align: center
 :::
+
 where *𝑟* is detection distance and *𝜃* is the angle of the camera lens in degrees ({{ rtxt_moeller_et_al_2018 }}). *𝑟* – instead of being the maximum distance at which an animal can trigger a camera’s motion sensor, however, as it is for the TTE – is simply the maximum distance at which an animal is identifiable, and is measured using landmarks as references ({{ rtxt_gilbert_et_al_2020 }}; {{ rtxt_moeller_et_al_2018 }}).
+
 ## Simulations and Field Experiments
 Random walk simulations show that the STE – unlike the TTE – is insensitive to movement speed ({{ rtxt_moeller_et_al_2018 }}). This means that the model produces unbiased estimates of density, whether animals move slowly or quickly.
 The STE has been field-tested on high-density ungulates and low-density carnivores in Idaho:
@@ -140,7 +148,7 @@ figure8_caption
 ::::
 
 ::::{grid-item-card} {{ rtxt_figure9_ref_id }}
-:::{figure} ../03_images/03_image_files/figure9_filename.pngmoeller_et_al_2018_fig7_clipped.png
+:::{figure} ../03_images/03_image_files/figure9_filename.png
 :class: img_grid
 :::
 figure9_caption
@@ -156,7 +164,7 @@ Check back in the future!
 :::::{tab-item} Analytical tools & Resources
 | Type | Name | Note | URL |Reference |
 |:----------------|:-------------------------------|:----------------------------------------------------------------|:----------------------|:----------------------------------------|
-| R package | spaceNtime: an R package for estimating abundance of unmarked animals using camera-trap photographs | free and open-source R package designed to assist in the implementation of the STE and TTE models, along with the IS estimator | <https://github.com/annam21/spaceNtime;<br><https://link.springer.com/article/10.1007/s42991-021-00181-8> | {{ rbib_moeller_lukacs_2022 }} |
+| R package | spaceNtime: an R package for estimating abundance of unmarked animals using camera-trap photographs | free and open-source R package designed to assist in the implementation of the STE and TTE models, along with the IS estimator | <https://github.com/annam21/spaceNtime;<br><https://link.springer.com/article/10.1007/s42991-021-00181-8> | {{ rbib_Error! Reference source not found. }} |
 | resource2_type | resource2_name | resource2_note | resource2_url | {{ rbib_resource2_ref_id }} |
 | resource3_type | resource3_name | resource3_note | resource3_url | {{ rbib_resource3_ref_id }} |
 | resource4_type | resource4_name | resource4_note | resource4_url | {{ rbib_resource4_ref_id }} |
@@ -173,21 +181,30 @@ Check back in the future!
 | resource15_type | resource15_name | resource15_note | resource15_url | {{ rbib_resource15_ref_id }} |
 | Error! Reference source not found. | Error! Reference source not found. | Error! Reference source not found. | Error! Reference source not found. | {{ rbib_Error! Reference source not found. }} |
 | Error! Reference source not found. | Error! Reference source not found. | Error! Reference source not found. | Error! Reference source not found. | {{ rbib_Error! Reference source not found. }} |
-| Error! Reference source not found. | Error! Reference source not found. | Error! Reference source not found. | Error! Reference source not found.| {{ rbib_Error! Reference source not found.}} |
+| Error! Reference source not found. | Error! Reference source not found. | Error! Reference source not found. | Error! Reference source not found. | {{ rbib_Error! Reference source not found.}} |
 | Error! Reference source not found. | Error! Reference source not found. | Error! Reference source not found. | Error! Reference source not found. | {{ rbib_Error! Reference source not found. }} |
 | Error! Reference source not found. | Error! Reference source not found. | Error! Reference source not found. | Error! Reference source not found. | {{ rbib_Error! Reference source not found. }} |
 ::::::
 
 ::::::{tab-item} References
 {{ rbib_ausband_et_al_2022 }}
+
 {{ rbib_clarke_et_al_2023 }}
+
 {{ rbib_gilbert_et_al_2020 }}
+
 {{ rbib_granados_2021 }}
+
 {{ rbib_loonam_et_al_2021a }}
+
 {{ rbib_loonam_et_al_2021b }}
+
 {{ rbib_lukacs_2021 }}
+
 {{ rbib_mcmurray_et_al_2023 }}
+
 {{ rbib_moeller_lukacs_2021 }}
+
 {{ rbib_moeller_et_al_2018 }}
 ::::::
 

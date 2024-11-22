@@ -14,4 +14,4 @@ editor_options:
   markdown:
     wrap: none
 ---
-<iframe src="_static/08_references.html" width="100%" height="500px"></iframe>
+<iframe src="_static/raw/08_references.html" width="100%" height="500px"></iframe>

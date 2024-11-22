@@ -11,16 +11,18 @@ kernelspec:
   language: python
   name: python3
 editor_options:
-      markdown:
+  markdown:
     wrap: none
 ---
 (i_mod_rai)=
 # {{ title_i_mod_rai }}
+
 <!--
 :::{hint}
 replace me with text
 :::
 -->
+
 **{{ term_mod_rai }}**: {{ term_def_mod_rai }}
 ```{include} pro_con_assump/mod_rai_apc.md
 ```
@@ -35,23 +37,32 @@ replace me with text
 ::::::{tab-item} In-depth
 ```{include} include/note_adapted_clarke_et_al_2023.md
 ```
+
 In ecology, relative abundance (RA) is any count of animals or animal sign (e.g., number of deer sighted, number of bird vocalizations per unit time, number of moose tracks per kilometer of transect) that is assumed to correlate with absolute abundance ({{ rtxt_obrien_2011 }}). RA is a controversial index for two reasons: 1) there is often no documented relationship between the number of animals or signs observed and population size (i.e., index validation), and 2) detection probability is assumed to be constant between the areas, times or species being compared ({{ rtxt_obrien_2011 }}; {{ rtxt_thompson_et_al_1998 }}).
+
 To the first point: the relationship between the number of animals or signs and abundance is rarely established ({{ rtxt_burton_et_al_2015 }}). Researchers often assume that counts and population size scale linearly – but many other kinds of relationships are possible. When the assumed relationship between counts and abundance diverges from the actual relationship, inferences from RA are not very meaningful ({{ rtxt_thompson_et_al_1998 }}). Validating a count-abundance relationship requires comparison with a robust, accurate estimate of absolute density (e.g., {{ rtxt_krebs_et_al_1987}}; {{ rtxt_rovero_marshall_2009 }}; {{ rtxt_villette_et_al_2016 }}).
+
 To the second point: consider the canonical equation,
 ```{figure} ../03_images/03_image_files/clarke_et_al_2023_eqn_rai1.png
 :width: 80px
 :align: center
 ```
+
 where *𝑁* is population size, *𝐶* is the count of animals or signs and *𝑝* is detection probability ({{ rtxt_anderson_2001 }}; {{ rtxt_brennan_2019 }}). This equation underlies many estimators of abundance, including capture-recapture (CR; see {bdg-link-primary-line}`Capture-recapture (CR) / Capture-mark-recapture (CMR)<https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/03_10_mod_cr_cmr.html>`) and distance sampling (DS; see {bdg-link-primary-line}`Distance sampling<https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/03_20_mod_ds.html>`) methods ({{ rtxt_obrien_2011 }}). RA comparisons assume that detection probability *𝑝* is constant across space, time or species, and can therefore be ignored ({{ rtxt_anderson_2001 }}; {{ rtxt_obrien_2011 }}; {{ rtxt_sollmann_et_al_2013b }}), such that:
 ```{figure} ../03_images/03_image_files/clarke_et_al_2023_eqn_rai2.png
 :width: 80px
 :align: center
 ```
+
 so count essentially becomes a surrogate for population size.
+
 Assuming constant detection probability *𝑝* is problematic, since the likelihood an animal or sign is counted during a survey will vary with observational, environmental, and habitat- and species-specific factors, which in turn can vary with time ({{ rtxt_anderson_2001 }}). For example: at site A, animals may be difficult to spot in dense vegetation, while at site B, animals may be easy to spot in open grassland; and the effects of vegetation on observability may differ seasonally. If the effects of vegetation on detectability are not accounted for, how can we be sure that differences in animal counts at site A and B are due to true differences in abundance, and not simply artefacts of detection bias ({{ rtxt_sollmann_et_al_2013b }})?
+
 In a camera trapping context, RA is the comparison of detection rates across space, time or species – where detection rates are typically reported as the number of images per 100 trap days, but can also be reported in terms of the total number of detections, other units of effort (e.g., camera trap hours), proportion of stations with detections, etc. ({{ rtxt_burton_et_al_2015 }}). As with other kinds of RA surveys, comparisons of camera trap detection rates can confound abundance with animal behaviour and observability ({{ rtxt_anderson_2001 }}; {{ rtxt_burton_et_al_2015 }}).
-RA has been criticized as an abundance estimator. Anderson (2001) condemned the index as “unprofessional,” while O’Brien (2011) called it a “metric of last resort.” Sollmann et al. (2013b) used simulations to determine that camera trap RA analyses did not detect changes in big cat density, and called use of the index for wildlife management “alarming.” Nevertheless, some researchers have had success with the method and/or have argued for its conceptual and practical advantages (e.g., {{ rtxt_rovero_carbone_et_al_2001 }}; {{ rtxt_johnson_2008 }}; {{ rtxt_palmer_et_al_2018 }}; {{ rtxt_rovero_marshall_2009 }}). Broadley et al. (2019) used simulations to show that RA could be sensitive to density-dependent movement, but generally tracked abundance well. Banks-Leite (2014) emphasized the importance of careful sampling design and protocols to control for variation in detectability, arguing that researchers should not solely rely on statistical corrections.
-Ultimately, there is no “silver bullet” and researchers must carefully consider their inferential objectives and potential sources of sampling and estimation bias when choosing response variables and modelling frameworks for camera trap data.
+
+RA has been criticized as an abundance estimator. Anderson (2001) condemned the index as "unprofessional," while O’Brien (2011) called it a "metric of last resort." Sollmann et al. (2013b) used simulations to determine that camera trap RA analyses did not detect changes in big cat density, and called use of the index for wildlife management "alarming." Nevertheless, some researchers have had success with the method and/or have argued for its conceptual and practical advantages (e.g., {{ rtxt_rowcliffe_carbone_2008 }}; {{ rtxt_johnson_2008 }}; {{ rtxt_palmer_et_al_2018 }}; {{ rtxt_rovero_marshall_2009 }}). Broadley et al. (2019) used simulations to show that RA could be sensitive to density-dependent movement, but generally tracked abundance well. Banks-Leite (2014) emphasized the importance of careful sampling design and protocols to control for variation in detectability, arguing that researchers should not solely rely on statistical corrections.
+
+Ultimately, there is no "silver bullet" and researchers must carefully consider their inferential objectives and potential sources of sampling and estimation bias when choosing response variables and modelling frameworks for camera trap data.
 ::::::
 
 ::::::{tab-item} Visual resources
@@ -122,32 +133,20 @@ Red boxes represent important model assumptions (in bold) and sampling design re
 :margin: 0
 
 ::::{grid-item-card} {{ rtxt_dectre_accel_2016 }}
-<div>
-<div style=“position:relative;padding-top:56.25%;”>
-<iframe src=“https://www.youtube.com/embed/CvM6j8hE8lE?si=E_kNQm9YYwgUECM3“ loading=“lazy” frameborder=“0” allowfullscreen
-style=“position:absolute;top:0;left:0;width:100%;height:100%;”></iframe>
-</div>
-</div>
+<div><div style="position:relative;padding-top:56.25%;"><iframe src="https://www.youtube.com/embed/CvM6j8hE8lE?si=E_kNQm9YYwgUECM3" loading="lazy" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>  </div></div>
+
 Using Hurdle Models to Analyze Zero-Inflated Count Data
 ::::
 
 ::::{grid-item-card} {{ rtxt_cao_2021 }}
-<div>
-<div style=“position:relative;padding-top:56.25%;”>
-<iframe src=“https://www.youtube.com/embed/q2NRQBcihQY?si=r9NeRpegoj47uVn-“ loading=“lazy” frameborder=“0” allowfullscreen
-style=“position:absolute;top:0;left:0;width:100%;height:100%;”></iframe>
-</div>
-</div>
+<div><div style="position:relative;padding-top:56.25%;"><iframe src="https://www.youtube.com/embed/q2NRQBcihQY?si=r9NeRpegoj47uVn-" loading="lazy" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>  </div></div>
+
 Hurdle models
 ::::
 
 ::::{grid-item-card} {{ rtxt_tilestats_2021 }}
-<div>
-<div style=“position:relative;padding-top:56.25%;”>
-<iframe src=“https://www.youtube.com/embed/ztNQvAabgtU?si=9rY7DVbBWN_ByPvf“ loading=“lazy” frameborder=“0” allowfullscreen
-style=“position:absolute;top:0;left:0;width:100%;height:100%;”></iframe>
-</div>
-</div>
+<div><div style="position:relative;padding-top:56.25%;"><iframe src="https://www.youtube.com/embed/ztNQvAabgtU?si=9rY7DVbBWN_ByPvf" loading="lazy" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>  </div></div>
+
 Zero-inflated Poisson (ZIP) regression
 ::::
 
@@ -159,32 +158,22 @@ Zero-inflated Poisson (ZIP) regression
 :margin: 0
 
 ::::{grid-item-card} {{ rtxt_marinstats_2020a }}
-<div>
-<div style=“position:relative;padding-top:56.25%;”>
-<iframe src=“https://www.youtube.com/embed/A8H6gc9Eq0w?si=Ade-D5-J5JtCZwil“ loading=“lazy” frameborder=“0” allowfullscreen
-style=“position:absolute;top:0;left:0;width:100%;height:100%;”></iframe>
-</div>
-</div>
+<div><div style="position:relative;padding-top:56.25%;"><iframe src="https://www.youtube.com/embed/A8H6gc9Eq0w?si=Ade-D5-J5JtCZwil" loading="lazy" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>  </div></div>
+
 Poisson Regression Review
 ::::
 
 ::::{grid-item-card} {{ rtxt_marinstats_2020b }}
-<div>
-<div style=“position:relative;padding-top:56.25%;”>
-<iframe src=“https://www.youtube.com/embed/eIY--zc5f24?si=dgtSF_vfwUxuG1Mi“ loading=“lazy” frameborder=“0” allowfullscreen
-style=“position:absolute;top:0;left:0;width:100%;height:100%;”></iframe>
+<div><div style="position:relative;padding-top:56.25%;"><iframe src="https://www.youtube.com/embed/eIY--zc5f24?si=dgtSF_vfwUxuG1Mi" loading="lazy" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
 </div>
 </div>
+
 Poisson Regression: Zero Inflation (Excessive Zeros)
 ::::
 
 ::::{grid-item-card} {{ rtxt_russel_2020 }}
-<div>
-<div style=“position:relative;padding-top:56.25%;”>
-<iframe src=“vid6_url“ loading=“lazy” frameborder=“0” allowfullscreen
-style=“position:absolute;top:0;left:0;width:100%;height:100%;”></iframe>
-</div>
-</div>
+<div><div style="position:relative;padding-top:56.25%;"><iframe src="vid6_url" loading="lazy" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>  </div></div>
+
 Fitting Poisson and zero-inflated Poisson models.
 ::::
 
@@ -195,15 +184,8 @@ Fitting Poisson and zero-inflated Poisson models.
 
 :::::{card} Microbiome Analysis: Relative Abundance Boxplots
 A Shiny app allows you to visualize data by using R scripts without having to interact with the R script itself. This Shiny app will allow you to plot your Relative Abundance microbiome data in an easy-to-view format. If this is your first time utilizing this Shiny app, follow the step below to start visualising your data now!
-<iframe
-width=“100%”
-height=“900”
-src=“https://guthub.org/shiny/sample-apps/absboxplot/ “
-loading=“lazy”
-frameborder=“0”
-allow=“accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture”
-allowfullscreen>
-</iframe>
+
+<iframe width="100%" height="900" src="https://guthub.org/shiny/sample-apps/absboxplot/ " loading="lazy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 :::::
 
 ::::::
@@ -213,14 +195,14 @@ allowfullscreen>
 |:----------------|:-------------------------------|:----------------------------------------------------------------|:----------------------|:----------------------------------------|
 | R resource | abmi.camera.extras: Animal Density from Camera Data > Probabilistic gaps | | Main resource page: <https://mabecker89.github.io/abmi.camera.extras/index.html>;<br>[Probabilistic gaps]<https://mabecker89.github.io/abmi.camera.extras/articles/gaps.html> | {{ rbib_becker_et_al_2020 }} |
 | App/Program | Introduction to Camera Trap Data Management and Analysis in R > Chapter 12 Activity | | <https://bookdown.org/c_w_beirne/wildCo-Data-Analysis/activity.html> | {{ rbib_wildco_lab_2021d }} |
-| App/Program | R package “activity” | Provides functions to express clock time data relative to anchor points (typically solar); fit kernel density functions to animal activity time data; plot activity distributions; quantify overall levels of activity; statistically compare activity metrics through bootstrapping; evaluate variation in linear variables with time (or other circular variables). | <https://cran.r-project.org/web/packages/activity/index.html> | {{ rbib_rowcliffe_2023 }} |
-| R package | R package “overlap” | Estimates of Coefficient of Overlapping for Animal Activity Patterns | <https://cran.r-project.org/web/packages/overlap/index.html> | {{ rbib_campbell_2024 }} |
+| App/Program | R package "activity" | Provides functions to express clock time data relative to anchor points (typically solar); fit kernel density functions to animal activity time data; plot activity distributions; quantify overall levels of activity; statistically compare activity metrics through bootstrapping; evaluate variation in linear variables with time (or other circular variables). | <https://cran.r-project.org/web/packages/activity/index.html> | {{ rbib_rowcliffe_2023 }} |
+| R package | R package "overlap" | Estimates of Coefficient of Overlapping for Animal Activity Patterns | <https://cran.r-project.org/web/packages/overlap/index.html> | {{ rbib_campbell_2024 }} |
 | Tutorial | Chapter 6 Modeling Relative Abundance | | <https://cornelllabofornithology.github.io/ebird-best-practices/abundance.html> | {{ rbib_strimasmackey_et_al_2023 }} |
 | R package | glmmTMB: Generalized Linear Mixed Models using Template Model Builder | resource6_note | <https://cran.r-project.org/web/packages/glmmTMB/index.html> | {{ rbib_brooks_et_al_2017 }} |
-| R package | R package “zicounts” | Counts data models: zero-inflation as well as interval icensored | <https://github.com/cran/zicounts> | {{ rbib_resource7_ref_id }} |
-| R package | R package “DHARMa” | Can be used to assess goodness-of-fit of a mixed effect model via quantile–quantile (Q–Q) plots of standardized residuals | <https://CRAN.R-project.org/package=DHARMa> | {{ rbib_hartig_2019}} |
-| R package | R package “Pscl” | resource9_note | < https://cran.r-project.org/web/packages/pscl/index.html> | {{ rbib_jackman_2024 }} |
-| R package | R package “countreg” | Can be used to assess goodness-of-fit of a mixed effect hurdle model via rootograms ({{ rtxt_kleiber_zeileis_2016 }}) | <https://rdrr.io/rforge/countreg/><br>
+| R package | R package "zicounts" | Counts data models: zero-inflation as well as interval icensored | <https://github.com/cran/zicounts> | {{ rbib_resource7_ref_id }} |
+| R package | R package "DHARMa" | Can be used to assess goodness-of-fit of a mixed effect model via quantile–quantile (Q–Q) plots of standardized residuals | <https://CRAN.R-project.org/package=DHARMa> | {{ rbib_hartig_2019}} |
+| R package | R package "Pscl" | resource9_note | < https://cran.r-project.org/web/packages/pscl/index.html> | {{ rbib_jackman_2024 }} |
+| R package | R package "countreg" | Can be used to assess goodness-of-fit of a mixed effect hurdle model via rootograms ({{ rtxt_kleiber_zeileis_2016 }}) | <https://rdrr.io/rforge/countreg/><br>
 https://rdrr.io/rforge/countreg/f/inst/doc/countreg.pdf><br><https://www.zeileis.org/papers/Kleiber+Zeileis-2016.pdf> | {{ rbib_zeileis_et_al_2008 }} |
 | resource11_type | A guide to modeling outcomes that have lots of zeros with Bayesian hurdle lognormal and hurdle Gaussian regression models | resource11_note | <https://www.andrewheiss.com/blog/2022/05/09/hurdle-lognormal-gaussian-brms> | {{ rbib_resource11_ref_id }} |
 | resource12_type | resource12_name | resource12_note | resource12_url | {{ rbib_resource12_ref_id }} |
@@ -229,44 +211,76 @@ https://rdrr.io/rforge/countreg/f/inst/doc/countreg.pdf><br><https://www.zeileis
 | resource15_type | resource15_name | resource15_note | resource15_url | {{ rbib_resource15_ref_id }} |
 | resource16_type | resource16_name | resource16_note | resource16_url | {{ rbib_resource16_ref_id }} |
 | resource17_type | resource17_name | resource17_note | resource17_url | {{ rbib_resource17_ref_id }} |
-| resource18_type | resource18_name | resource18_note | resource18_url| {{ rbib_resource18_ref_id}} |
+| resource18_type | resource18_name | resource18_note | resource18_url | {{ rbib_resource18_ref_id}} |
 | resource19_type | resource19_name | resource19_note | resource19_url | {{ rbib_resource19_ref_id }} |
 | resource20_type | resource20_name | resource20_note | resource20_url | {{ rbib_resource20_ref_id }} |
 ::::::
 
 ::::::{tab-item} References
 {{ rbib_anderson_2001 }}
+
 {{ rbib_banksleite_2014 }}
+
 {{ rbib_blasco_moreno_et_al_2019 }}
+
 {{ rbib_brennan_2019 }}
+
 {{ rbib_broadley_et_al_2019 }}
+
 {{ rbib_burton_et_al_2015 }}
+
 {{ rbib_carbone_et_al_2001 }}
+
 {{ rbib_cao_2021 }}
+
 {{ rbib_clark_et_al_2003 }}
+
 {{ rbib_dectre_accel_2016 }}
+
 {{ rbib_denes_et_al_2015 }}
+
 {{ rbib_gilbert_et_al_2020 }}
+
 {{ rbib_hartig_2019 }}
+
 {{ rbib_heilbron_1994 }}
+
 {{ rbib_kleiber_zeileis_2016 }}
+
 {{ rbib_krebs_et_al_1987 }}
+
 {{ rbib_johnson_2008 }}
+
 {{ rbib_marinstats_2020a }}
+
 {{ rbib_marinstats_2020b }}
+
 {{ rbib_markle_et_al_2020 }}
+
 {{ rbib_martin_et_al_2005 }}
+
 {{ rbib_mullahy_1986 }}
+
 {{ rbib_obrien_2011 }}
+
 {{ rbib_palmer_et_al_2018 }}
+
 {{ rbib_rovero_marshall_2009 }}
+
 {{ rbib_russel_2020 }}
+
 {{ rbib_sollmann_et_al_2013b }}
+
 {{ rbib_thompson_et_al_1998 }}
+
 {{ rbib_tilestats_2021 }}
+
 {{ rbib_villette_et_al_2016 }}
+
 {{ rbib_welsh_et_al_2000 }}
+
 {{ rbib_zeileis_et_al_2008 }}
+
 +check others
 ::::::
 

@@ -14,4 +14,4 @@ editor_options:
   markdown:
     wrap: none
 ---
-<iframe src="_static/03_02_mod_divers_rich.html" width="100%" height="500px"></iframe>
+<iframe src="_static/raw/03_02_mod_divers_rich.html" width="100%" height="500px"></iframe>
