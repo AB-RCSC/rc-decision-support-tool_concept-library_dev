@@ -1,0 +1,1325 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Remote Camera Decision Support Tool - Concept Library &#8212; Remote Camera Decision Support Tool - Concept Library</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/colours.css?v=9897dbfc" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=aeacfa45" />
+    <link rel="stylesheet" type="text/css" href="_static/tooltips.css?v=4de49550" />
+    <link rel="stylesheet" type="text/css" href="_static/youtube.css?v=70faa909" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'index';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="#">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="Remote Camera Decision Support Tool - Concept Library - Home"/>
+    <img src="_static/logo.png" class="logo__image only-dark pst-js-only" alt="Remote Camera Decision Support Tool - Concept Library - Home"/>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class=" navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://ab-rcsc.github.io/rc-decision-support-tool">
+    <b>Home</b> 
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/">
+    Concept library
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/09_glossary.html">
+    Glossary
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/08_references.html">
+    References
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/AB-RCSC/rc-decision-support-tool" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-github-square fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://ab-rcsc.github.io/RCSC-WildCAM_Remote-Camera-Survey-Guidelines-and-Metadata-Standards/" title="Survey Guidelines / Metadata Standards" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="_static/logo_survguide_metadata.png" class="icon-link-image" alt="Survey Guidelines / Metadata Standards"/></a>
+        </li>
+</ul></div>
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+        <div class="navbar-item">
+
+  <div class="tocsection sourcelink">
+    <a href="_sources/index.md">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://ab-rcsc.github.io/rc-decision-support-tool">
+    <b>Home</b> 
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/">
+    Concept library
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/09_glossary.html">
+    Glossary
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/08_references.html">
+    References
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/AB-RCSC/rc-decision-support-tool" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-github-square fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://ab-rcsc.github.io/RCSC-WildCAM_Remote-Camera-Survey-Guidelines-and-Metadata-Standards/" title="Survey Guidelines / Metadata Standards" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="_static/logo_survguide_metadata.png" class="icon-link-image" alt="Survey Guidelines / Metadata Standards"/></a>
+        </li>
+</ul></div>
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+          <div class="navbar-item">
+
+  <div class="tocsection sourcelink">
+    <a href="_sources/index.md">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> 
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectives-resources">Objectives &amp; Resources</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#study-area-site-selection-constraints">Study area &amp; Site selection constraints</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#duration-timing">Duration &amp; Timing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#target-species">Target species</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#target-species-single">Target species (single)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#target-species-multiple">Target species (multiple)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#equipment-deployment">Equipment &amp; Deployment</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-analysis">Data &amp; Analysis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recommendations">Recommendations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modelling-approaches">Modelling Approaches</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references-glossary">References / Glossary</a></li>
+</ul>
+  </nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none"></div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <style>
+    .bd-page-width {
+    max-width: 95%;  /* default is 88rem */
+}
+    .bd-main .bd-content .bd-article-container {
+    max-width: 95%;  /* default is 60em */
+  }
+}
+</style>
+<section class="tex2jax_ignore mathjax_ignore" id="remote-camera-decision-support-tool-concept-library">
+<h1>Remote Camera Decision Support Tool - Concept Library<a class="headerlink" href="#remote-camera-decision-support-tool-concept-library" title="Link to this heading">#</a></h1>
+<br>
+<br>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Full TOC</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><b>Objectives &amp; Resources</b><br>
+<font color='#FFFFFF'>……………………</font><a class="reference internal" href="#/02_dialog-boxes//01_01_user_entry#title_i_user_entry"><span class="xref myst">User entry (Study design or data already collected)</span></a><br>
+<font color='#FFFFFF'>……………………</font><a class="reference internal" href="02_dialog-boxes/01_02_objective.html"><span class="std std-doc">State Variable <em>vs.</em> Objective</span></a><br>
+<font color='#FFFFFF'>……………………</font><a class="reference internal" href="02_dialog-boxes/01_03_num_cams.html"><span class="std std-doc">Number of cameras available</span></a><br>
+<b>Study area &amp; Site selection constraints</b><br>
+<font color='#FFFFFF'>……………………</font><a class="reference internal" href="#/02_dialog-boxes/01_04_study_area_mult.md"><span class="xref myst">Single <em>vs</em> multiple</span></a><br>
+<font color='#FFFFFF'>……………………</font><a class="reference internal" href="#/02_dialog-boxes/01_05_cam_dens_gradient.md"><span class="xref myst">Known density gradient</span></a><br>
+<font color='#FFFFFF'>……………………</font><span class="xref myst">Stratified by covariates</span><br>
+<font color='#FFFFFF'>……………………</font><a class="reference internal" href="#/02_dialog-boxes/01_07_cam_high_dens.md"><span class="xref myst">Camera density</span></a><br>
+<b>Duration &amp; Timing</b><br>
+<font color='#FFFFFF'>……………………</font><a class="reference internal" href="#/02_dialog-boxes/01_08_surv_dur_min_max.md"><span class="xref myst">Duration (minimum &amp; maximum)</span></a><br>
+<font color='#FFFFFF'>……………………</font><a class="reference internal" href="02_dialog-boxes/01_10_sp_asymptote.html"><span class="std std-doc">Species-accumulation asymptote</span></a><br>
+<font color='#FFFFFF'>……………………</font><a class="reference internal" href="#/02_dialog-boxes/01_11_study_season_num.md"><span class="xref myst">Season(s)</span></a><br>
+<b>Target species</b><br>
+<font color='#FFFFFF'>…………</font><b><i>Target species (single)</b></i><br>
+<font color='#FFFFFF'>……………………</font><a class="reference internal" href="#/02_dialog-boxes/01_12_obj_targ_sp.md"><span class="xref myst">Single <em>vs.</em> multiple</span></a><br>
+<font color='#FFFFFF'>……………………</font><span class="xref myst">Ecological knowledge</span><br>
+<font color='#FFFFFF'>……………………</font><span class="xref myst">Carnivore / ungulate</span><br>
+<font color='#FFFFFF'>……………………</font><span class="xref myst">Low density species</span><br>
+<font color='#FFFFFF'>……………………</font><a class="reference internal" href="#/02_dialog-boxes/01_16_sp_occ_restr.md"><span class="xref myst">Occurrence restricted</span></a><br>
+<font color='#FFFFFF'>……………………</font><a class="reference internal" href="02_dialog-boxes/01_17_sp_hr_size.html"><span class="std std-doc">Home range size</span></a><br>
+<font color='#FFFFFF'>……………………</font><a class="reference internal" href="02_dialog-boxes/01_18_sp_size.html"><span class="std std-doc">Body size</span></a><br>
+<font color='#FFFFFF'>……………………</font><a class="reference internal" href="02_dialog-boxes/01_19_sp_rarity.html"><span class="std std-doc">Rarity</span></a><br>
+<font color='#FFFFFF'>……………………</font><a class="reference internal" href="02_dialog-boxes/01_20_sp_detprob_cat.html"><span class="std std-doc">Detection probability</span></a><br>
+<font color='#FFFFFF'>……………………</font><span class="xref myst">Behaviour (Investigative)</span><br>
+<font color='#FFFFFF'>……………………</font><a class="reference internal" href="#/02_dialog-boxes/01_22_sp_behav_season.md"><span class="xref myst">Behaviour (Seasonal)</span></a><br>
+<font color='#FFFFFF'>……………………</font><a class="reference internal" href="#/02_dialog-boxes/01_23_marking_code.md"><span class="xref myst">Markings (Marked, unmarked, partially marked)</span></a><br>
+<font color='#FFFFFF'>……………………</font><a class="reference internal" href="#/02_dialog-boxes/01_24_marking_allsub.md"><span class="xref myst">Markings (All or subset marked)</span></a><br>
+<font color='#FFFFFF'>……………………</font><a class="reference internal" href="#/02_dialog-boxes/01_25_3ormore_cat_ids.md"><span class="xref myst">Markings (Number of categorical identifiers)</span></a><br>
+<font color='#FFFFFF'>……………………</font><a class="reference internal" href="#/02_dialog-boxes/01_26_auxillary_info.md"><span class="xref myst">Additional information obtainable</span></a><br>
+<font color='#FFFFFF'>……………………</font><a class="reference internal" href="#/02_dialog-boxes/01_27_aux_count_possible.md"><span class="xref myst">Counts of individuals</span></a><br>
+<font color='#FFFFFF'>……………………</font><a class="reference internal" href="#/02_dialog-boxes/01_28_focalarea_calc.md"><span class="xref myst">Focal area measured or detections binned by distance</span></a><br>
+<font color='#FFFFFF'>……………………</font><a class="reference internal" href="#/02_dialog-boxes/01_29_cam_high_dens.md"><span class="xref myst">Camera density</span></a><br>
+<font color='#FFFFFF'>……………………</font><a class="reference internal" href="#/02_dialog-boxes/01_30_sp_common_pop_lg.md"><span class="xref myst">Study population size</span></a><br>
+<font color='#FFFFFF'>…………</font><b><i>Target species (multiple)</b></i><br>
+<font color='#FFFFFF'>……………………</font><a class="reference internal" href="#/02_dialog-boxes/01_31_sp_size_multi.md"><span class="xref myst">Size</span></a><br>
+<font color='#FFFFFF'>……………………</font><a class="reference internal" href="#/02_dialog-boxes/01_32_sp_behav__multi.md"><span class="xref myst">Behaviour</span></a><br>
+<font color='#FFFFFF'>……………………</font><a class="reference internal" href="#/02_dialog-boxes/01_33_sp_rarity_multi.md"><span class="xref myst">Rarity</span></a><br>
+<font color='#FFFFFF'>……………………</font><a class="reference internal" href="#/02_dialog-boxes/01_36_sp_detprob_cat_multi.md"><span class="xref myst">Detection probability</span></a><br>
+<b>Equipment &amp; Deployment</b><br>
+<font color='#FFFFFF'>……………………</font><span class="xref myst">Camera equipment</span><br>
+<font color='#FFFFFF'>……………………</font><a class="reference internal" href="#/02_dialog-boxes/01_40_cam_settings_mult.md"><code class="xref myst docutils literal notranslate"><span class="pre">/02_dialog-boxes/01_40_cam_settings_mult.md</span></code></a><br>
+<font color='#FFFFFF'>……………………</font><a class="reference internal" href="#/02_dialog-boxes/01_41_cam_placement.md"><span class="xref myst">Camera height, angle, direction</span></a><br>
+<font color='#FFFFFF'>……………………</font><span class="xref myst">Bait/lure</span><br>
+<font color='#FFFFFF'>……………………</font><a class="reference internal" href="#/02_dialog-boxes/01_45_targ_feature.md"><span class="xref myst">Targetting specific features</span></a><br>
+<b>Data &amp; Analysis</b><br>
+<font color='#FFFFFF'>……………………</font><a class="reference internal" href="02_dialog-boxes/01_47_cam_independent.html"><span class="std std-doc">Camera location independence</span></a><br>
+<font color='#FFFFFF'>……………………</font><a class="reference internal" href="#/02_dialog-boxes/01_48_multisamp_per_loc.md"><span class="xref myst">Repeat sampling</span></a><br>
+<font color='#FFFFFF'>……………………</font><a class="reference internal" href="#/02_dialog-boxes/01_49_modmixed.md"><span class="xref myst">Mixed models</span></a><br>
+<font color='#FFFFFF'>……………………</font><a class="reference internal" href="#/02_dialog-boxes/01_50_num_det.md"><span class="xref myst">Number of detections</span></a><br>
+<font color='#FFFFFF'>……………………</font><a class="reference internal" href="#/02_dialog-boxes/01_02_mod_divers_rich.md"><span class="xref myst">Number of individuals</span></a><br>
+<font color='#FFFFFF'>……………………</font><a class="reference internal" href="#/02_dialog-boxes/01_52_num_recap.md"><span class="xref myst">Number of recaptures</span></a><br>
+<font color='#FFFFFF'>……………………</font><a class="reference internal" href="#/02_dialog-boxes/01_51_num_det_individ.md"><span class="xref myst">Overdispersion / Zero-inflation</span></a><br>
+<b>Recommendations</b><br>
+<font color='#FFFFFF'>…………</font><b><i>Sampling design</b></i><br>
+<font color='#FFFFFF'>…………</font><b><i>Modelling Approaches</b></i><br>
+<font color='#FFFFFF'>……………………</font><a class="reference internal" href="02_dialog-boxes/03_01_mod_inventory.html"><span class="std std-doc">Species inventory</span></a><br>
+<font color='#FFFFFF'>……………………</font><a class="reference internal" href="02_dialog-boxes/03_02_mod_divers_rich.html"><span class="std std-doc">Species diversity &amp; richness</span></a><br>
+<font color='#FFFFFF'>……………………</font><a class="reference internal" href="02_dialog-boxes/03_03_mod_occupancy.html"><span class="std std-doc">Occupancy</span></a><br>
+<font color='#FFFFFF'>……………………</font><a class="reference internal" href="02_dialog-boxes/03_04_mod_rai.html"><span class="std std-doc">Relative abundance indices</span></a><br>
+<font color='#FFFFFF'>……………………</font><a class="reference internal" href="02_dialog-boxes/03_10_mod_cr_cmr.html"><span class="std std-doc">Capture-recapture (CR) / Capture-mark-recapture (CMR)</span></a><br>
+<font color='#FFFFFF'>……………………</font><a class="reference internal" href="02_dialog-boxes/03_11_mod_scr_secr.html"><span class="std std-doc">Spatial capture-recapture (SCR) / Spatially explicit capture recapture (SECR)</span></a><br>
+<font color='#FFFFFF'>……………………</font><a class="reference internal" href="02_dialog-boxes/03_13_mod_smr.html"><span class="std std-doc">Spatial mark-resight </span></a><br>
+<font color='#FFFFFF'>……………………</font><a class="reference internal" href="02_dialog-boxes/03_14_mod_sc.html"><span class="std std-doc">Spatial count (SC) model / Unmarked spatial capture-recapture</span></a><br>
+<font color='#FFFFFF'>……………………</font><a class="reference internal" href="02_dialog-boxes/03_15_mod_catspim.html"><span class="std std-doc">Spatial Partial Identity Model (Categorical SPIM; catSPIM)</span></a><br>
+<font color='#FFFFFF'>……………………</font><a class="reference internal" href="02_dialog-boxes/03_16_mod_2flankspim.html"><span class="std std-doc">Spatial Partial Identity Model (2-flank SPIM)</span></a><br>
+<font color='#FFFFFF'>……………………</font><a class="reference internal" href="02_dialog-boxes/03_17_mod_rem.html"><span class="std std-doc">Random encounter model (REM)</span></a><br>
+<font color='#FFFFFF'>……………………</font><a class="reference internal" href="02_dialog-boxes/03_18_mod_rest.html"><span class="std std-doc">Random encounter and staying time (REST)</span></a><br>
+<font color='#FFFFFF'>……………………</font><a class="reference internal" href="02_dialog-boxes/03_19_mod_tifc.html"><span class="std std-doc">Time in front of the camera (TIFC)</span></a><br>
+<font color='#FFFFFF'>……………………</font><a class="reference internal" href="02_dialog-boxes/03_20_mod_ds.html"><span class="std std-doc">Distance sampling (DS)</span></a><br>
+<font color='#FFFFFF'>……………………</font><a class="reference internal" href="02_dialog-boxes/03_21_mod_tte.html"><span class="std std-doc">Time-to-event (TTE)</span></a><br>
+<font color='#FFFFFF'>……………………</font><a class="reference internal" href="02_dialog-boxes/03_22_mod_ste.html"><span class="std std-doc">Space-to-event (STE)</span></a><br>
+<font color='#FFFFFF'>……………………</font><a class="reference internal" href="02_dialog-boxes/03_23_mod_is.html"><span class="std std-doc">Instantaneous sampling (IS)</span></a><br>
+<font color='#FFFFFF'>……………………</font><a class="reference internal" href="02_dialog-boxes/03_24_mod_behaviour.html"><span class="std std-doc">Behaviour</span></a><br>
+<font color='#FFFFFF'>…………</font><b><i>Analysis considerations</b></i><br>
+<b>References / Glossary</b><br>
+<font color='#FFFFFF'>……………………</font><a class="reference internal" href="02_dialog-boxes/08_references.html"><span class="std std-doc">References</span></a><br>
+<font color='#FFFFFF'>……………………</font><a class="reference internal" href="02_dialog-boxes/09_glossary.html"><span class="std std-doc">Glossary</span></a><br></p>
+</div>
+</details><div class="admonition note">
+<p class="admonition-title">Note</p>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-2 sd-row-cols-xs-2 sd-row-cols-sm-2 sd-row-cols-md-2 sd-row-cols-lg-2 sd-g-3 sd-g-xs-3 sd-g-sm-3 sd-g-md-3 sd-g-lg-3 docutils">
+<div class="sd-col sd-d-flex-column sd-col-11 sd-col-xs-11 sd-col-sm-11 sd-col-md-11 sd-col-lg-11 docutils">
+<p><em>Items in italics are not yet available.</em><br></p>
+</div>
+<div class="sd-col sd-d-flex-column sd-col-1 sd-col-xs-1 sd-col-sm-1 sd-col-md-1 sd-col-lg-1 docutils">
+<p><a class="sd-sphinx-override sd-badge sd-outline-white sd-text-white reference external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/00_master_test.html"><span>master_test</span></a>
+<a class="sd-sphinx-override sd-badge sd-outline-white sd-text-white reference external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/00_test_keep.html"><span>test_keep</span></a>
+<a class="sd-sphinx-override sd-badge sd-outline-white sd-text-white reference external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/itables_references2.html"><span>test_img</span></a></p>
+</div>
+</div>
+</div>
+</div>
+<section id="objectives-resources">
+<span id="id1"></span><h2>Objectives &amp; Resources<a class="headerlink" href="#objectives-resources" title="Link to this heading">#</a></h2>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-3 sd-row-cols-xs-3 sd-row-cols-sm-3 sd-row-cols-md-3 sd-row-cols-lg-3 sd-g-3 sd-g-xs-3 sd-g-sm-3 sd-g-md-3 sd-g-lg-3 docutils">
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center class-prog1 docutils">
+<img alt="" class="sd-card-img" src="_images/transparent.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><em><div class="class-card-center toc_text_tight">User entry (Study design or data already collected)</div></em></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="02_dialog-boxes/01_01_user_entry.html"><span>02_dialog-boxes/01_01_user_entry.html</span></a></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center class-prog1 docutils">
+<img alt="" class="sd-card-img" src="_images/transparent.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><strong><div class="class-card-center toc_text_tight">State Variable <em>vs.</em> Objective</div></strong></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="02_dialog-boxes/01_02_objective.html"><span>02_dialog-boxes/01_02_objective.html</span></a></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center class-prog1 docutils">
+<img alt="" class="sd-card-img" src="_images/transparent.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><strong><div class="class-card-center toc_text_tight">Number of cameras available</div></strong></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="02_dialog-boxes/01_03_num_cams.html"><span>02_dialog-boxes/01_03_num_cams.html</span></a></div>
+</div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+</section>
+<section id="study-area-site-selection-constraints">
+<span id="id2"></span><h2>Study area &amp; Site selection constraints<a class="headerlink" href="#study-area-site-selection-constraints" title="Link to this heading">#</a></h2>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-3 sd-row-cols-xs-3 sd-row-cols-sm-3 sd-row-cols-md-3 sd-row-cols-lg-3 sd-g-3 sd-g-xs-3 sd-g-sm-3 sd-g-md-3 sd-g-lg-3 docutils">
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center class-prog2 docutils">
+<img alt="" class="sd-card-img" src="_images/transparent.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><em><div class="class-card-center toc_text_tight">Single <em>vs</em> multiple</div></em></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="02_dialog-boxes/01_04_study_area_mult.html"><span>02_dialog-boxes/01_04_study_area_mult.html</span></a></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center class-prog2 docutils">
+<img alt="" class="sd-card-img" src="_images/transparent.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><em><div class="class-card-center toc_text_tight">Known density gradient</div></em></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="02_dialog-boxes/01_05_cam_dens_gradient.html"><span>02_dialog-boxes/01_05_cam_dens_gradient.html</span></a></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center class-prog2 docutils">
+<img alt="" class="sd-card-img" src="_images/transparent.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><strong><div class="class-card-center toc_text_tight">Stratified by covariates</div></strong></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="02_dialog-boxes/01_06_cam_strat_covar.html"><span>02_dialog-boxes/01_06_cam_strat_covar.html</span></a></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center class-prog2 docutils">
+<img alt="" class="sd-card-img" src="_images/transparent.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><em><div class="class-card-center toc_text_tight">Camera density</div></em></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="02_dialog-boxes/01_07_cam_high_dens.html"><span>02_dialog-boxes/01_07_cam_high_dens.html</span></a></div>
+</div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+</section>
+<section id="duration-timing">
+<span id="id3"></span><h2>Duration &amp; Timing<a class="headerlink" href="#duration-timing" title="Link to this heading">#</a></h2>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-3 sd-row-cols-xs-3 sd-row-cols-sm-3 sd-row-cols-md-3 sd-row-cols-lg-3 sd-g-3 sd-g-xs-3 sd-g-sm-3 sd-g-md-3 sd-g-lg-3 docutils">
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center class-prog3 docutils">
+<img alt="" class="sd-card-img" src="_images/transparent.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><em><div class="class-card-center toc_text_tight">Duration (minimum &amp; maximum)</div></em></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="02_dialog-boxes/01_08_surv_dur.html"><span>02_dialog-boxes/01_08_surv_dur.html</span></a></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center class-prog3 docutils">
+<img alt="" class="sd-card-img" src="_images/transparent.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><strong><div class="class-card-center toc_text_tight">Species-accumulation asymptote</div></strong></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="02_dialog-boxes/01_10_sp_asymptote.html"><span>02_dialog-boxes/01_10_sp_asymptote.html</span></a></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center class-prog3 docutils">
+<img alt="" class="sd-card-img" src="_images/transparent.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><em><div class="class-card-center toc_text_tight">Season(s)</div></em></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="02_dialog-boxes/01_11_study_season_num.html"><span>02_dialog-boxes/01_11_study_season_num.html</span></a></div>
+</div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+</section>
+<section id="target-species">
+<span id="id4"></span><h2>Target species<a class="headerlink" href="#target-species" title="Link to this heading">#</a></h2>
+<section id="target-species-single">
+<span id="id5"></span><h3>Target species (single)<a class="headerlink" href="#target-species-single" title="Link to this heading">#</a></h3>
+<br>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-3 sd-row-cols-xs-3 sd-row-cols-sm-3 sd-row-cols-md-3 sd-row-cols-lg-3 sd-g-3 sd-g-xs-3 sd-g-sm-3 sd-g-md-3 sd-g-lg-3 docutils">
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center class-prog4 docutils">
+<img alt="" class="sd-card-img" src="_images/transparent.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><em><div class="class-card-center toc_text_tight">Single <em>vs.</em> multiple</div></em></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="02_dialog-boxes/01_12_obj_targ_sp.html"><span>02_dialog-boxes/01_12_obj_targ_sp.html</span></a></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center class-prog4 docutils">
+<img alt="" class="sd-card-img" src="_images/transparent.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><em><div class="class-card-center toc_text_tight">Ecological knowledge</div></em></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="02_dialog-boxes/01_13_sp_info.html"><span>02_dialog-boxes/01_13_sp_info.html</span></a></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center class-prog4 docutils">
+<img alt="" class="sd-card-img" src="_images/transparent.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><em><div class="class-card-center toc_text_tight">Carnivore / ungulate</div></em></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="02_dialog-boxes/01_14_sp_type.html"><span>02_dialog-boxes/01_14_sp_type.html</span></a></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center class-prog4 docutils">
+<img alt="" class="sd-card-img" src="_images/transparent.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><em><div class="class-card-center toc_text_tight">Low density species</div></em></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="02_dialog-boxes/01_15_sp_dens_low.html"><span>02_dialog-boxes/01_15_sp_dens_low.html</span></a></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center class-prog4 docutils">
+<img alt="" class="sd-card-img" src="_images/transparent.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><em><div class="class-card-center toc_text_tight">Occurrence restricted</div></em></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="02_dialog-boxes/01_16_sp_occ_restr.html"><span>02_dialog-boxes/01_16_sp_occ_restr.html</span></a></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center class-prog4 docutils">
+<img alt="" class="sd-card-img" src="_images/transparent.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><strong><div class="class-card-center toc_text_tight">Home range size</div></strong></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="02_dialog-boxes/01_17_sp_hr_size.html"><span>02_dialog-boxes/01_17_sp_hr_size.html</span></a></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center class-prog4 docutils">
+<img alt="" class="sd-card-img" src="_images/transparent.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><strong><div class="class-card-center toc_text_tight">Body size</div></strong></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="02_dialog-boxes/01_18_sp_size.html"><span>02_dialog-boxes/01_18_sp_size.html</span></a></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center class-prog4 docutils">
+<img alt="" class="sd-card-img" src="_images/transparent.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><strong><div class="class-card-center toc_text_tight">Rarity</div></strong></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="02_dialog-boxes/01_19_sp_rarity.html"><span>02_dialog-boxes/01_19_sp_rarity.html</span></a></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center class-prog4 docutils">
+<img alt="" class="sd-card-img" src="_images/transparent.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><strong><div class="class-card-center toc_text_tight">Detection probability</div></strong></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="02_dialog-boxes/01_20_sp_detprob_cat.html"><span>02_dialog-boxes/01_20_sp_detprob_cat.html</span></a></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center class-prog4 docutils">
+<img alt="" class="sd-card-img" src="_images/transparent.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><em><div class="class-card-center toc_text_tight">Behaviour (Investigative)</div></em></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="02_dialog-boxes/01_21_sp_behav.html"><span>02_dialog-boxes/01_21_sp_behav.html</span></a></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center class-prog4 docutils">
+<img alt="" class="sd-card-img" src="_images/transparent.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><em><div class="class-card-center toc_text_tight">Behaviour (Seasonal)</div></em></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="02_dialog-boxes/01_22_sp_behav_season.html"><span>02_dialog-boxes/01_22_sp_behav_season.html</span></a></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center class-prog4 docutils">
+<img alt="" class="sd-card-img" src="_images/transparent.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><em><div class="class-card-center toc_text_tight">Markings (Marked, unmarked, partially marked)</div></em></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="02_dialog-boxes/01_23_marking_code.html"><span>02_dialog-boxes/01_23_marking_code.html</span></a></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center class-prog4 docutils">
+<img alt="" class="sd-card-img" src="_images/transparent.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><em><div class="class-card-center toc_text_tight">Markings (All or subset marked)</div></em></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="02_dialog-boxes/01_24_marking_allsub.html"><span>02_dialog-boxes/01_24_marking_allsub.html</span></a></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center class-prog4 docutils">
+<img alt="" class="sd-card-img" src="_images/transparent.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><em><div class="class-card-center toc_text_tight">Markings (Number of categorical identifiers)</div></em></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="02_dialog-boxes/01_25_3ormore_cat_ids.html"><span>02_dialog-boxes/01_25_3ormore_cat_ids.html</span></a></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center class-prog4 docutils">
+<img alt="" class="sd-card-img" src="_images/transparent.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><em><div class="class-card-center toc_text_tight">Additional information obtainable</div></em></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="02_dialog-boxes/01_26_auxillary_info.html"><span>02_dialog-boxes/01_26_auxillary_info.html</span></a></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center class-prog4 docutils">
+<img alt="" class="sd-card-img" src="_images/transparent.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><em><div class="class-card-center toc_text_tight">Counts of individuals</div></em></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="02_dialog-boxes/01_27_aux_count_possible.html"><span>02_dialog-boxes/01_27_aux_count_possible.html</span></a></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center class-prog4 docutils">
+<img alt="" class="sd-card-img" src="_images/transparent.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><em><div class="class-card-center toc_text_tight">Focal area measured or detections binned by distance</div></em></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="02_dialog-boxes/01_28_focalarea_calc.html"><span>02_dialog-boxes/01_28_focalarea_calc.html</span></a></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center class-prog4 docutils">
+<img alt="" class="sd-card-img" src="_images/transparent.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><em><div class="class-card-center toc_text_tight">Study population size</div></em></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="02_dialog-boxes/01_30_sp_common_pop_lg.html"><span>02_dialog-boxes/01_30_sp_common_pop_lg.html</span></a></div>
+</div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+</section>
+<section id="target-species-multiple">
+<span id="id6"></span><h3>Target species (multiple)<a class="headerlink" href="#target-species-multiple" title="Link to this heading">#</a></h3>
+<br>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-3 sd-row-cols-xs-3 sd-row-cols-sm-3 sd-row-cols-md-3 sd-row-cols-lg-3 sd-g-3 sd-g-xs-3 sd-g-sm-3 sd-g-md-3 sd-g-lg-3 docutils">
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center class-prog4 docutils">
+<img alt="" class="sd-card-img" src="_images/transparent.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><em><div class="class-card-center toc_text_tight">Size</div></em></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="02_dialog-boxes/01_31_sp_size_multi.html"><span>02_dialog-boxes/01_31_sp_size_multi.html</span></a></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center class-prog4 docutils">
+<img alt="" class="sd-card-img" src="_images/transparent.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><em><div class="class-card-center toc_text_tight">Behaviour</div></em></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="02_dialog-boxes/01_32_sp_behav_multi.html"><span>02_dialog-boxes/01_32_sp_behav_multi.html</span></a></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center class-prog4 docutils">
+<img alt="" class="sd-card-img" src="_images/transparent.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><em><div class="class-card-center toc_text_tight">Rarity</div></em></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="02_dialog-boxes/01_33_sp_rarity_multi.html"><span>02_dialog-boxes/01_33_sp_rarity_multi.html</span></a></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center class-prog4 docutils">
+<img alt="" class="sd-card-img" src="_images/transparent.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><em><div class="class-card-center toc_text_tight">Detection probability</div></em></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="02_dialog-boxes/01_36_sp_detprob_cat_multi.html"><span>02_dialog-boxes/01_36_sp_detprob_cat_multi.html</span></a></div>
+</div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+</section>
+</section>
+<section id="equipment-deployment">
+<span id="id7"></span><h2>Equipment &amp; Deployment<a class="headerlink" href="#equipment-deployment" title="Link to this heading">#</a></h2>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-3 sd-row-cols-xs-3 sd-row-cols-sm-3 sd-row-cols-md-3 sd-row-cols-lg-3 sd-g-3 sd-g-xs-3 sd-g-sm-3 sd-g-md-3 sd-g-lg-3 docutils">
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center class-prog5 docutils">
+<img alt="" class="sd-card-img" src="_images/transparent.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><em><div class="class-card-center toc_text_tight">Camera equipment</div></em></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="02_dialog-boxes/01_39_cam_equipment.html"><span>02_dialog-boxes/01_39_cam_equipment.html</span></a></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center class-prog5 docutils">
+<img alt="" class="sd-card-img" src="_images/transparent.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><em><div class="class-card-center toc_text_tight">Camera settings</div></em></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="02_dialog-boxes/01_40_cam_settings.html"><span>02_dialog-boxes/01_40_cam_settings.html</span></a></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center class-prog5 docutils">
+<img alt="" class="sd-card-img" src="_images/transparent.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><em><div class="class-card-center toc_text_tight">Camera height, angle, direction</div></em></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="02_dialog-boxes/01_41_cam_placement.html"><span>02_dialog-boxes/01_41_cam_placement.html</span></a></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center class-prog5 docutils">
+<img alt="" class="sd-card-img" src="_images/transparent.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><em><div class="class-card-center toc_text_tight">Bait/lure</div></em></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="02_dialog-boxes/01_43_bait_lure.html"><span>02_dialog-boxes/01_43_bait_lure.html</span></a></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center class-prog5 docutils">
+<img alt="" class="sd-card-img" src="_images/transparent.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><em><div class="class-card-center toc_text_tight"></div></em></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="02_dialog-boxes/01_45_targ_feature.html"><span>02_dialog-boxes/01_45_targ_feature.html</span></a></div>
+</div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+</section>
+<section id="data-analysis">
+<span id="id8"></span><h2>Data &amp; Analysis<a class="headerlink" href="#data-analysis" title="Link to this heading">#</a></h2>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-3 sd-row-cols-xs-3 sd-row-cols-sm-3 sd-row-cols-md-3 sd-row-cols-lg-3 sd-g-3 sd-g-xs-3 sd-g-sm-3 sd-g-md-3 sd-g-lg-3 docutils">
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center class-prog6 docutils">
+<img alt="" class="sd-card-img" src="_images/transparent.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><strong><div class="class-card-center toc_text_tight">Camera location independence</div></strong></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="02_dialog-boxes/01_47_cam_independent.html"><span>02_dialog-boxes/01_47_cam_independent.html</span></a></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center class-prog6 docutils">
+<img alt="" class="sd-card-img" src="_images/transparent.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><em><div class="class-card-center toc_text_tight">Repeat sampling</div></em></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="02_dialog-boxes/01_48_multisamp_per_loc.html"><span>02_dialog-boxes/01_48_multisamp_per_loc.html</span></a></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center class-prog6 docutils">
+<img alt="" class="sd-card-img" src="_images/transparent.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><em><div class="class-card-center toc_text_tight">Mixed models</div></em></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="02_dialog-boxes/01_49_modmixed.html"><span>02_dialog-boxes/01_49_modmixed.html</span></a></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center class-prog6 docutils">
+<img alt="" class="sd-card-img" src="_images/transparent.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><em><div class="class-card-center toc_text_tight">Number of detections</div></em></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="02_dialog-boxes/01_50_num_det.html"><span>02_dialog-boxes/01_50_num_det.html</span></a></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center class-prog6 docutils">
+<img alt="" class="sd-card-img" src="_images/transparent.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><em><div class="class-card-center toc_text_tight">Number of individuals</div></em></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="02_dialog-boxes/01_51_num_det_individ.html"><span>02_dialog-boxes/01_51_num_det_individ.html</span></a></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center class-prog6 docutils">
+<img alt="" class="sd-card-img" src="_images/transparent.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><em><div class="class-card-center toc_text_tight">Number of recaptures</div></em></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="02_dialog-boxes/01_52_num_recap.html"><span>02_dialog-boxes/01_52_num_recap.html</span></a></div>
+</div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+</section>
+<section id="recommendations">
+<span id="id9"></span><h2>Recommendations<a class="headerlink" href="#recommendations" title="Link to this heading">#</a></h2>
+<section id="modelling-approaches">
+<span id="id10"></span><h3>Modelling Approaches<a class="headerlink" href="#modelling-approaches" title="Link to this heading">#</a></h3>
+<br>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-3 sd-row-cols-xs-3 sd-row-cols-sm-3 sd-row-cols-md-3 sd-row-cols-lg-3 sd-g-3 sd-g-xs-3 sd-g-sm-3 sd-g-md-3 sd-g-lg-3 docutils">
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center class-prog7 docutils">
+<img alt="" class="sd-card-img" src="_images/transparent.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><strong><div class="class-card-center toc_text_tight">Species inventory</div></strong></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="02_dialog-boxes/03_01_mod_inventory.html"><span>02_dialog-boxes/03_01_mod_inventory.html</span></a></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center class-prog7 docutils">
+<img alt="" class="sd-card-img" src="_images/transparent.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><strong><div class="class-card-center toc_text_tight">Species diversity &amp; richness</div></strong></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="02_dialog-boxes/03_02_mod_divers_rich.html"><span>02_dialog-boxes/03_02_mod_divers_rich.html</span></a></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center class-prog7 docutils">
+<img alt="" class="sd-card-img" src="_images/transparent.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><strong><div class="class-card-center toc_text_tight">Occupancy</div></strong></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="02_dialog-boxes/03_03_mod_occupancy.html"><span>02_dialog-boxes/03_03_mod_occupancy.html</span></a></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center class-prog7 docutils">
+<img alt="" class="sd-card-img" src="_images/transparent.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><strong><div class="class-card-center toc_text_tight">Relative abundance indices</div></strong></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="02_dialog-boxes/03_04_mod_rai.html"><span>02_dialog-boxes/03_04_mod_rai.html</span></a></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center class-prog7 docutils">
+<img alt="" class="sd-card-img" src="_images/transparent.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><strong><div class="class-card-center toc_text_tight">Capture-recapture (CR) / Capture-mark-recapture (CMR)</div></strong></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="02_dialog-boxes/03_10_mod_cr_cmr.html"><span>02_dialog-boxes/03_10_mod_cr_cmr.html</span></a></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center class-prog7 docutils">
+<img alt="" class="sd-card-img" src="_images/transparent.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><strong><div class="class-card-center toc_text_tight">Spatial capture-recapture (SCR) / Spatially explicit capture recapture (SECR)</div></strong></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="02_dialog-boxes/03_11_mod_scr_secr.html"><span>02_dialog-boxes/03_11_mod_scr_secr.html</span></a></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center class-prog7 docutils">
+<img alt="" class="sd-card-img" src="_images/transparent.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><strong><div class="class-card-center toc_text_tight">Spatial mark-resight </div></strong></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="02_dialog-boxes/03_13_mod_smr.html"><span>02_dialog-boxes/03_13_mod_smr.html</span></a></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center class-prog7 docutils">
+<img alt="" class="sd-card-img" src="_images/transparent.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><strong><div class="class-card-center toc_text_tight">Spatial count (SC) model / Unmarked spatial capture-recapture</div></strong></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="02_dialog-boxes/03_14_mod_sc.html"><span>02_dialog-boxes/03_14_mod_sc.html</span></a></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center class-prog7 docutils">
+<img alt="" class="sd-card-img" src="_images/transparent.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><strong><div class="class-card-center toc_text_tight">Spatial Partial Identity Model (Categorical SPIM; catSPIM)</div></strong></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="02_dialog-boxes/03_15_mod_catspim.html"><span>02_dialog-boxes/03_15_mod_catspim.html</span></a></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center class-prog7 docutils">
+<img alt="" class="sd-card-img" src="_images/transparent.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><strong><div class="class-card-center toc_text_tight">Spatial Partial Identity Model (2-flank SPIM)</div></strong></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="02_dialog-boxes/03_16_mod_2flankspim.html"><span>02_dialog-boxes/03_16_mod_2flankspim.html</span></a></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center class-prog7 docutils">
+<img alt="" class="sd-card-img" src="_images/transparent.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><strong><div class="class-card-center toc_text_tight">Random encounter model (REM)</div></strong></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="02_dialog-boxes/03_17_mod_rem.html"><span>02_dialog-boxes/03_17_mod_rem.html</span></a></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center class-prog7 docutils">
+<img alt="" class="sd-card-img" src="_images/transparent.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><strong><div class="class-card-center toc_text_tight">Random encounter and staying time (REST)</div></strong></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="02_dialog-boxes/03_18_mod_rest.html"><span>02_dialog-boxes/03_18_mod_rest.html</span></a></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center class-prog7 docutils">
+<img alt="" class="sd-card-img" src="_images/transparent.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><strong><div class="class-card-center toc_text_tight">Time in front of the camera (TIFC)</div></strong></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="02_dialog-boxes/03_19_mod_tifc.html"><span>02_dialog-boxes/03_19_mod_tifc.html</span></a></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center class-prog7 docutils">
+<img alt="" class="sd-card-img" src="_images/transparent.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><strong><div class="class-card-center toc_text_tight">Distance sampling (DS)</div></strong></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="02_dialog-boxes/03_20_mod_ds.html"><span>02_dialog-boxes/03_20_mod_ds.html</span></a></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center class-prog7 docutils">
+<img alt="" class="sd-card-img" src="_images/transparent.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><strong><div class="class-card-center toc_text_tight">Time-to-event (TTE)</div></strong></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="02_dialog-boxes/03_21_mod_tte.html"><span>02_dialog-boxes/03_21_mod_tte.html</span></a></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center class-prog7 docutils">
+<img alt="" class="sd-card-img" src="_images/transparent.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><strong><div class="class-card-center toc_text_tight">Space-to-event (STE)</div></strong></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="02_dialog-boxes/03_22_mod_ste.html"><span>02_dialog-boxes/03_22_mod_ste.html</span></a></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center class-prog7 docutils">
+<img alt="" class="sd-card-img" src="_images/transparent.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><strong><div class="class-card-center toc_text_tight">Instantaneous sampling (IS)</div></strong></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="02_dialog-boxes/03_23_mod_is.html"><span>02_dialog-boxes/03_23_mod_is.html</span></a></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-p-1 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center class-prog7 docutils">
+<img alt="" class="sd-card-img" src="_images/transparent.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><strong><div class="class-card-center toc_text_tight">Behaviour</div></strong></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="02_dialog-boxes/03_24_mod_behaviour.html"><span>02_dialog-boxes/03_24_mod_behaviour.html</span></a></div>
+</div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+</section>
+</section>
+<section id="references-glossary">
+<span id="toc-ref-glossary"></span><h2>References / Glossary<a class="headerlink" href="#references-glossary" title="Link to this heading">#</a></h2>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-3 sd-row-cols-xs-3 sd-row-cols-sm-3 sd-row-cols-md-3 sd-row-cols-lg-3 sd-g-3 sd-g-xs-3 sd-g-sm-3 sd-g-md-3 sd-g-lg-3 docutils">
+<div class="sd-col sd-d-flex-row sd-p-1 docutils" id="toc-ref">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center docutils">
+<img alt="" class="sd-card-img" src="_images/background_grey.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><strong><div class="class-card-center toc_text_tight">References</div></strong></p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="02_dialog-boxes/08_references.html"><span>02_dialog-boxes/08_references.html</span></a></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-p-1 docutils" id="toc-glossary">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center docutils">
+<img alt="" class="sd-card-img" src="_images/background_grey.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><strong><div class="class-card-center toc_text_tight">Glossary</div></strong></p>
+<div class="docutils">
+</div>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="02_dialog-boxes/09_glossary.html"><span>02_dialog-boxes/09_glossary.html</span></a></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<hr class="docutils" />
+<div class="toctree-wrapper compound">
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+              
+              
+              
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="component-author">
+By Alberta Remote Camera Steering Committee (RCSC)
+</p>
+</div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

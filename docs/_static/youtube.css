@@ -1,0 +1,19 @@
+div.admonition.admonition-youtube {
+  border-color: hsl(0deg 100% 50%); /* YouTube red */
+}
+
+div.admonition.admonition-youtube > .admonition-title {
+  background-color: hsl(0deg 99% 18%);
+  color: white;
+}
+
+div.admonition.admonition-youtube > .admonition-title::after {
+  color: hsl(0deg 100% 50%);
+  content: "\f26c"; /* fa-solid fa-tv */
+}
+
+.insert_youtube {  
+    background-image: url("/03_images/03_icons/watch-on-youtube.png");  
+    width: 44px;  
+    height: 44px;  
+}

@@ -1,0 +1,850 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>State Variable vs. Objective &#8212; Remote Camera Decision Support Tool - Concept Library</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/colours.css?v=9897dbfc" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=aeacfa45" />
+    <link rel="stylesheet" type="text/css" href="../_static/tooltips.css?v=4de49550" />
+    <link rel="stylesheet" type="text/css" href="../_static/youtube.css?v=70faa909" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '02_dialog-boxes/01_02_objective';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Remote Camera Decision Support Tool - Concept Library - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="Remote Camera Decision Support Tool - Concept Library - Home"/>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class=" navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://ab-rcsc.github.io/rc-decision-support-tool">
+    <b>Home</b> 
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/">
+    Concept library
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/09_glossary.html">
+    Glossary
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/08_references.html">
+    References
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/AB-RCSC/rc-decision-support-tool" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-github-square fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://ab-rcsc.github.io/RCSC-WildCAM_Remote-Camera-Survey-Guidelines-and-Metadata-Standards/" title="Survey Guidelines / Metadata Standards" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="../_static/logo_survguide_metadata.png" class="icon-link-image" alt="Survey Guidelines / Metadata Standards"/></a>
+        </li>
+</ul></div>
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+        <div class="navbar-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../_sources/02_dialog-boxes/01_02_objective.md">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://ab-rcsc.github.io/rc-decision-support-tool">
+    <b>Home</b> 
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/">
+    Concept library
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/09_glossary.html">
+    Glossary
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/08_references.html">
+    References
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/AB-RCSC/rc-decision-support-tool" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-github-square fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://ab-rcsc.github.io/RCSC-WildCAM_Remote-Camera-Survey-Guidelines-and-Metadata-Standards/" title="Survey Guidelines / Metadata Standards" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="../_static/logo_survguide_metadata.png" class="icon-link-image" alt="Survey Guidelines / Metadata Standards"/></a>
+        </li>
+</ul></div>
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+          <div class="navbar-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../_sources/02_dialog-boxes/01_02_objective.md">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none"></div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="state-variable-vs-objective">
+<span id="i-objective"></span><h1>State Variable <em>vs.</em> Objective<a class="headerlink" href="#state-variable-vs-objective" title="Link to this heading">#</a></h1>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-2 sd-row-cols-xs-2 sd-row-cols-sm-2 sd-row-cols-md-2 sd-row-cols-lg-2 sd-g-3 sd-g-xs-3 sd-g-sm-3 sd-g-md-3 sd-g-lg-3 docutils">
+<div class="sd-col sd-d-flex-column sd-col-10 sd-col-xs-10 sd-col-sm-10 sd-col-md-10 sd-col-lg-10 docutils">
+<p><strong>State variable</strong>: A formal measure that summarizes the state of a community or population at a particular time (Wearn &amp; Glover-Kapfer, 2017), (e.g., species richness or population abundance).</p>
+<ul class="simple">
+<li><p>Hover over each term to see its definition</p></li>
+<li><p>Refer to the “overview” tab of the concept info-box for the full definition list (with figures!)</p></li>
+<li><p>Refer to the “advanced” tab of the concept info-box if you would like to understand more about how a “state variable” differs from an “objective.”</p></li>
+</ul>
+</div>
+<div class="sd-col sd-d-flex-column sd-col-2 sd-col-xs-2 sd-col-sm-2 sd-col-md-2 sd-col-lg-2 docutils">
+<p><a class="sd-sphinx-override sd-badge sd-outline-primary sd-text-primary reference external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/"><span>Concept Library TOC</span></a></p>
+</div>
+</div>
+</div>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-0">
+Overview</label><div class="sd-tab-content docutils">
+<p>Definitions for each option are as follows (with a few additional notes):</p>
+<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><strong><font size="4"><span style="color:#2F5496">Species diversity <em>vs</em> Richness</font></span></strong></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p class="sd-card-text">This tool currently provides one set of recommendations for <strong>Species diversity &amp; richness</strong>; we hope to expand this in the future to provide recommendations more fine-tuned to Richness vs. Diversity as well as the as multiple “levels” described below.</p>
+</div>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 sd-p-2 docutils">
+<div class="sd-row sd-row-cols-2 sd-row-cols-xs-2 sd-row-cols-sm-2 sd-row-cols-md-2 sd-row-cols-lg-2 sd-g-5 sd-g-xs-5 sd-g-sm-5 sd-g-md-5 sd-g-lg-5 docutils">
+<dl class="myst field-list simple">
+<dt class="field-odd">margin<span class="colon">:</span></dt>
+<dd class="field-odd"><p class="sd-card-text">2</p>
+</dd>
+</dl>
+<div class="sd-col sd-d-flex-column docutils">
+<p class="sd-card-text"><strong>Species diversity</strong>: A measure of diversity that incorporates both the number of species in an assemblage and some measure of their relative abundances.’ (Gotelli &amp; Chao, 2013)</p>
+</div>
+<div class="sd-col sd-d-flex-column docutils">
+<p class="sd-card-text"><strong>Species richness</strong>: The total number of species in an assemblage or a sample’ (Gotelli &amp; Chao, 2013).</p>
+</div>
+</div>
+</div>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/pyron_2010_fig1_clipped.png"><img alt="../_images/pyron_2010_fig1_clipped.png" src="../_images/pyron_2010_fig1_clipped.png" style="width: 394.8px; height: 136.79999999999998px;" /></a>
+</figure>
+<p class="sd-card-text"><strong>Pyron (2010) - Fig. 1</strong> Species evenness and species richness for animalcule communities. Both communities contain five species of animalcules. Species richness is the same. The community on the left is dominated by one of the species. The community on the right has equal proportions of each species. Evenness is higher when species are present in similar proportions. Thus the community on the left has higher species diversity, because evenness is higher.</p>
+<p class="sd-card-text">Note that there are multiple “levels” to Species diversity &amp; richness, these include:</p>
+<ul class="simple">
+<li><p class="sd-card-text"><strong>Alpha richness (α)</strong>: The number of species at the level of an individual camera location (Wearn &amp; Glover-Kapfer, 2017).</p></li>
+<li><p class="sd-card-text"><strong>Beta-diversity (β)</strong>: The differences between the communities or, more formally, the variance among the communities (Wearn &amp; Glover-Kapfer, 2017).</p></li>
+<li><p class="sd-card-text"><strong>Gamma richness (γ)</strong>: The number of species across a whole study area (Wearn &amp; Glover-Kapfer, 2017).</p></li>
+</ul>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/eco_intel.jpeg"><img alt="../_images/eco_intel.jpeg" src="../_images/eco_intel.jpeg" style="width: 600px;" /></a>
+</figure>
+<p class="sd-card-text">*<center>(Babu, N.D.)</center></p>
+</div>
+</div>
+<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><strong><font size="4"><span style="color:#2F5496">Species inventory (presence) <em>vs.</em> Occupancy </font></span></strong></p>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 sd-p-2 docutils">
+<div class="sd-row sd-row-cols-2 sd-row-cols-xs-2 sd-row-cols-sm-2 sd-row-cols-md-2 sd-row-cols-lg-2 sd-g-5 sd-g-xs-5 sd-g-sm-5 sd-g-md-5 sd-g-lg-5 docutils">
+<dl class="myst field-list simple">
+<dt class="field-odd">margin<span class="colon">:</span></dt>
+<dd class="field-odd"><p class="sd-card-text">2</p>
+</dd>
+</dl>
+<div class="sd-col sd-d-flex-column docutils">
+<p class="sd-card-text"><strong>Species inventory</strong>: Rapid assessment surveys used to determine what species are present in a given area at a given point in time; there is no attempt made to quantify aspects of communities or populations (Wearn &amp; Glover-Kapfer, 2017).</p>
+</div>
+<div class="sd-col sd-d-flex-column docutils">
+<p class="sd-card-text"><strong>Occupancy</strong>: The probability a site is occupied by the species (MacKenzie et al., 2002). Occupancy is also highly suitable for evaluating broad-scale patterns of species distribution (Wearn &amp; Glover-Kapfer, 2017).</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><strong><font size="4"><span style="color:#2F5496">Absolute abundance <em>vs.</em> Relative abundance <em>vs.</em> Density</font></span></strong></p>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 sd-p-2 docutils">
+<div class="sd-row sd-row-cols-3 sd-row-cols-xs-3 sd-row-cols-sm-3 sd-row-cols-md-3 sd-row-cols-lg-3 sd-g-5 sd-g-xs-5 sd-g-sm-5 sd-g-md-5 sd-g-lg-5 docutils">
+<dl class="myst field-list simple">
+<dt class="field-odd">margin<span class="colon">:</span></dt>
+<dd class="field-odd"><p class="sd-card-text">2</p>
+</dd>
+</dl>
+<div class="sd-col sd-d-flex-column docutils">
+<p class="sd-card-text"><strong>Absolute abundance</strong>: The number of individuals in a population (Wearn &amp; Glover-Kapfer, 2017).</p>
+<figure class="align-default">
+<img alt="../_images/abundance.png" class="img-grid" src="../_images/abundance.png" />
+</figure>
+<p class="sd-card-text"><em><center>Figure modified from Becker (2024)</center></em></p>
+</div>
+<div class="sd-col sd-d-flex-column docutils">
+<p class="sd-card-text"><strong>Relative abundance</strong>: The number of animals detected from one camera/area compared to another camera/area.</p>
+<figure class="align-default">
+<img alt="../_images/relative_abundance.png" class="img-grid" src="../_images/relative_abundance.png" />
+</figure>
+<p class="sd-card-text"><em><center>Figure modified from Becker (2024)</center></em></p>
+</div>
+<div class="sd-col sd-d-flex-column docutils">
+<p class="sd-card-text"><strong>Density</strong>: The number of individuals per unit area (Wearn &amp; Glover-Kapfer, 2017)</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/density.png"><img alt="../_images/density.png" src="../_images/density.png" style="width: 330px;" /></a>
+</figure>
+<p class="sd-card-text"><em><center>Figure modified from Becker (2024)</center></em></p>
+</div>
+</div>
+</div>
+<div class="sd-container-fluid sd-sphinx-override sd-m-2 sd-p-2 docutils">
+<div class="sd-row sd-row-cols-3 sd-row-cols-xs-3 sd-row-cols-sm-3 sd-row-cols-md-3 sd-row-cols-lg-3 sd-g-5 sd-g-xs-5 sd-g-sm-5 sd-g-md-5 sd-g-lg-5 docutils">
+<div class="sd-col sd-d-flex-column docutils">
+<p class="sd-card-text"><strong>Examples of possible questions include:</strong> <!--Abundance--></p>
+<ul class="simple">
+<li><p class="sd-card-text">How many animals were there?</p></li>
+<li><p class="sd-card-text">How have moose numbers changed over time?</p></li>
+</ul>
+</div>
+<div class="sd-col sd-d-flex-column docutils">
+<p class="sd-card-text"><strong>Examples of possible questions include:</strong> <!--Relative abundance--></p>
+<ul class="simple">
+<li><p class="sd-card-text">Do moose spend more time in wetlands than dense forests? Does this change in summer vs winter?</p></li>
+</ul>
+</div>
+<div class="sd-col sd-d-flex-column docutils">
+<p class="sd-card-text"><strong>Examples of possible questions include:</strong> <!--Density--></p>
+<ul class="simple">
+<li><p class="sd-card-text">How many animals were there per km<sup>2</sup>?</p></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sd-container-fluid sd-sphinx-override sd-m-0 sd-p-0 docutils">
+<div class="sd-row sd-row-cols-2 sd-row-cols-xs-2 sd-row-cols-sm-2 sd-row-cols-md-2 sd-row-cols-lg-2 sd-g-1 sd-g-xs-1 sd-g-sm-1 sd-g-md-1 sd-g-lg-1 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><strong><font size="4"><span style="color:#2F5496">Vital rates</font></span></strong></p>
+<p class="sd-card-text"><strong>Vital rate</strong>: The species-specific factors of a population that, together, play a large role in the population’s trend. These include the birth rate, recruitment rate, and probability of survival and mortality.’ NBCKC / CNSCB, 2024</p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><strong><font size="4"><span style="color:#2F5496">Behaviour</font></span></strong></p>
+<p class="sd-card-text"><strong>Behaviour</strong>: behaviour focused objectives vary greatly; they may be qualitative or quantitative (e.g., diel activity patterns, mating, boldness, predation, foraging, activity patterns, vigilance, parental care (Caravaggi et al., 2020; Wearn &amp; Glover-Kapfer, 2017).</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/caravaggi_et_al_2017_fig1_clipped.png"><img alt="../_images/caravaggi_et_al_2017_fig1_clipped.png" src="../_images/caravaggi_et_al_2017_fig1_clipped.png" style="width: 300px;" /></a>
+</figure>
+<p class="sd-card-text"><strong>Caravaggi et al. (2017) - Fig. 1.</strong> Examples of animal behaviour captured by camera traps:</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-kebab-horizontal no-title" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14a2 2 0 1 1-.001-3.999A2 2 0 0 1 20 14ZM6 12a2 2 0 1 1-3.999.001A2 2 0 0 1 6 12Zm8 0a2 2 0 1 1-3.999.001A2 2 0 0 1 14 12Z"></path></svg></span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">(A) Scent marking by an American black bear (<em>Ursus americanus</em>); (B) intraspecific competition in moose (<em>Alces alces</em>); (C) interspecific interactions between a European hare (<em>Lepus europaeus</em>; anti-predator response), a common buzzard (<em>Buteo buteo</em>; avoidance and attempted predation) and a hooded crow (<em>Corvus cornix</em>; anti-predator behaviour) captured on video (available at 10.6084/m9.figshare.4508369); (D) predation of a European rabbit (<em>Oryctolagus cuniculus</em>) by a red fox (<em>Vulpes vulpes</em>); (E) investigation of a squirrel feeding station by a pine marten (<em>Martes martes</em>); (F) nut caching by a grey squirrel (<em>Sciurus carolinensis</em>). Images provided by A.C. Burton (a, b), A. Caravaggi (c, d) and C.M.V. Finlay (e, f).</p>
+</div>
+</details></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-1">
+In-depth</label><div class="sd-tab-content docutils">
+<p><strong><font size="4"><span style="color:#2F5496">Objective <em>vs.</em> State Variable</font></span></strong></p>
+<p>One of the first choices you will make when designing your study, is what it is that you plan to measure (or your “state variable”; a formal measure that summarizes the state of a community or population at a particular time [Wearn &amp; Glover-Kapfer, 2017]). Since this concept might be easy to confuse with <a class="reference internal" href="09_glossary.html#survey-objectives"><span class="std std-ref">Survey Objective(s)</span></a> (and since “objective” is often referred to interchangeably with “state variable”), consider the following figure:</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/00_FIG_obj_state_var.png"><img alt="../_images/00_FIG_obj_state_var.png" src="../_images/00_FIG_obj_state_var.png" style="width: 800px;" /></a>
+</figure>
+<p><strong><font size="4"><span style="color:#2F5496">What should objectives include?</font></span></strong></p>
+<p>To expand upon the figure above,  }} should be specific, measurable, achievable, relevant and time-bound (i.e., SMART).  }} should describe the following:</p>
+<ul class="simple">
+<li><p><strong><a href="09_glossary.html#target_species" target="_blank" data-bs-toggle="tooltip" data-bs-title="Target Species: The common name(s) of the species that the survey was designed to detect.">Target Species<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a></strong> - the species that the <a href="09_glossary.html#survey" target="_blank" data-bs-toggle="tooltip" data-bs-title="Survey: A unique deployment period (temporal extent) within a project (recorded as 'Survey Name').">survey<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a> is designed to detect,</p></li>
+<li><p><strong><a href="09_glossary.html#state_variable" target="_blank" data-bs-toggle="tooltip" data-bs-title="State variable: A formal measure that summarizes the state of a community or population at a particular time (Wearn & Glover-Kapfer, 2017), (e.g., species richness or population abundance).">State variable<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a></strong> - a formal measure that summarizes the state of a community or population at a particular time (Wearn &amp; Glover-Kapfer, 2017) (e.g., species richness or population abundance), and</p></li>
+<li><p><strong>Proposed  }}</strong> - the method used to analyze the camera data, which should depend on the <a href="09_glossary.html#state_variable" target="_blank" data-bs-toggle="tooltip" data-bs-title="State variable: A formal measure that summarizes the state of a community or population at a particular time (Wearn & Glover-Kapfer, 2017), (e.g., species richness or population abundance).">state variable<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a> (e.g.,  }} [MacKenzie et al., 2002],  }} [e.g., ] for  estimation, etc.) and the <a href="09_glossary.html#target_species" target="_blank" data-bs-toggle="tooltip" data-bs-title="Target Species: The common name(s) of the species that the survey was designed to detect.">Target Species<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a>.</p></li>
+</ul>
+<p>An example of a clearly defined  }} could be “to monitor trends in wolverine <a href="09_glossary.html#obj_occupancy" target="_blank" data-bs-toggle="tooltip" data-bs-title="Occupancy: The probability a site is occupied by the species (Mackenzie et al., 2002).">occupancy<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a> at 5-year intervals from March – December 2020 to 2030 in wildlife management unit 539”.</p>
+<p>The  }} will determine the appropriate study design and <a href="09_glossary.html#deployment" target="_blank" data-bs-toggle="tooltip" data-bs-title="Deployment: A unique placement of a camera in space and time (recorded as 'Deployment Name'). There may be multiple deployments for one camera location. Deployments are often considered as the time between visits (i.e., deployment to service, service to service, and service to retrieval). Any change to camera location, sampling period, camera equipment (e.g., Trigger Sensitivity setting, becomes non-functioning), and*/or conditions (e.g., not baited then baited later; camera SD card replaced) should be documented as a unique deployment.">deployment<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a> considerations (e.g., <a href="09_glossary.html#cam_spacing" target="_blank" data-bs-toggle="tooltip" data-bs-title="Camera spacing: The distance between cameras (i.e., also referred to as 'inter-trap distance'). This will be influenced by the chosen sampling design, the survey Objectives, the Target Species and data analysis.">camera spacing<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a>, <a href="09_glossary.html#survey" target="_blank" data-bs-toggle="tooltip" data-bs-title="Survey: A unique deployment period (temporal extent) within a project (recorded as 'Survey Name').">survey<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a> effort, attractants or not). For example, based on the above objective for our wolverine <a href="09_glossary.html#obj_occupancy" target="_blank" data-bs-toggle="tooltip" data-bs-title="Occupancy: The probability a site is occupied by the species (Mackenzie et al., 2002).">occupancy<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a> project, we “randomly selected  }}s within a 15 km x 15 km grid cell with one camera per location and a total of 60 stations across our <a href="09_glossary.html#study_area" target="_blank" data-bs-toggle="tooltip" data-bs-title="Study area: A unique research, inventory or monitoring area (spatial boundary) within a project (there may be multiple study areas within a single project) (recorded as 'Study Area Name').">study area<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a>. We will place <a href="09_glossary.html#baitlure_lure" target="_blank" data-bs-toggle="tooltip" data-bs-title="Lure: Any substance that draws animals closer; lures include scent (olfactory) lure, visual lure and audible lure (Schlexer, 2008).">lure<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a> dispensers at each  }} to increase the likelihood of detecting a wolverine.” to increase the likelihood of detecting a wolverine.”</p>
+</div>
+<input id="sd-tab-item-2" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-2">
+Visual resources</label><div class="sd-tab-content docutils">
+<div class="sd-container-fluid sd-sphinx-override sd-m-0 sd-p-0 docutils">
+<div class="sd-row sd-row-cols-3 sd-row-cols-xs-3 sd-row-cols-sm-3 sd-row-cols-md-3 sd-row-cols-lg-3 sd-g-1 sd-g-xs-1 sd-g-sm-1 sd-g-md-1 sd-g-lg-1 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Pyron, 2010</div>
+<figure class="align-default">
+<img alt="../_images/pyron_2010_fig1_clipped1.png" class="img-grid" src="../_images/pyron_2010_fig1_clipped1.png" />
+</figure>
+<p class="sd-card-text"><strong>Pyron (2010) – Fig. 1</strong> Species evenness and species richness for animalcule communities. Both communities contain five species of animalcules. Species richness is the same. The community on the left is dominated by one of the species. The community on the right has equal proportions of each species. Evenness is higher when species are present in similar proportions. Thus the community on the left has higher species diversity, because evenness is higher.</p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<figure class="align-default">
+<img alt="../_images/eco_intel.jpeg" class="img-grid" src="../_images/eco_intel.jpeg" />
+</figure>
+<p class="sd-card-text">Note that there are multiple “levels” to Species diversity &amp; richness, these include:</p>
+<ul class="simple">
+<li><p class="sd-card-text"><strong>Alpha richness (α)</strong>: The number of species at the level of an individual camera location (Wearn &amp; Glover-Kapfer, 2017).</p></li>
+<li><p class="sd-card-text"><strong>Beta-diversity (β)</strong>: The differences between the communities or, more formally, the variance among the communities (Wearn &amp; Glover-Kapfer, 2017).</p></li>
+<li><p class="sd-card-text"><strong>Gamma richness (γ)</strong>: The number of species across a whole study area (Wearn &amp; Glover-Kapfer, 2017).</p></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+rtxt_figure3_ref_id</div>
+<figure class="align-default">
+<img alt="../_images/figure3_filename.png" class="img-grid" src="../_images/figure3_filename.png" />
+</figure>
+<p class="sd-card-text"><strong>Species inventory</strong>: Rapid assessment surveys used to determine what species are present in a given area at a given point in time; there is no attempt made to quantify aspects of communities or populations (Wearn &amp; Glover-Kapfer, 2017).</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sd-container-fluid sd-sphinx-override sd-m-0 sd-p-0 docutils">
+<div class="sd-row sd-row-cols-3 sd-row-cols-xs-3 sd-row-cols-sm-3 sd-row-cols-md-3 sd-row-cols-lg-3 sd-g-1 sd-g-xs-1 sd-g-sm-1 sd-g-md-1 sd-g-lg-1 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+rtxt_figure4_ref_id</div>
+<figure class="align-default">
+<img alt="../_images/figure4_filename.png" class="img-grid" src="../_images/figure4_filename.png" />
+</figure>
+<p class="sd-card-text"><strong>Occupancy</strong>: The probability a site is occupied by the species (MacKenzie et al., 2002). Occupancy is also highly suitable for evaluating broad-scale patterns of species distribution (Wearn &amp; Glover-Kapfer, 2017).</p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Alberta Remote Camera Steering Committee [RCSC], 2024a; Becker, 2024</div>
+<figure class="align-default">
+<img alt="../_images/abundance.png" class="img-grid" src="../_images/abundance.png" />
+</figure>
+<p class="sd-card-text"><em><center>Figure modified from Becker (2024)</center></em></p>
+<p class="sd-card-text"><strong>Absolute abundance</strong>: The number of individuals in a population (Wearn &amp; Glover-Kapfer, 2017).</p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Alberta Remote Camera Steering Committee [RCSC], 2024a; Becker, 2024</div>
+<figure class="align-default">
+<img alt="../_images/relative_abundance.png" class="img-grid" src="../_images/relative_abundance.png" />
+</figure>
+<p class="sd-card-text"><em><center>Figure modified from Becker (2024)</center></em></p>
+<p class="sd-card-text"><strong>Relative abundance</strong>: The number of animals detected from one camera/area compared to another camera/area.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sd-container-fluid sd-sphinx-override sd-m-0 sd-p-0 docutils">
+<div class="sd-row sd-row-cols-3 sd-row-cols-xs-3 sd-row-cols-sm-3 sd-row-cols-md-3 sd-row-cols-lg-3 sd-g-1 sd-g-xs-1 sd-g-sm-1 sd-g-md-1 sd-g-lg-1 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Alberta Remote Camera Steering Committee [RCSC], 2024a; Becker, 2024</div>
+<figure class="align-default">
+<img alt="../_images/density.png" class="img-grid" src="../_images/density.png" />
+</figure>
+<p class="sd-card-text"><em><center>Figure modified from Becker (2024)</center></em></p>
+<p class="sd-card-text"><strong>Density</strong>: The number of individuals per unit area (Wearn &amp; Glover-Kapfer, 2017)</p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Caravaggi et al., 2017</div>
+<figure class="align-default">
+<img alt="../_images/caravaggi_et_al_2017_fig1_clipped1.png" class="img-grid" src="../_images/caravaggi_et_al_2017_fig1_clipped1.png" />
+</figure>
+<p class="sd-card-text"><strong>Behaviour</strong>: behaviour focused objectives vary greatly; they may be qualitative or quantitative (e.g., diel activity patterns, mating, boldness, predation, foraging, activity patterns, vigilance, parental care (Caravaggi et al., 2020; Wearn &amp; Glover-Kapfer, 2017).</p>
+<p class="sd-card-text"><strong>Caravaggi et al. (2017) - Fig. 1.</strong> Examples of animal behaviour captured by camera traps:</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-kebab-horizontal no-title" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14a2 2 0 1 1-.001-3.999A2 2 0 0 1 20 14ZM6 12a2 2 0 1 1-3.999.001A2 2 0 0 1 6 12Zm8 0a2 2 0 1 1-3.999.001A2 2 0 0 1 14 12Z"></path></svg></span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">(A) Scent marking by an American black bear (<em>Ursus americanus</em>); (B) intraspecific competition in moose (<em>Alces alces</em>); (C) interspecific interactions between a European hare (<em>Lepus europaeus</em>; anti-predator response), a common buzzard (<em>Buteo buteo</em>; avoidance and attempted predation) and a hooded crow (<em>Corvus cornix</em>; anti-predator behaviour) captured on video (available at 10.6084/m9.figshare.4508369); (D) predation of a European rabbit (<em>Oryctolagus cuniculus</em>) by a red fox (<em>Vulpes vulpes</em>); (E) investigation of a squirrel feeding station by a pine marten (<em>Martes martes</em>); (F) nut caching by a grey squirrel (<em>Sciurus carolinensis</em>). Images provided by A.C. Burton (a, b), A. Caravaggi (c, d) and C.M.V. Finlay (e, f).</p>
+</div>
+</details></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Alberta Remote Camera Steering Committee [RCSC], 2024a</div>
+<figure class="align-default">
+<img alt="../_images/00_FIG_obj_state_var.png" class="img-grid" src="../_images/00_FIG_obj_state_var.png" />
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sd-container-fluid sd-sphinx-override sd-m-0 sd-p-0 docutils">
+<div class="sd-row sd-row-cols-3 sd-row-cols-xs-3 sd-row-cols-sm-3 sd-row-cols-md-3 sd-row-cols-lg-3 sd-g-1 sd-g-xs-1 sd-g-sm-1 sd-g-md-1 sd-g-lg-1 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Mccomb et al., 2010</div>
+<figure class="align-default">
+<img alt="../_images/mccomb_et_al_2010_fig4_3_clipped.png" class="img-grid" src="../_images/mccomb_et_al_2010_fig4_3_clipped.png" />
+</figure>
+<p class="sd-card-text"><strong>McComb et al. (2010) - Fig 4.3</strong>: The components of a monitoring objective.</p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+rtxt_figure11_ref_id</div>
+<figure class="align-default">
+<img alt="../_images/figure11_filename.png" class="img-grid" src="../_images/figure11_filename.png" />
+</figure>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+rtxt_figure12_ref_id</div>
+<figure class="align-default">
+<img alt="../_images/figure12_filename.png" class="img-grid" src="../_images/figure12_filename.png" />
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<input id="sd-tab-item-3" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-3">
+References</label><div class="sd-tab-content docutils">
+<p>Babu, A. (N.D.). <em>Alpha, Beta and Gamma Diversity: Biodiversity at different scales</em>. <a class="reference external" href="https://eco-intelligent.com/2016/10/14/alpha-beta-gamma-diversity">https://eco-intelligent.com/2016/10/14/alpha-beta-gamma-diversity</a></p>
+<p>Becker, M. (2024, June 4-6). <em>Comparisons between moose densities with aerial surveys and integrated camera projects.</em> [Conference presentation]. Government of Alberta Ungulate Monitoring Methods Workshop, Edmonton, AB, Canada. <a class="reference external" href="https://ab-rcsc.github.io/GOA_Ungulate-monitoring-methods-workshop/1_pages/3_Speaker-Bios.html">https://ab-rcsc.github.io/GOA_Ungulate-monitoring-methods-workshop/1_pages/3_Speaker-Bios.html</a></p>
+<p>Caravaggi, A., Banks, P. B., Burton, A. C., Finlay, C. M. V., Haswell, P. M., Hayward, M. W., Rowcliffe, M. J., Wood, M. D., Pettorelli, N., &amp; Sollmann, R. (2017). A review of camera trapping for conservation behaviour research*. Remote Sensing in Ecology and Conservation, 3*(3), 109-122. <a class="reference external" href="https://doi.org/10.1002/rse2.48">https://doi.org/10.1002/rse2.48</a></p>
+<p>Caravaggi, A., Burton, A. C., Clark, D. A., Fisher, J. T., Grass, A., Green, S., Hobaiter, C., Hofmeester, T. R., Kalan, A. K., Rabaiotti, D., &amp; Rivet, D. (2020). A Review of Factors To Consider When Using Camera Traps To Study Animal Behavior To Inform Wildlife Ecology And Conservation. <em>Conservation Science and Practice, 2</em>(8). <a class="reference external" href="https://doi.org/10.1111/csp2.239">https://doi.org/10.1111/csp2.239</a></p>
+<p>Caughley, G. (1977). Analysis of Vertebrate Populations (pp. 234). Wiley. <a class="reference external" href="https://books.google.ca/books/about/Analysis_of_Vertebrate_Populations.html?id=qAcUAQAAIAAJ&amp;amp;redir_esc=y">https://books.google.ca/books/about/Analysis_of_Vertebrate_Populations.html?id=qAcUAQAAIAAJ&amp;redir_esc=y</a></p>
+<p>Gotelli, N. J., &amp; Chao, A. (2013). Measuring and Estimating Species Richness, Species Diversity, and Biotic Similarity from Sampling Data. In <em>Encyclopedia of Biodiversity</em> (pp. 195-211). Elsevier. <a class="reference external" href="https://doi.org/10.1016/B978-0-12-384719-5.00424-X">https://doi.org/10.1016/B978-0-12-384719-5.00424-X</a></p>
+<p>MacKenzie, D. I., Nichols, J. D., Lachman, G. B., Droege, S., Royle, J. A., &amp; Langtimm, C. A. (2002). Estimating Site Occupancy Rates When Detection Probabilities Are Less Than One. <em>Ecology, 83</em>(8), 2248-2255. <a class="reference external" href="https://doi.org/10.2307/3072056">https://doi.org/10.2307/3072056</a></p>
+<p>Mccomb, B., Vesely, D., &amp; Jordan, C. (2010). <em>Monitoring Animal Populations and Their Habitats: A Practitioner’s Guide</em>. Oregon State University. <a class="reference external" href="https://openlibrary-repo.ecampusontario.ca/xmlui/bitstream/handle/123456789/850/Monitoring-Animal-Populations-and-Their-Habitats-A-Practitioner039s-Guide-1598474504._print.pdf?sequence=4&amp;amp;isAllowed=y">https://openlibrary-repo.ecampusontario.ca/xmlui/bitstream/handle/123456789/850/Monitoring-Animal-Populations-and-Their-Habitats-A-Practitioner039s-Guide-1598474504._print.pdf?sequence=4&amp;isAllowed=y</a></p>
+<p>National Boreal Caribou Knowledge Consortium [NBCKC / CNSCB]. (2024). <i>National Boreal Caribou Knowledge Consortium Glossary: Creating a common language.<i> National Boreal Caribou Knowledge Consortium (NBCKC / CNSCB). <a class="reference external" href="https://www.cclmportal.ca/resource/creating-common-language-glossary#:~:text=The%20goal%20of%20the%20National,A%20Toolkit%20for%20Respectful%20Collaboration">https://www.cclmportal.ca/resource/creating-common-language-glossary#:~:text=The goal of the National,A Toolkit for Respectful Collaboration</a></p>
+<p>O’Brien, T. G., Kinnaird, M. F., &amp; Wibisono, H. T. (2003). Crouching tigers, hidden prey: Sumatran tiger and prey populations in a tropical forest landscape. <em>Animal Conservation, 6</em>(2), 131-139. <a class="reference external" href="https://doi.org/10.1017/s1367943003003172">https://doi.org/10.1017/s1367943003003172</a></p>
+<p>Pyron, M. (2010) Characterizing Communities. <em>Nature Education Knowledge, 3</em>(10):39. <a class="reference external" href="https://www.nature.com/scitable/knowledge/library/characterizing-communities-13241173/">https://www.nature.com/scitable/knowledge/library/characterizing-communities-13241173/</a></p>
+<p>Wearn, O. R., &amp; Glover-Kapfer, P. (2017). Camera-Trapping for Conservation: A Guide to Best-ractices. <em>WWF conservation technology series, 1</em>, 1-181. <a class="reference external" href="http://dx.doi.org/10.13140/RG.2.2.23409.17767">http://dx.doi.org/10.13140/RG.2.2.23409.17767</a></p>
+</div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./02_dialog-boxes"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+              
+              
+              
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="component-author">
+By Alberta Remote Camera Steering Committee (RCSC)
+</p>
+</div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>
