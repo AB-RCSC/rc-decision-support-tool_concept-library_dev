@@ -1,0 +1,134 @@
+##### Table of contents
+##### Learn more at https://jupyterbook.org/customize/toc.html
+##### https://jupyterbook.org/en/stable/structure/configure.html
+##### https://jupyterbook.org/en/stable/structure/sections-headers.html
+
+format: jb-book
+root: index
+
+parts:
+- caption: Concept Library
+  maxdepth: 0
+  titlesonly: False
+  chapters:
+#  - file: index_links_all_internal_2024-10-02.md
+#  - file: 02_dialog-boxes/00_master_test.md
+  - file: 02_dialog-boxes/00_test/00_test_img.md
+  #  - file: itables_references2.ipynb
+##### Objectives & Resources
+  - file: 01_toc_pages/00_01_toc_objective_resources.md
+    title: Objectives & Resources
+    sections:
+#    - file: 02_dialog-boxes/00_test/00_test_color.md
+#    - file: 02_dialog-boxes/00_test/00_test_cross_ref.md
+#    - file: 02_dialog-boxes/00_test/00_test_embed.md
+#    - file: 02_dialog-boxes/00_test/00_test_icons.md
+#    - file: 02_dialog-boxes/00_test/00_test_keep.md
+#    - file: 02_dialog-boxes/00_test/00_tooltip.md
+#    - file: 02_dialog-boxes/01_01_user_entry.md
+    - file: 02_dialog-boxes/01_02_objective.md
+#    - file: 02_dialog-boxes/01_02_objective_ref.md
+    - file: 02_dialog-boxes/01_03_num_cams.md
+#    - file: 02_dialog-boxes/01_03_num_cams_noframe.md
+##### Study area & Site selection
+  - file: 01_toc_pages/00_02_toc_study_area_site_selection_constraints.md
+    title: Study area & Site selection
+    sections:
+    - file: 02_dialog-boxes/02_01_design_study_area.md
+    - file: 02_dialog-boxes/02_02_design_cam_arrange.md
+#    - file: 02_dialog-boxes/01_04_study_area_mult.md
+#    - file: 02_dialog-boxes/01_05_cam_dens_gradient.md
+#    - file: 02_dialog-boxes/01_06_cam_strat_covar.md
+#    - file: 02_dialog-boxes/01_07_cam_high_dens.md
+##### Duration & Timing
+  - file: 01_toc_pages/00_03_toc_duration_timing.md
+    title: Duration & Timing
+    sections:
+#    - file: 02_dialog-boxes/01_08_surv_dur_min_max.md
+#    - file: 02_dialog-boxes/01_09_survey_dur_mth.md
+    - file: 02_dialog-boxes/01_10_sp_asymptote.md
+#    - file: 02_dialog-boxes/01_11_study_season_num.md
+##### Target species
+  - file: 01_toc_pages/00_04_toc_target_species.md
+    title: Target species
+    sections:
+##### Target species (Single)
+#    - file: 02_dialog-boxes/01_12_obj_targ_sp.md
+#    - file: 02_dialog-boxes/01_13_sp_info.md
+#    - file: 02_dialog-boxes/01_14_sp_type.md
+#    - file: 02_dialog-boxes/01_15_sp_dens_low.md 
+#    - file: 02_dialog-boxes/01_16_sp_occ_restr.md
+    - file: 02_dialog-boxes/01_17_sp_hr_size.md
+    - file: 02_dialog-boxes/01_18_sp_size.md
+    - file: 02_dialog-boxes/01_19_sp_rarity.md
+    - file: 02_dialog-boxes/01_20_sp_detprob_cat.md
+#    - file: 02_dialog-boxes/01_21_sp_behav.md
+#    - file: 02_dialog-boxes/01_22_sp_behav_season.md
+#    - file: 02_dialog-boxes/01_23_marking_code.md
+#    - file: 02_dialog-boxes/01_24_marking_allsub.md
+#    - file: 02_dialog-boxes/01_25_3ormore_cat_ids.md
+#    - file: 02_dialog-boxes/01_26_auxillary_info.md
+#    - file: 02_dialog-boxes/01_27_aux_count_possible.md
+#    - file: 02_dialog-boxes/01_28_focalarea_calc.md
+#    - file: 02_dialog-boxes/01_29_cam_high_dens.md
+#    - file: 02_dialog-boxes/01_30_sp_common_pop_lg.md
+##### Target species (Multiple)
+#    - file: 02_dialog-boxes/01_31_sp_size_multi.md
+#    - file: 02_dialog-boxes/01_32_sp_behav_multi.md
+#    - file: 02_dialog-boxes/01_33_sp_rarity_multi.md
+#    - file: 02_dialog-boxes/01_36_sp_detprob_cat_multi.md
+##### Equipment & Deployment  
+#  - file: 01_toc_pages/00_05_toc_equipment_deployment.md
+#    title: Equipment & Deployment
+#    sections:
+#    - file: 02_dialog-boxes/01_39_cam_equipment.md
+#    - file: 02_dialog-boxes/01_40_cam_settings.md
+#    - file: 02_dialog-boxes/01_41_cam_protocol_ht_angle.md
+#    - file: 02_dialog-boxes/01_42_cam_direction_ds.md
+#    - file: 02_dialog-boxes/01_43_bait_lure.md
+#    - file: 02_dialog-boxes/01_44_bait_lure_cams.md
+#    - file: 02_dialog-boxes/01_45_targ_feature.md
+#    - file: 02_dialog-boxes/01_46_targ_feature_same.md
+##### Data & Analysis
+  - file: 01_toc_pages/00_06_toc_data_analysis.md
+    title: Data & Analysis
+    sections:
+    - file: 02_dialog-boxes/01_47_cam_independent.md   
+#    - file: file: 02_dialog-boxes/01_48_multisamp_per_loc.md
+#    - file: 02_dialog-boxes/01_49_modmixed.md
+#    - file: 02_dialog-boxes/01_50_num_det.md
+#    - file: 02_dialog-boxes/01_51_num_det_individ.md
+#    - file: 02_dialog-boxes/01_52_num_recap.md
+#    - file: 02_dialog-boxes/01_53_overdispersion.md
+#    - file: 02_dialog-boxes/01_54_zeroinflation.md
+#    - file: 02_dialog-boxes/01_55_zi_overdispersed.md
+#    - file: 02_dialog-boxes/01_56_modmixed.md
+#    - file: 02_dialog-boxes/01_57_zi_re_overdispersed.md
+#    - file: 02_dialog-boxes/01_58_zi_process.md
+##### Recommendations - Modelling Approaches
+  - file: 01_toc_pages/00_07_toc_rec_approach.md
+    title: Recommendations - Modelling Approaches
+    sections:
+    - file: 02_dialog-boxes/03_01_mod_inventory.md
+    - file: 02_dialog-boxes/03_02_mod_divers_rich.md
+    - file: 02_dialog-boxes/03_03_mod_occupancy.md
+    - file: 02_dialog-boxes/03_04_mod_rai.md
+    - file: 02_dialog-boxes/03_10_mod_cr_cmr.md
+    - file: 02_dialog-boxes/03_11_mod_scr_secr.md
+    - file: 02_dialog-boxes/03_13_mod_smr.md
+    - file: 02_dialog-boxes/03_14_mod_sc.md
+    - file: 02_dialog-boxes/03_15_mod_catspim.md
+    - file: 02_dialog-boxes/03_16_mod_2flankspim.md
+    - file: 02_dialog-boxes/03_17_mod_rem.md
+    - file: 02_dialog-boxes/03_18_mod_rest.md
+    - file: 02_dialog-boxes/03_19_mod_tifc.md
+    - file: 02_dialog-boxes/03_20_mod_ds.md
+    - file: 02_dialog-boxes/03_21_mod_tte.md
+    - file: 02_dialog-boxes/03_22_mod_ste.md
+    - file: 02_dialog-boxes/03_23_mod_is.md
+    - file: 02_dialog-boxes/03_24_mod_behaviour.md
+  - file: 01_toc_pages/00_10_ref_gloss.md
+    title: References / Glossary
+    sections:
+    - file: 02_dialog-boxes/08_references.md
+    - file: 02_dialog-boxes/09_glossary.md
