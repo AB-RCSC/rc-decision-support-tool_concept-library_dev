@@ -1,0 +1,668 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Spatial mark-resight &#8212; Remote Camera Decision Support Tool - Concept Library</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/class-prog.css?v=d31cb8f7" />
+    <link rel="stylesheet" type="text/css" href="../_static/colours.css?v=9897dbfc" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=52e9b356" />
+    <link rel="stylesheet" type="text/css" href="../_static/iframe.css?v=2a601663" />
+    <link rel="stylesheet" type="text/css" href="../_static/test.css?v=32d70693" />
+    <link rel="stylesheet" type="text/css" href="../_static/tooltips.css?v=4de49550" />
+    <link rel="stylesheet" type="text/css" href="../_static/youtube.css?v=70faa909" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '02_dialog-boxes/03_13_mod_smr';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Remote Camera Decision Support Tool - Concept Library - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="Remote Camera Decision Support Tool - Concept Library - Home"/>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class=" navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="00_test/00_test_img.html">
+    <no title>
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://ab-rcsc.github.io/rc-decision-support-tool">
+    <b>Home</b> 
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/">
+    Concept library
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/09_glossary.html">
+    Glossary
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/08_references.html">
+    References
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/AB-RCSC/rc-decision-support-tool" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-github-square fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://ab-rcsc.github.io/RCSC-WildCAM_Remote-Camera-Survey-Guidelines-and-Metadata-Standards/" title="Survey Guidelines / Metadata Standards" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="../_static/logo_survguide_metadata.png" class="icon-link-image" alt="Survey Guidelines / Metadata Standards"/></a>
+        </li>
+</ul></div>
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+        <div class="navbar-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../_sources/02_dialog-boxes/03_13_mod_smr.md">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="00_test/00_test_img.html">
+    <no title>
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://ab-rcsc.github.io/rc-decision-support-tool">
+    <b>Home</b> 
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/">
+    Concept library
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/09_glossary.html">
+    Glossary
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/08_references.html">
+    References
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/AB-RCSC/rc-decision-support-tool" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-github-square fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://ab-rcsc.github.io/RCSC-WildCAM_Remote-Camera-Survey-Guidelines-and-Metadata-Standards/" title="Survey Guidelines / Metadata Standards" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="../_static/logo_survguide_metadata.png" class="icon-link-image" alt="Survey Guidelines / Metadata Standards"/></a>
+        </li>
+</ul></div>
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+          <div class="navbar-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../_sources/02_dialog-boxes/03_13_mod_smr.md">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none"></div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="spatial-mark-resight">
+<span id="i-mod-smr"></span><h1>Spatial mark-resight <a class="headerlink" href="#spatial-mark-resight" title="Link to this heading">#</a></h1>
+<!--
+:::{hint}
+replace me with text
+:::
+-->
+<p><strong>Spatial mark-resight </strong>: </p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Assumptions, Pros, Cons</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Assumptions</div>
+<ul class="simple">
+<li><p class="sd-card-text">Demographic closure (i.e., no births or deaths) (Chandler &amp; Royle, 2013; Clarke et al., 2023)</p></li>
+<li><p class="sd-card-text">Geographic closure (i.e., no immigration or emigration) (Chandler &amp; Royle, 2013; Clarke et al., 2023)</p></li>
+<li><p class="sd-card-text">Individuals do not lose marks (Wearn &amp; Glover-Kapfer, 2017) (for maximum <a href="09_glossary.html#precision" target="_blank" data-bs-toggle="tooltip" data-bs-title="Precision: Uncertainty in estimates (Hammond et al., 2021)' (Clarke et al., 2023).">precision<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a>), but <a href="09_glossary.html#mod_smr" target="_blank" data-bs-toggle="tooltip" data-bs-title="Spatial mark-resight (SMR) (Chandler & Royle, 2013; Sollmann et al., 2013a, 2013b): A method used to estimate the density of 'partially marked populations by combining... [detection] histories of marked [individuals] and counts of unmarked [individuals]' (Doran-Myers, 2018) over several occasions (Sollman et al., 2013a; Rich et al., 2014; Whittington et al., 2018). SMR models can be implemented using different statistical frameworks, including Bayesian estimation (Royle and Young, 2008; Morin et al., 2022).">SMR<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a> (Chandler &amp; Royle, 2013; Sollmann et al., 2013a; Sollmann et al., 2013b)) does allow for inclusion of <a href="09_glossary.html#typeid_marked" target="_blank" data-bs-toggle="tooltip" data-bs-title="Marked individuals / populations / species: Individuals, populations, or species (varies with modelling approach and context) that can be identified using natural or artificial markings (e.g., coat patterns, scars, tags, collars).">marked<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a> but unidentified resighting detections (Sollmann et al., 2013b; Rich et al., 2014)</p></li>
+<li><p class="sd-card-text">Individuals are not misidentified (Wearn &amp; Glover-Kapfer, 2017)</p></li>
+<li><p class="sd-card-text">Failure to identify <a href="09_glossary.html#typeid_marked" target="_blank" data-bs-toggle="tooltip" data-bs-title="Marked individuals / populations / species: Individuals, populations, or species (varies with modelling approach and context) that can be identified using natural or artificial markings (e.g., coat patterns, scars, tags, collars).">marked<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a> individuals is random (Whittington et al., 2018; Clarke et al., 2023)</p></li>
+<li><p class="sd-card-text"><a href="09_glossary.html#typeid_marked" target="_blank" data-bs-toggle="tooltip" data-bs-title="Marked individuals / populations / species: Individuals, populations, or species (varies with modelling approach and context) that can be identified using natural or artificial markings (e.g., coat patterns, scars, tags, collars).">Marked<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a> animals are a random sample of the population with <a href="09_glossary.html#hr" target="_blank" data-bs-toggle="tooltip" data-bs-title="Home range: the area within which an animal normally lives and finds what it needs to survive and reproduce.">home ranges<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a> located inside the state space (Sollmann et al., 2013a; Rich et al., 2014)</p></li>
+<li><p class="sd-card-text"><a href="09_glossary.html#independent_detections" target="_blank" data-bs-toggle="tooltip" data-bs-title="Independent detections: Detections that are deemed to be independent based on a user-defined threshold (e.g., 30 minutes).">Detections are independent<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a> (Chandler &amp; Royle, 2013; Clarke et al., 2023)</p></li>
+<li><p class="sd-card-text">Individuals have equal <a href="09_glossary.html#detection_probability" target="_blank" data-bs-toggle="tooltip" data-bs-title="Detection probability (aka detectability): The probability (likelihood) that an individual of the population of interest is included in the count at time or location *i*.">Detection probability<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a> at a given distance from the centre of their <a href="09_glossary.html#hr" target="_blank" data-bs-toggle="tooltip" data-bs-title="Home range: the area within which an animal normally lives and finds what it needs to survive and reproduce.">home range<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a> (Wearn &amp; Glover-Kapfer, 2017)</p></li>
+<li><p class="sd-card-text">Detections of different individuals are independent (Wearn &amp; Glover-Kapfer, 2017)</p></li>
+<li><p class="sd-card-text">Movement is unaffected by the cameras (Wearn &amp; Glover-Kapfer, 2017)</p></li>
+<li><p class="sd-card-text">Behaviour is unaffected by cameras and <a href="09_glossary.html#typeid_marked" target="_blank" data-bs-toggle="tooltip" data-bs-title="Individuals, populations, or species (varies with modelling approach and context) that can be identified using natural or artificial markings (e.g., coat patterns, scars, tags, collars).">marking<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a> (Wearn &amp; Glover-Kapfer, 2017)</p></li>
+<li><p class="sd-card-text"><a href="09_glossary.html#cam_location" target="_blank" data-bs-toggle="tooltip" data-bs-title="Camera location: The location where a single camera was placed (recorded as 'Camera Location Name').">Camera locations<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a> are <a href="09_glossary.html#sampledesign_random" target="_blank" data-bs-toggle="tooltip" data-bs-title="Random (or 'simple random') design: Cameras occur at randomized camera locations (or sample stations) across the area of interest, sometimes with a predetermined minimum distance between camera locations (or sample stations).">randomly placed<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a> relative to the distribution and orientation of <a href="09_glossary.html#hr" target="_blank" data-bs-toggle="tooltip" data-bs-title="Home range: the area within which an animal normally lives and finds what it needs to survive and reproduce.">home ranges<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a> (Wearn &amp; Glover-Kapfer, 2017)</p></li>
+<li><p class="sd-card-text"><a href="09_glossary.html#cam_location" target="_blank" data-bs-toggle="tooltip" data-bs-title="Camera location: The location where a single camera was placed (recorded as 'Camera Location Name').">Camera locations<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a> are close enough together that animals are detected at multiple cameras (Chandler &amp; Royle, 2013; Clarke et al., 2023)</p></li>
+<li><p class="sd-card-text"><a href="09_glossary.html#survey" target="_blank" data-bs-toggle="tooltip" data-bs-title="Survey: A unique deployment period (temporal extent) within a project (recorded as 'Survey Name').">Surveys<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a> are independent (Wearn &amp; Glover-Kapfer, 2017)</p></li>
+<li><p class="sd-card-text"><a href="09_glossary.html#hr" target="_blank" data-bs-toggle="tooltip" data-bs-title="Home range: the area within which an animal normally lives and finds what it needs to survive and reproduce.">Home ranges<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a> are stable (Wearn &amp; Glover-Kapfer, 2017)</p></li>
+<li><p class="sd-card-text">Distribution of <a href="09_glossary.html#hr" target="_blank" data-bs-toggle="tooltip" data-bs-title="Home range: the area within which an animal normally lives and finds what it needs to survive and reproduce.">home range<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a> centres follows a defined distribution (Poisson, or other, e.g., negative binomial) (Wearn &amp; Glover-Kapfer, 2017)</p></li>
+<li><p class="sd-card-text">Animals’ activity centres are randomly dispersed (Chandler &amp; Royle, 2013; Clarke et al., 2023)</p></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Pros</div>
+<ul class="simple">
+<li><p class="sd-card-text">Estimates are fully comparable to <a href="09_glossary.html#mod_secr" target="_blank" data-bs-toggle="tooltip" data-bs-title="Spatially explicit capture-recapture (SECR) / Spatial capture-recapture (SCR) (Borchers & Efford, 2008; Efford, 2004; Royle & Young, 2008; Royle et al., 2009): The SECR (or SCR) method is used to estimate the density of marked populations; an extension of traditional capture-recapture (CR; Karanth, 1995; Karanth & Nichols, 1998) models (Karanth, 1995; Karanth & Nichols, 1998) that explicitly accounts for camera location and animal movement (Burgar et al., 2018). SECR models use spatially referenced individual capture histories to infer where animals' home range centres are, assuming that detection probability decreases with increasing distance between cameras and home range centres (Clarke et al., 2023). SECR models can be implemented using different statistical frameworks, including Bayesian estimation (Royle and Young, 2008; Morin et al., 2022).">SECR<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a> (Efford, 2004; Borchers &amp; Efford, 2008; Royle &amp; Young, 2008; Royle et al., 2009) of <a href="09_glossary.html#typeid_marked" target="_blank" data-bs-toggle="tooltip" data-bs-title="Marked individuals / populations / species: Individuals, populations, or species (varies with modelling approach and context) that can be identified using natural or artificial markings (e.g., coat patterns, scars, tags, collars).">marked<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a> species (Wearn &amp; Glover-Kapfer, 2017)</p></li>
+<li><p class="sd-card-text">Can be applied to a broader range of species than <a href="09_glossary.html#mod_secr" target="_blank" data-bs-toggle="tooltip" data-bs-title="Spatially explicit capture-recapture (SECR) / Spatial capture-recapture (SCR) (Borchers & Efford, 2008; Efford, 2004; Royle & Young, 2008; Royle et al., 2009): The SECR (or SCR) method is used to estimate the density of marked populations; an extension of traditional capture-recapture (CR; Karanth, 1995; Karanth & Nichols, 1998) models (Karanth, 1995; Karanth & Nichols, 1998) that explicitly accounts for camera location and animal movement (Burgar et al., 2018). SECR models use spatially referenced individual capture histories to infer where animals' home range centres are, assuming that detection probability decreases with increasing distance between cameras and home range centres (Clarke et al., 2023). SECR models can be implemented using different statistical frameworks, including Bayesian estimation (Royle and Young, 2008; Morin et al., 2022).">SECR<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a> [(Efford, 2004; Borchers &amp; Efford, 2008; Royle &amp; Young, 2008; Royle et al., 2009) (Wearn &amp; Glover-Kapfer, 2017)</p></li>
+<li><p class="sd-card-text">Allows researcher to take advantage of natural markings (Wearn &amp; Glover-Kapfer, 2017)</p></li>
+<li><p class="sd-card-text">Allows researcher to mark a subset of the population (note - <a href="09_glossary.html#precision" target="_blank" data-bs-toggle="tooltip" data-bs-title="Precision: Uncertainty in estimates (Hammond et al., 2021)' (Clarke et al., 2023).">precision<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a> is dependent on number of <a href="09_glossary.html#typeid_marked" target="_blank" data-bs-toggle="tooltip" data-bs-title="Marked individuals / populations / species: Individuals, populations, or species (varies with modelling approach and context) that can be identified using natural or artificial markings (e.g., coat patterns, scars, tags, collars).">marked<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a> individuals in a population) (Wearn &amp; Glover-Kapfer, 2017)</p></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Cons</div>
+<ul class="simple">
+<li><p class="sd-card-text">Animals may have to be physically captured and marked if natural marks do not exist on enough individuals (Wearn &amp; Glover-Kapfer, 2017)</p></li>
+<li><p class="sd-card-text">All individuals must be identifiable (Wearn &amp; Glover-Kapfer, 2017)</p></li>
+<li><p class="sd-card-text">Allows for <a href="09_glossary.html#obj_density" target="_blank" data-bs-toggle="tooltip" data-bs-title="Density: The number of individuals per unit area (Wearn & Glover-Kapfer, 2017)">density<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a> estimation for a <a href="09_glossary.html#typeid_unmarked" target="_blank" data-bs-toggle="tooltip" data-bs-title="Unmarked individuals / populations / species: Individuals, populations, or species (varies with modelling approach and context) that cannot be identified using natural or artificial markings (e.g., coat patterns, scars, tags, collars). Unmarked population models rely on supplementary data (e.g., animal movement speed) and*/or assumptions as a surrogate for individual identification; that is, to distinguish between multiple detections of the same individual from detections of multiple individuals when individuals do not have unique features (Gilbert et al., 2020; Morin et al., 2022).">unmarked<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a> population, but the <a href="09_glossary.html#precision" target="_blank" data-bs-toggle="tooltip" data-bs-title="Precision: Uncertainty in estimates (Hammond et al., 2021)' (Clarke et al., 2023).">precision<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a> of the <a href="09_glossary.html#obj_density" target="_blank" data-bs-toggle="tooltip" data-bs-title="Density: The number of individuals per unit area (Wearn & Glover-Kapfer, 2017)">density<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a> estimates are likely to be very low value (Wearn &amp; Glover-Kapfer, 2017)</p></li>
+<li><p class="sd-card-text">Remains poorly tested with camera data, although it offers promise (Wearn &amp; Glover-Kapfer, 2017)</p></li>
+<li><p class="sd-card-text"><a href="09_glossary.html#obj_density" target="_blank" data-bs-toggle="tooltip" data-bs-title="Density: The number of individuals per unit area (Wearn & Glover-Kapfer, 2017)">density<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a> estimates are likely less <a href="09_glossary.html#precision" target="_blank" data-bs-toggle="tooltip" data-bs-title="Precision: Uncertainty in estimates (Hammond et al., 2021)' (Clarke et al., 2023).">precise<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a> than with <a href="09_glossary.html#mod_secr" target="_blank" data-bs-toggle="tooltip" data-bs-title="Spatially explicit capture-recapture (SECR) / Spatial capture-recapture (SCR) (Borchers & Efford, 2008; Efford, 2004; Royle & Young, 2008; Royle et al., 2009): The SECR (or SCR) method is used to estimate the density of marked populations; an extension of traditional capture-recapture (CR; Karanth, 1995; Karanth & Nichols, 1998) models (Karanth, 1995; Karanth & Nichols, 1998) that explicitly accounts for camera location and animal movement (Burgar et al., 2018). SECR models use spatially referenced individual capture histories to infer where animals' home range centres are, assuming that detection probability decreases with increasing distance between cameras and home range centres (Clarke et al., 2023). SECR models can be implemented using different statistical frameworks, including Bayesian estimation (Royle and Young, 2008; Morin et al., 2022).">SECR<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a> (Efford, 2004; Borchers &amp; Efford, 2008; Royle &amp; Young, 2008; Royle et al., 2009) or <a href="09_glossary.html#mod_rem" target="_blank" data-bs-toggle="tooltip" data-bs-title="Random encounter model (REM) (Rowcliffe et al., 2008, 2013): A method used to estimate the density of unmarked populations; uses the rate of independent captures, an estimate of movement rate, average group size, and the area sampled by the remote camera.">REM<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a>, unless a large proportion of the population has marks (Wearn &amp; Glover-Kapfer, 2017)</p></li>
+<li><p class="sd-card-text">Requires sampling points to be close enough that individuals encounter multiple cameras (Wearn &amp; Glover-Kapfer, 2017)</p></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</details><div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-0">
+Overview</label><div class="sd-tab-content docutils">
+<p>This section will be available soon! In the meantime, check out the information in the other tabs!</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/00_coming_soon.png"><img alt="../_images/00_coming_soon.png" src="../_images/00_coming_soon.png" style="width: 300px;" /></a>
+</figure>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-1">
+In-depth</label><div class="sd-tab-content docutils">
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>This content was adapted from: The Density Handbook</strong>, “<a class="reference external" href="https://www.researchgate.net/publication/368601884_Using_Camera_Traps_to_Estimate_Medium_and_Large_Mammal_Density_Comparison_of_Methods_and_Recommendations_for_Wildlife_Managers">Using Camera Traps to Estimate Medium and Large Mammal Density: Comparison of Methods and Recommendations for Wildlife Managers</a>” (Clarke et al., 2023)</p>
+</div>
+<p>We have already discussed spatially-explicit density models for completely marked populations (spatial capture-recapture, SCR; see <a class="sd-sphinx-override sd-badge sd-outline-primary sd-text-primary reference external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/03_11_mod_scr_secr.html"><span>Spatial capture-recapture (SCR) / Spatially explicit capture recapture (SECR)</span></a>) and completely unmarked populations (spatial count, SC; see <a class="sd-sphinx-override sd-badge sd-outline-primary sd-text-primary reference external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/03_14_mod_sc.html"><span>Spatial count</span></a>) – but what about the “intermediate” situation, in which only a fraction of a population carries marks? Spatial mark-resight (SMR) models were developed for such scenarios.</p>
+<p>First, let’s familiarize ourselves with non-spatial mark-resight models (or simply markresight models). Mark-resight models are similar to capture-recapture (CR; see <a class="sd-sphinx-override sd-badge sd-outline-primary sd-text-primary reference external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/03_10_mod_cr_cmr.html"><span>Capture-recapture (CR) / Capture-mark-recapture (CMR)</span></a>) models, but relax CR’s stipulation that all animals in a study population are individually identifiable – that is, that all animals carry unique natural marks, or that all animals are trapped and tagged (Royle et al., 2014; Sollmann et al., 2013a). Instead, mark-resight models need only a subset of the population to be marked (either naturally or from a single trapping-and-tagging event; Sollmann et al., 2013a). The entire population is then resighted using a “non-invasive” survey technique (i.e., a method that does not require the handling of animals, like an aerial or camera trap survey; Royle et al., 2014, Sollmann et al., 2013a) and population size is calculated using the equation:</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/clarke_et_al_2023_eqn_smr1.png"><img alt="../_images/clarke_et_al_2023_eqn_smr1.png" src="../_images/clarke_et_al_2023_eqn_smr1.png" style="width: 150px;" /></a>
+</figure>
+<p>where <em>𝑚</em> is the number of marked animals, <em>𝑢</em> is the number of unmarked animals and <em>𝑝</em> is detection probability – the latter of which is determined using data from marked individuals only (Chandler &amp; Royle, 2013). Dividing <em>𝑁</em> by the area of the sampling frame <em>𝐴</em> produces an estimate of total population density.</p>
+<p>SMR models integrate spatial information into the mark-resight framework. The result is a hybrid model that combines data from the detection histories of marked individuals, as per SCR, with site-specific counts of unmarked individuals, as per SC (Royle et al., 2014). For the remainder of this section, we will discuss camera trap SMR, for which animals are resighted using camera trap arrays.</p>
+<p>The first SMR model, developed by Chandler and Royle (2013) and Sollmann et al. (2013a) and now coined “conventional SMR,” models the resighting process only (i.e., ignores the marking process; Whittington et al., 2018). In doing so, conventional SMR makes the implicit assumption that marked animals are a random subset of the study population, and thus that 1) marked and unmarked animals are distributed similarly across the landscape, and 2) marked and unmarked animals have equal detection probabilities (Royle et al., 2014; Whittington et al., 2018). Such assumptions can hold – for example, when a random subset of the population carries natural marks, or when a closed population of animals is trapped and tagged at random locations (Sollmann et al., 2013a; Rich et al., 2014; Whittington et al., 2018). These assumptions are violated, however, when animals are trapped and tagged non-randomly (e.g., owing to inaccessibility, rough terrain) before resighting, since the distribution of marked animals will be clustered around trapping-and-tagging sites, and marked animals will have a higher chance of being detected at camera traps near where they were tagged (Whittington et al., 2018).</p>
+<p>To ease the assumptions and address the limitations of conventional SMR, Whittington et al. (2018) developed generalized SMR, which models the marking and resighting processes separately. The marking sub-model describes where animals were trapped and tagged on the study landscape – that is, how marked individuals are distributed in space (Jiménez et al., 2021). Explicitly modelling the marking process allows practitioners to trap and tag animals non-randomly (e.g., using linear or grid trap layouts) without biasing density estimates (Whittington et al., 2018). The resighting submodel combines marked individuals’ detection histories, camera trap-specific counts of unmarked individuals and estimates of detection probability to determine population density (Whittington et al., 2018).</p>
+<p>Practitioners should note that the number of marked animals in a population can influence the precision of SMR studies. The general trend in precision, based on previous SMR studies (both conventional and generalized), is: the more marked animals, the more precise the density estimation (see Whittington et al., 2018). Of the four studies compared, only those with 22 or more marked individuals achieved coefficients of variation (CVs) below the accepted threshold for wildlife management (i.e., CV ≤ 0.2; Sollmann et al., 2013a; Whittington et al., 2018; Williams et al., 2002).</p>
+</div>
+<input id="sd-tab-item-2" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-2">
+Visual resources</label><div class="sd-tab-content docutils">
+<div class="sd-container-fluid sd-sphinx-override sd-m-0 sd-p-0 docutils">
+<div class="sd-row sd-row-cols-3 sd-row-cols-xs-3 sd-row-cols-sm-3 sd-row-cols-md-3 sd-row-cols-lg-3 sd-g-1 sd-g-xs-1 sd-g-sm-1 sd-g-md-1 sd-g-lg-1 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Whittington et al., 2018</div>
+<figure class="align-default">
+<img alt="../_images/whittington_et_al_2018_fig1_clipped.png" class="img-grid" src="../_images/whittington_et_al_2018_fig1_clipped.png" />
+</figure>
+<p class="sd-card-text"><strong>Whittington et al. (2018) - Fig. 1</strong> Differences in the distributions of marked and unmarked animals lead to bias in conventional SMR models but not generalized SMR models. (a) Animals (blue triangles) in the state-space are subject to trapping (+) and marking. (b) The expected distributions of marked and unmarked animals are assumed to be identical for conventional SMR models but depend on trap distribution for generalized SMR. (c) Marked and unmarked animals are observed during resight surveys. (d) The expected distribution of marked animals not resighted is incorrectly assumed to be highest near the edge of the state-space for conventional SMR, whereas generalized SMR models correctly assume it is highest closest to traps.</p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+</div>
+<figure class="align-default">
+<img alt="../_images/secr_creemmural_org_secr_clipped.png" class="img-grid" src="../_images/secr_creemmural_org_secr_clipped.png" />
+</figure>
+<p class="sd-card-text"><strong>CREEM Mural (N.D.)</strong> - The Figure shows some leopard camera trap data and the contours of the resulting estimated probability of detecting an animal with activity centre anywhere in the survey region (blue lines). The red crosses are camera traps and the coloured dots are individual leopard captures, with captures of the same individual joined by lines.</p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Clarke et al., 2023</div>
+<figure class="align-default">
+<img alt="../_images/clarke_et_al_2023_eqn_smr1.png" class="img-grid" src="../_images/clarke_et_al_2023_eqn_smr1.png" />
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<input id="sd-tab-item-3" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-3">
+Shiny apps/Widgets</label><div class="sd-tab-content docutils">
+<p>Check back in the future!</p>
+</div>
+<input id="sd-tab-item-4" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-4">
+Analytical tools &amp; Resources</label><div class="sd-tab-content docutils">
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Type</p></th>
+<th class="head text-left"><p>Name</p></th>
+<th class="head text-left"><p>Note</p></th>
+<th class="head text-left"><p>URL</p></th>
+<th class="head text-left"><p>Reference</p></th>
+</tr>
+</thead>
+</table>
+</div>
+<!-- END_RESOURCE_TABLE -->
+</div>
+<input id="sd-tab-item-5" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-5">
+References</label><div class="sd-tab-content docutils">
+<p>Chandler, R. B., &amp; Royle, J. A. (2013). Spatially explicit models for inference about Density in unmarked or partially marked populations. <em>The Annals of Applied Statistics, 7</em>(2), 936-954. <a class="reference external" href="https://doi.org/10.1214/12-aoas610">https://doi.org/10.1214/12-aoas610</a></p>
+<p>Clarke, J., Bohm, H., Burton, C., Constantinou, A. (2023). <em>Using Camera Traps to Estimate Medium and Large Mammal Density: Comparison of Methods and Recommendations for Wildlife Managers</em>. <a class="reference external" href="https://doi.org/10.13140/RG.2.2.18364.72320">https://doi.org/10.13140/RG.2.2.18364.72320</a></p>
+<p>Jiménez, J., C. Augustine, B., Linden, D. W., B. Chandler, R., &amp; Royle, J. A. (2021). Spatial capture-recapture with random thinning for unidentified encounters. <em>Ecology and Evolution, 11</em>, 1187-1198. <a class="reference external" href="https://doi.org/10.1002/ece3.7091">https://doi.org/10.1002/ece3.7091</a></p>
+<p>Sollmann, R., Gardner, B., Chandler, R. B., Shindle, D. B., Onorato, D. P., Royle, J. A., O’Connell, A. F., &amp; Lukacs, P. (2013a). Using multiple data sources provides Density estimates for endangered Florida panther. <em>Journal of Applied Ecology, 50</em>(4), 961-968. <a class="reference external" href="https://doi.org/10.1111/1365-2664.12098">https://doi.org/10.1111/1365-2664.12098</a></p>
+<p>Rich, L. N., Kelly, M. J., Sollmann, R., Noss, A. J., Maffei, L., Arispe, R. L., Paviolo, A., De Angelo, C. D., Di Blanco, Y. E., &amp; Di Bitetti, M. S. (2014).comparing capture-recapture, mark-resight, and spatial mark-resight models for estimating puma densities via camera traps. <em>Journal of Mammalogy, 95</em>(2), 382-391. <a class="reference external" href="https://doi.org/10.1644/13-mamm-a-126">https://doi.org/10.1644/13-mamm-a-126</a></p>
+<p>Royle, J. A., Converse, S. J., &amp; Freckleton, R. (2014). Hierarchical spatial capture-recapture models: modelling population Density in stratified populations. <em>Methods in Ecology and Evolution, 5</em>(1), 37-43. <a class="reference external" href="https://doi.org/10.1111/2041-210x.12135">https://doi.org/10.1111/2041-210x.12135</a></p>
+<p>Whittington, J., Hebblewhite, M., Chandler, R. B., &amp; Lentini, P. (2018). Generalized spatial mark-resight models with an application to grizzly bears. <em>Journal of Applied Ecology, 55</em>(1), 157-168. <a class="reference external" href="https://doi.org/10.1111/1365-2664.12954">https://doi.org/10.1111/1365-2664.12954</a></p>
+<p>Williams, B. K., Nichols, J. D., &amp; Conroy, M. J. (2002). <em>Analysis and Management of Animal Populations: Modeling, Estimation, and Decision Making</em>. Book, Whole. San Diego: Academic Press. <a class="reference external" href="https://go.exlibris.link/qSfqP9dC">https://go.exlibris.link/qSfqP9dC</a></p>
+</div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./02_dialog-boxes"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+              
+              
+              
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="component-author">
+By Alberta Remote Camera Steering Committee (RCSC)
+</p>
+</div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

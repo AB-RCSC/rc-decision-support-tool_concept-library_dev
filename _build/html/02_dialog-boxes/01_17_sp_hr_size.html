@@ -1,0 +1,685 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Home range size &#8212; Remote Camera Decision Support Tool - Concept Library</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/class-prog.css?v=d31cb8f7" />
+    <link rel="stylesheet" type="text/css" href="../_static/colours.css?v=9897dbfc" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=52e9b356" />
+    <link rel="stylesheet" type="text/css" href="../_static/iframe.css?v=2a601663" />
+    <link rel="stylesheet" type="text/css" href="../_static/test.css?v=32d70693" />
+    <link rel="stylesheet" type="text/css" href="../_static/tooltips.css?v=4de49550" />
+    <link rel="stylesheet" type="text/css" href="../_static/youtube.css?v=70faa909" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '02_dialog-boxes/01_17_sp_hr_size';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Remote Camera Decision Support Tool - Concept Library - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="Remote Camera Decision Support Tool - Concept Library - Home"/>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class=" navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="00_test/00_test_img.html">
+    <no title>
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://ab-rcsc.github.io/rc-decision-support-tool">
+    <b>Home</b> 
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/">
+    Concept library
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/09_glossary.html">
+    Glossary
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/08_references.html">
+    References
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/AB-RCSC/rc-decision-support-tool" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-github-square fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://ab-rcsc.github.io/RCSC-WildCAM_Remote-Camera-Survey-Guidelines-and-Metadata-Standards/" title="Survey Guidelines / Metadata Standards" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="../_static/logo_survguide_metadata.png" class="icon-link-image" alt="Survey Guidelines / Metadata Standards"/></a>
+        </li>
+</ul></div>
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+        <div class="navbar-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../_sources/02_dialog-boxes/01_17_sp_hr_size.md">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="00_test/00_test_img.html">
+    <no title>
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://ab-rcsc.github.io/rc-decision-support-tool">
+    <b>Home</b> 
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/">
+    Concept library
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/09_glossary.html">
+    Glossary
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/08_references.html">
+    References
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/AB-RCSC/rc-decision-support-tool" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-github-square fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://ab-rcsc.github.io/RCSC-WildCAM_Remote-Camera-Survey-Guidelines-and-Metadata-Standards/" title="Survey Guidelines / Metadata Standards" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="../_static/logo_survguide_metadata.png" class="icon-link-image" alt="Survey Guidelines / Metadata Standards"/></a>
+        </li>
+</ul></div>
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+          <div class="navbar-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../_sources/02_dialog-boxes/01_17_sp_hr_size.md">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none"></div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="home-range-size">
+<span id="i-sp-hr-size"></span><h1>Home range size<a class="headerlink" href="#home-range-size" title="Link to this heading">#</a></h1>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p><strong></strong>: </p>
+<p>Unsure about the  of your Target Species? There may be information available in the “Species home range / body size lookup”; see the<strong>Shiny Apps/Widgets</strong> tab of the info-box below.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p> will not be exactly the same for every animal of a certain species; when thinking of home range size in the context of study design, we are really thinking about the average  for individuals of that species for the duration of your study.</p></li>
+<li><p> information should, ideally, be chosen to reflect the conditions of your study (as closely as possible). For example, data from a study that only reported  for one season (e.g., summer ) might bias placement if your study aims to evaluate your  variable of interest (e.g., ‘occupancy’) over multiple seasons, especially if the species’ movement highly differs between seasons (e.g., moves more in summer).</p></li>
+</ul>
+</div>
+</div>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-0">
+Overview</label><div class="sd-tab-content docutils">
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/00_home_range.jpg"><img alt="../_images/00_home_range.jpg" src="../_images/00_home_range.jpg" style="width: 300px;" /></a>
+</figure>
+<p><strong></strong>: </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p> will not be exactly the same for every animal of a certain species; when thinking of home range size in the context of study design, we are really thinking about the average  for individuals of that species for the duration of your study.</p></li>
+<li><p> information should, ideally, be chosen to reflect the conditions of your study (as closely as possible). For example, data from a study that only reported  for one season (e.g., summer ) might bias placement if your study aims to evaluate your  variable of interest (e.g., ‘occupancy’) over multiple seasons, especially if the species’ movement highly differs between seasons (e.g., moves more in summer).</p></li>
+</ul>
+</div>
+<p><strong><font size="4"><span style="color:#2F5496">How does this relate to study design?</font></span></strong></p>
+<p> information is used in this tool to determine ‘camera spacing’ and the ‘number of cameras’ required. This is because how far animals can move will ultimately affect whether the data collected from different locations (or observations of different individuals) are independent of one another.</p>
+<p>This is one aspect of the “” (i.e., ) <a href="09_glossary.html#mod_assumption" target="_blank" data-bs-toggle="tooltip" data-bs-title="Model assumption: Explicitly stated (or implicitly premised) conventions, choices and other specifications (e.g., about the data, wildlife ecology*/behaviour, the relationships between variables, etc.) on which a particular modelling approach is based that allows the model to provide valid inference.">assumption<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a> of many <a href="09_glossary.html#mod_approach" target="_blank" data-bs-toggle="tooltip" data-bs-title="Modelling approach: The method used to analyze the camera data, which should depend on the state variable, e.g., occupancy models [MacKenzie et al., 2002], spatially explicit capture recapture (SECR) for density estimation [Chandler & Royle, 2013], etc. and the Target Species.">modelling approaches<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a> (e.g., <a href="09_glossary.html#mod_occupancy" target="_blank" data-bs-toggle="tooltip" data-bs-title="Occupancy model (MacKenzie et al., 2002): A modelling approach used to account for imperfect detection by first evaluating the detection probability of a species via detection histories (i.e., present or absent) to determine the probability of the true presence or absence of a species at a site (MacKenzie et al., 2002).">occupancy models<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a> [MacKenzie et al., 2004]).’<strong>Site independence</strong>’ is often used interchangeably with ‘site closure’, however, the concept of ‘site independence’ also considers <a href="09_glossary.html#spatial_autocorrelation" target="_blank" data-bs-toggle="tooltip" data-bs-title="Spatial autocorrelation: The tendency for locations that are closer together to be more similar.">spatial autocorrelation<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a>, or “.” To meet these  <a href="09_glossary.html#mod_assumption" target="_blank" data-bs-toggle="tooltip" data-bs-title="Model assumption: Explicitly stated (or implicitly premised) conventions, choices and other specifications (e.g., about the data, wildlife ecology*/behaviour, the relationships between variables, etc.) on which a particular modelling approach is based that allows the model to provide valid inference.">assumption<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a>, its often suggested to space cameras far enough apart that the same individuals or groups of animals are not <strong>influencing data</strong> from multiple sites (e.g., either by being detected or influencing detection at multiple sites, i.e., camera spacing is larger than the species’ home range size). However, its not always ideal to space cameras far enough apart to ensure ‘site closure’ and ‘site independence’ assumptions are met. For some approaches, such as capture-recapture [CITE], the opposite is true; sites should be sufficiently close to one another such that individuals ARE picked up across more than one location (‘dependence’ is required). Meeting these assumptions (i.e., ‘site independence’ and/or ‘site dependence’ [approach-dependent]) is important to ensure that the model results are valid (avoid biased results and incorrect conclusions).</p>
+<p>Refer to the “in-depth” tab for more information.</p>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-1">
+In-depth</label><div class="sd-tab-content docutils">
+<p>This section will be available soon! In the meantime, check out the information in the other tabs!</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/00_coming_soon.png"><img alt="../_images/00_coming_soon.png" src="../_images/00_coming_soon.png" style="width: 300px;" /></a>
+</figure>
+</div>
+<input id="sd-tab-item-2" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-2">
+Visual resources</label><div class="sd-tab-content docutils">
+<div class="sd-container-fluid sd-sphinx-override sd-m-0 sd-p-0 docutils">
+<div class="sd-row sd-row-cols-3 sd-row-cols-xs-3 sd-row-cols-sm-3 sd-row-cols-md-3 sd-row-cols-lg-3 sd-g-1 sd-g-xs-1 sd-g-sm-1 sd-g-md-1 sd-g-lg-1 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Alberta Remote Camera Steering Committee [RCSC], 2024b</div>
+<figure class="align-default">
+<img alt="../_images/00_home_range.jpg" class="img-grid" src="../_images/00_home_range.jpg" />
+</figure>
+<p class="sd-card-text"><strong>Home range</strong>: the area within which an animal normally lives and finds what it needs to survive and reproduce.</p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Hoeks et al., 2024</div>
+<figure class="align-default">
+<img alt="../_images/hoeks_et_al_2024_body_mass.png" class="img-grid" src="../_images/hoeks_et_al_2024_body_mass.png" />
+</figure>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Hoeks et al., 2024</div>
+<figure class="align-default">
+<img alt="../_images/hoeks_et_al_2024_summary.png" class="img-grid" src="../_images/hoeks_et_al_2024_summary.png" />
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sd-container-fluid sd-sphinx-override sd-m-0 sd-p-0 docutils">
+<div class="sd-row sd-row-cols-3 sd-row-cols-xs-3 sd-row-cols-sm-3 sd-row-cols-md-3 sd-row-cols-lg-3 sd-g-1 sd-g-xs-1 sd-g-sm-1 sd-g-md-1 sd-g-lg-1 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+rtxt_figure4_ref_id</div>
+<figure class="align-default">
+<img alt="../_images/figure4_filename.png" class="img-grid" src="../_images/figure4_filename.png" />
+</figure>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+rtxt_figure5_ref_id</div>
+<figure class="align-default">
+<img alt="../_images/figure5_filename.png" class="img-grid" src="../_images/figure5_filename.png" />
+</figure>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+rtxt_figure6_ref_id</div>
+<figure class="align-default">
+<img alt="../_images/figure6_filename.png" class="img-grid" src="../_images/figure6_filename.png" />
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<input id="sd-tab-item-3" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-3">
+Shiny apps/Widgets</label><div class="sd-tab-content docutils">
+<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Species home range / body size lookup</div>
+<p class="sd-card-text">A R Shiny app created for the RC Decision Support Tool to allows users lookup information on species home range size / body size; information pulled directly from the following sources:</p>
+<ul class="simple">
+<li><p class="sd-card-text">Burton et al. (2015) supplementary material “S2. Average body mass and home range size for a sample of species and studies among the reviewed set of camera trap publications”</p></li>
+<li><p class="sd-card-text">PanTHERIA database (Jones et al., 2009) “a species-level database of life history, ecology, and geography of extant and recently extinct mammals</p></li>
+<li><p class="sd-card-text">HomeRange: A global database of mammalian home ranges (Broekman et al., 2022)</p></li>
+</ul>
+<iframe width="100%" height="900" src="https://7e2l38-cassondra-stevenson.shinyapps.io/lu_species_homerange" loading="lazy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+</div>
+</div>
+<input id="sd-tab-item-4" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-4">
+Analytical tools &amp; Resources</label><div class="sd-tab-content docutils">
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Type</p></th>
+<th class="head text-left"><p>Name</p></th>
+<th class="head text-left"><p>Note</p></th>
+<th class="head text-left"><p>URL</p></th>
+<th class="head text-left"><p>Reference</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p>Data/Database</p></td>
+<td class="text-left"><p>HomeRange: A global database of mammalian home range</p></td>
+<td class="text-left"><p>HomeRange, a global database with 75,611 home- range values across 960 different species of mammals, including terrestrial, aquatic and aerial species</p></td>
+<td class="text-left"><p>Article:<a class="reference external" href="https://onlinelibrary.wiley.com/doi/epdf/10.1111/geb.13625">https://onlinelibrary.wiley.com/doi/epdf/10.1111/geb.13625</a>;<br>Data:<a class="github reference external" href="https://github.com/SHoeks/HomeRange">SHoeks/HomeRange</a>&gt;; <a class="reference external" href="https://shoeks.github.io/HomeRange/">https://shoeks.github.io/HomeRange/</a></p></td>
+<td class="text-left"><p>Broekman, M. J. E., Hoeks, S., Freriks, R., Langendoen, M. M., Runge, K. M., Savenco, E., Ter Harmsel, R., Huijbregts, M. A. J., &amp; Tucker, M. A. (2023). HomeRange: A global database of mammalian home ranges. <em>Global Ecology and Biogeography, 32</em>(2), 198-205. <a class="reference external" href="https://doi.org/10.1111/geb.13625">https://doi.org/10.1111/geb.13625</a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Data/Database</p></td>
+<td class="text-left"><p>Supplementary material; PanTHERIA</p></td>
+<td class="text-left"><p>PanTHERIA: a species-level database of life history, ecology,and geography of extant and recently extinct mammals</p></td>
+<td class="text-left"><p><a class="reference external" href="https://ecologicaldata.org/wiki/pantheria">https://ecologicaldata.org/wiki/pantheria</a></p></td>
+<td class="text-left"><p>Jones, K. E., Bielby, J., Cardillo, M., Fritz, S. A., O’Dell, J., Orme, C. D. L., Safi, K., Sechrest, W., Boakes, E. H., Carbone, C., Connolly, C., Cutts, M. J., Foster, J. K., Grenyer, R., Habib, M., Plaster, C. A., Price, S. A., Rigby, E. A., Rist, J., … Purvis, A. (2009). PanTHERIA: a species-level database of life history, ecology, and geography of extant and recently extinct mammals. <em>Ecology, 90</em>(9), 2648-2648. <a class="reference external" href="https://doi.org/10.1890/08-1494.1">https://doi.org/10.1890/08-1494.1</a></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Data/Database</p></td>
+<td class="text-left"><p>Supplementary material; Wildlife camera trapping: a review and recommendations for linking surveys to ecological processes</p></td>
+<td class="text-left"><p><strong>Burton et al. (2015)</strong><br> - Table S2. Data on body size and home range size for a sample of surveyed species.<br>-“Table S1. Bibliographic details and data summarized from camera trap publications included in the review.”</p></td>
+<td class="text-left"><p>Article: <a class="reference external" href="https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/1365-2664.12432">https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/1365-2664.12432</a>;<br><a class="reference external" href="https://besjournals.onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2F1365-2664.12432&amp;amp;file=jpe12432-sup-0006-TableS2.csv">Download Table S2 XLS</a> and/or<br><a class="reference external" href="https://besjournals.onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2F1365-2664.12432&amp;amp;file=jpe12432-sup-0005-TableS1.xlsx">Download the related references; CSV </a></p></td>
+<td class="text-left"><p>Burton, A. C., Neilson, E., Moreira, D., Ladle, A., Steenweg, R., Fisher, J. T., Bayne, E., Boutin, S., &amp; Stephens, P. (2015). Camera trap Trapping: A Review and Recommendations for Linking Surveys to Ecological Processes. <em>Journal of Applied Ecology</em>, <em>52</em>(3), 675-685. <a class="reference external" href="https://doi.org/10.1111/1365-2664.12432">https://doi.org/10.1111/1365-2664.12432</a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>R package</p></td>
+<td class="text-left"><p>Package ‘HomeRange’</p></td>
+<td class="text-left"><p>HomeRange data: the R package can be used to download and import the HomeRange data</p></td>
+<td class="text-left"><p><a class="github reference external" href="https://github.com/SHoeks/HomeRange">SHoeks/HomeRange</a></p></td>
+<td class="text-left"><p>Hoeks, S., Tucker, M., &amp; Broekman, M. (2024). <em>HomeRange</em> <a class="github reference external" href="https://github.com/SHoeks/HomeRange">SHoeks/HomeRange</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- END_RESOURCE_TABLE -->
+</div>
+<input id="sd-tab-item-5" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-5">
+References</label><div class="sd-tab-content docutils">
+<p>Broekman, M. J. E., Hoeks, S., Freriks, R., Langendoen, M. M., Runge, K. M., Savenco, E., Ter Harmsel, R., Huijbregts, M. A. J., &amp; Tucker, M. A. (2023). HomeRange: A global database of mammalian home ranges. <em>Global Ecology and Biogeography, 32</em>(2), 198-205. <a class="reference external" href="https://doi.org/10.1111/geb.13625">https://doi.org/10.1111/geb.13625</a></p>
+<p>Burton, A. C., Neilson, E., Moreira, D., Ladle, A., Steenweg, R., Fisher, J. T., Bayne, E., Boutin, S., &amp; Stephens, P. (2015). Camera trap Trapping: A Review and Recommendations for Linking Surveys to Ecological Processes. <em>Journal of Applied Ecology</em>, <em>52</em>(3), 675-685. <a class="reference external" href="https://doi.org/10.1111/1365-2664.12432">https://doi.org/10.1111/1365-2664.12432</a></p>
+<p>Hoeks, S., Tucker, M., &amp; Broekman, M. (2024). <em>HomeRange</em> <a class="github reference external" href="https://github.com/SHoeks/HomeRange">SHoeks/HomeRange</a></p>
+<p>Jones, K. E., Bielby, J., Cardillo, M., Fritz, S. A., O’Dell, J., Orme, C. D. L., Safi, K., Sechrest, W., Boakes, E. H., Carbone, C., Connolly, C., Cutts, M. J., Foster, J. K., Grenyer, R., Habib, M., Plaster, C. A., Price, S. A., Rigby, E. A., Rist, J., … Purvis, A. (2009). PanTHERIA: a species-level database of life history, ecology, and geography of extant and recently extinct mammals. <em>Ecology, 90</em>(9), 2648-2648. <a class="reference external" href="https://doi.org/10.1890/08-1494.1">https://doi.org/10.1890/08-1494.1</a></p>
+<p>MacKenzie, D. I., Bailey, L. L., &amp; Nichols, J. D. (2004). Investigating Species Co-Occurrence Patterns When Species Are Detected Imperfectly. <em>Journal of Animal Ecology, 73</em>(3), 546-555. <a class="reference external" href="https://doi.org/10.1111/j.0021-8790.2004.00828.x">https://doi.org/10.1111/j.0021-8790.2004.00828.x</a></p>
+<p>Nakashima, Y., Fukasawa, &amp; K., Samejima, H. (2017). Estimating Animal Density Without Individual Recognition Using Information Derivable Exclusively from Camera Traps. <em>Journal of Applied Ecology, 55</em>(2), 735-744. <a class="reference external" href="https://doi.org/10.1111/1365-2664.13059">https://doi.org/10.1111/1365-2664.13059</a></p>
+<p>O’Connell, A. F., Talancy, N. W., Bailey, L. L., Sauer, J. R., Cook, R., &amp; Gilbert, A. T. (2006). Estimating Site Occupancy and Detection Probability Parameters for Meso- And Large Mammals in a Coastal Ecosystem. <em>Journal of Wildlife Management, 70</em>(6), 1625-1633. <a class="reference external" href="https://doi.org/10.2193/0022-541X(2006)70%5B1625:ESOADP%5D2.0.CO;2">https://doi.org/10.2193/0022-541X(2006)70[1625:ESOADP]2.0.CO;2</a></p>
+<p>Rowcliffe, J. M., Field, J., Turvey, S. T., &amp; Carbone, C. (2008). Estimating animal Density using camera traps without the need for individual recognition. <em>Journal of Applied Ecology</em>, <em>45</em>(4), 1228-1236. <a class="reference external" href="https://doi.org/10.1111/j.1365-2664.2008.01473.x">https://doi.org/10.1111/j.1365-2664.2008.01473.x</a></p>
+<p>Rowcliffe, J. M., Kays, R., Carbone, C., &amp; Jansen, P. A. (2013). Clarifying assumptions behind the estimation of animal Density from camera trap rates. <em>The Journal of Wildlife Management, 77</em>(5), 876-876. <a class="reference external" href="https://doi.org/10.1002/jwmg.533">https://doi.org/10.1002/jwmg.533</a></p>
+</div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./02_dialog-boxes"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+              
+              
+              
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="component-author">
+By Alberta Remote Camera Steering Committee (RCSC)
+</p>
+</div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>
