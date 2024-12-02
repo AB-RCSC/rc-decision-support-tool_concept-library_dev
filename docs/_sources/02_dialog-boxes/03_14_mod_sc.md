@@ -23,7 +23,6 @@ replace me with text
 :::
 -->
 
-**{{ name_mod_sc }}**: {{ def_mod_sc }}
 ```{include} pro_con_assump/mod_sc_apc.md
 ```
 
@@ -56,7 +55,7 @@ To approximate population size, we take a data augmentation approach. Population
 :align: center
 ```
 
-where *𝑀* ≫ *𝑁* and *𝜔<sub>𝑖</sub>* is the probability of existence of individual *𝑖* within population *𝑁* ({{ rtxt_chandler_royle_2013 }}, {{ rtxt_sun_et_al_2022 }}). *𝜔<sub>𝑖</sub>* is Bernoulli distributed – an animal can be present (i.e., *𝜔<sub>𝑖</sub>* = 1) or absent (i.e., *𝜔<sub>𝑖</sub>* = 0) – and depends on the number of detections at traps and the distance between traps and individuals’ activity centres ({{ rtxt_chandler_royle_2013 }}, {{ rtxt_sun_et_al_2022 }}).
+where *𝑀* ≫ *𝑁* and *𝜔<sub>𝑖</sub>* is the probability of existence of individual *??* within population *𝑁* ({{ rtxt_chandler_royle_2013 }}, {{ rtxt_sun_et_al_2022 }}). *𝜔<sub>𝑖</sub>* is Bernoulli distributed – an animal can be present (i.e., *𝜔<sub>𝑖</sub>* = 1) or absent (i.e., *𝜔<sub>𝑖</sub>* = 0) – and depends on the number of detections at traps and the distance between traps and individuals’ activity centres ({{ rtxt_chandler_royle_2013 }}, {{ rtxt_sun_et_al_2022 }}).
 
 Note that, for SC, a "trap" is simply a tool or method for collecting count data. Trap types include hair snags, track plates, acoustic recording devices, human point-count observers and camera traps ({{ rtxt_chandler_royle_2013 }}, {{ rtxt_royle_et_al_2014 }}). We will refer to camera traps for the remainder of this section.
 
@@ -74,10 +73,7 @@ Box 1. The unmarked models that follow estimate density within the collective vi
 ::::::{tab-item} Visual resources
 
 :::::{grid} 3
-:gutter: 1
-:padding: 0
-:margin: 0
-
+:class: wrapper
 ::::{grid-item-card} {{ rtxt_clarke_et_al_2023 }}
 :::{figure} ../03_images/03_image_files/clarke_et_al_2023_eqn_sc1.png
 :class: img_grid
@@ -96,29 +92,21 @@ Box 1. The unmarked models that follow estimate density within the collective vi
 :::
 ::::
 
-:::::
-
-:::::{grid} 3
-:gutter: 1
-:padding: 0
-:margin: 0
-
 ::::{grid-item-card} {{ rtxt_vid1_ref_id }}
-<div><div style="position:relative;padding-top:56.25%;"><iframe src="vid1_url" loading="lazy" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe></div></div>
+<div class="iframe-container-vid"><iframe class="iframe-responsive-vid" src="vid1_url"></iframe></div>
 
 ::::
 
 ::::{grid-item-card} {{ rtxt_vid2_ref_id }}
-<div><div style="position:relative;padding-top:56.25%;"><iframe src="vid2_url" loading="lazy" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe></div></div>
+<div class="iframe-container-vid"><iframe class="iframe-responsive-vid" src="vid2_url"></iframe></div>
 
 ::::
 
 ::::{grid-item-card} {{ rtxt_vid3_ref_id }}
-<div><div style="position:relative;padding-top:56.25%;"><iframe src="vid3_url" loading="lazy" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe></div></div>
+<div class="iframe-container-vid"><iframe class="iframe-responsive-vid" src="vid3_url"></iframe></div>
 
 ::::
 
-:::::
 ::::::
 
 ::::::{tab-item} Shiny apps/Widgets
@@ -132,33 +120,7 @@ Check back in the future!
 ::::::
 
 ::::::{tab-item} References
-{{ rbib_burgar_et_al_2018 }}
-
-{{ rbib_burgar_et_al_2019 }}
-
-{{ rbib_chandler_royle_2013 }}
-
-{{ rbib_clarke_2019 }}
-
-{{ rbib_clarke_et_al_2023 }}
-
-{{ rbib_evans_rittenhouse_2018 }}
-
-{{ rbib_gilbert_et_al_2020 }}
-
-{{ rbib_royle_2016 }}
-
-{{ rbib_royle_dorazio_2012 }}
-
-{{ rbib_royle_et_al_2014 }}
-
-{{ rbib_sun_et_al_2014 }}
-
-{{ rbib_sun_et_al_2022 }}
-
-{{ rbib_sollmann_2018 }}
-
-{{ rbib_gilbert_et_al_2020 }}
+{{ rbib_burgar_et_al_2018 burgar_et_al_2019 chandler_royle_2013 clarke_2019 clarke_et_al_2023 evans_rittenhouse_2018 gilbert_et_al_2020 royle_2016 royle_dorazio_2012 royle_et_al_2014 sun_et_al_2014 sun_et_al_2022 sollmann_2018 gilbert_et_al_2020 }}
 ::::::
 
 :::::::

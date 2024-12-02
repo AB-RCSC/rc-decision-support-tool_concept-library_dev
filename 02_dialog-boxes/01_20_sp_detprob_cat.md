@@ -20,17 +20,11 @@ editor_options:
 **{{ term_detection_probability }}**: {{ def_detection_probability }}
 
 **Detection probability categories are defined as follows:**
-- **Low**:
-- < 0.1 ({{ rtxt_tobler_powell_2013 }})
-- < 0.05 ({{ rtxt_shannon_et_al_2014 }})
-- 0–0.37 ({{ rtxt_chatterjee_et_al_2021 }})
-- **Medium**:
-- 0.37–0.67 ({{ rtxt_chatterjee_et_al_2021 }})
-- **High**:
-- 0.67–1 ({{ rtxt_chatterjee_et_al_2021 }})
-- \> 0.5 ({{ rtxt_mackenzie_royle_2005 }})
-- **Unknown**: select this option if you’re not sure of the detection probability of your {{ target_species_tu }} (single or multiple species)
-- **Multiple**: select this option if your study include multiple {{ target_species_tu }}.
+- **{{ name_sp_detprob_cat_low }}**: {{ def_sp_detprob_cat_low }}
+- **{{ name_sp_detprob_cat_med }}**: {{ def_sp_detprob_cat_med }}
+- **{{ name_sp_detprob_cat_high }}**: {{ def_sp_detprob_cat_high }}
+- **{{ name_sp_detprob_cat_unk }}**: {{ def_sp_detprob_cat_unk }}
+- **{{ name_sp_detprob_cat_multi }}**: {{ def_sp_detprob_cat_multi }}
 
 **Select "Unknown" if you’re not sure.**
 :::::::
@@ -120,10 +114,7 @@ Factors that influence {{ detection_probability_tl_abrv }} at the microsite and 
 ::::::{tab-item} Visual resources
 
 :::::{grid} 3
-:gutter: 1
-:padding: 0
-:margin: 0
-
+:class: wrapper
 ::::{grid-item-card} {{ rtxt_rcsc_et_al_2024 }}
 :::{figure} ../03_images/03_image_files/rcsc_et_al_2024_detection_probability_2023_05_04_clipped.jpg
 :class: img_grid
@@ -144,13 +135,6 @@ Factors that influence {{ detection_probability_tl_abrv }} at the microsite and 
 :::
 **Tourani et al., (2020) - Fig. 1** Conceptual diagram showing different aspects of detectability during camera trap surveys and the modulating effect of biological characteristics. In addition to direct impacts on detectability, a longer visit and a closer image of focal species increase the chance of identifying the visitor, thereby increasing detectability. [Colour figure can be viewed at zslpublications.onlinelibrary.wiley.com].
 ::::
-
-:::::
-
-:::::{grid} 3
-:gutter: 1
-:padding: 0
-:margin: 0
 
 ::::{grid-item-card} {{ rtxt_iknayan_et_al_2014 }}
 :::{figure} ../03_images/03_image_files/iknayan_et_al_2014_fig2_clipped.png
@@ -176,12 +160,6 @@ Factors that influence {{ detection_probability_tl_abrv }} at the microsite and 
 ::::
 
 :::::
-
-:::::{grid} 3
-:gutter: 1
-:padding: 0
-:margin: 0
-
 ::::{grid-item-card} {{ rtxt_findlay_et_al_2020 }}
 :::{figure} ../03_images/03_image_files/findlay_et_al_2020_fig8_clipped.png
 
@@ -206,30 +184,22 @@ Factors that influence {{ detection_probability_tl_abrv }} at the microsite and 
 1) At the core lie intrinsic characteristics of the species, including whether it is rare or abundant, its physical appearance (or vocal characteristics) and its behaviour. 2) These are modulated by site characteristics, potentially inducing spatial variation in species detectability. For instance, a given species may be more difficult to detect if the vegetation is denser at a site, if local abundance is lower due to the specific habitat type or if individuals are wary because the site experiences greater levels of disturbance than normal. Ambient noise (e.g. a road) can also make difficult aural detection of species at some sites. 3) Species detectability at a given site may also depend on factors that vary temporally. For instance, the species may display seasonal changes in behaviour or even abundance. Behaviour also normally changes with the time of day and weather conditions, and so do visibility (or audibility) conditions. 4) Finally, the detectability of a given species, at a given site and point in time, depends on the detection method used, the skills of the surveyor and the amount of survey effort (e.g. duration of a survey visit). In the diagram, the numbers in brackets indicate how factors that vary in space and time can modulate aspects defining a species ‘baseline’ detectability. This diagram highlights key factors affecting detectability and their interactions but it is not necessarily an exhaustive account. Differences in survey characteristics in space or time will induce spatial or temporal variation in detectability.
 :::
 ::::
-:::::
-
-:::::{grid} 3
-:gutter: 1
-:padding: 0
-:margin: 0
-
 ::::{grid-item-card} {{ rtxt_turlapaty_2014 }}
-<div><div style="position:relative;padding-top:56.25%;"><iframe src="https://www.youtube.com/embed/WBgWOQBlNoI?si=h16_LVMHmwT0ntPd" loading="lazy" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe></div></div>
+<div class="iframe-container-vid"><iframe class="iframe-responsive-vid" src="https://www.youtube.com/embed/WBgWOQBlNoI?si=h16_LVMHmwT0ntPd"></iframe></div>
 
 Probability of Detection: Eg 01
 ::::
 
 ::::{grid-item-card} {{ rtxt_vid2_ref_id }}
-<div><div style="position:relative;padding-top:56.25%;"><iframe src="vid2_url" loading="lazy" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe></div></div>
+<div class="iframe-container-vid"><iframe class="iframe-responsive-vid" src="vid2_url"></iframe></div>
 
 ::::
 
 ::::{grid-item-card} {{ rtxt_vid3_ref_id }}
-<div><div style="position:relative;padding-top:56.25%;"><iframe src="vid3_url" loading="lazy" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe></div></div>
+<div class="iframe-container-vid"><iframe class="iframe-responsive-vid" src="vid3_url"></iframe></div>
 
 ::::
 
-:::::
 ::::::
 
 ::::::{tab-item} Shiny apps/Widgets
@@ -238,13 +208,13 @@ Probability of Detection: Eg 01
 ::::{dropdown} Probabilistic detection calculator ({{ rtxt_mikkela_2024 }})
 Online application used as an aid in sampling planning; calculates the probability of detecting disease (or other similar feature) with the given within-group prevalence and sample size for both finite and infinite group sizes. The detection means that at least one of the samples is detected positive. The sensitivity of the testing method can also be taken into account in the case of an imperfect test. <br>Additional information can be found here: <https://zenodo.org/records/13120206>
 
-<iframe width="100%" height="900" src="https://detcal-shiny.2.rahtiapp.fi/" loading="lazy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="iframe-container-shiny"><iframe class="iframe-responsive-shiny" src="https://detcal-shiny.2.rahtiapp.fi/"></iframe></div>
 ::::
 
 ::::{dropdown} smsPOMDP ({{ rtxt_pascal_et_al_2020 }})
 A Shiny r app to solve the problem of when to stop managing or surveying species under imperfect detection. <br>Additional information can be found here: <https://github.com/conservation-decisions/smsPOMDP> and <https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.13501>
 
-<iframe width="100%" height="900" src="https://conservation-decisions.shinyapps.io/smsPOMDP/" loading="lazy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="iframe-container-shiny"><iframe class="iframe-responsive-shiny" src="https://conservation-decisions.shinyapps.io/smsPOMDP/"></iframe></div>
 ::::
 
 :::::
@@ -260,53 +230,9 @@ Related documents: <https://zenodo.org/records/13120206> | {{ rbib_mikkela_2024 
 ::::::
 
 ::::::{tab-item} References
-{{ rbib_burton_et_al_2015 }}
+{{ rbib_burton_et_al_2015 caravaggi_et_al_2020 chatterjee_et_al_2021 denes_et_al_2015 findlay_et_al_2020 guilleraarroita_2016 hofmeester_et_al_2019 iknayan_et_al_2014 jennelle_et_al_2002 kays_et_al_2021 mackenzie_kendall_2002 mackenzie_royle_2005 mackenzie_et_al_2004 martin_et_al_2005 mikkela_2024 moeller_et_al_2023 obrien_et_al_2011 pascal_et_al_2020 rcsc_et_al_2024 }}
 
-{{ rbib_caravaggi_et_al_2020 }}
-
-{{ rbib_chatterjee_et_al_2021 }}
-
-{{ rbib_denes_et_al_2015 }}
-
-{{ rbib_findlay_et_al_2020 }}
-
-{{ rbib_guilleraarroita_2016 }}
-
-{{ rbib_hofmeester_et_al_2019 }}
-
-{{ rbib_iknayan_et_al_2014 }}
-
-{{ rbib_jennelle_et_al_2002 }}
-
-{{ rbib_kays_et_al_2021 }}
-
-{{ rbib_mackenzie_kendall_2002 }}
-
-{{ rbib_mackenzie_royle_2005 }}
-
-{{ rbib_mackenzie_et_al_2004 }}
-
-{{ rbib_martin_et_al_2005 }}
-
-{{ rbib_mikkela_2024 }}
-
-{{ rbib_moeller_et_al_2023 }}
-
-{{ rbib_obrien_et_al_2011 }}
-
-{{ rbib_pascal_et_al_2020 }}
-
-{{ rbib_rcsc_et_al_2024 }}
-
-{{ rbib_rowcliffe_et_al_2011 }}
-
-{{ rbib_shannon_et_al_2014 }}
-
-{{ rbib_solymos_et_al_2024 }}
-
-{{ rbib_tobler_powell_2013 }}
-
-{{ rbib_tourani_et_al_2020 }}
+{{ rbib_rowcliffe_et_al_2011 shannon_et_al_2014 solymos_et_al_2024 tobler_powell_2013 tourani_et_al_2020 }}
 ::::::
 
 :::::::

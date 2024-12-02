@@ -16,20 +16,20 @@ editor_options:
 ---
 (i_mod_rest)=
 # {{ title_i_mod_rest }}
-
-<!--
-:::{hint}
-replace me with text
+::::{hint}
+:::{seealso}
+{{ link_bdg_viewshed_dens_est }}
 :::
--->
+::::
 
-**{{ name_mod_rest }}**: {{ def_mod_rest }}
 ```{include} pro_con_assump/mod_rest_apc.md
 ```
 
 :::::::{tab-set}
 
 ::::::{tab-item} Overview
+"The REST model describes the relationship among population density, mean number of detections by a camera trap during a survey period, and staying time of individual animals in a predetermined detection zone in which individuals are certain to be detected by the camera trap." ({{ rtxt_nakashima_et_al_2017 }}).
+….
 ```{include} include/00_coming_soon.md
 ```
 ::::::
@@ -62,7 +62,6 @@ where *𝐷̂* is the corrected density estimate and *𝑎* is the activity leve
 :width: 300px
 :align: center
 ```
-
 > **Clarke et al. 2023 - Fig. 8.** A) Still from 中島啓裕’s (2021a) video series. Example of overlaying a video recording of an animal on a Reference image of the focal area (faint triangle) to determine staying time *𝑇*. B) Still from Appendix S2 from Palencia et al. (2021). Example of superimposing the focal area on an image capture.
 
 ## Simulations and Field Experiments
@@ -74,8 +73,8 @@ Garland et al. (2020) ran a "real life" simulation of the REST using human volun
 Both Garland et al. (2020) and Nakashima et al. (2018) tested the effect of sampling effort on the REST; both concluded that the model can yield accurate results, even when effort is relatively small (1% of study area sampled or 10 cameras deployed for 10 days, respectively). Note, however, that these results pertain to very high-density populations – animal density was 125 to 750 individuals per km<sup>2</sup> in Garland et al. (2020) and 10 individuals per km<sup>2</sup> in Nakashima et al. (2018) – and likely do not apply to average-to-low density populations. Low sampling effort was also linked to imprecision – the fewer cameras deployed, the less precise the density estimate ({{ rtxt_garland_et_al_2020 }}; {{ rtxt_nakashima_et_al_2017 }}). Thus, although little sampling effort is needed to produce accurate density estimates for very dense populations, considerable sampling effort will be necessary for most populations, and to produce precise estimates.
 
 ### In the field
-- The REST was initially validated by Nakashima et al. (2018), who compared density estimates of forest-dwelling antelopes from the camera data-based model and line-transect surveys (see {bdg-link-primary-line}`Distance sampling<https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/03_20_mod_ds.html>`). In this system, both methods produced similar estimates of antelope density, with similar precision ({{ rtxt_nakashima_et_al_2017 }}). A follow-up study in the same area further demonstrated that the model can produce unbiased estimates of density ({{ rtxt_nakashima_et_al_2020 }}).
-- The model produced estimates of snowshoe hare density comparable to livetrapping SCR in the boreal forest of the northwestern United States ({{ rtxt_jensen_et_al_2022 }}). REST- and REM-based estimates were also consistent with each other, and both models outperformed the time-to-event model (TTE; see {bdg-link-primary-line}`Time-to-event<https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/03_20_mod_tte.html>`; {{ rtxt_jensen_et_al_2022 }}).
+- The REST was initially validated by Nakashima et al. (2018), who compared density estimates of forest-dwelling antelopes from the camera data-based model and line-transect surveys (see {{ link_bdg_mod_ds }}). In this system, both methods produced similar estimates of antelope density, with similar precision ({{ rtxt_nakashima_et_al_2017 }}). A follow-up study in the same area further demonstrated that the model can produce unbiased estimates of density ({{ rtxt_nakashima_et_al_2020 }}).
+- The model produced estimates of snowshoe hare density comparable to livetrapping SCR in the boreal forest of the northwestern United States ({{ rtxt_jensen_et_al_2022 }}). REST- and REM-based estimates were also consistent with each other, and both models outperformed the time-to-event model (TTE; see {{ link_bdg_mod_tte }}); {{ rtxt_jensen_et_al_2022 }}).
 - Palencia et al. (2021) found that REST-derived density estimates were consistent with line-transect surveys of deer, but not with drive-count surveys of boar; the REST underestimated density compared to the latter. The model was, however, highly consistent with the REM and camera trap distance sampling (DS; {{ rtxt_palencia_et_al_2021 }}). Furthermore, the REST was more precise than the other two camera models – although not significantly ({{ rtxt_palencia_et_al_2021 }}).
 
 Practitioners should be aware that population densities were quite high in the studies listed above (about 1 to 160 animals per km<sup>2</sup>; {{ rtxt_jensen_et_al_2022 }}; {{ rtxt_nakashima_et_al_2017 }}). Thus, while the REST model applies well to very dense populations, it may not be appropriate for average-to-low density populations (e.g., wildlife populations in BC, with densities often <1 animal/km<sup>2</sup>); further investigation is needed ({{ rtxt_morin_et_al_2022 }}). The precision of the REST is also inversely related to population size – the smaller the population, the less precise the density estimate ({{ rtxt_morin_et_al_2022 }}).
@@ -84,10 +83,7 @@ Practitioners should be aware that population densities were quite high in the s
 ::::::{tab-item} Visual resources
 
 :::::{grid} 3
-:gutter: 1
-:padding: 0
-:margin: 0
-
+:class: wrapper
 ::::{grid-item-card} {{ rtxt_clarke_et_al_2023 }}
 :::{figure} ../03_images/03_image_files/clarke_et_al_2023_eqn_rest1.png
 :class: img_grid
@@ -106,13 +102,6 @@ Practitioners should be aware that population densities were quite high in the s
 :::
 **Clarke et al. (2023) - Fig. 8 ** A) Still from 中島啓裕’s (2021) video series. Example of overlaying a video recording of an animal on a Reference image of the focal area (faint triangle) to determine staying time *𝑇*. B) Still from Appendix S2 from Palencia et al. (2021). Example of superimposing the focal area on an image capture.
 ::::
-
-:::::
-
-:::::{grid} 3
-:gutter: 1
-:padding: 0
-:margin: 0
 
 ::::{grid-item-card} {{ rtxt_nakashima_et_al_2017 }}
 :::{figure} ../03_images/03_image_files/nakashima_et_al_2017_fig1_clipped.png
@@ -134,31 +123,24 @@ Practitioners should be aware that population densities were quite high in the s
 ::::
 
 :::::
-
-:::::{grid} 3
-:gutter: 1
-:padding: 0
-:margin: 0
-
 ::::{grid-item-card} {{ rtxt_nakajima_2021b }}
-<div><div style="position:relative;padding-top:56.25%;"><iframe src="https://www.youtube.com/embed/pUa9rgxSGVA?si=pOIqFPL6AxNuUYJtl" loading="lazy" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe></div></div>
+<div class="iframe-container-vid"><iframe class="iframe-responsive-vid" src="https://www.youtube.com/embed/pUa9rgxSGVA?si=pOIqFPL6AxNuUYJtl"></iframe></div>
 
 Density Estimation with the REST Model > REST_01_Set_Focal_Area
 ::::
 
 ::::{grid-item-card} {{ rtxt_nakajima_2021c }}
-<div><div style="position:relative;padding-top:56.25%;"><iframe src="https://www.youtube.com/embed/wqEF_up7EGs?si=IL2_moYR0XpdR-Fk" loading="lazy" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe></div></div>
+<div class="iframe-container-vid"><iframe class="iframe-responsive-vid" src="https://www.youtube.com/embed/wqEF_up7EGs?si=IL2_moYR0XpdR-Fk"></iframe></div>
 
 Density Estimation with the REST Model > REST_02_Set_Up_Emv
 ::::
 
 ::::{grid-item-card} {{ rtxt_nakajima_2021d }}
-<div><div style="position:relative;padding-top:56.25%;"><iframe src="https://www.youtube.com/embed/s-d81K72yWs?si=PqWOR_dvvkCfoLY7" loading="lazy" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe></div></div>
+<div class="iframe-container-vid"><iframe class="iframe-responsive-vid" src="https://www.youtube.com/embed/s-d81K72yWs?si=PqWOR_dvvkCfoLY7"></iframe></div>
 
 Density Estimation with the REST Model > REST_03_MeasureStayingTime
 ::::
 
-:::::
 ::::::
 
 ::::::{tab-item} Shiny apps/Widgets
@@ -168,41 +150,22 @@ Check back in the future!
 :::::{tab-item} Analytical tools & Resources
 | Type | Name | Note | URL |Reference |
 |:----------------|:-------------------------------|:----------------------------------------------------------------|:----------------------|:----------------------------------------|
+| Article | One size does not fit all: A novel approach for determining the Realised Viewshed Size for remote camera traps. | | https://doi.org/10.1101/2024.05.09.593241 | {{ rbib_carswell_et_al_2024 }}
 <!-- END_RESOURCE_TABLE -->
 ::::::
 
 ::::::{tab-item} References
-{{ rbib_caravaggi_et_al_2020 }}
+{{ rbib_caravaggi_et_al_2020 carswell_et_al_2024 clarke_et_al_2023 }}
 
-{{ rbib_clarke_et_al_2023 }}
-
-{{ rbib_codling_et_al_2008 }}
-
-{{ rbib_garland_et_al_2020 }}
+{{ rbib_codling_et_al_2008 garland_et_al_2020 }}
 
 {{ rbib_gilbert_et_al_2020 }})
 
 {{ rbib_hofmeester_et_al_2017 }})
 
-{{ rbib_jensen_et_al_2022 }}
+{{ rbib_jensen_et_al_2022 morin_et_al_2022 nakashima_et_al_2017 nakashima_et_al_2020 palencia_et_al_2021 rowcliffe_et_al_2014 }}
 
-{{ rbib_morin_et_al_2022 }}
-
-{{ rbib_nakashima_et_al_2017 }}
-
-{{ rbib_nakashima_et_al_2020 }}
-
-{{ rbib_palencia_et_al_2021 }}
-
-{{ rbib_rowcliffe_et_al_2014 }}
-
-{{ rbib_nakajima_2021a }}
-
-{{ rbib_nakajima_2021b }}
-
-{{ rbib_nakajima_2021c }}
-
-{{ rbib_nakajima_2021d }}
+{{ rbib_nakajima_2021a nakajima_2021b nakajima_2021c nakajima_2021d }}
 ::::::
 
 :::::::

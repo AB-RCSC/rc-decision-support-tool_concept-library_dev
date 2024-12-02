@@ -20,7 +20,6 @@ editor_options:
 {bdg-link-primary-line}`Space-to-event (STE)<https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/03_22_mod_ste.html>`
 :::
 
-**{{ name_mod_is }}**: {{ def_mod_is }}
 ```{include} pro_con_assump/mod_is_apc.md
 ```
 
@@ -53,10 +52,7 @@ The IS is relatively untested opposite its sister models. Simulations have shown
 ::::::{tab-item} Visual resources
 
 :::::{grid} 3
-:gutter: 1
-:padding: 0
-:margin: 0
-
+:class: wrapper
 ::::{grid-item-card} {{ rtxt_moeller_lukacs_2021 }}
 :::{figure} ../03_images/03_image_files/moeller_lukacs_2021_fig1.png
 :class: img_grid
@@ -77,7 +73,6 @@ The IS is relatively untested opposite its sister models. Simulations have shown
 :::
 ::::
 
-:::::
 ::::::
 
 ::::::{tab-item} Shiny apps/Widgets
@@ -92,11 +87,7 @@ Check back in the future!
 ::::::
 
 ::::::{tab-item} References
-{{ rbib_clarke_et_al_2023 }}
-
-{{ rbib_moeller_et_al_2018 }}
-
-{{ rbib_moeller_et_al_2021 }}
+{{ rbib_clarke_et_al_2023 moeller_et_al_2018 moeller_et_al_2021 }}
 ::::::
 
 :::::::

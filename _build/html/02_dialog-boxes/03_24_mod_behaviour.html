@@ -30,16 +30,17 @@
   <link href="../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
 <link href="../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b76e3c8a" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="../_static/class-prog.css?v=d31cb8f7" />
+    <link rel="stylesheet" type="text/css" href="../_static/class-prog.css?v=e0b0bc6d" />
     <link rel="stylesheet" type="text/css" href="../_static/colours.css?v=9897dbfc" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=52e9b356" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=5e97e934" />
     <link rel="stylesheet" type="text/css" href="../_static/iframe.css?v=2a601663" />
+    <link rel="stylesheet" type="text/css" href="../_static/scratch_backup.css?v=5f02f252" />
     <link rel="stylesheet" type="text/css" href="../_static/test.css?v=32d70693" />
     <link rel="stylesheet" type="text/css" href="../_static/tooltips.css?v=4de49550" />
     <link rel="stylesheet" type="text/css" href="../_static/youtube.css?v=70faa909" />
@@ -235,14 +236,6 @@
       
         <div class="navbar-item">
 
-<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
-  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
-  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
-</button></div>
-      
-        <div class="navbar-item">
-
   <div class="tocsection sourcelink">
     <a href="../_sources/02_dialog-boxes/03_24_mod_behaviour.md">
       <i class="fa-solid fa-file-lines"></i> Show Source
@@ -367,14 +360,6 @@
         
           <div class="navbar-item">
 
-<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
-  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
-  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
-</button></div>
-        
-          <div class="navbar-item">
-
   <div class="tocsection sourcelink">
     <a href="../_sources/02_dialog-boxes/03_24_mod_behaviour.md">
       <i class="fa-solid fa-file-lines"></i> Show Source
@@ -410,14 +395,60 @@
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="behaviour">
-<span id="i-obj-behaviour"></span><h1>Behaviour<a class="headerlink" href="#behaviour" title="Link to this heading">#</a></h1>
+<span id="i-mod-behaviour"></span><h1>Behaviour<a class="headerlink" href="#behaviour" title="Link to this heading">#</a></h1>
 <!--
 :::{hint}
 replace me with text
 :::
 -->
-<p><strong>Behaviour</strong>: </p>
-<div class="sd-tab-set docutils">
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Assumptions, Pros, Cons</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Assumptions</div>
+<ul class="simple">
+<li><p class="sd-card-text"><a href="09_glossary.html#mod_assumption" target="_blank" data-bs-toggle="tooltip" data-bs-title="Model assumption: Explicitly stated (or implicitly premised) conventions, choices and other specifications (e.g., about the data, wildlife ecology*/behaviour, the relationships between variables, etc.) on which a particular modelling approach is based that allows the model to provide valid inference.">Assumptions<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a> vary depending on the behavioural metric (Wearn &amp; Glover-Kapfer, 2017)</p></li>
+<li><p class="sd-card-text">For studies of activity patterns and temporal interactions of species: activity level is the only factor determining <a href="09_glossary.html#detection_rate" target="_blank" data-bs-toggle="tooltip" data-bs-title="Detection rate: The frequency of independent detections within a specified time period.">detection rates<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a>; animals are active when camera <a href="09_glossary.html#detection_rate" target="_blank" data-bs-toggle="tooltip" data-bs-title="Detection rate: The frequency of independent detections within a specified time period.">detection rate<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a> reaches its maximum in daily cycle (Royle et al., 2014; Rovero &amp; Zimmermann, 2016)</p></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Pros</div>
+<ul class="simple">
+<li><p class="sd-card-text">Can detect difficult to observe behaviours (i.e., boldness, or mating) (Bridges &amp; Noss, 2011)</p></li>
+<li><p class="sd-card-text">Long-term data on behavioural changes that would be difficult to obtain otherwise (i.e., time-limited human observers, or costly GPS collars) (Bridges &amp; Noss, 2011)</p></li>
+<li><p class="sd-card-text">Can monitor behaviour in response to specific locations (i.e., compost sites, which might be more difficult using GPS collars for example) (Rovero &amp; Zimmermann, 2016)</p></li>
+<li><p class="sd-card-text">Can evaluate interactions between species (Rovero &amp; Zimmermann, 2016)</p></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Cons</div>
+<ul class="simple">
+<li><p class="sd-card-text">Behavioural metrics may not reflect the behavioural state (inferred) (Rovero &amp; Zimmermann, 2016)</p></li>
+<li><p class="sd-card-text"><a href="09_glossary.html#bias" target="_blank" data-bs-toggle="tooltip" data-bs-title="Bias: A skewed or altered perspective. Biased data refers to data that may be inaccurate or unevenly portrayed (usually in favour of specific variables) and is therefore not as robust.' (Kemp et al., 2022).">Biases<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a> associated with equipment (i.e., presence of the camera itself may change behaviour studied) (Rovero &amp; Zimmermann, 2016)</p></li>
+<li><p class="sd-card-text">Difficult to consider individual variation (Rovero &amp; Zimmermann, 2016)</p></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</details><div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-0">
 Overview</label><div class="sd-tab-content docutils">
@@ -437,25 +468,15 @@ In-depth</label><div class="sd-tab-content docutils">
 <input id="sd-tab-item-2" name="sd-tab-set-0" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-2">
 Visual resources</label><div class="sd-tab-content docutils">
-<div class="sd-container-fluid sd-sphinx-override sd-m-0 sd-p-0 docutils">
-<div class="sd-row sd-row-cols-3 sd-row-cols-xs-3 sd-row-cols-sm-3 sd-row-cols-md-3 sd-row-cols-lg-3 sd-g-1 sd-g-xs-1 sd-g-sm-1 sd-g-md-1 sd-g-lg-1 docutils">
-<div class="sd-col sd-d-flex-row docutils">
-<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
-<div class="sd-card-body docutils">
-<div class="sd-card-title sd-font-weight-bold docutils">
-Caravaggi et al., 2017</div>
-<figure class="align-default">
-<img alt="../_images/caravaggi_et_al_2017_fig1_clipped1.png" class="img-grid" src="../_images/caravaggi_et_al_2017_fig1_clipped1.png" />
-</figure>
-<p class="sd-card-text"><strong>Caravaggi et al. (2017) - Fig. 1.</strong> Examples of animal behaviour captured by camera traps:</p>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-3 sd-row-cols-xs-3 sd-row-cols-sm-3 sd-row-cols-md-3 sd-row-cols-lg-3 docutils">
+<p><strong>Caravaggi et al. (2017) - Fig. 1.</strong> Examples of animal behaviour captured by camera traps:</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-kebab-horizontal no-title" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14a2 2 0 1 1-.001-3.999A2 2 0 0 1 20 14ZM6 12a2 2 0 1 1-3.999.001A2 2 0 0 1 6 12Zm8 0a2 2 0 1 1-3.999.001A2 2 0 0 1 14 12Z"></path></svg></span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">(A) Scent marking by an American black bear (<em>Ursus americanus</em>); (B) intraspecific competition in moose (<em>Alces alces</em>); (C) interspecific interactions between a European hare (<em>Lepus europaeus</em>; anti-predator response), a common buzzard (<em>Buteo buteo</em>; avoidance and attempted predation) and a hooded crow (<em>Corvus cornix</em>; anti-predator behaviour) captured on video (available at 10.6084/m9.figshare.4508369); (D) predation of a European rabbit (<em>Oryctolagus cuniculus</em>) by a red fox (<em>Vulpes vulpes</em>); (E) investigation of a squirrel feeding station by a pine marten (<em>Martes martes</em>); (F) nut caching by a grey squirrel (<em>Sciurus carolinensis</em>). Images provided by A.C. Burton (a, b), A. Caravaggi (c, d) and C.M.V. Finlay (e, f).</p>
 </div>
-</details></div>
-</div>
-</div>
+</details><div class="docutils">
 <div class="sd-col sd-d-flex-row docutils">
 <div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
 <div class="sd-card-body docutils">
@@ -473,6 +494,7 @@ Caravaggi et al., 2020</div>
 </details></div>
 </div>
 </div>
+</div>
 <div class="sd-col sd-d-flex-row docutils">
 <div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
 <div class="sd-card-body docutils">
@@ -485,10 +507,6 @@ Delisle et al., 2023</div>
 </div>
 </div>
 </div>
-</div>
-</div>
-<div class="sd-container-fluid sd-sphinx-override sd-m-0 sd-p-0 docutils">
-<div class="sd-row sd-row-cols-3 sd-row-cols-xs-3 sd-row-cols-sm-3 sd-row-cols-md-3 sd-row-cols-lg-3 sd-g-1 sd-g-xs-1 sd-g-sm-1 sd-g-md-1 sd-g-lg-1 docutils">
 <div class="sd-col sd-d-flex-row docutils">
 <div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
 <div class="sd-card-body docutils">
@@ -530,14 +548,12 @@ rtxt_figure6_ref_id</div>
 </div>
 </div>
 </div>
-<div class="sd-container-fluid sd-sphinx-override sd-m-0 sd-p-0 docutils">
-<div class="sd-row sd-row-cols-3 sd-row-cols-xs-3 sd-row-cols-sm-3 sd-row-cols-md-3 sd-row-cols-lg-3 sd-g-1 sd-g-xs-1 sd-g-sm-1 sd-g-md-1 sd-g-lg-1 docutils">
 <div class="sd-col sd-d-flex-row docutils">
 <div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
 <div class="sd-card-body docutils">
 <div class="sd-card-title sd-font-weight-bold docutils">
 rtxt_vid1_ref_id</div>
-<div><div style="position:relative;padding-top:56.25%;"><iframe src="vid1_url" loading="lazy" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe></div></div>
+<div class="iframe-container-vid"><iframe class="iframe-responsive-vid" src="vid1_url"></iframe></div>
 </div>
 </div>
 </div>
@@ -546,7 +562,7 @@ rtxt_vid1_ref_id</div>
 <div class="sd-card-body docutils">
 <div class="sd-card-title sd-font-weight-bold docutils">
 rtxt_vid2_ref_id</div>
-<div><div style="position:relative;padding-top:56.25%;"><iframe src="vid2_url" loading="lazy" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe></div></div>
+<div class="iframe-container-vid"><iframe class="iframe-responsive-vid" src="vid2_url"></iframe></div>
 </div>
 </div>
 </div>
@@ -555,9 +571,7 @@ rtxt_vid2_ref_id</div>
 <div class="sd-card-body docutils">
 <div class="sd-card-title sd-font-weight-bold docutils">
 rtxt_vid3_ref_id</div>
-<div><div style="position:relative;padding-top:56.25%;"><iframe src="vid3_url" loading="lazy" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe></div></div>
-</div>
-</div>
+<div class="iframe-container-vid"><iframe class="iframe-responsive-vid" src="vid3_url"></iframe></div>
 </div>
 </div>
 </div>
@@ -571,13 +585,13 @@ Shiny apps/Widgets</label><div class="sd-tab-content docutils">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Diel.Niche Shinyapp</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">RShiny implementation of Diel.Niche. See Gerber et al. A model-based hypothesis framework to define and estimate the diel niche via the `Diel.Niche’ R package. <br>Gerber, B. D., Devarajan, K., Farris, Z. J., &amp; Fidino, M. (2023). A model-based hypothesis framework to define and estimate the diel niche via the ‘Diel.Niche’ R package. <em>bioRxiv, 2023.06.21.545898.</em> <a class="reference external" href="https://doi.org/10.1101/2023.06.21.545898">https://doi.org/10.1101/2023.06.21.545898</a></p>
-<iframe width="100%" height="900" src="https://shiny.uri.edu/bgerber/DielNiche/" loading="lazy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="iframe-container-shiny"><iframe class="iframe-responsive-shiny" src="https://shiny.uri.edu/bgerber/DielNiche/"></iframe></div>
 </div>
 </details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Zone of Influence Effect Size and Buffer Distance Calculator</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">This tool can identify optimal buffer distances for recreational features, such as hiking trails, in natural areas inhabited by grizzly bears and wolves, using the outputs of camera trap modelling work from the Canadian Rockies of Alberta. The models assessed the impact of faraway human use on trails relative to human use at a focal location to estimate the zone of influence of human use on each of these wary species.<br>Thompson, P. R. (2024) <em>Zone of Influence Effect Size and Buffer Distance Calculator</em>. University of Alberta, Canada. <a class="reference external" href="https://pthompson234.shinyapps.io/calculate-zoi/">https://pthompson234.shinyapps.io/calculate-zoi/</a></p>
-<iframe width="100%" height="900" src="https://pthompson234.shinyapps.io/calculate-zoi/" loading="lazy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="iframe-container-shiny"><iframe class="iframe-responsive-shiny" src="https://pthompson234.shinyapps.io/calculate-zoi/"></iframe></div>
 </div>
 </details></div>
 </div>
@@ -651,11 +665,7 @@ Analytical tools &amp; Resources</label><div class="sd-tab-content docutils">
 <input id="sd-tab-item-5" name="sd-tab-set-0" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-5">
 References</label><div class="sd-tab-content docutils">
-<p>{ rbib_caravaggi_et_al_2017 }}</p>
-<p>Caravaggi, A., Burton, A. C., Clark, D. A., Fisher, J. T., Grass, A., Green, S., Hobaiter, C., Hofmeester, T. R., Kalan, A. K., Rabaiotti, D., &amp; Rivet, D. (2020). A Review of Factors To Consider When Using Camera Traps To Study Animal Behavior To Inform Wildlife Ecology And Conservation. <em>Conservation Science and Practice, 2</em>(8). <a class="reference external" href="https://doi.org/10.1111/csp2.239">https://doi.org/10.1111/csp2.239</a></p>
-<p>Gerber, B. D., Devarajan, K., Farris, Z. J., &amp; Fidino, M. (2023). A model-based hypothesis framework to define and estimate the diel niche via the ‘Diel.Niche’ R package. <em>bioRxiv, 2023.06.21.545898.</em> <a class="reference external" href="https://doi.org/10.1101/2023.06.21.545898">https://doi.org/10.1101/2023.06.21.545898</a></p>
-<p>Meek, P. D., Ballard, G. A., Fleming, P. J. S., Schaefer, M., Williams, W., &amp; Falzon, G. (2014a). Camera Traps Can Be Heard and Seen by Animals. <em>PLoS One</em>, <em>9</em>(10), e110832. <a class="reference external" href="https://doi.org/10.1371/journal.pone.0110832">https://doi.org/10.1371/journal.pone.0110832</a></p>
-<p>WildCo Lab (2021d). <em>Chapter 12 Activity</em>. <a class="reference external" href="https://bookdown.org/c_w_beirne/wildCo-Data-Analysis/activity.html">https://bookdown.org/c_w_beirne/wildCo-Data-Analysis/activity.html</a></p>
+<p>{ rbib_caravaggi_et_al_2017 caravaggi_et_al_2020 gerber_et_al_2023 meek_et_al_2014b wildco_lab_2021d }}</p>
 </div>
 </div>
 </section>

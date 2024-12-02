@@ -1,20 +1,8 @@
-div.text_tight {
-    margin-top: 2px;
-    padding-top: 2px;
-}
-
 div.toc_text_tight {
     line-height: 1.15;
     font-size: 0.25 rem;
     margin-top: 0;
 }
-
-div.toc_text_tight_i {
-    line-height: 1.15;
-    font-size: 0.25 rem;
-    font-style: italic;
-}
-
 .class-prog1 {
     display: flex;
     align-items: center; /* vertically */

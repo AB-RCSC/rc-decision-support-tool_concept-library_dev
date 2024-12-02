@@ -23,8 +23,6 @@ replace me with text
 :::
 -->
 
-**{{ name_sp_low_density }}**: {{ def_sp_low_density }}
-
 :::::::{tab-set}
 
 ::::::{tab-item} Overview
@@ -40,10 +38,7 @@ replace me with text
 ::::::{tab-item} Visual resources
 
 :::::{grid} 3
-:gutter: 1
-:padding: 0
-:margin: 0
-
+:class: wrapper
 ::::{grid-item-card} {{ rtxt_figure1_ref_id }}
 :::{figure} ../03_images/03_image_files/figure1_filename.png
 :class: img_grid
@@ -62,7 +57,6 @@ replace me with text
 :::
 ::::
 
-:::::
 ::::::
 
 ::::::{tab-item} Shiny apps/Widgets

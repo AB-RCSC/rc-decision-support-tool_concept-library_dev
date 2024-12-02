@@ -23,8 +23,6 @@ replace me with text
 :::
 -->
 
-**{{ name_cam_independent }}**: {{ def_cam_independent }}
-
 :::::::{tab-set}
 
 ::::::{tab-item} Overview
@@ -48,10 +46,7 @@ In some cases, it is advantageous or required to have dependent detections from 
 ::::::{tab-item} Visual resources
 
 :::::{grid} 3
-:gutter: 1
-:padding: 0
-:margin: 0
-
+:class: wrapper
 ::::{grid-item-card} {{ rtxt_zuckerberg_et_al_2020 }}
 :::{figure} ../03_images/03_image_files/zuckerberg_et_al_2020_fig1_clipped.png
 :class: img_grid
@@ -79,8 +74,6 @@ Scenario A implemented a biased sampling scheme with 18 sampling sites stratifie
 Shown in rows, spatial variation may be continuous or categorical (with different proportion of area in the lower detectability category). Shown in columns, spatial autocorration may vary from high (Moran’s I ≈ 1) to low (Moran’s I ≈ 0). For a detailed description of each scenario, see the main text.
 :::
 ::::
-:::::
-
 ::::::
 
 ::::::{tab-item} Shiny apps/Widgets
@@ -94,21 +87,7 @@ Check back in the future!
 ::::::
 
 ::::::{tab-item} References
-{{ rbib_augustine_et_al_2016 }}
-
-{{ rbib_oconnor_et_al_2017 }}
-
-{{ rbib_hurlbert_1984 }}
-
-{{ rbib_kelejian_prucha_1998 }}
-
-{{ rbib_mcclintock_et_al_2013 }}
-
-{{ rbib_ramage_et_al_2013 }}
-
-{{ rbib_wearn_gloverkapfer_2017 }}
-
-{{ rbib_zuckerberg_et_al_2020 }}
+{{ rbib_augustine_et_al_2016 oconnor_et_al_2017 hurlbert_1984 kelejian_prucha_1998 mcclintock_et_al_2013 ramage_et_al_2013 wearn_gloverkapfer_2017 zuckerberg_et_al_2020 }}
 ::::::
 
 :::::::

@@ -1,4 +1,4 @@
----
+﻿---
 jupytext:
   formats: md:myst
   text_representation:
@@ -14,7 +14,7 @@ editor_options:
   markdown:
     wrap: none
 ---
-(i_obj_behaviour)=
+(i_mod_behaviour)=
 # {{ title_i_mod_behaviour }}
 
 <!--
@@ -23,8 +23,7 @@ replace me with text
 :::
 -->
 
-**{{ name_mod_behaviour }}**: {{ def_mod_behaviour }}
-```{include} pro_con_assump/obj_behaviour_apc.md
+```{include} pro_con_assump/mod_behaviour_apc.md
 ```
 
 :::::::{tab-set}
@@ -42,10 +41,7 @@ replace me with text
 ::::::{tab-item} Visual resources
 
 :::::{grid} 3
-:gutter: 1
-:padding: 0
-:margin: 0
-
+:class: wrapper
 ::::{grid-item-card} {{ rtxt_caravaggi_et_al_2017 }}
 :::{figure} ../03_images/03_image_files/caravaggi_et_al_2017_fig1_clipped.png
 :class: img_grid
@@ -71,13 +67,6 @@ replace me with text
 **Delisle et al. (2023) - Fig 1** Conceptual movement paths in which animals exhibit a variety of different reactive behaviours towards camera traps: (A) attraction towards the camera trap; (B) freezing normal travel; (C) fleeing in response to being detected by the camera trap; and (d) fleeing in response to the presence of the camera trap regardless of being detected. Panels depicting actual animals exhibiting a variety of reactive behaviours towards camera traps: (A) white-tailed deer (*Odocoileus virginianus*) that is attracted towards the camera trap; (B) white-tailed deer that freezes in front of a camera trap; and (C) coyote (*Canis latrans*) that flees in response to being detected by a camera trap.
 ::::
 
-:::::
-
-:::::{grid} 3
-:gutter: 1
-:padding: 0
-:margin: 0
-
 ::::{grid-item-card} {{ rtxt_delisle_et_al_2023 }}
 :::{figure} ../03_images/03_image_files/delisle_et_al_2023_fig2.jpg
 :class: img_grid
@@ -100,28 +89,21 @@ Densities were estimated using camera trap distance sampling (CTDS; a) and the r
 ::::
 
 :::::
-
-:::::{grid} 3
-:gutter: 1
-:padding: 0
-:margin: 0
-
 ::::{grid-item-card} {{ rtxt_vid1_ref_id }}
-<div><div style="position:relative;padding-top:56.25%;"><iframe src="vid1_url" loading="lazy" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe></div></div>
+<div class="iframe-container-vid"><iframe class="iframe-responsive-vid" src="vid1_url"></iframe></div>
 
 ::::
 
 ::::{grid-item-card} {{ rtxt_vid2_ref_id }}
-<div><div style="position:relative;padding-top:56.25%;"><iframe src="vid2_url" loading="lazy" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe></div></div>
+<div class="iframe-container-vid"><iframe class="iframe-responsive-vid" src="vid2_url"></iframe></div>
 
 ::::
 
 ::::{grid-item-card} {{ rtxt_vid3_ref_id }}
-<div><div style="position:relative;padding-top:56.25%;"><iframe src="vid3_url" loading="lazy" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe></div></div>
+<div class="iframe-container-vid"><iframe class="iframe-responsive-vid" src="vid3_url"></iframe></div>
 
 ::::
 
-:::::
 ::::::
 
 ::::::{tab-item} Shiny apps/Widgets
@@ -130,13 +112,13 @@ Densities were estimated using camera trap distance sampling (CTDS; a) and the r
 ::::{dropdown} Diel.Niche Shinyapp
 RShiny implementation of Diel.Niche. See Gerber et al. A model-based hypothesis framework to define and estimate the diel niche via the `Diel.Niche' R package. <br>{{ rbib_gerber_et_al_2023 }}
 
-<iframe width="100%" height="900" src="https://shiny.uri.edu/bgerber/DielNiche/" loading="lazy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="iframe-container-shiny"><iframe class="iframe-responsive-shiny" src="https://shiny.uri.edu/bgerber/DielNiche/"></iframe></div>
 ::::
 
 ::::{dropdown} Zone of Influence Effect Size and Buffer Distance Calculator
 This tool can identify optimal buffer distances for recreational features, such as hiking trails, in natural areas inhabited by grizzly bears and wolves, using the outputs of camera trap modelling work from the Canadian Rockies of Alberta. The models assessed the impact of faraway human use on trails relative to human use at a focal location to estimate the zone of influence of human use on each of these wary species.<br>{{ rbib_thompson_2024 }}
 
-<iframe width="100%" height="900" src="https://pthompson234.shinyapps.io/calculate-zoi/" loading="lazy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="iframe-container-shiny"><iframe class="iframe-responsive-shiny" src="https://pthompson234.shinyapps.io/calculate-zoi/"></iframe></div>
 ::::
 
 :::::
@@ -151,21 +133,13 @@ This tool can identify optimal buffer distances for recreational features, such 
 | Tutorial | An Introduction to Camera Trap Data Management and Analysis in R > Chapter 14 Behavior | | <https://bookdown.org/c_w_beirne/wildCo-Data-Analysis/behavior.html> | {{ rbib_wildco_lab_2021e }} |
 | R Package | R Package ‘activity’ | " Provides functions to express clock time data relative to anchor points (typically solar); fit kernel density functions to animal activity time data; plot activity distributions; quantify overall levels of activity; statistically compare activity metrics through bootstrapping; evaluate variation in linear variables with time (or other circular variables)." | <https://CRAN.R-project.org/package=activity> | {{ rbib_rowcliffe_2023 }} |
 | Article | A simple statistical guide for the analysis of behaviour when data are constrained due to practical or ethical reasons | | <https://www.researchgate.net/publication/289569231_A_simple_statistical_guide_for_the_analysis_of_behaviour_when_data_are_constrained_due_to_practical_or_ethical_reasons> | {{ rbib_garamszegi_2016 }} |
-| Article / Tutorial / R Code | A "How-to" Guide for Estimating Animal Diel Activity Using Hierarchical Models | Companion manuscript, tutorial and R Code;
+| Article / Tutorial / R Code | A “How-to” Guide for Estimating Animal Diel Activity Using Hierarchical Models | Companion manuscript, tutorial and R Code;
 "The tutorial includes step-by-step examples on how to use trigonometric and cyclic cubic spline hierarchical models to analyze activity patterns from time-stamped data. We present case studies based on camera-trap data, but these approaches can be applied to data collected via other static sensors (e.g., acoustic recorders)." ({{ rtxt_iannarilli_et_al_2024b }}). | - <b>Article</b>: <https://besjournals.onlinelibrary.wiley.com/doi/10.1111/1365-2656.14213?af=R><br>- <b>Tutorial</b>: <https://hms-activity.netlify.app/><br>- <b>R Code</b>: <https://github.com/FabiolaIannarilli/HMs_Activit> | {{ rbib_iannarilli_et_al_2024a; rtxt_iannarilli_et_al_2024b }} ||||
 <!-- END_RESOURCE_TABLE -->
 ::::::
 
 ::::::{tab-item} References
-{ rbib_caravaggi_et_al_2017 }}
-
-{{ rbib_caravaggi_et_al_2020 }}
-
-{{ rbib_gerber_et_al_2023 }}
-
-{{ rbib_meek_et_al_2014b }}
-
-{{ rbib_wildco_lab_2021d }}
+{ rbib_caravaggi_et_al_2017 caravaggi_et_al_2020 gerber_et_al_2023 meek_et_al_2014b wildco_lab_2021d }}
 ::::::
 
 :::::::

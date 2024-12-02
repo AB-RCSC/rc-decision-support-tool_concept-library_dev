@@ -23,7 +23,6 @@ replace me with text
 :::
 -->
 
-**{{ name_mod_inventory }}**: {{ def_mod_inventory }}
 ```{include} pro_con_assump/mod_inventory_apc.md
 ```
 
@@ -64,10 +63,7 @@ Caution should be exercised in comparing the results of species inventories from
 ::::::{tab-item} Visual resources
 
 :::::{grid} 3
-:gutter: 1
-:padding: 0
-:margin: 0
-
+:class: wrapper
 ::::{grid-item-card} {{ rtxt_wearn_gloverkapfer_2017 }}
 :::{figure} ../03_images/03_image_files/wearn_gloverkapfer_2017_fig7_3.png
 :class: img_grid
@@ -88,29 +84,21 @@ Caution should be exercised in comparing the results of species inventories from
 :::
 ::::
 
-:::::
-
-:::::{grid} 3
-:gutter: 1
-:padding: 0
-:margin: 0
-
 ::::{grid-item-card} {{ rtxt_vid1_ref_id }}
-<div><div style="position:relative;padding-top:56.25%;"><iframe src="vid1_url" loading="lazy" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe></div></div>
+<div class="iframe-container-vid"><iframe class="iframe-responsive-vid" src="vid1_url"></iframe></div>
 
 ::::
 
 ::::{grid-item-card} {{ rtxt_vid2_ref_id }}
-<div><div style="position:relative;padding-top:56.25%;"><iframe src="vid2_url" loading="lazy" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe></div></div>
+<div class="iframe-container-vid"><iframe class="iframe-responsive-vid" src="vid2_url"></iframe></div>
 
 ::::
 
 ::::{grid-item-card} {{ rtxt_vid3_ref_id }}
-<div><div style="position:relative;padding-top:56.25%;"><iframe src="vid3_url" loading="lazy" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe></div></div>
+<div class="iframe-container-vid"><iframe class="iframe-responsive-vid" src="vid3_url"></iframe></div>
 
 ::::
 
-:::::
 ::::::
 
 ::::::{tab-item} Shiny apps/Widgets
@@ -131,31 +119,7 @@ the results of presence-absence analysis. | <https://research.fs.usda.gov/treese
 ::::::
 
 ::::::{tab-item} References
-{{ rbib_ahumada_et_al_2011 }}
-
-{{ rbib_colyn_et_al_2018 }}
-
-{{ rbib_colwell_coddington_1994 }}
-
-{{ rbib_colwell_et_al_2004 }}
-
-{{ rbib_freeman_gretchen_2008 }}
-
-{{ rbib_rcsc_et_al_2024 }}
-
-{{ rbib_rovero_et_al_2013 }}
-
-{{ rbib_rovero_tobler_2010 }}
-
-{{ rbib_soberon_lorente_1993 }}
-
-{{ rbib_tobler_et_al_2008 }}
-
-{{ rbib_walther_moore_2005 }}
-
-{{ rbib_wearn_et_al_2013 }}
-
-{{ rbib_wearn_gloverkapfer_2017 }}
+{{ rbib_ahumada_et_al_2011 colyn_et_al_2018 colwell_coddington_1994 colwell_et_al_2004 freeman_gretchen_2008 rcsc_et_al_2024 rovero_et_al_2013 rovero_tobler_2010 soberon_lorente_1993 tobler_et_al_2008 walther_moore_2005 wearn_et_al_2013 wearn_gloverkapfer_2017 }}
 ::::::
 
 :::::::

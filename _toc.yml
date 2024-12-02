@@ -27,7 +27,7 @@ parts:
 #    - file: 02_dialog-boxes/00_test/00_tooltip.md
 #    - file: 02_dialog-boxes/01_01_user_entry.md
     - file: 02_dialog-boxes/01_02_objective.md
-    - file: 02_dialog-boxes/01_02_objective2.md
+#    - file: 02_dialog-boxes/01_02_objective2.md
 #    - file: 02_dialog-boxes/01_02_objective_ref.md
     - file: 02_dialog-boxes/01_03_num_cams.md
 #    - file: 02_dialog-boxes/01_03_num_cams_noframe.md
@@ -36,7 +36,7 @@ parts:
     title: Study area & Site selection
     sections:
     - file: 02_dialog-boxes/02_01_design_study_area.md
-    - file: 02_dialog-boxes/02_02_design_cam_arrange.md
+    - file: 02_dialog-boxes/02_02_design_camera_arrange.md
 #    - file: 02_dialog-boxes/01_04_study_area_mult.md
 #    - file: 02_dialog-boxes/01_05_cam_dens_gradient.md
 #    - file: 02_dialog-boxes/01_06_cam_strat_covar.md
@@ -129,7 +129,9 @@ parts:
     - file: 02_dialog-boxes/03_23_mod_is.md
     - file: 02_dialog-boxes/03_24_mod_behaviour.md
   - file: 01_toc_pages/00_10_ref_gloss.md
-    title: References / Glossary
+    title: References / Glossary / Other Resources
     sections:
     - file: 02_dialog-boxes/08_references.md
     - file: 02_dialog-boxes/09_glossary.md
+    - file: 02_dialog-boxes/10_other_resource_lib.md
+    

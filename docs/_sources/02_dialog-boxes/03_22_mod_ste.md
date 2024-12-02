@@ -23,7 +23,6 @@ replace me with text
 :::
 -->
 
-**{{ name_mod_ste }}**: {{ def_mod_ste }}
 ```{include} pro_con_assump/mod_ste_apc.md
 ```
 
@@ -67,10 +66,7 @@ The STE has been field-tested on high-density ungulates and low-density carnivor
 ::::::{tab-item} Visual resources
 
 :::::{grid} 3
-:gutter: 1
-:padding: 0
-:margin: 0
-
+:class: wrapper
 ::::{grid-item-card} {{ rtxt_moeller_lukacs_2021 }}
 :::{figure} ../03_images/03_image_files/moeller_lukacs_2021_fig1.png
 :class: img_grid
@@ -94,13 +90,6 @@ The average area of a camera viewshed is calculated using \[this\] equation.
 The circular sectors represent three different cameras on two different occasions (a-b). On each occasion *j* = 1, 2,. . ., *J*, we randomly order the cameras i = 1, 2,. . ., *M*. If the first animal detection is in the *n*th camera, the observed STE *S<sub>j</sub>* is the sum of the areas of cameras 1, 2,. .. *n*. (a) On occasion *j* = 1, camera 1 contains at least one animal, so we record the space to first event S*<sub>j</sub>*=1 = a<sub>1</sub>. (b) On occasion *j* = 2, cameras 2 and 3 both contain animals, but we use the first camera in the series. Therefore, we record the space to first event *S<sub>j</sub>*=1 = *a*<sub>1</sub> + *a*<sub>2</sub>.
 :::
 ::::
-:::::
-
-:::::{grid} 3
-:gutter: 1
-:padding: 0
-:margin: 0
-
 ::::{grid-item-card} {{ rtxt_clarke_et_al_2023 }}
 :::{figure} ../03_images/03_image_files/clarke_et_al_2023_fig12_clipped.png
 :class: img_grid
@@ -128,11 +117,6 @@ Various factors can influence accurate counts of group size, including animal be
 ::::
 :::::
 
-:::::{grid} 3
-:gutter: 1
-:padding: 0
-:margin: 0
-
 ::::{grid-item-card} {{ rtxt_figure7_ref_id }}
 :::{figure} ../03_images/03_image_files/figure7_filename.png
 :class: img_grid
@@ -151,7 +135,6 @@ Various factors can influence accurate counts of group size, including animal be
 :::
 ::::
 
-:::::
 ::::::
 
 ::::::{tab-item} Shiny apps/Widgets
@@ -166,25 +149,7 @@ Check back in the future!
 ::::::
 
 ::::::{tab-item} References
-{{ rbib_ausband_et_al_2022 }}
-
-{{ rbib_clarke_et_al_2023 }}
-
-{{ rbib_gilbert_et_al_2020 }}
-
-{{ rbib_granados_2021 }}
-
-{{ rbib_loonam_et_al_2021a }}
-
-{{ rbib_loonam_et_al_2021b }}
-
-{{ rbib_lukacs_2021 }}
-
-{{ rbib_mcmurray_et_al_2023 }}
-
-{{ rbib_moeller_lukacs_2021 }}
-
-{{ rbib_moeller_et_al_2018 }}
+{{ rbib_ausband_et_al_2022 clarke_et_al_2023 gilbert_et_al_2020 granados_2021 loonam_et_al_2021a loonam_et_al_2021b lukacs_2021 mcmurray_et_al_2023 moeller_lukacs_2021 moeller_et_al_2018 }}
 ::::::
 
 :::::::

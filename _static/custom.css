@@ -10,26 +10,17 @@
 /*Block quoteshttps://jupyter-notebook.readthedocs.io/en/stable/custom_css.html*/
 /*    font-family: Helvetica Neue;/*
 /*    font-style: italic;/*
+/*https://pydata-sphinx-theme.readthedocs.io/en/v0.9.0/user_guide/customizing.html*/
 
 /*If you’d like the article content to take up more width than its default, use the max-width CSS property with the following selectors*/
 
-.bd-page-width {
-    max-width: 93%;  /* default is 88rem */
-    background-color: #f5f5f5;
-}
-
 .bd-main .bd-content .bd-article-container {
-    max-width: 100%;  /* default is 60em */
+    max-width: 100%;
     background-color: white;
 }
 
-.bd-sidebar-primary-toggle {
-    display: none;
-}
-
-div.secondary-sidebar {
-  position: absolute;
-  left: 0;
+.bd-page-width {
+    max-width: 93%;
 }
 
 .bd-main {
@@ -37,41 +28,21 @@ div.secondary-sidebar {
     flex-direction: row-reverse; /* Reverse the order of main content and sidebar */
 }
 
-/* Adjust the width of the left sidebar */
-/*.sb-site-main .sphinxsidebar {*/
-/*    order: -1; /* This ensures the sidebar comes first */
-/*}*/
-
-body {
-    line-height: 1.4;
-    background: whitesmoke;
+.card-whitesmoke {
+  --sd-color-card-background: whitesmoke;
+  border: 1px solid #ccc;
 }
-
-/* Hide the table of contents toggle icon */
-.bd-sidebar-primary-toggle {
-    display: none;
-}
-
-/*div#sidebar {*/
-/*    width: 150px;*/
-/*}*/
-
-/*. sidebarwidth {*/
-/*    max-width: 10%;*/
-/*}*/
-
-/*https://pydata-sphinx-theme.readthedocs.io/en/v0.9.0/user_guide/customizing.html*/
-
 
 html {
 /*  --pst-header-height: 12px;*/
-  --pst-font-size-base: 15px;
+  --pst-font-size-base: 14px;
   --pst-font-size-h1: 24px;
   --pst-font-size-h2: 24px;
   --pst-font-size-h3: 22px;
   --pst-sidebar-primary-font-size: 0.9em;
   --pst-sidebar-header-font-size: 18px;
   --pst-sidebar-header-font-weight: 600;
+  line-height-body: 1.4;
 }
 
 h1 {
@@ -112,24 +83,11 @@ root {
   --pst-icon-admonition-important: var(--pst-icon-exclamation-circle);
 }
 
-div.b {
-    line-height: 1.15;
-}
-
 .grid-wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 /*  gap: 10px;*/
   gutter: 3	
-}
-
-.grid-wrapper-vis {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-/*  gap: 10px;*/
-  gutter: 1
-  padding: 0
-  margin: 0
 }
 
 div.img_grid {
@@ -142,17 +100,6 @@ div.img_grid {
     font-size: 1.1rem;
 }
 
-div.h_bold {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #2F5496;
-}
-
-/*span.underline {*/
-/*    text-decoration: underline;*/
-/*    color: #2F5496;*/
-/*}*/
-
 /* Block Quotes*/
 blockquote {
   color: white;
@@ -160,29 +107,4 @@ blockquote {
   border-right: 150px solid  white;
   background-color: white;
   padding: 5px;
-}
-
-/*div.indent {*/
-/*  color: white;*/
-/*  border-left: 8px solid  white;*/
-/*  background-color: white;*/
-/*  padding: 20px;*/
-/*}*/
-
-/*div.hanging {*/
-/*padding-left: 2em*/
-/*text-indent: -2em*/
-/*}*/
-
-.bdg-test {
-  --bs-badge-font-size: .75em;
-  --bs-badge-font-weight: $font-weight-bold;
-  --bs-badge-color: $white;
-  --bs-badge-padding-y: .35em;
-  --bs-badge-padding-x: .65em;
-  --bs-badge-border-radius: $border-radius;
-}
-
-html[data-theme="dark"] {
-    --pst-color-primary: bd-blue-700;
 }

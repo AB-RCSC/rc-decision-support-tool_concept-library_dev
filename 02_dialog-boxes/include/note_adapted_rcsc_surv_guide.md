@@ -1,0 +1,4 @@
+:::{note}
+**This content was adapted from: 
+Alberta Remote Camera Steering Committee [RCSC], Stevenson, C., Hubbs, A., & Wildlife Cameras for Adaptive Management (WildCAM). (2024). <i>Remote Camera Survey Guidelines: Guidelines for Western Canada</i>. Version 3.0. Edmonton, Alberta. <a target="_blank" href="https://ab-rcsc.github.io/RCSC-WildCAM_Remote-Camera-Survey-Guidelines-and-Metadata-Standards/1_Survey-guidelines/1_0.1_Citation-and-Info.html">{https://ab-rcsc.github.io/RCSC-WildCAM_Remote-Camera-Survey-Guidelines-and-Metadata-Standards/1_Survey-guidelines/1_0.1_Citation-and-Info.html}
+:::

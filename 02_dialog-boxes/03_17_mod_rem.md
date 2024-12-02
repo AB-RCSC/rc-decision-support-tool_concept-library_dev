@@ -16,14 +16,14 @@ editor_options:
 ---
 (i_mod_rem)=
 # {{ title_i_mod_rem }}
-
-<!--
 :::{hint}
-replace me with text
+:::{seealso}
+{{ link_bdg_viewshed_dens_est }}
+{{ link_bdg_mod_rest }}
+{{ link_bdg_mod_tifc }}
 :::
--->
+::::
 
-**{{ name_mod_rem }}**: {{ def_mod_rem }}
 ```{include} pro_con_assump/mod_rem_apc.md
 ```
 
@@ -78,10 +78,7 @@ Simulations suggest that, to achieve adequate precision using the REM, a minimum
 ::::::{tab-item} Visual resources
 
 :::::{grid} 3
-:gutter: 1
-:padding: 0
-:margin: 0
-
+:class: wrapper
 ::::{grid-item-card} {{ rtxt_clarke_et_al_2023 }}
 :::{figure} ../03_images/03_image_files/clarke_et_al_2023_eqn_rem1.png
 :class: img_grid
@@ -101,13 +98,6 @@ Simulations suggest that, to achieve adequate precision using the REM, a minimum
 :::
 **Henrich et al. (2022) - Fig. 1** Potential problems caused by animal behavior in the estimation of population densities of unmarked animal species using camera traps and our proposed solutions.
 ::::
-
-:::::
-
-:::::{grid} 3
-:gutter: 1
-:padding: 0
-:margin: 0
 
 ::::{grid-item-card} {{ rtxt_rowcliffe_et_al_2008 }}
 :::{figure} ../03_images/03_image_files/rowcliffe_et_al_2008_fig1_clipped.png
@@ -138,28 +128,22 @@ Typical combinations of day range and density are indicated for carnivores (C), 
 ::::
 :::::
 
-:::::{grid} 3
-:gutter: 1
-:padding: 0
-:margin: 0
-
 ::::{grid-item-card} {{ rtxt_palencia_enetwild_2022 }}
-<div><div style="position:relative;padding-top:56.25%;"><iframe src="https://www.youtube.com/embed/NUW4oLGeQwk?si=isAJ3uO31eANSkDv" loading="lazy" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe></div></div>
+<div class="iframe-container-vid"><iframe class="iframe-responsive-vid" src="https://www.youtube.com/embed/NUW4oLGeQwk?si=isAJ3uO31eANSkDv"></iframe></div>
 
 Camera Trap Methods for Density Estimation
 ::::
 
 ::::{grid-item-card} {{ rtxt_vid2_ref_id }}
-<div><div style="position:relative;padding-top:56.25%;"><iframe src="vid2_url" loading="lazy" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe></div></div>
+<div class="iframe-container-vid"><iframe class="iframe-responsive-vid" src="vid2_url"></iframe></div>
 
 ::::
 
 ::::{grid-item-card} {{ rtxt_vid3_ref_id }}
-<div><div style="position:relative;padding-top:56.25%;"><iframe src="vid3_url" loading="lazy" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe></div></div>
+<div class="iframe-container-vid"><iframe class="iframe-responsive-vid" src="vid3_url"></iframe></div>
 
 ::::
 
-:::::
 ::::::
 
 ::::::{tab-item} Shiny apps/Widgets
@@ -173,37 +157,7 @@ Check back in the future!
 ::::::
 
 ::::::{tab-item} References
-{{ rbib_balestrieri_et_al_2016 }}
-
-{{ rbib_cusack_et_al_2015 }}
-
-{{ rbib_gilbert_et_al_2020 }}
-
-{{ rbib_henrich_et_al_2022 }}
-
-{{ rbib_jensen_et_al_2022 }}
-
-{{ rbib_kavcic_et_al_2021 }}
-
-{{ rbib_nakashima_et_al_2017 }}
-
-{{ rbib_palencia_et_al_2021 }}
-
-{{ rbib_palencia_et_al_2022 }}
-
-{{ rbib_palencia_enetwild_2022 }}
-
-{{ rbib_pettigrew_et_al_2021 }}
-
-{{ rbib_pfeffer_et_al_2018 }}
-
-{{ rbib_rowcliffe_et_al_2008 }}
-
-{{ rbib_rowcliffe_et_al_2016 }}
-
-{{ rbib_schaus_et_al_2020 }}
-
-{{ rbib_williams_et_al_2002 }}
+{{ rbib_balestrieri_et_al_2016 cusack_et_al_2015 gilbert_et_al_2020 henrich_et_al_2022 jensen_et_al_2022 kavcic_et_al_2021 nakashima_et_al_2017 palencia_et_al_2021 palencia_et_al_2022 palencia_enetwild_2022 pettigrew_et_al_2021 pfeffer_et_al_2018 rowcliffe_et_al_2008 rowcliffe_et_al_2016 schaus_et_al_2020 williams_et_al_2002 }}
 ::::::
 
 :::::::

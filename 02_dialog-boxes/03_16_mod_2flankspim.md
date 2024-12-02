@@ -23,7 +23,6 @@ replace me with text
 :::
 -->
 
-**{{ name_mod_2flankspim }}**: {{ def_mod_2flankspim }}
 ```{include} pro_con_assump/mod_2flankspim_apc.md
 ```
 
@@ -52,10 +51,7 @@ In the field: Augustine et al. (2018) found that the 2-flank SPIM improved infer
 ::::::{tab-item} Visual resources
 
 :::::{grid} 3
-:gutter: 1
-:padding: 0
-:margin: 0
-
+:class: wrapper
 ::::{grid-item-card} {{ rtxt_figure1_ref_id }}
 :::{figure} ../03_images/03_image_files/figure1_filename.png
 :class: img_grid
@@ -74,7 +70,6 @@ In the field: Augustine et al. (2018) found that the 2-flank SPIM improved infer
 :::
 ::::
 
-:::::
 ::::::
 
 :::::{tab-item} Analytical tools & Resources
@@ -84,11 +79,7 @@ In the field: Augustine et al. (2018) found that the 2-flank SPIM improved infer
 ::::::
 
 ::::::{tab-item} References
-{{ rbib_augustine_et_al_2018 }}
-
-{{ rbib_clarke_et_al_2023 }}
-
-{{ rbib_davis_et_al_2021 }}
+{{ rbib_augustine_et_al_2018 clarke_et_al_2023 davis_et_al_2021 }}
 ::::::
 
 :::::::

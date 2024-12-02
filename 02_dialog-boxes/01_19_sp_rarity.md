@@ -1,4 +1,4 @@
----
+﻿---
 jupytext:
   formats: md:myst
   text_representation:
@@ -14,33 +14,24 @@ editor_options:
   markdown:
     wrap: none
 ---
-<style>
-  .bd-page-width {
-  max-width: `100%;
-  }
-  .bd-main .bd-content .bd-article-container {
-  max-width: 100%;
-  }
-</style>
 (i_sp_rarity)=
 # {{ title_i_sp_rarity }}
 :::{hint}
-**Species rarity**: the number of individuals present of the species in question, relative to the total number of individuals of all species (or how "represented" is the species when considering the total number of individuals of all species).
+**{{ name_sp_rarity}}**: {{ def_sp_rarity }}
 While technically "how rare" a species is will be change from place to place (e.g., will depend on geographic range, habitat specificity, local abundance, etc.; {{ rtxt_crisfield_et_al_2024 }}), for the purposes of informing study design recommendations, the **species rarity categories are defined as follows**:
 
-- **Common**: probability of occupancy > ~0.75-0.8 (> 0.75 [{{ rtxt_kinnaird_obrien_2012 }}; {{ rtxt_kays_et_al_2020 }}]; > 0.8 [{{ rtxt_shannon_et_al_2014 }}; {{ rtxt_wearn_gloverkapfer_2017 }}])
-- **Less common**: 0.25-0.75
-- **Rare**: probability of occupancy < 0.25 {{ rtxt_kays_et_al_2020 }}
-- **Very-rare**: probability of occupancy < 0.001 ({{ rtxt_wearn_gloverkapfer_2017 }}; {{ rtxt_rowcliffe_et_al_2008 }}; {{ rtxt_obrien_2010 }})
-- **Unknown**: select this option if you’re not sure of the rarity of your Target Species (single or multiple species)
-- **Multiple**: select this option if your study includes multiple Target Species that vary in rarity.
+- **{{ name_sp_rarity_common }}**: {{ def_sp_rarity_common }}
+- **{{ name_sp_rarity_less_common }}**: {{ def_sp_less_common }}
+- **{{ name_sp_rarity_rare }}**: {{ def_sp_rarity_rare }}
+- **{{ name_sp_rarity_very_rare }}**: {{ def_sp_rarity_very_rare }}
+- **{{ name_sp_rarity_unkn }}**: {{ def_sp_rarity_unkn }}
+- **{{ name_sp_rarity_multiple}}**: {{ def_sp_rarity_sp_rarity_multiple }}
 
 Refer to the tabs below for more information.
 :::
 
 :::{seealso}
-{bdg-link-primary-line}`Species-accumulation curves<https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_10_sp_asymptote.html>`
-{bdg-link-primary-line}`Species rarity<https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_19_sp_rarity.html>`
+{{ link_bdg_sp_asymptote }}
 :::
 
 :::::::{tab-set}
@@ -68,10 +59,7 @@ Species rarity can be generally thought of as a species characteristic, however,
 ::::::{tab-item} Visual resources
 
 :::::{grid} 3
-:gutter: 1
-:padding: 0
-:margin: 0
-
+:class: wrapper
 ::::{grid-item-card} {{ rtxt_leroy_2024 }}
 :::{figure} ../03_images/03_image_files/leroy_2024_Rarity_cutoff-point.png
 :class: img_grid
@@ -92,31 +80,23 @@ Species rarity can be generally thought of as a species characteristic, however,
 :::
 ::::
 
-:::::
-
-:::::{grid} 3
-:gutter: 1
-:padding: 0
-:margin: 0
-
 ::::{grid-item-card} {{ rtxt_mecks100_2018 }}
-<div><div style="position:relative;padding-top:56.25%;"><iframe src="https://www.youtube.com/embed/4gcmAUpo9TU?si=_S-JYDDskR8QbHs5" loading="lazy" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe></div></div>
+<div class="iframe-container-vid"><iframe class="iframe-responsive-vid" src="https://www.youtube.com/embed/4gcmAUpo9TU?si=_S-JYDDskR8QbHs5"></iframe></div>
 
 Species accumulation and rarefaction curves
 ::::
 
 ::::{grid-item-card} {{ rtxt_riffomonas_project_2022b }}
-<div><div style="position:relative;padding-top:56.25%;"><iframe src="https://www.youtube.com/embed/ywHVb0Q-qsM?si=_xJ5jbFc6MDEQlAh" loading="lazy" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe></div></div>
+<div class="iframe-container-vid"><iframe class="iframe-responsive-vid" src="https://www.youtube.com/embed/ywHVb0Q-qsM?si=_xJ5jbFc6MDEQlAh"></iframe></div>
 
 Generating a rarefaction curve from collector's curves in R within the tidyverse (CC198)
 ::::
 
 ::::{grid-item-card} {{ rtxt_vid3_ref_id }}
-<div><div style="position:relative;padding-top:56.25%;"><iframe src="vid3_url" loading="lazy" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe></div></div>
+<div class="iframe-container-vid"><iframe class="iframe-responsive-vid" src="vid3_url"></iframe></div>
 
 ::::
 
-:::::
 ::::::
 
 ::::::{tab-item} Shiny apps/Widgets
@@ -132,39 +112,7 @@ Check back in the future!
 ::::::
 
 ::::::{tab-item} References
-{{ rbib_chatterjee_et_al_2021 }}
-
-{{ rbib_crisfield_et_al_2024 }}
-
-{{ rbib_flather_sieg_2007 }}
-
-{{ rbib_kays_et_al_2020 }}
-
-{{ rbib_kinnaird_obrien_2012 }}
-
-{{ rbib_kunin_1997 }}
-
-{{ rbib_leroy_2023 }}
-
-{{ rbib_leroy_2024 }}
-
-{{ rbib_mackenzie_et_al_2002 }}
-
-{{ rbib_obrien_2010 }}
-
-{{ rbib_riffomonas_project_2022b }}
-
-{{ rbib_rowcliffe_et_al_2008 }}
-
-{{ rbib_shannon_et_al_2014 }}
-
-{{ rbib_southwell_et_al_2019 }}
-
-{{ rbib_steenweg_et_al_2019 }}
-
-{{ rbib_mecks100_2018 }}
-
-{{ rbib_wearn_gloverkapfer_2017 }}
+{{ rbib_chatterjee_et_al_2021 crisfield_et_al_2024 flather_sieg_2007 kays_et_al_2020 kinnaird_obrien_2012 kunin_1997 leroy_2023 leroy_2024 mackenzie_et_al_2002 obrien_2010 riffomonas_project_2022b rowcliffe_et_al_2008 shannon_et_al_2014 southwell_et_al_2019 steenweg_et_al_2019 mecks100_2018 wearn_gloverkapfer_2017 }}
 ::::::
 
 :::::::

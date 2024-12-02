@@ -15,16 +15,12 @@ editor_options:
   wrap: none
 ---
 <style>
-  .bd-page-width {
-  max-width: `100%;
-  }
   .bd-main .bd-content .bd-article-container {
   max-width: 100%;
   }
 </style>
 # Remote Camera Decision Support Tool - Concept Library
 
-<br>
 <br>
 
 :::::{dropdown} Full TOC
@@ -34,16 +30,6 @@ editor_options:
 
 :::::{dropdown} test iframe
 <div class="container-iframe"><iframe class="responsive-iframe" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe></div> 
-:::::
-
-:::::{dropdown} test map
-```{python}
-from ipyleaflet import Map, basemaps
-
-# display a map centered on France
-m = Map(basemap=basemaps.Esri.WorldImagery,  zoom=5, center=[46.21, 2.21])
-m
-```
 :::::
 
 :::::{note}
@@ -75,7 +61,7 @@ m
 :::::{grid} 3
 :gutter: 3
 :class: wrapper
-
+<!--
 :::{grid-item-card}
 :link: 02_dialog-boxes/01_01_user_entry.html
 :img-background: ./03_images/01_ui/transparent.png
@@ -85,7 +71,7 @@ m
 
 *<div class="class-card-center toc_text_tight">{{ title_i_user_entry }}</div>*
 :::
-
+-->
 :::{grid-item-card}
 :link: 02_dialog-boxes/01_02_objective.html
 :img-background: ./03_images/01_ui/transparent.png
@@ -801,6 +787,16 @@ m
 :text-align: center
 
 **<div class="class-card-center toc_text_tight">Glossary</div>**
+:::
+
+(toc_other_resource_lib)=
+::::{grid-item-card}
+:link: 02_dialog-boxes/10_other_resource_lib.html
+:img-background: ./03_images/01_ui/background_grey.png
+:padding: 1
+:text-align: center
+
+**<div class="class-card-center toc_text_tight">Other resources libraries</div>**
 :::
 
 :::::

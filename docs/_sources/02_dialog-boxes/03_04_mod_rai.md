@@ -23,7 +23,6 @@ replace me with text
 :::
 -->
 
-**{{ name_mod_rai }}**: {{ def_mod_rai }}
 ```{include} pro_con_assump/mod_rai_apc.md
 ```
 
@@ -68,10 +67,7 @@ Ultimately, there is no "silver bullet" and researchers must carefully consider 
 ::::::{tab-item} Visual resources
 
 :::::{grid} 3
-:gutter: 1
-:padding: 0
-:margin: 0
-
+:class: wrapper
 ::::{grid-item-card} {{ rtxt_gilbert_et_al_2020 }}
 :::{figure} ../03_images/03_image_files/gilbert_et_al_2020_fig3.png
 :class: img_grid
@@ -97,13 +93,6 @@ Modified from Gilbert et al. (2020) - Fig 3.
 The example shows the presence (>0) or absence (0) of herbivores on a plant species. Zeros due to the lack of experience of the observer (a–b) or resulting from a poor experimental design (c–h) are called False Zeros and should be minimized when performing the experiment. Structural Zeros, that is, zeros related to the ecological system under study (i–k), and Random Zeros emerging from the sampling variability (l) are known as True Zeros. Classifying a zero as a design error or structural zero depends on whether the event is part of the hypotheses tested. Only when the study includes the possibility of a zero value as part of the hypotheses (e.g. the study aims to test whether the interaction is occurring) the resulting zeros would be structural and should be included in the statistical analysis. The following text explains different scenarios that would result in a zero value, and, in brackets, how errors due to false zeros can be minimized: (a) the insects or the damage exerted are so small that the observer cannot detect them [sample when the insects are expected to be well developed]; (b) the observer does not see the herbivore (e.g. it is mistaken for a seed) or the damage is associated to other causes not related to herbivory (e.g. mechanical damage during sampling, pathogens, etc.) [the observer should be trained properly]; (c) the distributional areas of herbivores and plants are not coincident [know the species distribution before sampling]; (d) a herbivore is not present in a certain location within its distributional area, for example due to the microclimatic conditions [sample in habitats with adequate environmental conditions for a herbivore, or perform replicate surveys in different areas]; (e) a single survey is conducted, and is not coincident with the herbivore phenology [know the herbivore life cycle or perform long‐term surveys]; (f) a long‐term survey is conducted, but the low sampling frequency does not enable capture of the presence of the herbivore [sample on a more frequent basis]; (g) herbivores are not found because they are absent at the time of sampling [record plant damage instead of the presence of insects]; (h) herbivores are so infrequent that the design cannot capture their presence [perform extensive sampling with a high number of replicates]; (i) phenology of plants and herbivores are not completely coincident at a temporal level; (j) herbivores do not recognize a plant as a potential host; (k) herbivores recognize a plant as a host but prefer to feed on another species and (l) the herbivore population is not large enough to saturate the available plant resources.
 :::
 ::::
-:::::
-
-:::::{grid} 3
-:gutter: 1
-:padding: 0
-:margin: 0
-
 ::::{grid-item-card} {{ rtxt_denes_et_al_2015 }}
 :::{figure} ../03_images/03_image_files/denes_et_al_2015_fig2_clipped.png
 :class: img_grid
@@ -126,58 +115,42 @@ Red boxes represent important model assumptions (in bold) and sampling design re
 ::::
 
 :::::
-
-:::::{grid} 3
-:gutter: 1
-:padding: 0
-:margin: 0
-
 ::::{grid-item-card} {{ rtxt_dectre_accel_2016 }}
-<div><div style="position:relative;padding-top:56.25%;"><iframe src="https://www.youtube.com/embed/CvM6j8hE8lE?si=E_kNQm9YYwgUECM3" loading="lazy" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe></div></div>
+<div class="iframe-container-vid"><iframe class="iframe-responsive-vid" src="https://www.youtube.com/embed/CvM6j8hE8lE?si=E_kNQm9YYwgUECM3"></iframe></div>
 
 Using Hurdle Models to Analyze Zero-Inflated Count Data
 ::::
 
 ::::{grid-item-card} {{ rtxt_cao_2021 }}
-<div><div style="position:relative;padding-top:56.25%;"><iframe src="https://www.youtube.com/embed/q2NRQBcihQY?si=r9NeRpegoj47uVn-" loading="lazy" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe></div></div>
+<div class="iframe-container-vid"><iframe class="iframe-responsive-vid" src="https://www.youtube.com/embed/q2NRQBcihQY?si=r9NeRpegoj47uVn-"></iframe></div>
 
 Hurdle models
 ::::
 
 ::::{grid-item-card} {{ rtxt_tilestats_2021 }}
-<div><div style="position:relative;padding-top:56.25%;"><iframe src="https://www.youtube.com/embed/ztNQvAabgtU?si=9rY7DVbBWN_ByPvf" loading="lazy" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe></div></div>
+<div class="iframe-container-vid"><iframe class="iframe-responsive-vid" src="https://www.youtube.com/embed/ztNQvAabgtU?si=9rY7DVbBWN_ByPvf"></iframe></div>
 
 Zero-inflated Poisson (ZIP) regression
 ::::
 
-:::::
-
-:::::{grid} 3
-:gutter: 1
-:padding: 0
-:margin: 0
-
 ::::{grid-item-card} {{ rtxt_marinstats_2020a }}
-<div><div style="position:relative;padding-top:56.25%;"><iframe src="https://www.youtube.com/embed/A8H6gc9Eq0w?si=Ade-D5-J5JtCZwil" loading="lazy" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe></div></div>
+<div class="iframe-container-vid"><iframe class="iframe-responsive-vid" src="https://www.youtube.com/embed/A8H6gc9Eq0w?si=Ade-D5-J5JtCZwil"></iframe></div>
 
 Poisson Regression Review
 ::::
 
 ::::{grid-item-card} {{ rtxt_marinstats_2020b }}
-<div><div style="position:relative;padding-top:56.25%;"><iframe src="https://www.youtube.com/embed/eIY--zc5f24?si=dgtSF_vfwUxuG1Mi" loading="lazy" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
-</div>
-</div>
+<div class="iframe-container-vid"><iframe class="iframe-responsive-vid" src="https://www.youtube.com/embed/eIY--zc5f24?si=dgtSF_vfwUxuG1Mi"></iframe></div>
 
 Poisson Regression: Zero Inflation (Excessive Zeros)
 ::::
 
 ::::{grid-item-card} {{ rtxt_russel_2020 }}
-<div><div style="position:relative;padding-top:56.25%;"><iframe src="vid6_url" loading="lazy" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe></div></div>
+<div class="iframe-container-vid"><iframe class="iframe-responsive-vid" src="vid6_url"></iframe></div>
 
 Fitting Poisson and zero-inflated Poisson models.
 ::::
 
-:::::
 ::::::
 
 ::::::{tab-item} Shiny apps/Widgets
@@ -185,7 +158,7 @@ Fitting Poisson and zero-inflated Poisson models.
 :::::{card} Microbiome Analysis: Relative Abundance Boxplots
 A Shiny app allows you to visualize data by using R scripts without having to interact with the R script itself. This Shiny app will allow you to plot your Relative Abundance microbiome data in an easy-to-view format. If this is your first time utilizing this Shiny app, follow the step below to start visualising your data now!
 
-<iframe width="100%" height="900" src="https://guthub.org/shiny/sample-apps/absboxplot/ " loading="lazy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="iframe-container-shiny"><iframe class="iframe-responsive-shiny" src="https://guthub.org/shiny/sample-apps/absboxplot/ "></iframe></div>
 :::::
 
 ::::::
@@ -208,69 +181,7 @@ https://rdrr.io/rforge/countreg/f/inst/doc/countreg.pdf><br><https://www.zeileis
 ::::::
 
 ::::::{tab-item} References
-{{ rbib_anderson_2001 }}
-
-{{ rbib_banksleite_2014 }}
-
-{{ rbib_blasco_moreno_et_al_2019 }}
-
-{{ rbib_brennan_2019 }}
-
-{{ rbib_broadley_et_al_2019 }}
-
-{{ rbib_burton_et_al_2015 }}
-
-{{ rbib_carbone_et_al_2001 }}
-
-{{ rbib_cao_2021 }}
-
-{{ rbib_clark_et_al_2003 }}
-
-{{ rbib_dectre_accel_2016 }}
-
-{{ rbib_denes_et_al_2015 }}
-
-{{ rbib_gilbert_et_al_2020 }}
-
-{{ rbib_hartig_2019 }}
-
-{{ rbib_heilbron_1994 }}
-
-{{ rbib_kleiber_zeileis_2016 }}
-
-{{ rbib_krebs_et_al_1987 }}
-
-{{ rbib_johnson_2008 }}
-
-{{ rbib_marinstats_2020a }}
-
-{{ rbib_marinstats_2020b }}
-
-{{ rbib_markle_et_al_2020 }}
-
-{{ rbib_martin_et_al_2005 }}
-
-{{ rbib_mullahy_1986 }}
-
-{{ rbib_obrien_2011 }}
-
-{{ rbib_palmer_et_al_2018 }}
-
-{{ rbib_rovero_marshall_2009 }}
-
-{{ rbib_russel_2020 }}
-
-{{ rbib_sollmann_et_al_2013b }}
-
-{{ rbib_thompson_et_al_1998 }}
-
-{{ rbib_tilestats_2021 }}
-
-{{ rbib_villette_et_al_2016 }}
-
-{{ rbib_welsh_et_al_2000 }}
-
-{{ rbib_zeileis_et_al_2008 }}
+{{ rbib_anderson_2001 banksleite_2014 blasco_moreno_et_al_2019 brennan_2019 broadley_et_al_2019 burton_et_al_2015 carbone_et_al_2001 cao_2021 clark_et_al_2003 dectre_accel_2016 denes_et_al_2015 gilbert_et_al_2020 hartig_2019 heilbron_1994 kleiber_zeileis_2016 krebs_et_al_1987 johnson_2008 marinstats_2020a marinstats_2020b markle_et_al_2020 martin_et_al_2005 mullahy_1986 obrien_2011 palmer_et_al_2018 rovero_marshall_2009 russel_2020 sollmann_et_al_2013b thompson_et_al_1998 tilestats_2021 villette_et_al_2016 welsh_et_al_2000 zeileis_et_al_2008 }}
 
 +check others
 ::::::

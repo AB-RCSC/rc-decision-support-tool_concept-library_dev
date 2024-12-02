@@ -1,4 +1,4 @@
----
+﻿---
 jupytext:
   formats: md:myst
   text_representation:
@@ -20,49 +20,52 @@ editor_options:
 **{{ term_hr_size }}**: {{ def_hr_size }}
 
 Unsure about the {{ hr_size_tl }} of your Target Species? There may be information available in the "Species home range / body size lookup"; see the**Shiny Apps/Widgets** tab of the info-box below.
-
 :::{note}
 - {{ hr_size_tu }} will not be exactly the same for every animal of a certain species; when thinking of home range size in the context of study design, we are really thinking about the average {{ hr_size_tl }} for individuals of that species for the duration of your study.
-- {{ hr_size_tu }} information should, ideally, be chosen to reflect the conditions of your study (as closely as possible). For example, data from a study that only reported {{ hr_size_tl }} for one season (e.g., summer {{ hr_size_tl }}) might bias placement if your study aims to evaluate your  variable of interest (e.g., 'occupancy') over multiple seasons, especially if the species' movement highly differs between seasons (e.g., moves more in summer).
+- {{ hr_size_tu }} information should, ideally, be chosen to reflect the conditions of your study (as closely as possible). For example, data from a study that only reported {{ hr_size_tl }} for one season (e.g., summer {{ hr_size_tl }}) might bias placement if your study aims to evaluate your variable of interest (e.g., 'occupancy') over multiple seasons, especially if the species' movement highly differs between seasons (e.g., moves more in summer).
 :::
-
 ::::
 
 :::::::{tab-set}
 
 ::::::{tab-item} Overview
+
 :::{figure} ../03_images/03_image_files/00_home_range.jpg
 :align: center
 :width: 300px
 :::
 **{{ term_hr_size }}**: {{ def_hr_size }}
-
 :::{note}
 - {{ hr_size_tu }} will not be exactly the same for every animal of a certain species; when thinking of home range size in the context of study design, we are really thinking about the average {{ hr_size_tl }} for individuals of that species for the duration of your study.
-- {{ hr_size_tu }} information should, ideally, be chosen to reflect the conditions of your study (as closely as possible). For example, data from a study that only reported {{ hr_size_tl }} for one season (e.g., summer {{ hr_size_tl }}) might bias placement if your study aims to evaluate your  variable of interest (e.g., 'occupancy') over multiple seasons, especially if the species' movement highly differs between seasons (e.g., moves more in summer).
+- {{ hr_size_tu }} information should, ideally, be chosen to reflect the conditions of your study (as closely as possible). For example, data from a study that only reported {{ hr_size_tl }} for one season (e.g., summer {{ hr_size_tl }}) might bias placement if your study aims to evaluate your variable of interest (e.g., 'occupancy') over multiple seasons, especially if the species' movement highly differs between seasons (e.g., moves more in summer).
 :::
 
 **<font size="4"><span style="color:#2F5496">How does this relate to study design?</font></span>**
 
-{{ hr_size_tu }} information is used in this tool to determine 'camera spacing' and the 'number of cameras' required. This is because how far animals can move will ultimately affect whether the data collected from different locations (or observations of different individuals) are independent of one another. 
+{{ hr_size_tu }} information is used in this tool to determine 'camera spacing' and the 'number of cameras' required. This is because how far animals can move will ultimately affect whether the data collected from different locations (or observations of different individuals) are independent of one another.
 
-This is one aspect of the "{{ closure_site_tl }}" (i.e., {{ def_closure_site }}) {{ mod_assumption_tl_abrv }} of many {{ mod_approach_tl_pl }} (e.g., {{ mod_occupancy_tl_abrv_pl }} [{{ rtxt_mackenzie_et_al_2004  }}]).'**Site independence**' is often used interchangeably with 'site closure', however, the concept of 'site independence' also considers {{ spatial_autocorrelation_tl }}, or "{{ def_spatial_autocorrelation }}." To meet these  {{ mod_assumption_tl_abrv }}, its often suggested to space cameras far enough apart that the same individuals or groups of animals are not **influencing data** from multiple sites (e.g., either by being detected or influencing detection at multiple sites, i.e., camera spacing is larger than the species' home range size). However, its not always ideal to space cameras far enough apart to ensure 'site closure' and 'site independence' assumptions are met. For some approaches, such as capture-recapture [CITE], the opposite is true; sites should be sufficiently close to one another such that individuals ARE picked up across more than one location ('dependence' is required). Meeting these assumptions (i.e., 'site independence' and/or 'site dependence' [approach-dependent]) is important to ensure that the model results are valid (avoid biased results and incorrect conclusions).
+This is one aspect of the "{{ closure_site_tl }}" (i.e., {{ def_closure_site }}) {{ mod_assumption_tl_abrv }} of many {{ mod_approach_tl_pl }} (e.g., {{ mod_occupancy_tl_abrv_pl }} [{{ rtxt_mackenzie_et_al_2004 }}]).'**Site independence**' is often used interchangeably with 'site closure', however, the concept of 'site independence' also considers {{ spatial_autocorrelation_tl }}, or "{{ def_spatial_autocorrelation }}." To meet these {{ mod_assumption_tl_abrv }}, its often suggested to space cameras far enough apart that the same individuals or groups of animals are not **influencing data** from multiple sites (e.g., either by being detected or influencing detection at multiple sites, i.e., camera spacing is larger than the diameter of the species' home range size). However, its not always ideal to space cameras far enough apart to ensure 'site closure' and 'site independence' assumptions are met. For some approaches, such as capture-recapture [CITE], the opposite is true; sites should be sufficiently close to one another such that individuals ARE picked up across more than one location ('dependence' is required). Meeting these assumptions (i.e., 'site independence' and/or 'site dependence' [approach-dependent]) is important to ensure that the model results are valid (avoid biased results and incorrect conclusions).
 
-Refer to the "in-depth" tab for more information.
+**Refer to the "in-depth" tab for more information.**
 ::::::
 
 ::::::{tab-item} In-depth
 ```{include} include/00_coming_soon.md
 ```
+The {{ survey_duration_tl }} must also be short enough that the probability of {{ obj_occupancy_tl }} does not change (i.e., not confounded by other processes, e.g., by changes in the population) ({{ rtxt_oconnell_et_al_2011 }}).
+
+Species with higher dispersal ability (i.e., able to travel further distances) are more likely to be absent during the survey (Wearn & Glover-Kapfer, 2017).
+
+For example, home range size "**has implications for the interpretation of occupancy**. If animals range over a much larger area than a single site, then a) they may conceivably be unavailable for capture during a sampling occasion, and b) the "occupancy" of a site is more related to the ranging patterns and habitat preferences of an individual, rather than the coarse-scale distribution of a species" (Wearn & Glover-Kapfer, 2017).
+
+For some approaches, violation of this {{ mod_assumption_tl_abrv }} can result in an **underestimate of {{ detection_probability_tl_pl }}** and, in turn, **over-estimate {{ obj_density_tl }}** (e.g., with spatial recapture models) or result in simply averaging detections over the sampling period (e.g., {{ mod_rem_tu_abrv }} [{{ rtxt_rowcliffe_et_al_2008 }}; {{ rtxt_rowcliffe_et_al_2013 }}], {{ mod_rest_tu_abrv }} [{{ rtxt_nakashima_et_al_2017 }}] models).
+
 ::::::
 
 ::::::{tab-item} Visual resources
 
 :::::{grid} 3
-:gutter: 1
-:padding: 0
-:margin: 0
-
+:class: wrapper
 ::::{grid-item-card} {{ rtxt_rcsc_2024b }}
 :::{figure} ../03_images/03_image_files/00_home_range.jpg
 :class: img_grid
@@ -81,13 +84,6 @@ Refer to the "in-depth" tab for more information.
 :class: img_grid
 :::
 ::::
-
-:::::
-
-:::::{grid} 3
-:gutter: 1
-:padding: 0
-:margin: 0
 
 ::::{grid-item-card} {{ rtxt_figure4_ref_id }}
 :::{figure} ../03_images/03_image_files/figure4_filename.png
@@ -117,8 +113,11 @@ A R Shiny app created for the RC Decision Support Tool to allows users lookup in
 - Burton et al. (2015) supplementary material "S2. Average body mass and home range size for a sample of species and studies among the reviewed set of camera trap publications"
 - PanTHERIA database ({{ rtxt_jones_et_al_2009 }}) "a species-level database of life history, ecology, and geography of extant and recently extinct mammals
 - HomeRange: A global database of mammalian home ranges ({{ rtxt_broekman_et_al_2022 }})
+:::{note}
+Home range size information should, ideally, be chosen to reflect the conditions of your study (as closely as possible). For example, data from a study that only reported home range size for one season (e.g., summer home range size) might bias placement, if your study aims to evaluate occupancy over multiple seasons, especially if the species' movement highly differs between seasons (e.g., moves more in summer).
+:::
 
-<iframe width="100%" height="900" src="https://7e2l38-cassondra-stevenson.shinyapps.io/lu_species_homerange" loading="lazy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="iframe-container-shiny"><iframe class="iframe-responsive-shiny" src="https://7e2l38-cassondra-stevenson.shinyapps.io/lu_species_homerange"></iframe></div>
 :::::
 
 ::::::
@@ -134,23 +133,7 @@ A R Shiny app created for the RC Decision Support Tool to allows users lookup in
 ::::::
 
 ::::::{tab-item} References
-{{ rbib_broekman_et_al_2022 }}
-
-{{ rbib_burton_et_al_2015 }}
-
-{{ rbib_hoeks_et_al_2024 }}
-
-{{ rbib_jones_et_al_2009 }}
-
-{{ rbib_mackenzie_et_al_2004 }}
-
-{{ rbib_nakashima_et_al_2017 }}
-
-{{ rbib_oconnell_et_al_2011 }}
-
-{{ rbib_rowcliffe_et_al_2008 }}
-
-{{ rbib_rowcliffe_et_al_2013 }}
+{{ rbib_broekman_et_al_2022 burton_et_al_2015 hoeks_et_al_2024 jones_et_al_2009 mackenzie_et_al_2004 nakashima_et_al_2017 oconnell_et_al_2011 rowcliffe_et_al_2008 rowcliffe_et_al_2013 }}
 ::::::
 
 :::::::

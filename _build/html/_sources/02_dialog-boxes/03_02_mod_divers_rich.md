@@ -17,11 +17,10 @@ editor_options:
 (i_mod_divers_rich)=
 # {{ title_i_mod_divers_rich }}
 :::{seealso}
-{bdg-link-primary-line}`Species-accumulation curves<https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_10_sp_asymptote.html>`
-{bdg-link-primary-line}`Species rarity<https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/01_19_sp_rarity.html>`
+{{ link_bdg_sp_asymptote }}
+{{ link_bdg_sp_rarity }}
 :::
 
-**{{ name_mod_divers_rich }}**: {{ def_mod_divers_rich }}
 ```{include} pro_con_assump/mod_divers_rich_apc.md
 ```
 
@@ -62,7 +61,7 @@ The optimal number of cameras required will be influenced by factors such as lan
 
 ### Duration - Camera days per camera location
 
-For measures of species richness or diversity, it is presumed that a camera is active long enough to detect rare species that may occur at a specific location ({{ rtxt_wearn_gloverkapfer_2017 }}). If this is not the case, the results will indicate that the species was not present when it was (i.e., a "false negative"). False negatives may also be problematic for other measures, such as **{{ mod_rai_tl }}** (count data, with or without {{ mod_zero_inflation_tl }} and/or {{ mod_overdispersion_tl }}), even if the model type used can account for {{ imperfect_detection_tl }} explicitly (e.g., combined occurrence/{{ mod_rai_tl }}; {{ {{ mod_n_mixture_tu }} }}).
+For measures of species richness or diversity, it is presumed that a camera is active long enough to detect rare species that may occur at a specific location ({{ rtxt_wearn_gloverkapfer_2017 }}). If this is not the case, the results will indicate that the species was not present when it was (i.e., a "false negative"). False negatives may also be problematic for other measures, such as **{{ mod_rai_tl }}** (count data, with or without {{ mod_zero_inflation_tl }} and/or {{ mod_overdispersion_tl }}), even if the model type used can account for {{ imperfect_detection_tl }} explicitly (e.g., combined occurrence/{{ mod_rai_tl }}; {{ mod_n_mixture_tu }}).
 
 ### Number of cameras vs. Camera days per camera location
 
@@ -88,10 +87,7 @@ The **two principal ways of estimating species richness from remote camera data*
 ::::::{tab-item} Visual resources
 
 :::::{grid} 3
-:gutter: 1
-:padding: 0
-:margin: 0
-
+:class: wrapper
 ::::{grid-item-card} {{ rtxt_pyron_2010 }}
 :::{figure} ../03_images/03_image_files/pyron_2010_fig1_clipped.png
 :class: img_grid
@@ -117,79 +113,56 @@ Both communities contain five species of animalcules. Species richness is the sa
 The x-axis is the order *q* in the Hill number (eqn [23a]), and is illustrated for values of *q* from 0 to 5. The y-axis is the calculated Hill number (the equivalent number of equally abundant species). Each of the four assemblages has exactly 100 species and 500 individuals, but they differ in their relative evenness: (1) completely even assemblage (black solid line): each species is represented by five individuals; (2) slightly uneven assemblage (red dashed line): 50 species each represented by seven individuals and 50 species each represented by three individuals (this structure is denoted as {50 x 7, 50 x 3}); (3) moderately uneven assemblage (green dotted line): {22 x 10, 28 x 5, 40 x 3, 10 x 2}; (4) highly uneven assemblage (blue dash–dot line): {1 x 120, 1 x 80, 1 x 70, 1 x 50, 3 x 20, 3 x 10, 90 x 1}. For *q*=0, the Hill number is species richness, which is equal to 100 for all assemblages. Because Hill numbers represent the equivalent number of equally abundant species, the curve for the perfectly even assemblage (black solid line) does not change as q is increased. Larger values of q place progressively more weight on common species, so the equivalent number of equally abundant species is much lower for the more uneven assemblages than for more even assemblages.
 :::
 ::::
-:::::
-
-:::::{grid} 3
-:gutter: 1
-:padding: 0
-:margin: 0
-
 ::::{grid-item-card} {{ rtxt_project_dragonfly_2019 }}
-<div><div style="position:relative;padding-top:56.25%;"><iframe src="https://www.youtube.com/embed/ghhZClDRK_g?si=khprL1u5NJrFduTb" loading="lazy" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe></div></div>
+<div class="iframe-container-vid"><iframe class="iframe-responsive-vid" src="https://www.youtube.com/embed/ghhZClDRK_g?si=khprL1u5NJrFduTb"></iframe></div>
 
 Abundance, species richness, and diversity
 ::::
 
 ::::{grid-item-card} {{ rtxt_mecks100_2018 }}
-<div><div style="position:relative;padding-top:56.25%;"><iframe src="https://www.youtube.com/embed/4gcmAUpo9TU?si=_S-JYDDskR8QbHs5" loading="lazy" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe></div></div>
+<div class="iframe-container-vid"><iframe class="iframe-responsive-vid" src="https://www.youtube.com/embed/4gcmAUpo9TU?si=_S-JYDDskR8QbHs5"></iframe></div>
 
 Species accumulation and rarefaction curves
 ::::
 
 ::::{grid-item-card} {{ rtxt_riffomonas_project_2022a }}
-<div><div style="position:relative;padding-top:56.25%;"><iframe src="https://www.youtube.com/embed/wq1SXGQYgCs?si=Re5tglERblfkCNhDl" loading="lazy" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe></div></div>
+<div class="iframe-container-vid"><iframe class="iframe-responsive-vid" src="https://www.youtube.com/embed/wq1SXGQYgCs?si=Re5tglERblfkCNhDl"></iframe></div>
 
 Using vegan to calculate alpha diversity metrics within the tidyverse in R (CC196)
 ::::
 
-:::::
-
-:::::{grid} 3
-:gutter: 1
-:padding: 0
-:margin: 0
-
 ::::{grid-item-card} {{ rtxt_vsn_international_2022 }}
-<div><div style="position:relative;padding-top:56.25%;"><iframe src="https://www.youtube.com/embed/wBx7f4PP8RE?si=D6mtAMNMLlk3aH8H" loading="lazy" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe></div></div>
+<div class="iframe-container-vid"><iframe class="iframe-responsive-vid" src="https://www.youtube.com/embed/wBx7f4PP8RE?si=D6mtAMNMLlk3aH8H"></iframe></div>
 
 Species abundance tools in Genstat
 ::::
 
 ::::{grid-item-card} {{ rtxt_baylor_tutoring_center_2021 }}
-<div><div style="position:relative;padding-top:56.25%;"><iframe src="https://www.youtube.com/embed/UXJ0r4hjbqI?si=gYR6rOmIMgyibyvR" loading="lazy" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
-</div>
-</div>
+<div class="iframe-container-vid"><iframe class="iframe-responsive-vid" src="https://www.youtube.com/embed/UXJ0r4hjbqI?si=gYR6rOmIMgyibyvR"></iframe></div>
 
 Species Diversity and Species Richness
 ::::
 
 ::::{grid-item-card} {{ rtxt_styring_2020a }}
-<div><div style="position:relative;padding-top:56.25%;"><iframe src="https://www.youtube.com/embed/KBByV3kR3IA?si=RPcG1lFQ-v0Shwaw" loading="lazy" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe></div></div>
+<div class="iframe-container-vid"><iframe class="iframe-responsive-vid" src="https://www.youtube.com/embed/KBByV3kR3IA?si=RPcG1lFQ-v0Shwaw"></iframe></div>
 
 Field Ecology - Diversity Metrics in R
 ::::
 
-:::::
-
-:::::{grid} 3
-:gutter: 1
-:padding: 0
-:margin: 0
-
 ::::{grid-item-card} {{ rtxt_riffomonas_project_2022b }}
-<div><div style="position:relative;padding-top:56.25%;"><iframe src="https://www.youtube.com/embed/ywHVb0Q-qsM?si=_xJ5jbFc6MDEQlAh" loading="lazy" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe></div></div>
+<div class="iframe-container-vid"><iframe class="iframe-responsive-vid" src="https://www.youtube.com/embed/ywHVb0Q-qsM?si=_xJ5jbFc6MDEQlAh"></iframe></div>
 
 Generating a rarefaction curve from collector's curves in R within the tidyverse (CC198)
 ::::
 
 ::::{grid-item-card} {{ rtxt_benedetto_2021 }}
-<div><div style="position:relative;padding-top:56.25%;"><iframe src="https://www.youtube.com/embed/Clxji2_36Do?si=H2UUsKL_F9FGRTvZ" loading="lazy" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe></div></div>
+<div class="iframe-container-vid"><iframe class="iframe-responsive-vid" src="https://www.youtube.com/embed/Clxji2_36Do?si=H2UUsKL_F9FGRTvZ"></iframe></div>
 
 Community structure and diversity
 ::::
 
 ::::{grid-item-card} {{ rtxt_vid9_ref_id }}
-<div><div style="position:relative;padding-top:56.25%;"><iframe src="vid9_url" loading="lazy" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe></div></div>
+<div class="iframe-container-vid"><iframe class="iframe-responsive-vid" src="vid9_url"></iframe></div>
 
 ::::
 
@@ -202,13 +175,13 @@ Community structure and diversity
 ::::{dropdown} iNext Online
 Software for interpolation and extrapolation of species diversity.<br><br>{{ rbib_chao_et_al_2016 }}
 
-<iframe width="100%" height="900" src="https://chao.shinyapps.io/iNEXTOnline" loading="lazy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="iframe-container-shiny"><iframe class="iframe-responsive-shiny" src="https://chao.shinyapps.io/iNEXTOnline"></iframe></div>
 ::::
 
 ::::{dropdown} Visualizing Biodiversity in \[U.S.\] National Parks
 'Biodiversity in National Parks is an app that let you visualize Kaggle’s biodiversity dataset. By using the National Park Service database of animal and plant species, the application offers a graphical representation of the data with maps and charts'<br><br>{{ rbib_benedetti_2024 }}
 
-<iframe width="100%" height="900" src="https://abenedetti.shinyapps.io/bioNPS/" loading="lazy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="iframe-container-shiny"><iframe class="iframe-responsive-shiny" src="https://abenedetti.shinyapps.io/bioNPS/"></iframe></div>
 ::::
 
 :::::
@@ -227,75 +200,7 @@ Software for interpolation and extrapolation of species diversity.<br><br>{{ rbi
 ::::::
 
 ::::::{tab-item} References
-{{ rbib_ahumada_et_al_2011 }}
-
-{{ rbib_baylor_tutoring_center_2021 }}
-
-{{ rbib_benedetti_2024 }}
-
-{{ rbib_bioninja_nd }}
-
-{{ rbib_brodie_et_al_2015 }}
-
-{{ rbib_chatterjee_et_al_2021 }}
-
-{{ rbib_chao_et_al_2016 }}
-
-{{ rbib_chao_et_al_2014 }}
-
-{{ rbib_colwell_2022 }}
-
-{{ rbib_gerhartbarley_nd }}
-
-{{ rbib_gotelli_chao_2013 }}
-
-{{ rbib_hsieh_et_al_2015 }}
-
-{{ rbib_iknayan_et_al_2014 }}
-
-{{ rbib_kinnaird_obrien_2012 }}
-
-{{ rbib_kitamura_et_al_2010 }}
-
-{{ rbib_loreau_2010 }}
-
-{{ rbib_mackenzie_et_al_2006 }}
-
-{{ rbib_mecks100_2018 }}
-
-{{ rbib_oconnor_et_al_2017 }}
-
-{{ rbib_oksanen_et_al_2024 }}
-
-{{ rbib_pettorelli_et_al_2010 }}
-
-{{ rbib_project_dragonfly_2019 }}
-
-{{ rbib_pyron_2010 }}
-
-{{ rbib_riffomonas_project_2022a }}
-
-{{ rbib_riffomonas_project_2022b }}
-
-{{ rbib_samejima_et_al_2012 }}
-
-{{ rbib_si_et_al_2014 }}
-
-{{ rbib_styring_2020a }}
-
-{{ rbib_styring_2020b }}
-
-{{ rbib_tobler_et_al_2008 }}
-
-{{ rbib_vsn_international_2022 }}
-
-{{ rbib_wearn_et_al_2016 }}
-
-{{ rbib_wearn_gloverkapfer_2017 }}
-
-{{ rbib_wildco_lab_2021b }}
-
-{{ rbib_yue_et_al_2015 }}
+{{ rbib_ahumada_et_al_2011 baylor_tutoring_center_2021 benedetti_2024 bioninja_nd brodie_et_al_2015 chatterjee_et_al_2021 chao_et_al_2016 chao_et_al_2014 colwell_2022 gerhartbarley_nd gotelli_chao_2013 hsieh_et_al_2015 iknayan_et_al_2014 kinnaird_obrien_2012 kitamura_et_al_2010 loreau_2010 mackenzie_et_al_2006 mecks100_2018 oconnor_et_al_2017 oksanen_et_al_2024 pettorelli_et_al_2010 project_dragonfly_2019 pyron_2010 riffomonas_project_2022a riffomonas_project_2022b samejima_et_al_2012 si_et_al_2014 styring_2020a styring_2020b tobler_et_al_2008 vsn_international_2022 wearn_et_al_2016 wearn_gloverkapfer_2017 wildco_lab_2021b yue_et_al_2015 }}
 ::::::
 
 :::::::

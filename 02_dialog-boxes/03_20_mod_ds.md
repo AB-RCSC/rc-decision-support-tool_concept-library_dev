@@ -23,7 +23,6 @@ replace me with text
 :::
 -->
 
-**{{ name_mod_ds }}**: {{ def_mod_ds }}
 ```{include} pro_con_assump/mod_ds_apc.md
 ```
 
@@ -100,10 +99,7 @@ Finally, another density methods comparison study showed that camera trap DS was
 ::::::{tab-item} Visual resources
 
 :::::{grid} 3
-:gutter: 1
-:padding: 0
-:margin: 0
-
+:class: wrapper
 ::::{grid-item-card} {{ rtxt_clarke_et_al_2023 }}
 :::{figure} ../03_images/03_image_files/clarke_et_al_2023_fig6_clipped.png
 :class: img_grid
@@ -122,13 +118,6 @@ Finally, another density methods comparison study showed that camera trap DS was
 :class: img_grid
 :::
 ::::
-
-:::::
-
-:::::{grid} 3
-:gutter: 1
-:padding: 0
-:margin: 0
 
 ::::{grid-item-card} {{ rtxt_clarke_et_al_2023 }}
 :::{figure} ../03_images/03_image_files/clarke_et_al_2023_eqn_ds3.png
@@ -149,12 +138,6 @@ Finally, another density methods comparison study showed that camera trap DS was
 ::::
 
 :::::
-
-:::::{grid} 3
-:gutter: 1
-:padding: 0
-:margin: 0
-
 ::::{grid-item-card} {{ rtxt_figure7_ref_id }}
 :::{figure} ../03_images/03_image_files/figure7_filename.png
 :class: img_grid
@@ -173,29 +156,21 @@ Finally, another density methods comparison study showed that camera trap DS was
 :::
 ::::
 
-:::::
-
-:::::{grid} 3
-:gutter: 1
-:padding: 0
-:margin: 0
-
 ::::{grid-item-card} {{ rtxt_vid1_ref_id }}
-<div><div style="position:relative;padding-top:56.25%;"><iframe src="vid1_url" loading="lazy" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe></div></div>
+<div class="iframe-container-vid"><iframe class="iframe-responsive-vid" src="vid1_url"></iframe></div>
 
 ::::
 
 ::::{grid-item-card} {{ rtxt_vid2_ref_id }}
-<div><div style="position:relative;padding-top:56.25%;"><iframe src="vid2_url" loading="lazy" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe></div></div>
+<div class="iframe-container-vid"><iframe class="iframe-responsive-vid" src="vid2_url"></iframe></div>
 
 ::::
 
 ::::{grid-item-card} {{ rtxt_vid3_ref_id }}
-<div><div style="position:relative;padding-top:56.25%;"><iframe src="vid3_url" loading="lazy" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe></div></div>
+<div class="iframe-container-vid"><iframe class="iframe-responsive-vid" src="vid3_url"></iframe></div>
 
 ::::
 
-:::::
 ::::::
 
 ::::::{tab-item} Shiny apps/Widgets
@@ -210,37 +185,7 @@ Check back in the future!
 ::::::
 
 ::::::{tab-item} References
-{{ rbib_aep_2016 }}
-
-{{ rbib_clarke_et_al_2023 }}
-
-{{ rbib_bessone_et_al_2020 }}
-
-{{ rbib_clarke_et_al_2023 }}
-
-{{ rbib_buckland_et_al_1993 }}
-
-{{ rbib_buckland_et_al_2015 }}
-
-{{ rbib_cappelle_et_al_2021 }}
-
-{{ rbib_despres_einspenner_et_al_2017 }}
-
-{{ rbib_gilbert_et_al_2020 }}
-
-{{ rbib_hauke_et_al_2022 }}
-
-{{ rbib_howe_et_al_2017 }}
-
-{{ rbib_jenny_1996 }}
-
-{{ rbib_morin_et_al_2022 }}
-
-{{ rbib_palencia_et_al_2021 }}
-
-{{ rbib_rowcliffe_et_al_2011 }}
-
-{{ rbib_twining_et_al_2022 }}
+{{ rbib_aep_2016 clarke_et_al_2023 bessone_et_al_2020 clarke_et_al_2023 buckland_et_al_1993 buckland_et_al_2015 cappelle_et_al_2021 despres_einspenner_et_al_2017 gilbert_et_al_2020 hauke_et_al_2022 howe_et_al_2017 jenny_1996 morin_et_al_2022 palencia_et_al_2021 rowcliffe_et_al_2011 twining_et_al_2022 }}
 ::::::
 
 :::::::

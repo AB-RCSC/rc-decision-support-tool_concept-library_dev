@@ -23,8 +23,6 @@ editor_options:
 :::
 -->
 
-**{{ name_bait_lure }}**: {{ def_bait_lure }}
-
 :::::::{tab-set}
 
 ::::::{tab-item} Overview
@@ -40,10 +38,7 @@ editor_options:
 ::::::{tab-item} Visual resources
 
 :::::{grid} 3
-:gutter: 1
-:padding: 0
-:margin: 0
-
+:class: wrapper
 ::::{grid-item-card} {{ rtxt_wearn_gloverkapfer_2019 }}
 :::{figure} ../03_images/03_image_files/wearn_gloverkapfer_2019_fig5.png
 :class: img_grid
@@ -62,13 +57,6 @@ editor_options:
 :::
 Figure 8: Average time spent per visit per lure (non- reward) station. Sourced from Thomas & Cowan (2016)
 ::::
-
-:::::
-
-:::::{grid} 3
-:gutter: 1
-:padding: 0
-:margin: 0
 
 ::::{grid-item-card} {{ rtxt_figure4_ref_id }}
 :::{figure} ../03_images/03_image_files/figure4_filename.png
@@ -89,28 +77,21 @@ Figure 8: Average time spent per visit per lure (non- reward) station. Sourced f
 ::::
 
 :::::
-
-:::::{grid} 3
-:gutter: 1
-:padding: 0
-:margin: 0
-
 ::::{grid-item-card} {{ rtxt_vid1_ref_id }}
-<div><div style="position:relative;padding-top:56.25%;"><iframe src="vid1_url" loading="lazy" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe></div></div>
+<div class="iframe-container-vid"><iframe class="iframe-responsive-vid" src="vid1_url"></iframe></div>
 
 ::::
 
 ::::{grid-item-card} {{ rtxt_vid2_ref_id }}
-<div><div style="position:relative;padding-top:56.25%;"><iframe src="vid2_url" loading="lazy" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe></div></div>
+<div class="iframe-container-vid"><iframe class="iframe-responsive-vid" src="vid2_url"></iframe></div>
 
 ::::
 
 ::::{grid-item-card} {{ rtxt_vid3_ref_id }}
-<div><div style="position:relative;padding-top:56.25%;"><iframe src="vid3_url" loading="lazy" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe></div></div>
+<div class="iframe-container-vid"><iframe class="iframe-responsive-vid" src="vid3_url"></iframe></div>
 
 ::::
 
-:::::
 ::::::
 
 ::::::{tab-item} Shiny apps/Widgets

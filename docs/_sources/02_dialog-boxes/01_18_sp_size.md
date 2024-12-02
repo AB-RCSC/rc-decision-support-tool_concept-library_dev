@@ -1,4 +1,4 @@
----
+﻿---
 jupytext:
   formats: md:myst
   text_representation:
@@ -16,15 +16,22 @@ editor_options:
 ---
 (i_sp_size)=
 # {{ title_i_sp_size }}
+:::{hint}
+
+Here are a few examples of comparable species for each body size options:
+- **{{ name_sp_size_sm }}**{{ name_sp_size_sm }}**: {{ def_sp_size_sm }}
+- **{{ name_sp_size_md }}**: {{ def_sp_size_md }}
+- **{{ name_sp_size_lg }}**: {{ def_sp_size_lg }}
+- **{{ name_sp_size_mult }}**: *{{ def_sp_size_mult }}*
 
 Unsure about the size of your Target Species? There may be information available in the "Species home range / body size lookup"; see the**Shiny Apps/Widgets** tab below.
-
-**{{ name_sp_size }}**: {{ def_sp_size }}
+:::
 
 :::::::{tab-set}
 
 ::::::{tab-item} Overview
 Here are a few examples of comparable species for each body size options:
+
 - **Small**: rodents and similarly sized species in the "Mustelidae" family [i.e., weasels, badgers, otters, martens, wolverine, etc.])
 - **Medium**: small and mid-sized species, ~< 33 lbs (or 15 kilograms), such as meso-carnivores (i.e., Red, fox, Coyote) ({{ rtxt_roemer_et_al_2009 }})
 - **Large**: bears or ungulates (i.e., large mammals with hooves, such as White-tailed deer, Elk, Moose, etc)
@@ -44,13 +51,11 @@ Body size affects the detection process ({{ rtxt_obrien_et_al_2011 }}). Species 
 :align: center
 :width: 40%
 :::
-
 > **Kays et al. (2021) - Fig. 6**: Relationship between trigger probability and body mass for four focal species (ascending order by weight: gray fox, raccoon, coyote, white-tailed deer). Error bars show standard deviation. Body mass values come from North Carolina animals in the mammal collections of the NC Museum of Natural Sciences.
 
 When thinking beyond the camera's FOV, larger species generally also have larger home ranges ({{ rtxt_garland_1983 }}) and daily movement distances, making them more likely to be detected at multiple cameras ({{ rtxt_chatterjee_et_al_2021 }}), therefore there are also implications for which models may be appropriate (due to assumptions of "site closure" / "independent locations").
-
 :::{note}
-This is an especially important consideration when targeting multiple species of varying sizes.
+This is an especially important consideration when targetting multiple species of varying sizes.
 :::
 
 ::::::
@@ -63,10 +68,7 @@ This is an especially important consideration when targeting multiple species of
 ::::::{tab-item} Visual resources
 
 :::::{grid} 3
-:gutter: 1
-:padding: 0
-:margin: 0
-
+:class: wrapper
 ::::{grid-item-card} {{ rtxt_kays_et_al_2021 }}
 :::{figure} ../03_images/03_image_files/kays_et_al_2021_fig6_clipped.png
 :class: img_grid
@@ -92,13 +94,6 @@ Some records appeared as ‘outliers’ in this figure, that is, particularly hi
 Fitted values are predicted for fixed effects only from the averaged model. The number of trap hours *th* was fixed at = 1000 days, whereas the number of camera stations *ncamstat*, and the inter-trap distance *intdist* were fixed to their median values (*ncamstat* = 26, *intdist* = 1760 m, respectively), and, the type of camera used, the use of cameras in pairs, the use of bait or lures and whether the authors took into account the nonindependence of capture events were set to *camtyp* = A, *campair* = Y, *baitlure* = N, and *ind.ce* = N, that is, the most frequent design type used, to estimate fitted values.
 :::
 ::::
-:::::
-
-:::::{grid} 3
-:gutter: 1
-:padding: 0
-:margin: 0
-
 ::::{grid-item-card} {{ rtxt_bodysize_movement.png }}
 :::{figure} ../03_images/03_image_files/bodysize_movement.png
 :class: img_grid
@@ -120,12 +115,6 @@ Fitted values are predicted for fixed effects only from the averaged model. The 
 ::::
 
 :::::
-
-:::::{grid} 3
-:gutter: 1
-:padding: 0
-:margin: 0
-
 ::::{grid-item-card} {{ rtxt_kemp_et_al_2022 }}
 :::{figure} ../03_images/03_image_files/kemp_et_al_2022_pg15_fig1.png
 :class: img_grid
@@ -145,7 +134,6 @@ Fitted values are predicted for fixed effects only from the averaged model. The 
 :::
 ::::
 
-:::::
 ::::::
 
 ::::::{tab-item} Shiny apps/Widgets
@@ -156,7 +144,7 @@ A R Shiny app created for the RC Decision Support Tool to lookup information on 
 - PanTHERIA database ({{ rtxt_jones_et_al_2009 }}) "a species-level database of life history, ecology,and geography of extant and recently extinct mammals
 - HomeRange: A global database of mammalian home ranges ({{ rtxt_broekman_et_al_2022 }})
 
-<iframe width="100%" height="900" src="https://7e2l38-cassondra-stevenson.shinyapps.io/lu_species_homerange/" loading="lazy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="iframe-container-shiny"><iframe class="iframe-responsive-shiny" src="https://7e2l38-cassondra-stevenson.shinyapps.io/lu_species_homerange/"></iframe></div>
 :::::
 
 ::::::
@@ -168,37 +156,7 @@ A R Shiny app created for the RC Decision Support Tool to lookup information on 
 ::::::
 
 ::::::{tab-item} References
-{{ rbib_anile_devillard_2016 }}
-
-{{ rbib_blackburn_gaston_1999 }}
-
-{{ rbib_broekman_et_al_2022 }}
-
-{{ rbib_burton_et_al_2015 }}
-
-{{ rbib_chatterjee_et_al_2021 }}
-
-{{ rbib_fisher_et_al_2011 }}
-
-{{ rbib_garland_1983 }}
-
-{{ rbib_glen_et_al_2013 }}
-
-{{ rbib_hofmeester_et_al_2017 }}
-
-{{ rbib_jones_et_al_2009 }}
-
-{{ rbib_kays_et_al_2021 }}
-
-{{ rbib_kemp_et_al_2022 }}
-
-{{ rbib_labarbera_1989 }}
-
-{{ rbib_obrien_et_al_2011 }}
-
-{{ rbib_roemer_et_al_2009 }}
-
-{{ rbib_rowcliffe_et_al_2011 }}
+{{ rbib_anile_devillard_2016 blackburn_gaston_1999 broekman_et_al_2022 burton_et_al_2015 chatterjee_et_al_2021 fisher_et_al_2011 garland_1983 glen_et_al_2013 hofmeester_et_al_2017 jones_et_al_2009 kays_et_al_2021 kemp_et_al_2022 labarbera_1989 obrien_et_al_2011 roemer_et_al_2009 rowcliffe_et_al_2011 }}
 ::::::
 
 :::::::

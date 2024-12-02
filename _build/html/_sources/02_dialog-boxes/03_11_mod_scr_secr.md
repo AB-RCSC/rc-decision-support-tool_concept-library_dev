@@ -23,7 +23,6 @@ replace me with text
 :::
 -->
 
-**{{ name_mod_scr_secr }}**: {{ def_mod_scr_secr }}
 ```{include} pro_con_assump/mod_scr_secr_apc.md
 ```
 
@@ -78,10 +77,7 @@ Another aspect of sampling design practitioners must consider is the number and 
 ::::::{tab-item} Visual resources
 
 :::::{grid} 3
-:gutter: 1
-:padding: 0
-:margin: 0
-
+:class: wrapper
 ::::{grid-item-card} {{ rtxt_clarke_et_al_2023 }}
 :::{figure} ../03_images/03_image_files/clarke_et_al_2023_eqn_scr1.png
 :class: img_grid
@@ -104,13 +100,6 @@ Another aspect of sampling design practitioners must consider is the number and 
 The red circle highlights an example individual’s activity centre. The red arrows point towards camera stations where the red individual was detected; the numbers beside the camera stations show how many times the red individual was detected at each station. Note, the number and location of individual’s activity centres is not known, but rather inferred from the spatial pattern of detections (i.e., the number of detections of each individual at camera stations of known location). B) An example graph showing how the probability the red individual is detected at a camera station decreases with distance from its activity centre. This is reflected in A); as the distance between the red individual’s activity centre and a camera station increases, the number of detections dwindles. σ is the spatial scale parameter; it describes how detection probability decreases with increasing distance.
 :::
 ::::
-:::::
-
-:::::{grid} 3
-:gutter: 1
-:padding: 0
-:margin: 0
-
 ::::{grid-item-card} {{ rtxt_efford_2024b }}
 :::{figure} ../03_images/03_image_files/efford_2024_fig1.png
 :class: img_grid
@@ -136,11 +125,6 @@ In this model (like in standard SCR), the detection rate of each individual depe
 ::::
 :::::
 
-:::::{grid} 3
-:gutter: 1
-:padding: 0
-:margin: 0
-
 ::::{grid-item-card} {{ rtxt_figure10_ref_id }}
 :::{figure} ../03_images/03_image_files/figure10_filename.png
 :class: img_grid
@@ -159,48 +143,32 @@ In this model (like in standard SCR), the detection rate of each individual depe
 :::
 ::::
 
-:::::
-
-:::::{grid} 3
-:gutter: 1
-:padding: 0
-:margin: 0
-
 ::::{grid-item-card} {{ rtxt_royle_2016 }}
-<div><div style="position:relative;padding-top:56.25%;"><iframe src="https://www.youtube.com/embed/4HKFimATq9E" loading="lazy" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe></div></div>
+<div class="iframe-container-vid"><iframe class="iframe-responsive-vid" src="https://www.youtube.com/embed/4HKFimATq9E"></iframe></div>
 
 J. Andrew Royle, ’Spatial Capture-Recapture Modelling’
 ::::
 
 ::::{grid-item-card} {{ rtxt_snow_leopard_network_2020a }}
-<div><div style="position:relative;padding-top:56.25%;"><iframe src="https://www.youtube.com/embed/IHVez1a_hqg?si=1ePCJKv0v1SiKwSi" loading="lazy" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe></div></div>
+<div class="iframe-container-vid"><iframe class="iframe-responsive-vid" src="https://www.youtube.com/embed/IHVez1a_hqg?si=1ePCJKv0v1SiKwSi"></iframe></div>
 
 PAWS: Spatial Capture Recapture Data Analysis Part 1
 ::::
 
 ::::{grid-item-card} {{ rtxt_snow_leopard_network_2020b }}
-<div><div style="position:relative;padding-top:56.25%;"><iframe src="https://www.youtube.com/embed/IHVez1a_hqg" loading="lazy" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe></div></div>
+<div class="iframe-container-vid"><iframe class="iframe-responsive-vid" src="https://www.youtube.com/embed/IHVez1a_hqg"></iframe></div>
 
 PAWS: Spatial Capture Recapture Data Analysis Part 2
 ::::
 
-:::::
-
-:::::{grid} 3
-:gutter: 1
-:padding: 0
-:margin: 0
-
 ::::{grid-item-card} {{ rtxt_royle_2020 }}
-<div><div style="position:relative;padding-top:56.25%;"><iframe src="https://www.youtube.com/embed/yRRDi07FtPg?si=vmGQslB9Wv9MnkYC" loading="lazy" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe></div></div>
+<div class="iframe-container-vid"><iframe class="iframe-responsive-vid" src="https://www.youtube.com/embed/yRRDi07FtPg?si=vmGQslB9Wv9MnkYC"></iframe></div>
 
 Introduction to Spatial Capture-Recapture with the oSCR Package
 ::::
 
 ::::{grid-item-card} {{ rtxt_oscrpackage206 }}
-<div><div style="position:relative;padding-top:56.25%;"><iframe src="../03_images/03_image_files/oscrpackage206.png" loading="lazy" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
-</div>
-</div>
+<div class="iframe-container-vid"><iframe class="iframe-responsive-vid" src="../03_images/03_image_files/oscrpackage206.png"></iframe></div>
 
 **oSCR Package**: Channel for the R package for the analysis of spatial encounter histories for inferences about spatial population ecology.
 - [Introduction to Spatial Capture-Recapture](https://www.youtube.com/watch?v=yRRDi07FtPg)
@@ -212,11 +180,10 @@ Introduction to Spatial Capture-Recapture with the oSCR Package
 ::::
 
 ::::{grid-item-card} {{ rtxt_vid6_ref_id }}
-<div><div style="position:relative;padding-top:56.25%;"><iframe src="vid6_url" loading="lazy" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe></div></div>
+<div class="iframe-container-vid"><iframe class="iframe-responsive-vid" src="vid6_url"></iframe></div>
 
 ::::
 
-:::::
 ::::::
 
 ::::::{tab-item} Shiny apps/Widgets
@@ -224,7 +191,7 @@ Introduction to Spatial Capture-Recapture with the oSCR Package
 :::::{card} Secrdesign app 1.5
 {{ rbib_efford_boulanger_2019 }}
 
-<iframe width="100%" height="900" src="https://www.stats.otago.ac.nz/secrdesignapp" loading="lazy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="iframe-container-shiny"><iframe class="iframe-responsive-shiny" src="https://www.stats.otago.ac.nz/secrdesignapp"></iframe></div>
 :::::
 
 ::::::
@@ -249,61 +216,7 @@ may be particularly useful. | Article: <https://onlinelibrary.wiley.com/doi/10.1
 ::::::
 
 ::::::{tab-item} References
-{{ rbib_augustine_et_al_2018 }}
-
-{{ rbib_baddeley_nd }}
-
-{{ rbib_borchers_efford_2008 }}
-
-{{ rbib_chandler_royle_2013 }}
-
-{{ rbib_clarke_2019 }}
-
-{{ rbib_clarke_et_al_2023 }}
-
-{{ rbib_dupont_et_al_2021 }}
-
-{{ rbib_efford_et_al_2004 }}
-
-{{ rbib_efford_boulanger_2019 }}
-
-{{ rbib_efford_2023 }}
-
-{{ rbib_efford_2024a }}
-
-{{ rbib_efford_2024b }}
-
-{{ rbib_fleming_et_al_2021 }}
-
-{{ rbib_gopalaswamy_et_al_2012 }}
-
-{{ rbib_proctor_et_al_2022 }}
-
-{{ rbib_mcfarlane_et_al_2020 }}
-
-{{ rbib_morin_et_al_2022 }}
-
-{{ rbib_nawaz_et_al_2021 }}
-
-{{ rbib_oscrpackage206 }}
-
-{{ rbib_sollmann_et_al_2012 }}
-
-{{ rbib_sun_et_al_2014 }}
-
-{{ rbib_romairone_et_al_2018 }}
-
-{{ rbib_royle_et_al_2014 }}
-
-{{ rbib_royle_2016 }}
-
-{{ rbib_royle_2020 }}
-
-{{ rbib_royle_young_2008 }}
-
-{{ rbib_u_capetown_2024a }}
-
-{{ rbib_u_capetown_2024b }}
+{{ rbib_augustine_et_al_2018 baddeley_nd borchers_efford_2008 chandler_royle_2013 clarke_2019 clarke_et_al_2023 dupont_et_al_2021 efford_et_al_2004 efford_boulanger_2019 efford_2023 efford_2024a efford_2024b fleming_et_al_2021 gopalaswamy_et_al_2012 proctor_et_al_2022 mcfarlane_et_al_2020 morin_et_al_2022 nawaz_et_al_2021 oscrpackage206 sollmann_et_al_2012 sun_et_al_2014 romairone_et_al_2018 royle_et_al_2014 royle_2016 royle_2020 royle_young_2008 u_capetown_2024a u_capetown_2024b }}
 ::::::
 
 :::::::

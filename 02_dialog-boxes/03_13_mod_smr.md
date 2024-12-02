@@ -23,7 +23,6 @@ replace me with text
 :::
 -->
 
-**{{ name_mod_smr }}**: {{ def_mod_smr }}
 ```{include} pro_con_assump/mod_smr_apc.md
 ```
 
@@ -60,10 +59,7 @@ Practitioners should note that the number of marked animals in a population can 
 ::::::{tab-item} Visual resources
 
 :::::{grid} 3
-:gutter: 1
-:padding: 0
-:margin: 0
-
+:class: wrapper
 ::::{grid-item-card} {{ rtxt_whittington_et_al_2018 }}
 :::{figure} ../03_images/03_image_files/whittington_et_al_2018_fig1_clipped.png
 :class: img_grid
@@ -84,7 +80,6 @@ Practitioners should note that the number of marked animals in a population can 
 :::
 ::::
 
-:::::
 ::::::
 
 ::::::{tab-item} Shiny apps/Widgets
@@ -98,23 +93,7 @@ Check back in the future!
 ::::::
 
 ::::::{tab-item} References
-{{ rbib_chandler_royle_2013 }}
-
-{{ rbib_cremmural_nd }}
-
-{{ rbib_clarke_et_al_2023 }}
-
-{{ rbib_jimenez_et_al_2021 }}
-
-{{ rbib_sollmann_et_al_2013a }}
-
-{{ rbib_rich_et_al_2014 }}
-
-{{ rbib_royle_et_al_2014 }}
-
-{{ rbib_whittington_et_al_2018 }}
-
-{{ rbib_williams_et_al_2002 }}
+{{ rbib_chandler_royle_2013 cremmural_nd clarke_et_al_2023 jimenez_et_al_2021 sollmann_et_al_2013a rich_et_al_2014 royle_et_al_2014 whittington_et_al_2018 williams_et_al_2002 }}
 ::::::
 
 :::::::

@@ -23,8 +23,6 @@ replace me with text
 :::
 -->
 
-**{{ name_sp_behav }}**: {{ def_sp_behav }}
-
 :::::::{tab-set}
 
 ::::::{tab-item} Overview
@@ -53,10 +51,7 @@ Examples of comparable species that can be used to select the most appropriate o
 ::::::{tab-item} Visual resources
 
 :::::{grid} 3
-:gutter: 1
-:padding: 0
-:margin: 0
-
+:class: wrapper
 ::::{grid-item-card} {{ rtxt_meek_et_al_2014b }}
 :::{figure} ../03_images/03_image_files/meek_et_al_2014_fig11.png
 :class: img_grid
@@ -81,13 +76,6 @@ Conceptual movement paths in which animals exhibit a variety of different reacti
 
 caption
 ::::
-
-:::::
-
-:::::{grid} 3
-:gutter: 1
-:padding: 0
-:margin: 0
 
 ::::{grid-item-card} {{ rtxt_figure4_ref_id }}
 :::{figure} ../03_images/03_image_files/figure4_filename.png
@@ -125,17 +113,7 @@ Check back in the future!
 ::::::
 
 ::::::{tab-item} References
-{{ rbib_caravaggi_et_al_2017 }}
-
-{{ rbib_caravaggi_et_al_2020 }}
-
-{{ rbib_delisle_et_al_2023 }}
-
-{{ rbib_meek_et_al_2014b }}
-
-{{ rbib_sharma_et_al_2010 }}
-
-{{ rbib_wegge_et_al_2004 }}
+{{ rbib_caravaggi_et_al_2017 caravaggi_et_al_2020 delisle_et_al_2023 meek_et_al_2014b sharma_et_al_2010 wegge_et_al_2004 }}
 ::::::
 
 :::::::

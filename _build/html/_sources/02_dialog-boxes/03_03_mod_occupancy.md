@@ -23,7 +23,6 @@ replace me with text
 :::
 -->
 
-**{{ name_mod_occupancy }}**: {{ def_mod_occupancy }}
 ```{include} pro_con_assump/mod_occupancy_apc.md
 ```
 
@@ -61,10 +60,7 @@ Despite its widespread use, occupancy may be particularly problematic for camera
 ::::::{tab-item} Visual resources
 
 :::::{grid} 3
-:gutter: 1
-:padding: 0
-:margin: 0
-
+:class: wrapper
 ::::{grid-item-card} {{ rtxt_murray_et_al_2021 }}
 :::{figure} ../03_images/03_image_files/murray_et_al_2021.jpg
 :class: img_grid
@@ -86,13 +82,6 @@ We used images of coyotes collected along transects following an urban gradient 
 :class: img_grid
 :::
 ::::
-
-:::::
-
-:::::{grid} 3
-:gutter: 1
-:padding: 0
-:margin: 0
 
 ::::{grid-item-card} {{ rtxt_chatterjee_et_al_2021 }}
 :::{figure} ../03_images/03_image_files/chatterjee_et_al_2021_table2_clipped.png
@@ -119,11 +108,6 @@ We used images of coyotes collected along transects following an urban gradient 
 ::::
 :::::
 
-:::::{grid} 3
-:gutter: 1
-:padding: 0
-:margin: 0
-
 ::::{grid-item-card} {{ rtxt_proteus_nd }}
 :::{figure} ../03_images/03_image_files/proteus_2018_obs_state.jpg
 :class: img_grid
@@ -141,13 +125,6 @@ We used images of coyotes collected along transects following an urban gradient 
 :class: img_grid
 :::
 ::::
-
-:::::
-
-:::::{grid} 3
-:gutter: 1
-:padding: 0
-:margin: 0
 
 ::::{grid-item-card} {{ rtxt_figure10_ref_id }}
 :::{figure} ../03_images/03_image_files/figure10_filename.png
@@ -167,79 +144,56 @@ We used images of coyotes collected along transects following an urban gradient 
 :::
 ::::
 
-:::::
-
-:::::{grid} 3
-:gutter: 1
-:padding: 0
-:margin: 0
-
 ::::{grid-item-card} {{ rtxt_cove_2020a }}
-<div><div style="position:relative;padding-top:56.25%;"><iframe src="https://www.youtube.com/embed/n21Ugw0lYcY?si=RUCD7WjcLPJdHR00" loading="lazy" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe></div></div>
+<div class="iframe-container-vid"><iframe class="iframe-responsive-vid" src="https://www.youtube.com/embed/n21Ugw0lYcY?si=RUCD7WjcLPJdHR00"></iframe></div>
 
 Occupancy Modeling Video 1 - Sampling Techniques for Mammals
 ::::
 
 ::::{grid-item-card} {{ rtxt_cove_2020b }}
-<div><div style="position:relative;padding-top:56.25%;"><iframe src="https://www.youtube.com/embed/u--F8_oRpVU?si=XzL4GMaQmvlL-noj" loading="lazy" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe></div></div>
+<div class="iframe-container-vid"><iframe class="iframe-responsive-vid" src="https://www.youtube.com/embed/u--F8_oRpVU?si=XzL4GMaQmvlL-noj"></iframe></div>
 
 Occupancy Modeling Video 2 -Introductory Statistical Review
 ::::
 
 ::::{grid-item-card} {{ rtxt_cove_2020c }}
-<div><div style="position:relative;padding-top:56.25%;"><iframe src="https://www.youtube.com/embed/-F-txltI_iA?si=C8R-MQ3pKcskOcQt" loading="lazy" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe></div></div>
+<div class="iframe-container-vid"><iframe class="iframe-responsive-vid" src="https://www.youtube.com/embed/-F-txltI_iA?si=C8R-MQ3pKcskOcQt"></iframe></div>
 
 Occupancy Modeling Video 3 - What are Occupancy Models and What are the Applications?
 ::::
 
-:::::
-
-:::::{grid} 3
-:gutter: 1
-:padding: 0
-:margin: 0
-
 ::::{grid-item-card} {{ rtxt_cove_2020d }}
-<div><div style="position:relative;padding-top:56.25%;"><iframe src="https://www.youtube.com/embed/DVo4KVMPnWg?si=m_umrFr9FjNb9KlK" loading="lazy" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe></div></div>
+<div class="iframe-container-vid"><iframe class="iframe-responsive-vid" src="https://www.youtube.com/embed/DVo4KVMPnWg?si=m_umrFr9FjNb9KlK"></iframe></div>
 
 Occupancy Modeling Video 4 - How to Run and Interpret the Models in PRESENCE
 ::::
 
 ::::{grid-item-card} {{ rtxt_proteus_2018 }}
-<div><div style="position:relative;padding-top:56.25%;"><iframe src="https://www.youtube.com/embed/Sp4kb4_TiBA?si=HfYJ3DgqOJfiJ4Z4l" loading="lazy" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
-</div>
-</div>
+<div class="iframe-container-vid"><iframe class="iframe-responsive-vid" src="https://www.youtube.com/embed/Sp4kb4_TiBA?si=HfYJ3DgqOJfiJ4Z4l"></iframe></div>
 
 Occupancy modelling - more than species presence/absence! (Darryl MacKenzie)
 ::::
 
 ::::{grid-item-card} {{ rtxt_proteus_2019a }}
-<div><div style="position:relative;padding-top:56.25%;"><iframe src="https://www.youtube.com/embed/zKQFY8W4ceU?si=ibziVu2KyWro5IUx" loading="lazy" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe></div></div>
+<div class="iframe-container-vid"><iframe class="iframe-responsive-vid" src="https://www.youtube.com/embed/zKQFY8W4ceU?si=ibziVu2KyWro5IUx"></iframe></div>
 
 Occupancy modelling - the difference between probability and proportion of units occupied
 ::::
 
-:::::
-
-:::::{grid} 3
-:gutter: 1
-:padding: 0
-:margin: 0
-
 ::::{grid-item-card} {{ rtxt_proteus_2019b }}
-<div><div style="position:relative;padding-top:56.25%;"><iframe src="https://www.youtube.com/embed/tCh7rTu6fvQ?si=xHlbwdQa69Kma-Ma" loading="lazy" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe></div></div>
+<div class="iframe-container-vid"><iframe class="iframe-responsive-vid" src="https://www.youtube.com/embed/tCh7rTu6fvQ?si=xHlbwdQa69Kma-Ma"></iframe></div>
 
 Occupancy models - how many covariates can I include?
 ::::
 
 ::::{grid-item-card} {{ rtxt_weecology_2020 }}
-<div><div style="position:relative;padding-top:56.25%;"><iframe src="<https://www.youtube.com/embed/0VObf2rMrI8?si=cDKbg_-IzRZNGq8T>" loading="lazy" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe></div></div>
+<div class="iframe-container-vid"><iframe class="iframe-responsive-vid" src="<https://www.youtube.com/embed/0VObf2rMrI8?si=cDKbg_-IzRZNGq8T>"></iframe></div>
 
 Introduction to Species Distribution Modeling Using R
 ::::
 
 ::::{grid-item-card} {{ rtxt_vid9_ref_id }}
-<div><div style="position:relative;padding-top:56.25%;"><iframe src="vid9_url" loading="lazy" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe></div></div>
+<div class="iframe-container-vid"><iframe class="iframe-responsive-vid" src="vid9_url"></iframe></div>
 
 ::::
 
@@ -252,14 +206,14 @@ Introduction to Species Distribution Modeling Using R
 ::::{dropdown} shiny_name
 shiny_caption
 
-<iframe width="100%" height="900" src="shiny_url" loading="lazy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="iframe-container-shiny"><iframe class="iframe-responsive-shiny" src="shiny_url"></iframe></div>
 ::::
 
 ::::{dropdown} Bias in single-season occupancy models
 Compute the relative bias (in %) in the maximum-likelihood estimator of the occupancy probability ψ in a single-season (aka static) occupancy model with constant parameters fitted with the package 'unmarked'.
 {{ rbib_gimenez_2020a }}
 
-<iframe width="100%" height="900" src="https://ecologicalstatistics.shinyapps.io/bias_occupancy/" loading="lazy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="iframe-container-shiny"><iframe class="iframe-responsive-shiny" src="https://ecologicalstatistics.shinyapps.io/bias_occupancy/"></iframe></div>
 ::::
 
 :::::
@@ -292,87 +246,7 @@ Compute the relative bias (in %) in the maximum-likelihood estimator of the occu
 ::::::
 
 ::::::{tab-item} References
-{{ rbib_burton_et_al_2015 }}
-
-{{ rbib_byrne_golden_2021 }}
-
-{{ rbib_cove_2020a }}
-
-{{ rbib_cove_2020b }}
-
-{{ rbib_cove_2020c }}
-
-{{ rbib_cove_2020d }}
-
-{{ rbib_donovan_et_al_2024 }}
-
-{{ rbib_efford_dawson_2012 }}
-
-{{ rbib_fidino_2021d }}
-
-{{ rbib_fidino_2021a }}
-
-{{ rbib_fidino_2021b }}
-
-{{ rbib_fidino_2021c }}
-
-{{ rbib_fidino_2021e }}
-
-{{ rbib_fidino_2021f }}
-
-{{ rbib_fidino_2023 }}
-
-{{ rbib_fidino_magle_2017 }}
-
-{{ rbib_fiske_chandler_2011 }}
-
-{{ rbib_gaston_et_al_2000 }}
-
-{{ rbib_gimenez_2020a }}
-
-{{ rbib_gimenez_2020b }}
-
-{{ rbib_gimenez_2023 }}
-
-{{ rbib_guillera_arroita_et_al_2012 }}
-
-{{ rbib_hines_2006 }}
-
-{{ rbib_kellner_et_al_2023 }}
-
-{{ rbib_mackenzie_et_al_2017 }}
-
-{{ rbib_mcneil_nd }}
-
-{{ rbib_murray_et_al_2021 }}
-
-{{ rbib_neilson_et_al_2018 }}
-
-{{ rbib_noon_et_al_2012 }}
-
-{{ rbib_paterson_2024 }}
-
-{{ rbib_proteus_2018 }}
-
-{{ rbib_proteus_2019a }}
-
-{{ rbib_proteus_2019b }}
-
-{{ rbib_royle_dorazio_2008 }}
-
-{{ rbib_sollmann_2018 }}
-
-{{ rbib_solymos_2023 }}
-
-{{ rbib_southwell_et_al_2019 }}
-
-{{ rbib_steenweg_et_al_2018 }}
-
-{{ rbib_stewart_et_al_2018 }}
-
-{{ rbib_weecology_2020 }}
-
-{{ rbib_wildco_lab_2021c }}
+{{ rbib_burton_et_al_2015 byrne_golden_2021 chatterjee_et_al_2021 clarke_et_al_2023 cove_2020a cove_2020b cove_2020c cove_2020d donovan_et_al_2024 efford_dawson_2012 fidino_2021d fidino_2021a fidino_2021b fidino_2021c fidino_2021e fidino_2021f fidino_2023 fidino_magle_2017 fiske_chandler_2011 gaston_et_al_2000 gimenez_2020a gimenez_2020b gimenez_2023 guillera_arroita_et_al_2011 guilleraarroita_2016 hines_2006 kellner_et_al_2023 mackenzie_et_al_2017 mcneil_nd murray_et_al_2021 neilson_et_al_2018 noon_et_al_2012 paterson_2024 proteus_2018 proteus_2019a proteus_2019b proteus_nd royle_dorazio_2008 sollmann_2018 solymos_2023 southwell_et_al_2019 steenweg_et_al_2018 stewart_et_al_2018 u_capetown_2024 weecology_2020 wildco_lab_2021c }}
 ::::::
 
 :::::::

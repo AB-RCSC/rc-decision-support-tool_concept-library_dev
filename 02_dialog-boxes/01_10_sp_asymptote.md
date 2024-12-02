@@ -23,8 +23,6 @@ replace me with text
 :::
 -->
 
-**{{ name_sp_asymptote }}**: {{ def_sp_asymptote }}
-
 :::::::{tab-set}
 
 ::::::{tab-item} Overview
@@ -57,10 +55,7 @@ It will also impact the available modelling approaches since it not always neces
 ::::::{tab-item} Visual resources
 
 :::::{grid} 3
-:gutter: 1
-:padding: 0
-:margin: 0
-
+:class: wrapper
 ::::{grid-item-card} {{ rtxt_gotelli_colwell_2011 }}
 :::{figure} ../03_images/03_image_files/gotelli_and_colwell_2011_fig4_1_clipped.png
 :class: img_grid
@@ -86,13 +81,6 @@ In CA2013, sampling effort is given by the number of records from which the numb
 **Loreau (2010) – Fig. 4** - Species accumulation and rarefaction curves. Species accumulation curves show the number of species obtained by successively censusing either individual organisms (individual-based accumulation curves) or samples (sample-based accumulation curves). Smoothed species rarefaction curves represent the statistical expectation of the corresponding accumulation curves. Credit: Rob Colwell, after Gotelli and Colwell (2001)
 ::::
 
-:::::
-
-:::::{grid} 3
-:gutter: 1
-:padding: 0
-:margin: 0
-
 ::::{grid-item-card} {{ rtxt_gotelli_chao_2013 }}
 :::{figure} ../03_images/03_image_files/gotelli_chao_2013_fig4_clipped.png
 :class: img_grid
@@ -117,31 +105,24 @@ The data represent summary counts of carabid beetles that were pitfall-trapped f
 ::::
 
 :::::
-
-:::::{grid} 3
-:gutter: 1
-:padding: 0
-:margin: 0
-
 ::::{grid-item-card} {{ rtxt_rk_stats_2018 }}
-<div><div style="position:relative;padding-top:56.25%;"><iframe src="https://www.youtube.com/embed/Jj7LYrU_6RA?si=odfIIBoC2w9h3_CU" loading="lazy" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe></div></div>
+<div class="iframe-container-vid"><iframe class="iframe-responsive-vid" src="https://www.youtube.com/embed/Jj7LYrU_6RA?si=odfIIBoC2w9h3_CU"></iframe></div>
 
 Species Accumulation Curves (11 minutes)
 ::::
 
 ::::{grid-item-card} {{ rtxt_styring_2020b }}
-<div><div style="position:relative;padding-top:56.25%;"><iframe src="https://www.youtube.com/embed/OEWdPm3zg9I?si=2RG41LmTRvWfMiEr" loading="lazy" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe></div></div>
+<div class="iframe-container-vid"><iframe class="iframe-responsive-vid" src="https://www.youtube.com/embed/OEWdPm3zg9I?si=2RG41LmTRvWfMiEr"></iframe></div>
 
 Generating a species accumulation plot in excel for BBS data
 ::::
 
 ::::{grid-item-card} {{ rtxt_wildlifedegree_2022 }}
-<div><div style="position:relative;padding-top:56.25%;"><iframe src="https://www.youtube.com/embed/h3MLWK9IJ4A?si=qOKB8jyALD3cwgAe" loading="lazy" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe></div></div>
+<div class="iframe-container-vid"><iframe class="iframe-responsive-vid" src="https://www.youtube.com/embed/h3MLWK9IJ4A?si=qOKB8jyALD3cwgAe"></iframe></div>
 
 Rarefied Species Accumulation Curves (the simple way) tutorial: How to create beautiful rarefied species accumulation curves with species richness, shannon wiener or the simpson index with abundance data, or species richness with incidence data using the iNext Online interface (which runs the iNext R package in the backgroundl
 ::::
 
-:::::
 ::::::
 
 ::::::{tab-item} Shiny apps/Widgets
@@ -149,7 +130,7 @@ Rarefied Species Accumulation Curves (the simple way) tutorial: How to create be
 :::::{card} iNext Online
 Software for interpolation and extrapolation of species diversity
 
-<iframe width="100%" height="900" src="https://chao.shinyapps.io/iNEXTOnline" loading="lazy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="iframe-container-shiny"><iframe class="iframe-responsive-shiny" src="https://chao.shinyapps.io/iNEXTOnline"></iframe></div>
 :::::
 
 ::::::
@@ -165,41 +146,9 @@ Software for interpolation and extrapolation of species diversity
 ::::::
 
 ::::::{tab-item} References
-{{ rbib_ahumada_et_al_2011 }}
+{{ rbib_ahumada_et_al_2011 chao_et_al_2016 colwell_et_al_2012 }
 
-{{ rbib_chao_et_al_2016 }}
-
-{{ rbib_colwell_et_al_2012 }
-
-{{ rbib_deng_et_al_2015 }}
-
-{{ rbib_gotelli_colwell_2001 }}
-
-{{ rbib_gotelli_colwell_2011 }}
-
-{{ rbib_li_et_al_2012 }}
-
-{{ rbib_loreau_2010 }}
-
-{{ rbib_molloy_2018 }}
-
-{{ rbib_roeland_2020 }}
-
-{{ rbib_rk_stats_2018 }}
-
-{{ rbib_ rovero_tobler_2010 }}
-
-{{ rbib_si_et_al_2014 }}
-
-{{ rbib_styring_2020b }}
-
-{{ rbib_vandooren_2016 }}
-
-{{ rbib_wearn_gloverkapfer_2017 }}
-
-{{ rbib_wearn_et_al_2016 }}
-
-{{ rbib_wildlifedegree_2022 }}
+{{ rbib_deng_et_al_2015 gotelli_colwell_2001 gotelli_colwell_2011 li_et_al_2012 loreau_2010 molloy_2018 roeland_2020 rk_stats_2018 rovero_tobler_2010 si_et_al_2014 styring_2020b vandooren_2016 wearn_gloverkapfer_2017 wearn_et_al_2016 wildlifedegree_2022 }}
 ::::::
 
 :::::::

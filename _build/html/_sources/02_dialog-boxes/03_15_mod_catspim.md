@@ -1,4 +1,4 @@
----
+﻿---
 jupytext:
   formats: md:myst
   text_representation:
@@ -23,7 +23,6 @@ replace me with text
 :::
 -->
 
-**{{ name_mod_catspim }}**: {{ def_mod_catspim }}
 ```{include} pro_con_assump/mod_catspim_apc.md
 ```
 
@@ -63,10 +62,7 @@ Field data-based simulations showed that the catSPIM was less biased and more pr
 ::::::{tab-item} Visual resources
 
 :::::{grid} 3
-:gutter: 1
-:padding: 0
-:margin: 0
-
+:class: wrapper
 ::::{grid-item-card} {{ rtxt_figure1_ref_id }}
 :::{figure} ../03_images/03_image_files/figure1_filename.png
 :class: img_grid
@@ -85,29 +81,20 @@ Field data-based simulations showed that the catSPIM was less biased and more pr
 :::
 ::::
 
-:::::
-
-:::::{grid} 3
-:gutter: 1
-:padding: 0
-:margin: 0
-
 ::::{grid-item-card} {{ rtxt_vid1_ref_id }}
-<div><div style="position:relative;padding-top:56.25%;"><iframe src="vid1_url" loading="lazy" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe></div></div>
+<div class="iframe-container-vid"><iframe class="iframe-responsive-vid" src="vid1_url"></iframe></div>
 
 ::::
 
 ::::{grid-item-card} {{ rtxt_vid2_ref_id }}
-<div><div style="position:relative;padding-top:56.25%;"><iframe src="vid2_url" loading="lazy" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe></div></div>
+<div class="iframe-container-vid"><iframe class="iframe-responsive-vid" src="vid2_url"></iframe></div>
 
 ::::
 
 ::::{grid-item-card} {{ rtxt_vid3_ref_id }}
-<div><div style="position:relative;padding-top:56.25%;"><iframe src="vid3_url" loading="lazy" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe></div></div>
+<div class="iframe-container-vid"><iframe class="iframe-responsive-vid" src="vid3_url"></iframe></div>
 
 ::::
-
-:::::
 
 ::::::
 
@@ -123,11 +110,7 @@ Check back in the future!
 ::::::
 
 ::::::{tab-item} References
-{{ rbib_augustine_et_al_2019 }}
-
-{{ rbib_clarke_et_al_2023 }}
-
-{{ rbib_sun_et_al_2022 }}
+{{ rbib_augustine_et_al_2019 clarke_et_al_2023 sun_et_al_2022 }}
 ::::::
 
 :::::::

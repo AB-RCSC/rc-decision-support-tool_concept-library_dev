@@ -23,8 +23,6 @@ replace me with text
 :::
 -->
 
-**{{ name_cam_strat_covar }}**: {{ def_cam_strat_covar }}
-
 :::::::{tab-set}
 
 ::::::{tab-item} Overview
@@ -47,10 +45,7 @@ It may not always be possible to address biases of confounding variables in the 
 ::::::{tab-item} Visual resources
 
 :::::{grid} 3
-:gutter: 1
-:padding: 0
-:margin: 0
-
+:class: wrapper
 ::::{grid-item-card} {{ rtxt_figure1_ref_id }}
 :::{figure} ../03_images/03_image_files/figure1_filename.png
 :class: img_grid
@@ -69,7 +64,6 @@ It may not always be possible to address biases of confounding variables in the 
 :::
 ::::
 
-:::::
 ::::::
 
 ::::::{tab-item} Shiny apps/Widgets
@@ -83,17 +77,7 @@ Check back in the future!
 ::::::
 
 ::::::{tab-item} References
-{{ rbib_esteveo_et_al_2017 }}
-
-{{ rbib_gilbert_et_al_2020 }}
-
-{{ rbib_hofmeester_et_al_2017 }}
-
-{{ rbib_rowcliffe_et_al_2011 }}
-
-{{ rbib_wearn_gloverkapfer_2017 }}
-
-{{ rbib_vanwilgenburg_et_al_2020 }}
+{{ rbib_esteveo_et_al_2017 gilbert_et_al_2020 hofmeester_et_al_2017 rowcliffe_et_al_2011 wearn_gloverkapfer_2017 vanwilgenburg_et_al_2020 }}
 ::::::
 
 :::::::

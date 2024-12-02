@@ -1,4 +1,4 @@
----
+﻿---
 jupytext:
   formats: md:myst
   text_representation:
@@ -16,14 +16,14 @@ editor_options:
 ---
 (i_mod_tifc)=
 # {{ title_i_mod_tifc }}
-
-<!--
 :::{hint}
-replace me with text
+:::{seealso}
+{{ link_bdg_viewshed_dens_est }}
+{{ link_bdg_mod_rem }}
+{{ link_bdg_mod_rest }}
 :::
--->
+::::
 
-**{{ name_mod_tifc }}**: {{ def_mod_tifc }}
 ```{include} pro_con_assump/mod_tifc_apc.md
 ```
 
@@ -69,11 +69,7 @@ In Uganda, TIFC-derived estimates of antelope were comparable to results from ca
 ::::::{tab-item} Visual resources
 
 :::::{grid} 3
-:gutter: 1
-:padding: 0
-:margin: 0
 :class: wrapper
-
 ::::{grid-item-card} {{ rtxt_clarke_et_al_2023 }}
 :::{figure} ../03_images/03_image_files/clarke_et_al_2023_eqn_tifc1.png
 :class: img_grid
@@ -112,24 +108,24 @@ In Uganda, TIFC-derived estimates of antelope were comparable to results from ca
 :::
 ::::
 
+:::::
 ::::{grid-item-card} {{ rtxt_becker_2024 }}
-<div><div style="position:relative;padding-top:56.25%;"><iframe src="https://drive.google.com/file/d/1IdxQScbzkHd2griu-dEYM4FTFjaXalKe/preview" loading="lazy" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe></div></div>
+<div class="iframe-container-vid"><iframe class="iframe-responsive-vid" src="https://drive.google.com/file/d/1IdxQScbzkHd2griu-dEYM4FTFjaXalKe/preview"></iframe></div>
 
 How to estimate density using TIFC;
 Video clip from presentation titled "Comparisons between moose densities with aerial surveys and integrated camera projects"
 ::::
 
 ::::{grid-item-card} {{ rtxt_vid2_ref_id }}
-<div><div style="position:relative;padding-top:56.25%;"><iframe src="vid2_url" loading="lazy" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe></div></div>
+<div class="iframe-container-vid"><iframe class="iframe-responsive-vid" src="vid2_url"></iframe></div>
 
 ::::
 
 ::::{grid-item-card} {{ rtxt_vid3_ref_id }}
-<div><div style="position:relative;padding-top:56.25%;"><iframe src="vid3_url" loading="lazy" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe></div></div>
+<div class="iframe-container-vid"><iframe class="iframe-responsive-vid" src="vid3_url"></iframe></div>
 
 ::::
 
-:::::
 ::::::
 
 ::::::{tab-item} Shiny apps/Widgets
@@ -141,24 +137,13 @@ Check back in the future!
 |:----------------|:-------------------------------|:----------------------------------------------------------------|:----------------------|:----------------------------------------|
 | Tutorial | Estimating animal density using TIFC (Time In Front of Camera) | Created by author of TIFC method. | <https://github.com/mabecker89/tifc-method> | {{ rbib_becker_et_al_2021 }} |
 | R package | abmi.camera.extras | | <https://mabecker89.github.io/abmi.camera.extras> | {{ rbib_becker_et_al_2020 }} |
-| Tutorial | abmi.camera.extras: Animal Density from Camera Data | | Main resource page <https://mabecker89.github.io/abmi.camera.extras/index.html> includes:<br>- [Overview]<https://mabecker89.github.io/abmi.camera.extras/articles/overview.html><br>- [Probabilistic gaps]<https://mabecker89.github.io/abmi.camera.extras/articles/gaps.html><br>- [Time in the camera field of view]<https://mabecker89.github.io/abmi.camera.extras/articles/fov.html><br>- [Effective detection distance]<https://mabecker89.github.io/abmi.camera.extras/articles/edd.html><br>- [Density at individual deployments]<https://mabecker89.github.io/abmi.camera.extras/articles/dep-density.html>- [Lure adjustments]<https://mabecker89.github.io/abmi.camera.extras/articles/lure.html><br>- [Density in an area of interest (AOI)]<https://mabecker89.github.io/abmi.camera.extras/articles/aoi-density.html><br>- [Important assumptions]<https://mabecker89.github.io/abmi.camera.extras/articles/assumptions.html> | {{ rbib_becker_et_al_2020 }} |||
+| Tutorial | abmi.camera.extras: Animal Density from Camera Data | | Main resource page <https://mabecker89.github.io/abmi.camera.extras/index.html> includes:<br>- [Overview]<https://mabecker89.github.io/abmi.camera.extras/articles/overview.html><br>- [Probabilistic gaps]<https://mabecker89.github.io/abmi.camera.extras/articles/gaps.html><br>- [Time in the camera field of view]<https://mabecker89.github.io/abmi.camera.extras/articles/fov.html><br>- [Effective detection distance]<https://mabecker89.github.io/abmi.camera.extras/articles/edd.html><br>- [Density at individual deployments]<https://mabecker89.github.io/abmi.camera.extras/articles/dep-density.html>- [Lure adjustments]<https://mabecker89.github.io/abmi.camera.extras/articles/lure.html><br>- [Density in an area of interest (AOI)]<https://mabecker89.github.io/abmi.camera.extras/articles/aoi-density.html><br>- [Important assumptions]<https://mabecker89.github.io/abmi.camera.extras/articles/assumptions.html> | {{ rbib_becker_et_al_2020 }} |
+| Article | One size does not fit all: A novel approach for determining the Realised Viewshed Size for remote camera traps. | | https://doi.org/10.1101/2024.05.09.593241 | {{ rbib_carswell_et_al_2024 }} ||
 <!-- END_RESOURCE_TABLE -->
 ::::::
 
 ::::::{tab-item} References
-{{ rbib_becker_et_al_2022 }}
-
-{{ rbib_becker_2024 }}
-
-{{ rbib_clarke_et_al_2023 }}
-
-{{ rbib_dickie_2022 }}
-
-{{ rbib_foca_2021 }}
-
-{{ rbib_palencia_et_al_2022 }}
-
-{{ rbib_warbington_boyce_2020 }}
+{{ rbib_becker_et_al_2022 becker_2024 carswell_et_al_2024 clarke_et_al_2023 dickie_2022 foca_2021 palencia_et_al_2022 warbington_boyce_2020 }}
 ::::::
 
 :::::::

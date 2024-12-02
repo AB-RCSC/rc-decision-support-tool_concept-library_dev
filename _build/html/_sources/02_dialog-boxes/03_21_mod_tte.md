@@ -23,7 +23,6 @@ replace me with text
 :::
 -->
 
-**{{ name_mod_tte }}**: {{ def_mod_tte }}
 ```{include} pro_con_assump/mod_tte_apc.md
 ```
 
@@ -86,10 +85,7 @@ The TTE has also performed poorly in natural populations. A study on snowshoe ha
 ::::::{tab-item} Visual resources
 
 :::::{grid} 3
-:gutter: 1
-:padding: 0
-:margin: 0
-
+:class: wrapper
 ::::{grid-item-card} {{ rtxt_clarke_et_al_2023 }}
 :::{figure} ../03_images/03_image_files/clarke_et_al_2023_eqn_tte1.png
 :class: img_grid
@@ -111,13 +107,6 @@ The equation for camera data-based density estimation using TTE, where *𝜆* is
 :::
 **Clarke et al. (2023) - Fig. 10** Adapted from Moeller et al. (2018). Visualization of how total sampling time at a camera station is broken down into sampling occasions and then sampling periods.
 ::::
-
-:::::
-
-:::::{grid} 3
-:gutter: 1
-:padding: 0
-:margin: 0
 
 ::::{grid-item-card} {{ rtxt_clarke_et_al_2023 }}
 :::{figure} ../03_images/03_image_files/clarke_et_al_2023_fig11_clipped.png
@@ -141,12 +130,6 @@ The equation for camera data-based density estimation using TTE, where *𝜆* is
 ::::
 
 :::::
-
-:::::{grid} 3
-:gutter: 1
-:padding: 0
-:margin: 0
-
 ::::{grid-item-card} {{ rtxt_moeller_et_al_2018 }}
 :::{figure} ../03_images/03_image_files/moeller_et_al_2018_fig2_clipped.png
 :class: img_grid
@@ -168,7 +151,6 @@ The circular sector is the viewshed of a single camera *i* on a single occasion 
 :::
 ::::
 
-:::::
 ::::::
 
 ::::::{tab-item} Shiny apps/Widgets
@@ -183,29 +165,9 @@ Check back in the future!
 ::::::
 
 ::::::{tab-item} References
-{{ rbib_clark_et_al_2003 }}
+{{ rbib_clark_et_al_2003 clarke_et_al_2023 jennelle_et_al_2002 jensen_et_al_2022 loonam_2019 loonam_et_al_2021a loonam_et_al_2021b }}
 
-{{ rbib_clarke_et_al_2023 }}
-
-{{ rbib_jennelle_et_al_2002 }}
-
-{{ rbib_jensen_et_al_2022 }}
-
-{{ rbib_loonam_2019 }}
-
-{{ rbib_loonam_et_al_2021a }}
-
-{{ rbib_loonam_et_al_2021b }}
-
-({{ rbib_lukacs_2021 }}
-
-{{ rbib_moeller_lukacs_2021 }}
-
-{{ rbib_moeller_et_al_2018 }}
-
-{{ rbib_morin_et_al_2022 }}
-
-{{ rbib_parsons_et_al_2017 }}
+({{ rbib_lukacs_2021 moeller_lukacs_2021 moeller_et_al_2018 morin_et_al_2022 parsons_et_al_2017 }}
 ::::::
 
 :::::::
