@@ -1,0 +1,526 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Colour blind-friendly &#8212; Remote Camera Decision Support Tool - Concept Library</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/tippy.css?v=7a364cf7" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=703e16d2" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-PJDP7DQ9Q0"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-PJDP7DQ9Q0');
+            </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-PJDP7DQ9Q0');
+            </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '02_dialog-boxes/00_test_keep';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none"></div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="colour-blind-friendly">
+<h1>Colour blind-friendly<a class="headerlink" href="#colour-blind-friendly" title="Link to this heading">#</a></h1>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-4 sd-row-cols-xs-4 sd-row-cols-sm-4 sd-row-cols-md-4 sd-row-cols-lg-4 sd-g-3 sd-g-xs-3 sd-g-sm-3 sd-g-md-3 sd-g-lg-3 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm class-pale-red docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><strong><font size='4'>pale-red</font></strong></p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm class-orange docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><strong><font size='4'>orange</font></strong></p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm class-pale-yellow docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><strong><font size='4'>pale-yellow</font></strong></p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm class-sand docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><strong><font size='4'>sand</font></strong></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-4 sd-row-cols-xs-4 sd-row-cols-sm-4 sd-row-cols-md-4 sd-row-cols-lg-4 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm class-light-yellow docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><strong><font size='4'>light-yellow</font></strong></p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm class-yellow docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><strong><font size='4'>yellow</font></strong></p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm class-pale-green docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><strong><font size='4'>pale-green</font></strong></p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm class-pear docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><strong><font size='4'>pear</font></strong></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-4 sd-row-cols-xs-4 sd-row-cols-sm-4 sd-row-cols-md-4 sd-row-cols-lg-4 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm class-olive docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><strong><font size='4'>olive</font></strong></p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm class-mint docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><strong><font size='4'>mint</font></strong></p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm class-pale-cyan docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><strong><font size='4'>pale-cyan</font></strong></p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm class-pale-blue docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><strong><font size='4'>pale-blue</font></strong></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-4 sd-row-cols-xs-4 sd-row-cols-sm-4 sd-row-cols-md-4 sd-row-cols-lg-4 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm class-pale-grey docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><strong><font size='4'>pale-grey</font></strong></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="tooltip">
+<h1>00_tooltip ——————————————————————–<a class="headerlink" href="#tooltip" title="Link to this heading">#</a></h1>
+<p>this is a sub <button type="button" class="btn btn-link btn-bd-text btn-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="The method used to reach the camera location (e.g., on...)."><a class="reference internal" href="09_glossary.html#access-method"><span class="std std-ref">Access Method</span></a></button></p>
+<p>not sub
+test <button type="button" class="btn btn-link btn-bd-text btn-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="The method used to reach the camera location (e.g., on...)."><a class="reference internal" href="09_glossary.html#access-method"><span class="std std-ref">Access Method</span></a></button> and more text</p>
+<p><span class="align-middle">align-middle<button type="button" class="btn btn-link btn-bd-text btn-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="The method used to reach the camera location (e.g., on...)."><a class="reference internal" href="09_glossary.html#access-method"><span class="std std-ref">Access Method</span></a></button> and more text</span></p>
+<p><span class="align-baseline">align-baseline <button type="button" class="btn btn-link btn-bd-text btn-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="The method used to reach the camera location (e.g., on...)."><a class="reference internal" href="09_glossary.html#access-method"><span class="std std-ref">Access Method</span></a></button> and more text</span></p>
+<p><span class="align-top"> align-top<button type="button" class="btn btn-link btn-bd-text btn-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="The method used to reach the camera location (e.g., on...)."><a class="reference internal" href="09_glossary.html#access-method"><span class="std std-ref">Access Method</span></a></button> and more text</span></p>
+<p><span class="align-bottom">align-bottom<button type="button" class="btn btn-link btn-bd-text btn-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="The method used to reach the camera location (e.g., on...)."><a class="reference internal" href="09_glossary.html#access-method"><span class="std std-ref">Access Method</span></a></button> and more text</span></p>
+<p><span class="align-text-top">text-top<button type="button" class="btn btn-link btn-bd-text btn-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="The method used to reach the camera location (e.g., on...)."><a class="reference internal" href="09_glossary.html#access-method"><span class="std std-ref">Access Method</span></a></button> and more text</span></p>
+<p><span class="align-text-bottom">text-bottom<button type="button" class="btn btn-link btn-bd-text btn-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="The method used to reach the camera location (e.g., on...)."><a class="reference internal" href="09_glossary.html#access-method"><span class="std std-ref">Access Method</span></a></button> and more text</span></p>
+<p><span class="align-baseline">baseline</span>
+<span class="align-top">top</span>
+<span class="align-middle">middle</span>
+<span class="align-bottom">bottom</span>
+<span class="align-text-top">text-top</span>
+<span class="align-text-bottom"></p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="old">
+<h1>old<a class="headerlink" href="#old" title="Link to this heading">#</a></h1>
+<p><span class='underline example'>underline</span></p>
+<button type="button" class="btn btn-secondary btn-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top">
+  Tooltip on top
+</button>
+<button type="button" class="btn btn-secondary btn-sm" data-bs-toggle="tooltip" data-bs-placement="right" title="Tooltip on right">
+  Tooltip on right
+</button>
+<button type="button" class="btn btn-secondary btn-sm" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tooltip on bottom">
+  Tooltip on bottom
+</button>
+<button type="button" class="btn btn-secondary btn-sm" data-bs-toggle="tooltip" data-bs-placement="left" title="Tooltip on left">
+  Tooltip on left
+</button>
+<br>
+<p class="sd-text-center"><a class="sd-sphinx-override sd-btn sd-text-wrap sd-btn-primary sd-shadow-sm reference external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library" title="I am a tooltip"><span>Concept library</span></a></p>
+<p><a class="reference internal" href="09_glossary.html#access-method"><span class="std std-ref"><button type="button" class="btn btn-secondary btn-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top">
+<span style="color:#2F5496"><u>Access Method</u></span></button></span></a></p>
+<p>Here is some text <button type="button" class="btn btn-link btn-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="The method used to reach the camera location (e.g., on...)."><a class="reference internal" href="09_glossary.html#access-method"><span class="std std-ref">Access Method</span></a></button> and more text</p>
+<br>
+<button type="button" class="btn btn-secondary btn-sm" btn-border-width= "0px" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"><span class='underline'>Access Method</span></button>
+<p><button type="button" class="btn btn-secondary btn-sm input-btn-padding-y-sm input-btn-padding-x-sm input-btn-font-size-sm" btn-border-width= "1px" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"><span class='underline'>Access Method</span></button></p>
+<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="tooltip" data-bs-placement="right" title="Tooltip on right">
+  Species Inventory
+</button>
+<p><a class="sd-sphinx-override sd-badge sd-bg-white sd-bg-text-white reference external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library"><span>explicit title</span></a></p>
+<button type="button" class="btn btn-secondary position-relative">
+  Inbox
+  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning">
+    i
+    <span class="visually-hidden">info</span>
+  </span>
+</button>
+<p><br><br></p>
+<button type="button" class="btn btn-secondary position-relative">
+  Species Inventory
+  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning">
+    i
+    <span class="visually-hidden">info</span>
+  </span>
+</button>
+<div class="d-grid gap-2 col-6 mx-auto">
+  <button class="btn btn-primary position-relative" type="button">Button</button>
+      <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning">
+      i
+      <span class="visually-hidden">info</span>
+    </span>
+  <button class="btn btn-primary position-relative" type="button">Button</button>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="test-embed">
+<h1>00_test_embed ——————————————————————–<a class="headerlink" href="#test-embed" title="Link to this heading">#</a></h1>
+<p>this one</p>
+<figure class="align-default" id="id1">
+<a class="img-grid reference internal image-reference" href="../_images/clarke_et_al_2023_fig7_clipped.png"><img alt="../_images/clarke_et_al_2023_fig7_clipped.png" class="img-grid" src="../_images/clarke_et_al_2023_fig7_clipped.png" style="width: 300px;" /></a>
+<figcaption>
+<p><span class="caption-text"><strong>Clarke et al. (2023) - Fig. 7</strong> Measuring <em>𝑟</em> and <em>𝜃</em> by field trial. The perimeter of the detection zone is determined by approaching the camera from different angles and at different speeds, and noting where the camera’s sensor (red flash) detects motion (red dots).</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id2">
+<a class="img-grid reference internal image-reference" href="../_images/00_home_range.jpg"><img alt="../_images/00_home_range.jpg" class="img-grid" src="../_images/00_home_range.jpg" style="width: 300px;" /></a>
+<figcaption>
+<p><span class="caption-text">This is a home range….</span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<blockquote>
+<div><p>This is a home range….</p>
+</div></blockquote>
+<p>this one</p>
+<figure class="align-default" id="id3">
+<a class="img-grid reference internal image-reference" href="../_images/clarke_et_al_2023_fig7_clipped.png"><img alt="../_images/clarke_et_al_2023_fig7_clipped.png" class="img-grid" src="../_images/clarke_et_al_2023_fig7_clipped.png" style="width: 300px;" /></a>
+<figcaption>
+<p><span class="caption-text"><strong>Clarke et al. (2023) - Fig. 7</strong> Measuring <em>𝑟</em> and <em>𝜃</em> by field trial. The perimeter of the detection zone is determined by approaching the camera from different angles and at different speeds, and noting where the camera’s sensor (red flash) detects motion (red dots).</span><a class="headerlink" href="#id3" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id4">
+<a class="img-grid reference internal image-reference" href="../_images/00_home_range.jpg"><img alt="../_images/00_home_range.jpg" class="img-grid" src="../_images/00_home_range.jpg" style="width: 300px;" /></a>
+<figcaption>
+<p><span class="caption-text">This is a home range….</span><a class="headerlink" href="#id4" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<blockquote>
+<div><p>This is a home range….</p>
+</div></blockquote>
+<hr class="docutils" />
+<p>1</p>
+<p>2</p>
+<p>3</p>
+<p>4</p>
+<p>5</p>
+<p>6</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="test-cross-ref">
+<h1>00_test_cross_ref ——————————————————————–<a class="headerlink" href="#test-cross-ref" title="Link to this heading">#</a></h1>
+<iframe 
+    width="100%"
+    height="900"
+    src="https://www.rc-decision-support-tool.ca/voila/render/objective.ipynb?"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen>
+</iframe>
+<p><span class="xref std std-ref">*Access Method</span>  <!-- https://myst-parser.readthedocs.io/en/latest/syntax/optional.html#block-attributes-->
+<span class="xref std std-ref">your text here</span>
+<span class="xref std std-ref">your text here</span></p>
+<!-- worked to 09_glossary_blocktest.md-->
+<p><a class="reference internal" href="09_glossary.html#term-Access-Method"><span class="xref std std-term">*Access Method</span></a><!-- worked-->
+<a class="reference internal" href="09_glossary.html#term-Access-Method"><span class="xref std std-term">term test</span></a><!-- worked-->
+<a class="reference internal" href="09_glossary.html#access-method"><span class="std std-ref">ref text here</span></a>
+<a class="reference internal" href="09_glossary.html#access-method"><span class="std std-ref">test</span></a>  goes to page but not ref
+<code class="docutils literal notranslate"><span class="pre">/09_glossary2.md#access_method</span></code>
+[]{mods_zero_inflation}
+‘{‘#access_method’}’
+{#age_class_adult}
+{age_class}</p>
+<!-- (heading-target)=
+### Heading
+{#paragraph-target}=
+This is a paragraph, with an `id` attribute.
+This is a [span with an `id` attribute]{#span-target}
+
+:::{note}
+:name: directive-target
+
+This is a directive with a `name` option
+:::
+
+[heading link](#heading-target), [paragraph link](#paragraph-target),
+[span link](#span-target), [directive link](#directive-target)
+-->
+<!-- https://myst-parser.readthedocs.io/en/latest/syntax/cross-referencing.html--> 
+<!-- https://pydata-sphinx-theme.readthedocs.io/en/stable/examples/kitchen-sink/generic.html#inline-hyperlink-targets--> 
+<!-- https://docs.readthedocs.io/en/stable/guides/cross-referencing-with-sphinx.html#finding-the-reference-name--> 
+<!-- WITH myst_heading_anchors: 3--> 
+<!-- SAME WITH NO myst_heading_anchors: 3--> 
+<!-- this is with target immediatiely after the id)--> 
+<!-- (access_method)=
+ **\*Access Method 
+[test](access_method)  ## goes to page but not ref
+[test](#access_method) ## goes NOWHERE
+[test](/09_glossary2.md#access_method)  ## unsure
+[test](./09_glossary2.md#access_method) ## WORKS
+
+[test](../09_glossary.md#access_method) ## goes to page but not ref
+(#age_class_adult)=
+**Adult**
+[test](/09_glossary.md#age_class_adult) ## goes to page but not ref
+[test](./09_glossary.md#age_class_adult)## goes NOWHERE
+[test](../09_glossary.md#age_class_adult) ## goes to page but not ref
+-->
+<!-- now try with space no difference-->
+<!-- # goes NOWHERE
+[test]{/09_glossary.md#deployment_comments} 
+[test]{./09_glossary.md#deployment_comments}
+[test]{../09_glossary.md#deployment_comments}
+[test]{/09_glossary.md#deployment_crew}
+[test]{./09_glossary.md#deployment_crew}
+[test]{../09_glossary.md#deployment_crew}
+-->
+<!-- now try with space no difference--></section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./02_dialog-boxes"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+              
+              
+              
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="component-author">
+By Alberta Remote Camera Steering Committee (RCSC)
+</p>
+</div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

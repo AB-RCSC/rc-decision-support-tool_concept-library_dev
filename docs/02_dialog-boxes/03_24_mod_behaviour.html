@@ -16,8 +16,8 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
-  <!-- 
-    this give us a css class that will be invisible only if js is disabled 
+  <!--
+    this give us a css class that will be invisible only if js is disabled
   -->
   <noscript>
     <style>
@@ -27,29 +27,23 @@
   </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="../_static/class-prog.css?v=e0b0bc6d" />
-    <link rel="stylesheet" type="text/css" href="../_static/colours.css?v=9897dbfc" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=5e97e934" />
-    <link rel="stylesheet" type="text/css" href="../_static/iframe.css?v=2a601663" />
-    <link rel="stylesheet" type="text/css" href="../_static/scratch_backup.css?v=5f02f252" />
-    <link rel="stylesheet" type="text/css" href="../_static/test.css?v=32d70693" />
-    <link rel="stylesheet" type="text/css" href="../_static/tooltips.css?v=4de49550" />
-    <link rel="stylesheet" type="text/css" href="../_static/youtube.css?v=70faa909" />
+    <link rel="stylesheet" type="text/css" href="../_static/tippy.css?v=7a364cf7" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=703e16d2" />
   
   <!-- So that users can add custom icons -->
-  <script src="../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
     <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
@@ -63,9 +57,22 @@
     <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-PJDP7DQ9Q0"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-PJDP7DQ9Q0');
+            </script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-PJDP7DQ9Q0');
+            </script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = '02_dialog-boxes/03_24_mod_behaviour';</script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -113,154 +120,6 @@
 
   
     <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
-<div class="bd-header__inner bd-page-width">
-  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
-    <span class="fa-solid fa-bars"></span>
-  </button>
-  
-  
-  <div class=" navbar-header-items__start">
-    
-      <div class="navbar-item">
-
-  
-    
-  
-
-<a class="navbar-brand logo" href="../index.html">
-  
-  
-  
-  
-  
-    
-    
-      
-    
-    
-    <img src="../_static/logo.png" class="logo__image only-light" alt="Remote Camera Decision Support Tool - Concept Library - Home"/>
-    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="Remote Camera Decision Support Tool - Concept Library - Home"/>
-  
-  
-</a></div>
-    
-  </div>
-  
-  <div class=" navbar-header-items">
-    
-    <div class="me-auto navbar-header-items__center">
-      
-        <div class="navbar-item">
-<nav>
-  <ul class="bd-navbar-elements navbar-nav">
-    
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="00_test/00_test_img.html">
-    <no title>
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-external" href="https://ab-rcsc.github.io/rc-decision-support-tool">
-    <b>Home</b> 
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/">
-    Concept library
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/09_glossary.html">
-    Glossary
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/08_references.html">
-    References
-  </a>
-</li>
-
-  </ul>
-</nav></div>
-      
-    </div>
-    
-    
-    <div class="navbar-header-items__end">
-      
-        <div class="navbar-item navbar-persistent--container">
-          
-
-<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
- <i class="fa-solid fa-magnifying-glass"></i>
- <span class="search-button__default-text">Search</span>
- <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-</button>
-        </div>
-      
-      
-        <div class="navbar-item"><ul class="navbar-icon-links"
-    aria-label="Icon Links">
-        <li class="nav-item">
-          
-          
-          
-          
-          
-          
-          
-          
-          <a href="https://github.com/AB-RCSC/rc-decision-support-tool" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-github-square fa-lg" aria-hidden="true"></i>
-            <span class="sr-only">GitHub</span></a>
-        </li>
-        <li class="nav-item">
-          
-          
-          
-          
-          
-          
-          
-          
-          <a href="https://ab-rcsc.github.io/RCSC-WildCAM_Remote-Camera-Survey-Guidelines-and-Metadata-Standards/" title="Survey Guidelines / Metadata Standards" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="../_static/logo_survguide_metadata.png" class="icon-link-image" alt="Survey Guidelines / Metadata Standards"/></a>
-        </li>
-</ul></div>
-      
-        <div class="navbar-item">
-
-  <div class="tocsection sourcelink">
-    <a href="../_sources/02_dialog-boxes/03_24_mod_behaviour.md">
-      <i class="fa-solid fa-file-lines"></i> Show Source
-    </a>
-  </div>
-</div>
-      
-    </div>
-    
-  </div>
-  
-  
-    <div class="navbar-persistent--mobile">
-
-<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
- <i class="fa-solid fa-magnifying-glass"></i>
- <span class="search-button__default-text">Search</span>
- <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-</button>
-    </div>
-  
-
-  
-</div>
-
     </header>
   
 
@@ -279,103 +138,20 @@
   <div class="sidebar-header-items sidebar-primary__section">
     
     
-      <div class="sidebar-header-items__center">
-        
-          
-          
-            <div class="navbar-item">
-<nav>
-  <ul class="bd-navbar-elements navbar-nav">
     
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="00_test/00_test_img.html">
-    <no title>
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-external" href="https://ab-rcsc.github.io/rc-decision-support-tool">
-    <b>Home</b> 
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/">
-    Concept library
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/09_glossary.html">
-    Glossary
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/08_references.html">
-    References
-  </a>
-</li>
-
-  </ul>
-</nav></div>
-          
-        
-      </div>
-    
-    
-    
-      <div class="sidebar-header-items__end">
-        
-          <div class="navbar-item"><ul class="navbar-icon-links"
-    aria-label="Icon Links">
-        <li class="nav-item">
-          
-          
-          
-          
-          
-          
-          
-          
-          <a href="https://github.com/AB-RCSC/rc-decision-support-tool" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-github-square fa-lg" aria-hidden="true"></i>
-            <span class="sr-only">GitHub</span></a>
-        </li>
-        <li class="nav-item">
-          
-          
-          
-          
-          
-          
-          
-          
-          <a href="https://ab-rcsc.github.io/RCSC-WildCAM_Remote-Camera-Survey-Guidelines-and-Metadata-Standards/" title="Survey Guidelines / Metadata Standards" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="../_static/logo_survguide_metadata.png" class="icon-link-image" alt="Survey Guidelines / Metadata Standards"/></a>
-        </li>
-</ul></div>
-        
-          <div class="navbar-item">
-
-  <div class="tocsection sourcelink">
-    <a href="../_sources/02_dialog-boxes/03_24_mod_behaviour.md">
-      <i class="fa-solid fa-file-lines"></i> Show Source
-    </a>
-  </div>
-</div>
-        
-      </div>
     
   </div>
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -396,11 +172,7 @@
                   
   <section class="tex2jax_ignore mathjax_ignore" id="behaviour">
 <span id="i-mod-behaviour"></span><h1>Behaviour<a class="headerlink" href="#behaviour" title="Link to this heading">#</a></h1>
-<!--
-:::{hint}
-replace me with text
-:::
--->
+<p><strong></strong>: </p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Assumptions, Pros, Cons</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
@@ -412,8 +184,8 @@ replace me with text
 <div class="sd-card-title sd-font-weight-bold docutils">
 Assumptions</div>
 <ul class="simple">
-<li><p class="sd-card-text"><a href="09_glossary.html#mod_assumption" target="_blank" data-bs-toggle="tooltip" data-bs-title="Model assumption: Explicitly stated (or implicitly premised) conventions, choices and other specifications (e.g., about the data, wildlife ecology*/behaviour, the relationships between variables, etc.) on which a particular modelling approach is based that allows the model to provide valid inference.">Assumptions<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a> vary depending on the behavioural metric (Wearn &amp; Glover-Kapfer, 2017)</p></li>
-<li><p class="sd-card-text">For studies of activity patterns and temporal interactions of species: activity level is the only factor determining <a href="09_glossary.html#detection_rate" target="_blank" data-bs-toggle="tooltip" data-bs-title="Detection rate: The frequency of independent detections within a specified time period.">detection rates<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a>; animals are active when camera <a href="09_glossary.html#detection_rate" target="_blank" data-bs-toggle="tooltip" data-bs-title="Detection rate: The frequency of independent detections within a specified time period.">detection rate<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a> reaches its maximum in daily cycle (Royle et al., 2014; Rovero &amp; Zimmermann, 2016)</p></li>
+<li><p class="sd-card-text">Assumptions vary depending on the behavioural metric (Wearn &amp; Glover-Kapfer, 2017)</p></li>
+<li><p class="sd-card-text">For studies of activity patterns and temporal interactions of species: activity level is the only factor determining detection rates; animals are active when camera detection rate reaches its maximum in daily cycle (Royle et al., 2014; Rovero &amp; Zimmermann, 2016)</p></li>
 </ul>
 </div>
 </div>
@@ -439,7 +211,7 @@ Pros</div>
 Cons</div>
 <ul class="simple">
 <li><p class="sd-card-text">Behavioural metrics may not reflect the behavioural state (inferred) (Rovero &amp; Zimmermann, 2016)</p></li>
-<li><p class="sd-card-text"><a href="09_glossary.html#bias" target="_blank" data-bs-toggle="tooltip" data-bs-title="Bias: A skewed or altered perspective. Biased data refers to data that may be inaccurate or unevenly portrayed (usually in favour of specific variables) and is therefore not as robust.' (Kemp et al., 2022).">Biases<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a> associated with equipment (i.e., presence of the camera itself may change behaviour studied) (Rovero &amp; Zimmermann, 2016)</p></li>
+<li><p class="sd-card-text">Biases associated with equipment (i.e., presence of the camera itself may change behaviour studied) (Rovero &amp; Zimmermann, 2016)</p></li>
 <li><p class="sd-card-text">Difficult to consider individual variation (Rovero &amp; Zimmermann, 2016)</p></li>
 </ul>
 </div>
@@ -468,15 +240,25 @@ In-depth</label><div class="sd-tab-content docutils">
 <input id="sd-tab-item-2" name="sd-tab-set-0" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-2">
 Visual resources</label><div class="sd-tab-content docutils">
-<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
-<div class="sd-row sd-row-cols-3 sd-row-cols-xs-3 sd-row-cols-sm-3 sd-row-cols-md-3 sd-row-cols-lg-3 docutils">
-<p><strong>Caravaggi et al. (2017) - Fig. 1.</strong> Examples of animal behaviour captured by camera traps:</p>
+<div class="sd-container-fluid sd-sphinx-override sd-m-0 sd-p-0 docutils">
+<div class="sd-row sd-row-cols-3 sd-row-cols-xs-3 sd-row-cols-sm-3 sd-row-cols-md-3 sd-row-cols-lg-3 sd-g-1 sd-g-xs-1 sd-g-sm-1 sd-g-md-1 sd-g-lg-1 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Caravaggi et al., 2017</div>
+<figure class="align-default">
+<img alt="../_images/caravaggi_et_al_2017_fig1_clipped.png" class="img-grid" src="../_images/caravaggi_et_al_2017_fig1_clipped.png" />
+</figure>
+<p class="sd-card-text"><strong>Caravaggi et al. (2017) - Fig. 1.</strong> Examples of animal behaviour captured by camera traps:</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-kebab-horizontal no-title" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14a2 2 0 1 1-.001-3.999A2 2 0 0 1 20 14ZM6 12a2 2 0 1 1-3.999.001A2 2 0 0 1 6 12Zm8 0a2 2 0 1 1-3.999.001A2 2 0 0 1 14 12Z"></path></svg></span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">(A) Scent marking by an American black bear (<em>Ursus americanus</em>); (B) intraspecific competition in moose (<em>Alces alces</em>); (C) interspecific interactions between a European hare (<em>Lepus europaeus</em>; anti-predator response), a common buzzard (<em>Buteo buteo</em>; avoidance and attempted predation) and a hooded crow (<em>Corvus cornix</em>; anti-predator behaviour) captured on video (available at 10.6084/m9.figshare.4508369); (D) predation of a European rabbit (<em>Oryctolagus cuniculus</em>) by a red fox (<em>Vulpes vulpes</em>); (E) investigation of a squirrel feeding station by a pine marten (<em>Martes martes</em>); (F) nut caching by a grey squirrel (<em>Sciurus carolinensis</em>). Images provided by A.C. Burton (a, b), A. Caravaggi (c, d) and C.M.V. Finlay (e, f).</p>
 </div>
-</details><div class="docutils">
+</details></div>
+</div>
+</div>
 <div class="sd-col sd-d-flex-row docutils">
 <div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
 <div class="sd-card-body docutils">
@@ -495,105 +277,40 @@ Caravaggi et al., 2020</div>
 </div>
 </div>
 </div>
-<div class="sd-col sd-d-flex-row docutils">
-<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
-<div class="sd-card-body docutils">
-<div class="sd-card-title sd-font-weight-bold docutils">
-Delisle et al., 2023</div>
-<figure class="align-default">
-<img alt="../_images/delisle_et_al_2023_fig1.jpg" class="img-grid" src="../_images/delisle_et_al_2023_fig1.jpg" />
-</figure>
-<p class="sd-card-text"><strong>Delisle et al. (2023) - Fig 1</strong> Conceptual movement paths in which animals exhibit a variety of different reactive behaviours towards camera traps: (A) attraction towards the camera trap; (B) freezing normal travel; (C) fleeing in response to being detected by the camera trap; and (d) fleeing in response to the presence of the camera trap regardless of being detected. Panels depicting actual animals exhibiting a variety of reactive behaviours towards camera traps: (A) white-tailed deer (<em>Odocoileus virginianus</em>) that is attracted towards the camera trap; (B) white-tailed deer that freezes in front of a camera trap; and (C) coyote (<em>Canis latrans</em>) that flees in response to being detected by a camera trap.</p>
-</div>
-</div>
-</div>
-<div class="sd-col sd-d-flex-row docutils">
-<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
-<div class="sd-card-body docutils">
-<div class="sd-card-title sd-font-weight-bold docutils">
-Delisle et al., 2023</div>
-<figure class="align-default">
-<img alt="../_images/delisle_et_al_2023_fig2.jpg" class="img-grid" src="../_images/delisle_et_al_2023_fig2.jpg" />
-</figure>
-<p class="sd-card-text"><strong>Delisle et al. (2023) - Fig 2</strong> The average density estimates (animals/km<sup>2</sup> ± 95% confidence intervals [CI]) from detections of simulated animals at camera traps across 100 total simulations for each reaction type.</p>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-kebab-horizontal no-title" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14a2 2 0 1 1-.001-3.999A2 2 0 0 1 20 14ZM6 12a2 2 0 1 1-3.999.001A2 2 0 0 1 6 12Zm8 0a2 2 0 1 1-3.999.001A2 2 0 0 1 14 12Z"></path></svg></span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Densities were estimated using camera trap distance sampling (CTDS; a) and the random encounter model (REM; b). Simulated populations contained a fraction of the population (reactive individuals in the population [%]) that froze in response to cameras (Freezing), fled from the camera when the camera detected the individual (Fleeing if detected), fled from the camera regardless of being detected by the camera (Fleeing) and were attracted to cameras (Attraction). Additionally, we simulated a population that did not contain any reactive individuals (None). For each density estimate, we enacted a specific method to reduce bias associated with reactive movement (Method). Methods for CTDS included doing nothing (Naïve), removing detections of reactive individuals from consideration (Removal), ignoring the hazard rate key function (Ignore HR), combining Ignore HR and Removal, and using the ratio of average number of detections of reactive and nonreactive individuals as a multiplier (Multiplier). Methods for REM included doing nothing (Naïve), removing reactive encounters when estimating the speed parameter (Removal for speed), removing reactive encounters when estimating the speed parameter and the effective detection distance (Removal for speed +EDD) and removing reactive encounters when estimating the speed parameter, effective detection distance and the encounter rate (Removal for speed +EDD + ER). The grey dotted line represents true density (10 animals/km<sup>2</sup>). Some density estimates are above the upper limit of the y-axis due to severe bias (see Tables S1 and S2 for these estimates and the extent of their confidence intervals in the Supporting Information).</p>
-</div>
-</details></div>
-</div>
-</div>
-<div class="sd-col sd-d-flex-row docutils">
-<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
-<div class="sd-card-body docutils">
-<div class="sd-card-title sd-font-weight-bold docutils">
-rtxt_figure5_ref_id</div>
-<figure class="align-default">
-<img alt="../_images/figure5_filename.png" class="img-grid" src="../_images/figure5_filename.png" />
-</figure>
-</div>
-</div>
-</div>
-<div class="sd-col sd-d-flex-row docutils">
-<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
-<div class="sd-card-body docutils">
-<div class="sd-card-title sd-font-weight-bold docutils">
-rtxt_figure6_ref_id</div>
-<figure class="align-default">
-<img alt="../_images/figure6_filename.png" class="img-grid" src="../_images/figure6_filename.png" />
-</figure>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sd-col sd-d-flex-row docutils">
-<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
-<div class="sd-card-body docutils">
-<div class="sd-card-title sd-font-weight-bold docutils">
-rtxt_vid1_ref_id</div>
-<div class="iframe-container-vid"><iframe class="iframe-responsive-vid" src="vid1_url"></iframe></div>
-</div>
-</div>
-</div>
-<div class="sd-col sd-d-flex-row docutils">
-<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
-<div class="sd-card-body docutils">
-<div class="sd-card-title sd-font-weight-bold docutils">
-rtxt_vid2_ref_id</div>
-<div class="iframe-container-vid"><iframe class="iframe-responsive-vid" src="vid2_url"></iframe></div>
-</div>
-</div>
-</div>
-<div class="sd-col sd-d-flex-row docutils">
-<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
-<div class="sd-card-body docutils">
-<div class="sd-card-title sd-font-weight-bold docutils">
-rtxt_vid3_ref_id</div>
-<div class="iframe-container-vid"><iframe class="iframe-responsive-vid" src="vid3_url"></iframe></div>
-</div>
-</div>
 </div>
 </div>
 <input id="sd-tab-item-3" name="sd-tab-set-0" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-3">
 Shiny apps/Widgets</label><div class="sd-tab-content docutils">
-<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
-<div class="sd-card-body docutils">
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Diel.Niche Shinyapp</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">RShiny implementation of Diel.Niche. See Gerber et al. A model-based hypothesis framework to define and estimate the diel niche via the `Diel.Niche’ R package. <br>Gerber, B. D., Devarajan, K., Farris, Z. J., &amp; Fidino, M. (2023). A model-based hypothesis framework to define and estimate the diel niche via the ‘Diel.Niche’ R package. <em>bioRxiv, 2023.06.21.545898.</em> <a class="reference external" href="https://doi.org/10.1101/2023.06.21.545898">https://doi.org/10.1101/2023.06.21.545898</a></p>
-<div class="iframe-container-shiny"><iframe class="iframe-responsive-shiny" src="https://shiny.uri.edu/bgerber/DielNiche/"></iframe></div>
+<iframe 
+    width="100%"
+    height="900"
+    src="https://shiny.uri.edu/bgerber/DielNiche/"
+    loading="lazy"
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen>
+</iframe>
 </div>
 </details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Zone of Influence Effect Size and Buffer Distance Calculator</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">This tool can identify optimal buffer distances for recreational features, such as hiking trails, in natural areas inhabited by grizzly bears and wolves, using the outputs of camera trap modelling work from the Canadian Rockies of Alberta. The models assessed the impact of faraway human use on trails relative to human use at a focal location to estimate the zone of influence of human use on each of these wary species.<br>Thompson, P. R. (2024) <em>Zone of Influence Effect Size and Buffer Distance Calculator</em>. University of Alberta, Canada. <a class="reference external" href="https://pthompson234.shinyapps.io/calculate-zoi/">https://pthompson234.shinyapps.io/calculate-zoi/</a></p>
-<div class="iframe-container-shiny"><iframe class="iframe-responsive-shiny" src="https://pthompson234.shinyapps.io/calculate-zoi/"></iframe></div>
+<iframe
+    width="100%"
+    height="900"
+    src="https://pthompson234.shinyapps.io/calculate-zoi/"
+    loading="lazy"
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen>
+</iframe>
 </div>
-</details></div>
+</details><div class="docutils">
 </div>
 </div>
 <input id="sd-tab-item-4" name="sd-tab-set-0" type="radio">
@@ -611,7 +328,7 @@ Analytical tools &amp; Resources</label><div class="sd-tab-content docutils">
 <tbody>
 <tr class="row-even"><td class="text-left"><p>Paper</p></td>
 <td class="text-left"><p>A model-based hypothesis framework to define and estimate the diel niche via the ‘Diel.Niche’ R package</p></td>
-<td class="text-left"><p>/-</p></td>
+<td class="text-left"><p></p></td>
 <td class="text-left"><p><a class="reference external" href="https://www.biorxiv.org/content/10.1101/2023.06.21.545898v1">https://www.biorxiv.org/content/10.1101/2023.06.21.545898v1</a></p></td>
 <td class="text-left"><p>Gerber, B. D., Devarajan, K., Farris, Z. J., &amp; Fidino, M. (2023). A model-based hypothesis framework to define and estimate the diel niche via the ‘Diel.Niche’ R package. <em>bioRxiv, 2023.06.21.545898.</em> <a class="reference external" href="https://doi.org/10.1101/2023.06.21.545898">https://doi.org/10.1101/2023.06.21.545898</a></p></td>
 </tr>
@@ -631,7 +348,7 @@ Analytical tools &amp; Resources</label><div class="sd-tab-content docutils">
 <td class="text-left"><p>An Introduction to Camera Trap Data Management and Analysis in R &gt; Chapter 14 Behavior</p></td>
 <td class="text-left"><p></p></td>
 <td class="text-left"><p><a class="reference external" href="https://bookdown.org/c_w_beirne/wildCo-Data-Analysis/behavior.html">https://bookdown.org/c_w_beirne/wildCo-Data-Analysis/behavior.html</a></p></td>
-<td class="text-left"><p>WildCo Lab (2021e). <em>Chapter 14 Behavior</em>. <a class="reference external" href="https://bookdown.org/c_w_beirne/wildCo-Data-Analysis/behavior.html">https://bookdown.org/c_w_beirne/wildCo-Data-Analysis/behavior.html</a></p></td>
+<td class="text-left"><p>WildCo Lab (2021d). <em>Chapter 12 Activity</em>. <a class="reference external" href="https://bookdown.org/c_w_beirne/wildCo-Data-Analysis/activity.html">https://bookdown.org/c_w_beirne/wildCo-Data-Analysis/activity.html</a></p></td>
 </tr>
 <tr class="row-even"><td class="text-left"><p>R Package</p></td>
 <td class="text-left"><p>R Package ‘activity’</p></td>
@@ -645,27 +362,17 @@ Analytical tools &amp; Resources</label><div class="sd-tab-content docutils">
 <td class="text-left"><p><a class="reference external" href="https://www.researchgate.net/publication/289569231_A_simple_statistical_guide_for_the_analysis_of_behaviour_when_data_are_constrained_due_to_practical_or_ethical_reasons">https://www.researchgate.net/publication/289569231_A_simple_statistical_guide_for_the_analysis_of_behaviour_when_data_are_constrained_due_to_practical_or_ethical_reasons</a></p></td>
 <td class="text-left"><p>Garamszegi, L. Z. (2016). A simple statistical guide for the analysis of behaviour when data are constrained due to practical or ethical reasons. <em>Animal Behaviour, 120</em>, 223-234. <a class="reference external" href="https://doi.org/10.1016/j.anbehav.2015.11.009">https://doi.org/10.1016/j.anbehav.2015.11.009</a></p></td>
 </tr>
-<tr class="row-even"><td class="text-left"><p>Article / Tutorial / R Code</p></td>
-<td class="text-left"><p>A “How-to” Guide for Estimating Animal Diel Activity Using Hierarchical Models</p></td>
-<td class="text-left"><p>Companion manuscript, tutorial and R Code;</p></td>
-<td class="text-left"><p></p></td>
-<td class="text-left"><p></p></td>
-</tr>
-<tr class="row-odd"><td class="text-left"><p>“The tutorial includes step-by-step examples on how to use trigonometric and cyclic cubic spline hierarchical models to analyze activity patterns from time-stamped data. We present case studies based on camera-trap data, but these approaches can be applied to data collected via other static sensors (e.g., acoustic recorders).” ().</p></td>
-<td class="text-left"><p>- <b>Article</b>: <a class="reference external" href="https://besjournals.onlinelibrary.wiley.com/doi/10.1111/1365-2656.14213?af=R">https://besjournals.onlinelibrary.wiley.com/doi/10.1111/1365-2656.14213?af=R</a><br>- <b>Tutorial</b>: <a class="reference external" href="https://hms-activity.netlify.app/">https://hms-activity.netlify.app/</a><br>- <b>R Code</b>: <a class="github reference external" href="https://github.com/FabiolaIannarilli/HMs_Activit">FabiolaIannarilli/HMs_Activit</a></p></td>
-<td class="text-left"><p></p></td>
-<td class="text-left"><p></p></td>
-<td class="text-left"><p></p></td>
-</tr>
 </tbody>
 </table>
 </div>
-<!-- END_RESOURCE_TABLE -->
 </div>
 <input id="sd-tab-item-5" name="sd-tab-set-0" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-5">
 References</label><div class="sd-tab-content docutils">
-<p>{ rbib_caravaggi_et_al_2017 caravaggi_et_al_2020 gerber_et_al_2023 meek_et_al_2014b wildco_lab_2021d }}</p>
+<p>{ ref_bib_caravaggi_et_al_2017 }}</p>
+<p>Caravaggi, A., Burton, A. C., Clark, D. A., Fisher, J. T., Grass, A., Green, S., Hobaiter, C., Hofmeester, T. R., Kalan, A. K., Rabaiotti, D., &amp; Rivet, D. (2020). A Review of Factors To Consider When Using Camera Traps To Study Animal Behavior To Inform Wildlife Ecology And Conservation. <em>Conservation Science and Practice, 2</em>(8). <a class="reference external" href="https://doi.org/10.1111/csp2.239">https://doi.org/10.1111/csp2.239</a></p>
+<p>Meek, P. D., Ballard, G. A., Fleming, P. J. S., Schaefer, M., Williams, W., &amp; Falzon, G. (2014a). Camera Traps Can Be Heard and Seen by Animals. <em>PLoS One</em>, <em>9</em>(10), e110832. <a class="reference external" href="https://doi.org/10.1371/journal.pone.0110832">https://doi.org/10.1371/journal.pone.0110832</a></p>
+<p>WildCo Lab (2021d). <em>Chapter 12 Activity</em>. <a class="reference external" href="https://bookdown.org/c_w_beirne/wildCo-Data-Analysis/activity.html">https://bookdown.org/c_w_beirne/wildCo-Data-Analysis/activity.html</a></p>
 </div>
 </div>
 </section>
@@ -711,25 +418,11 @@ References</label><div class="sd-tab-content docutils">
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
-<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
-  
-    <div class="footer-items__start">
-      
-        <div class="footer-item">
-
-  <p class="copyright">
-    
-      © Copyright 2024.
-      <br/>
-    
-  </p>
-</div>
-      
-    </div>
   
   
   

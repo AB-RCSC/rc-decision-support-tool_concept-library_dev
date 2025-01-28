@@ -5,7 +5,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.17.2 <!--0.13-->
-    jupytext_version: 1.16.4 <!--6.5.2-->
+    jupytext_version: 1.16.4  <!--6.5.2-->
 kernelspec:
   display_name: Python 3
   language: python
@@ -15,82 +15,72 @@ editor_options:
   wrap: none
 ---
 <style>
-  .bd-main .bd-content .bd-article-container {
-  max-width: 100%;
+    .bd-page-width {
+    max-width: 85%;  /* default is 88rem */
+}
+    .bd-main .bd-content .bd-article-container {
+    max-width: 100%;  /* default is 60em */
   }
+    h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 1;
+    }
+}
 </style>
+(toc1_concept_lib)=
 # Remote Camera Decision Support Tool - Concept Library
-
-<br>
-
-:::::{dropdown} Full TOC
-```{include} 02_dialog-boxes/00_text_toc.md
-```
-:::::
-
-:::::{dropdown} test iframe
-<div class="container-iframe"><iframe class="responsive-iframe" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe></div> 
-:::::
-
+<!-- index_public_2024-10-02.md
+conda activate rclib
+cd C:\Users\cassi\Documents\GitHub_AB-RCSC\rc-tool_concept-library
+jupyter-book build ./
+-->
 :::::{note}
-
 ::::{grid} 2
 :gutter: 3
 
 :::{grid-item}
-:columns: 11
-*Items in italics are not yet available.*<br>
+:columns: 10
+Items in grey/italics are not yet available.
 :::
 
 :::{grid-item}
-:columns: 1
+:columns: 2
 
-{bdg-link-white-line}`master_test<https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/00_master_test.html>`
-{bdg-link-white-line}`test_keep<https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/00_test_keep.html>`
-{bdg-link-white-line}`test_img<https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/itables_references2.html>`
+{bdg-link-primary-line}`Secrets<index_links_all_internal_2024-10-02.html>`
 :::
-
 ::::
-
 :::::
-
 
 (objectives-resources)=
 ## Objectives & Resources
-
 :::::{grid} 3
 :gutter: 3
-:class: wrapper
-<!--
-:::{grid-item-card}
-:link: 02_dialog-boxes/01_01_user_entry.html
-:img-background: ./03_images/01_ui/transparent.png
+
+::::{grid-item-card}
+:img-background: ./03_images/01_ui/background_orangelight.png
 :padding: 1
 :text-align: center
-:class-card: class-prog1
 
-*<div class="class-card-center toc_text_tight">{{ title_i_user_entry }}</div>*
-:::
--->
-:::{grid-item-card}
+*<font color='grey'><font size='4'>{{ title_i_user_entry }}</font></font>*
+::::
+
+::::{grid-item-card}
 :link: 02_dialog-boxes/01_02_objective.html
-:img-background: ./03_images/01_ui/transparent.png
+:img-background: ./03_images/01_ui/background_orangelight.png
 :padding: 1
 :text-align: center
-:class-card: class-prog1
+**<font size='4'>{{ title_i_objective }}</font>**
+::::
 
-**<div class="class-card-center toc_text_tight">{{ title_i_objective }}</div>**
-:::
-
-:::{grid-item-card}
+::::{grid-item-card}
 :link: 02_dialog-boxes/01_03_num_cams.html
-:img-background: ./03_images/01_ui/transparent.png
+:img-background: ./03_images/01_ui/background_orangelight.png
 :padding: 1
 :text-align: center
-:class-card: class-prog1
 
-**<div class="class-card-center toc_text_tight">{{ title_i_num_cams }}</div>**
-:::
+**<font size='4'>{{ title_i_num_cams }}</font>**
+::::
 
 :::::
 
@@ -99,92 +89,79 @@ editor_options:
 (study-area-site-selection-constraints)=
 ## Study area & Site selection constraints
 
-:::::{grid} 3
+::::{grid} 3
 :gutter: 3
-:class: wrapper
 
-:::{grid-item-card}
-:link: 02_dialog-boxes/01_04_study_area_mult.html
-:img-background: ./03_images/01_ui/transparent.png
+:::{grid-item-card} 
+:img-background: ./03_images/01_ui/background_orange.png
 :padding: 1
 :text-align: center
-:class-card: class-prog2
 
-*<div class="class-card-center toc_text_tight">{{ title_i_study_area_mult }}</div>*
+*<font color='grey'><font size='4'>{{ title_i_study_area_mult }}</font></font>*
 :::
 
 :::{grid-item-card}
-:link: 02_dialog-boxes/01_05_cam_dens_gradient.html
-:img-background: ./03_images/01_ui/transparent.png
+:img-background: ./03_images/01_ui/background_orange.png
 :padding: 1
 :text-align: center
-:class-card: class-prog2
 
-*<div class="class-card-center toc_text_tight">{{ title_i_cam_dens_gradient }}</div>*
+*<font color='grey'><font size='4'>{{ title_i_cam_dens_gradient }}</font></font>*
 :::
 
 :::{grid-item-card}
 :link: 02_dialog-boxes/01_06_cam_strat_covar.html
-:img-background: ./03_images/01_ui/transparent.png
+:img-background: ./03_images/01_ui/background_orange.png
 :padding: 1
 :text-align: center
-:class-card: class-prog2
 
-**<div class="class-card-center toc_text_tight">{{ title_i_cam_strat_covar }}</div>**
+**<font size='4'>{{ title_i_cam_strat_covar }}</font>**
 :::
+::::
 
+::::{grid} 3
 :::{grid-item-card}
-:link: 02_dialog-boxes/01_07_cam_high_dens.html
-:img-background: ./03_images/01_ui/transparent.png
+:img-background: ./03_images/01_ui/background_orange.png
 :padding: 1
 :text-align: center
-:class-card: class-prog2
 
-*<div class="class-card-center toc_text_tight">{{ title_i_cam_high_dens }}</div>*
+*<font color='grey'><font size='4'>{{ title_i_cam_high_dens }}</font></font>*
 :::
-
-:::::
+::::
 
 ***
 
 (duration-timing)=
 ## Duration & Timing
 
-:::::{grid} 3
+::::{grid} 3
 :gutter: 3
-:class: wrapper
 
-:::{grid-item-card}
-:link: 02_dialog-boxes/01_08_surv_dur.html
-:img-background: ./03_images/01_ui/transparent.png
+:::{grid-item-card} 
+:img-background: ./03_images/01_ui/background_orange.png
 :padding: 1
 :text-align: center
-:class-card: class-prog3
 
-*<div class="class-card-center toc_text_tight">{{ title_i_surv_dur_min_max }}</div>*
+*<font color='grey'><font size='4'>{{ title_i_surv_dur_min_max }}</font></font>*
 :::
 
 :::{grid-item-card}
 :link: 02_dialog-boxes/01_10_sp_asymptote.html
-:img-background: ./03_images/01_ui/transparent.png
+:img-background: ./03_images/01_ui/background_orange.png
 :padding: 1
 :text-align: center
-:class-card: class-prog3
 
-**<div class="class-card-center toc_text_tight">{{ title_i_sp_asymptote }}</div>**
+**<font size='4'>{{ title_i_sp_asymptote }}</font>**
 :::
 
 :::{grid-item-card}
-:link: 02_dialog-boxes/01_11_study_season_num.html
-:img-background: ./03_images/01_ui/transparent.png
+:img-background: ./03_images/01_ui/background_orange.png
 :padding: 1
 :text-align: center
-:class-card: class-prog3
 
-*<div class="class-card-center toc_text_tight">{{ title_i_study_season_num }}</div>*
+*<font color='grey'><font size='4'>{{ title_i_study_season_num }}</font></font>*
 :::
 
-:::::
+::::
 
 ***
 
@@ -195,191 +172,191 @@ editor_options:
 ### Target species (single)
 <br>
 
-:::::{grid} 3
+::::{grid} 3
 :gutter: 3
-:class: wrapper
 
 :::{grid-item-card}
-:link: 02_dialog-boxes/01_12_obj_targ_sp.html
-:img-background: ./03_images/01_ui/transparent.png
+:img-background: ./03_images/01_ui/background_purple.png
 :padding: 1
 :text-align: center
-:class-card: class-prog4
 
-*<div class="class-card-center toc_text_tight">{{ title_i_obj_targ_sp }}</div>*
+*<font color='grey'><font size='4'>{{ title_i_obj_targ_sp }}</font></font>*
 :::
 
 :::{grid-item-card}
-:link: 02_dialog-boxes/01_13_sp_info.html
-:img-background: ./03_images/01_ui/transparent.png
+:img-background: ./03_images/01_ui/background_purple.png
 :padding: 1
 :text-align: center
-:class-card: class-prog4
 
-*<div class="class-card-center toc_text_tight">{{ title_i_sp_info }}</div>*
+*<font color='grey'><font size='4'>{{ title_i_sp_info }}</font></font>*
 :::
 
 :::{grid-item-card}
-:link: 02_dialog-boxes/01_14_sp_type.html
-:img-background: ./03_images/01_ui/transparent.png
+:img-background: ./03_images/01_ui/background_purple.png
 :padding: 1
 :text-align: center
-:class-card: class-prog4
 
-*<div class="class-card-center toc_text_tight">{{ title_i_sp_type }}</div>*
+*<font color='grey'><font size='4'>{{ title_i_sp_type }}</font></font>*
+:::
+::::
+
+::::{grid} 3
+:gutter: 3
+
+:::{grid-item-card}
+:img-background: ./03_images/01_ui/background_purple.png
+:padding: 1
+:text-align: center
+
+*<font color='grey'><font size='4'>{{ title_i_sp_dens_low }}</font></font>*
 :::
 
 :::{grid-item-card}
-:link: 02_dialog-boxes/01_15_sp_dens_low.html
-:img-background: ./03_images/01_ui/transparent.png
+:img-background: ./03_images/01_ui/background_purple.png
 :padding: 1
 :text-align: center
-:class-card: class-prog4
 
-*<div class="class-card-center toc_text_tight">{{ title_i_sp_dens_low }}</div>*
-:::
-
-:::{grid-item-card}
-:link: 02_dialog-boxes/01_16_sp_occ_restr.html
-:img-background: ./03_images/01_ui/transparent.png
-:padding: 1
-:text-align: center
-:class-card: class-prog4
-
-*<div class="class-card-center toc_text_tight">{{ title_i_sp_occ_restr }}</div>*
+*<font color='grey'><font size='4'>{{ title_i_sp_occ_restr }}</font></font>*
 :::
 
 :::{grid-item-card}
 :link: 02_dialog-boxes/01_17_sp_hr_size.html
-:img-background: ./03_images/01_ui/transparent.png
+:img-background: ./03_images/01_ui/background_purple.png
 :padding: 1
 :text-align: center
-:class-card: class-prog4
 
-**<div class="class-card-center toc_text_tight">{{ title_i_sp_hr_size }}</div>**
+**<font size='4'>{{ title_i_sp_hr_size }}</font>**
 :::
+::::
+
+::::{grid} 3
+:gutter: 3
 
 :::{grid-item-card}
 :link: 02_dialog-boxes/01_18_sp_size.html
-:img-background: ./03_images/01_ui/transparent.png
+:img-background: ./03_images/01_ui/background_purple.png
 :padding: 1
 :text-align: center
-:class-card: class-prog4
 
-**<div class="class-card-center toc_text_tight">{{ title_i_sp_size }}</div>**
+**<font size='4'>{{ title_i_sp_size }}</font>**
 :::
 
 :::{grid-item-card}
 :link: 02_dialog-boxes/01_19_sp_rarity.html
-:img-background: ./03_images/01_ui/transparent.png
+:img-background: ./03_images/01_ui/background_purple.png
 :padding: 1
 :text-align: center
-:class-card: class-prog4
 
-**<div class="class-card-center toc_text_tight">{{ title_i_sp_rarity }}</div>**
+**<font size='4'>{{ title_i_sp_rarity }}</font>**
 :::
+
 
 :::{grid-item-card}
 :link: 02_dialog-boxes/01_20_sp_detprob_cat.html
-:img-background: ./03_images/01_ui/transparent.png
+:img-background: ./03_images/01_ui/background_purple.png
 :padding: 1
 :text-align: center
-:class-card: class-prog4
 
-**<div class="class-card-center toc_text_tight">{{ title_i_sp_detprob_cat }}</div>**
+**<font size='4'>{{ title_i_sp_detprob_cat }}</font>**
+:::
+::::
+
+::::{grid} 3
+:gutter: 3
+
+:::{grid-item-card}
+:img-background: ./03_images/01_ui/background_purple.png
+:padding: 1
+:text-align: center
+
+*<font color='grey'><font size='4'>{{ title_i_sp_behav }}</font></font>*
 :::
 
 :::{grid-item-card}
-:link: 02_dialog-boxes/01_21_sp_behav.html
-:img-background: ./03_images/01_ui/transparent.png
+:img-background: ./03_images/01_ui/background_purple.png
 :padding: 1
 :text-align: center
-:class-card: class-prog4
 
-*<div class="class-card-center toc_text_tight">{{ title_i_sp_behav }}</div>*
+*<font color='grey'><font size='4'>{{ title_i_sp_behav_season }}</font></font>*
 :::
 
 :::{grid-item-card}
-:link: 02_dialog-boxes/01_22_sp_behav_season.html
-:img-background: ./03_images/01_ui/transparent.png
+:img-background: ./03_images/01_ui/background_purple.png
 :padding: 1
 :text-align: center
-:class-card: class-prog4
 
-*<div class="class-card-center toc_text_tight">{{ title_i_sp_behav_season }}</div>*
+*<font color='grey'><font size='4'>{{ title_i_marking_code }}</font></font>*
+:::
+::::
+
+::::{grid} 3
+:gutter: 3
+
+:::{grid-item-card}
+:img-background: ./03_images/01_ui/background_purple.png
+:padding: 1
+:text-align: center
+
+*<font color='grey'><font size='4'>{{ title_i_marking_allsub }}</font></font>*
 :::
 
 :::{grid-item-card}
-:link: 02_dialog-boxes/01_23_marking_code.html
-:img-background: ./03_images/01_ui/transparent.png
+:img-background: ./03_images/01_ui/background_purple.png
 :padding: 1
 :text-align: center
-:class-card: class-prog4
 
-*<div class="class-card-center toc_text_tight">{{ title_i_marking_code }}</div>*
+*<font color='grey'><font size='4'>{{ title_i_3ormore_cat_ids }}</font></font>*
 :::
 
 :::{grid-item-card}
-:link: 02_dialog-boxes/01_24_marking_allsub.html
-:img-background: ./03_images/01_ui/transparent.png
+:img-background: ./03_images/01_ui/background_purple.png
 :padding: 1
 :text-align: center
-:class-card: class-prog4
 
-*<div class="class-card-center toc_text_tight">{{ title_i_marking_allsub }}</div>*
+*<font color='grey'><font size='4'>{{ title_i_auxillary_info }}</font></font>*
+:::
+::::
+
+::::{grid} 3
+:gutter: 3
+
+:::{grid-item-card}
+:img-background: ./03_images/01_ui/background_purple.png
+:padding: 1
+:text-align: center
+
+*<font color='grey'><font size='4'>{{ title_i_aux_count_possible }}</font></font>*
 :::
 
 :::{grid-item-card}
-:link: 02_dialog-boxes/01_25_3ormore_cat_ids.html
-:img-background: ./03_images/01_ui/transparent.png
+:img-background: ./03_images/01_ui/background_purple.png
 :padding: 1
 :text-align: center
-:class-card: class-prog4
 
-*<div class="class-card-center toc_text_tight">{{ title_i_3ormore_cat_ids }}</div>*
+*<font color='grey'><font size='4'>{{ title_i_focalarea_calc }}</font></font>*
 :::
 
 :::{grid-item-card}
-:link: 02_dialog-boxes/01_26_auxillary_info.html
-:img-background: ./03_images/01_ui/transparent.png
+:img-background: ./03_images/01_ui/background_purple.png
 :padding: 1
 :text-align: center
-:class-card: class-prog4
 
-*<div class="class-card-center toc_text_tight">{{ title_i_auxillary_info }}</div>*
+*<font color='grey'><font size='4'>{{ title_i_cam_high_dens }}</font></font>*
 :::
+::::
+
+::::{grid} 3
+:gutter: 3
 
 :::{grid-item-card}
-:link: 02_dialog-boxes/01_27_aux_count_possible.html
-:img-background: ./03_images/01_ui/transparent.png
+:img-background: ./03_images/01_ui/background_purple.png
 :padding: 1
 :text-align: center
-:class-card: class-prog4
 
-*<div class="class-card-center toc_text_tight">{{ title_i_aux_count_possible }}</div>*
+*<font color='grey'><font size='4'>{{ title_i_sp_common_pop_lg }}</font></font>*
 :::
 
-:::{grid-item-card}
-:link: 02_dialog-boxes/01_28_focalarea_calc.html
-:img-background: ./03_images/01_ui/transparent.png
-:padding: 1
-:text-align: center
-:class-card: class-prog4
-
-*<div class="class-card-center toc_text_tight">{{ title_i_focalarea_calc }}</div>*
-:::
-
-:::{grid-item-card}
-:link: 02_dialog-boxes/01_30_sp_common_pop_lg.html
-:img-background: ./03_images/01_ui/transparent.png
-:padding: 1
-:text-align: center
-:class-card: class-prog4
-
-*<div class="class-card-center toc_text_tight">{{ title_i_sp_common_pop_lg }}</div>*
-:::
-
-:::::
+::::
 
 ***
 
@@ -387,183 +364,181 @@ editor_options:
 ### Target species (multiple)
 <br>
 
-:::::{grid} 3
+::::{grid} 3
+:::{grid-item-card}
+:img-background: ./03_images/01_ui/background_purple.png
+:padding: 1
+:text-align: center
+
+*<font color='grey'><font size='4'>{{ title_i_sp_size_multi }}</font></font>*
+:::
+
+:::{grid-item-card}
+:img-background: ./03_images/01_ui/background_purple.png
+:padding: 1
+:text-align: center
+
+*<font color='grey'><font size='4'>{{ title_i_sp_behav_mult }}</font></font>*
+:::
+
+:::{grid-item-card}
+:img-background: ./03_images/01_ui/background_purple.png
+:padding: 1
+:text-align: center
+
+*<font color='grey'><font size='4'>{{ title_i_sp_rarity_multi }}</font></font>*
+:::
+::::
+
+::::{grid} 3
 :gutter: 3
-:class: wrapper
 
 :::{grid-item-card}
-:link: 02_dialog-boxes/01_31_sp_size_multi.html
-:img-background: ./03_images/01_ui/transparent.png
+:img-background: ./03_images/01_ui/background_purple.png
 :padding: 1
 :text-align: center
-:class-card: class-prog4
 
-*<div class="class-card-center toc_text_tight">{{ title_i_sp_size_multi }}</div>*
+*<font color='grey'><font size='4'>{{ title_i_sp_detprob_cat_multi }}</font></font>*
 :::
 
-:::{grid-item-card}
-:link: 02_dialog-boxes/01_32_sp_behav_multi.html
-:img-background: ./03_images/01_ui/transparent.png
-:padding: 1
-:text-align: center
-:class-card: class-prog4
-
-*<div class="class-card-center toc_text_tight">{{ title_i_sp_behav_mult }}</div>*
-:::
-
-:::{grid-item-card}
-:link: 02_dialog-boxes/01_33_sp_rarity_multi.html
-:img-background: ./03_images/01_ui/transparent.png
-:padding: 1
-:text-align: center
-:class-card: class-prog4
-
-*<div class="class-card-center toc_text_tight">{{ title_i_sp_rarity_multi }}</div>*
-:::
-
-:::{grid-item-card}
-:link: 02_dialog-boxes/01_36_sp_detprob_cat_multi.html
-:img-background: ./03_images/01_ui/transparent.png
-:padding: 1
-:text-align: center
-:class-card: class-prog4
-
-*<div class="class-card-center toc_text_tight">{{ title_i_sp_detprob_cat_multi }}</div>*
-:::
-
-:::::
+::::
 
 ***
 
 (equipment-deployment)=
 ## Equipment & Deployment
 
-:::::{grid} 3
+::::{grid} 3
 :gutter: 3
-:class: wrapper
 
-:::{grid-item-card}
-:link: 02_dialog-boxes/01_39_cam_equipment.html
-:img-background: ./03_images/01_ui/transparent.png
+:::{grid-item-card} 
+:img-background: ./03_images/01_ui/background_yellow2.png
 :padding: 1
 :text-align: center
-:class-card: class-prog5
 
-*<div class="class-card-center toc_text_tight">{{ title_i_cam_equipment }}</div>*
+*<font color='grey'><font size='4'>{{ title_i_cam_makemod_same }}</font></font>*
 :::
 
 :::{grid-item-card} 
-:link: 02_dialog-boxes/01_40_cam_settings.html
-:img-background: ./03_images/01_ui/transparent.png
+:img-background: ./03_images/01_ui/background_yellow2.png
 :padding: 1
 :text-align: center
-:class-card: class-prog5
 
-*<div class="class-card-center toc_text_tight">{{ title_i_cam_settings }}</div>*
+*<font color='grey'><font size='4'>{{ title_i_cam_settings_mult }}</font></font>*
 :::
 
 :::{grid-item-card} 
-:link: 02_dialog-boxes/01_41_cam_placement.html
-:img-background: ./03_images/01_ui/transparent.png
+:img-background: ./03_images/01_ui/background_yellow2.png
 :padding: 1
 :text-align: center
-:class-card: class-prog5
 
-*<div class="class-card-center toc_text_tight">{{ title_i_cam_placement }}</div>*
+*<font color='grey'><font size='4'>{{ title_i_cam_protocol_ht_angle_dir }}</font></font>*
 :::
+::::
+
+::::{grid} 3
+:gutter: 3
 
 :::{grid-item-card} 
 :link: 02_dialog-boxes/01_43_bait_lure.html
-:img-background: ./03_images/01_ui/transparent.png
+:img-background: ./03_images/01_ui/background_yellow2.png
 :padding: 1
 :text-align: center
-:class-card: class-prog5
 
-*<div class="class-card-center toc_text_tight">{{ title_i_bait_lure }}</div>*
+*<font color='grey'><font size='4'>{{ title_i_bait_lure }}</font></font>*
 :::
 
 :::{grid-item-card} 
 :link: 02_dialog-boxes/01_45_targ_feature.html
-:img-background: ./03_images/01_ui/transparent.png
+:img-background: ./03_images/01_ui/background_yellow2.png
 :padding: 1
 :text-align: center
-:class-card: class-prog5
 
-*<div class="class-card-center toc_text_tight">{{ title_i_cam_targ_feature }}</div>*
+*<font color='grey'><font size='4'>{{ title_i_targ_feature }}</font></font>*
 :::
 
-:::::
+::::
 
 ***
 
 (data-analysis)=
 ## Data & Analysis
 
-:::::{grid} 3
+::::{grid} 3
 :gutter: 3
-:class: wrapper
 
-:::{grid-item-card}
+:::{grid-item-card} 
 :link: 02_dialog-boxes/01_47_cam_independent.html
-:img-background: ./03_images/01_ui/transparent.png
+:img-background: ./03_images/01_ui/background_blue2.png
 :padding: 1
 :text-align: center
-:class-card: class-prog6
 
-**<div class="class-card-center toc_text_tight">{{ title_i_cam_independent }}</div>**
+**<font size='4'>{{ title_i_cam_independent }}</font>**
 :::
 
 :::{grid-item-card}
 :link: 02_dialog-boxes/01_48_multisamp_per_loc.html
-:img-background: ./03_images/01_ui/transparent.png
+:img-background: ./03_images/01_ui/background_blue2.png
 :padding: 1
 :text-align: center
-:class-card: class-prog6
 
-*<div class="class-card-center toc_text_tight">{{ title_i_multisamp_per_loc }}</div>*
+*<font color='grey'><font size='4'>{{ title_i_multisamp_per_loc }}</font></font>*
 :::
 
 :::{grid-item-card}
 :link: 02_dialog-boxes/01_49_modmixed.html
-:img-background: ./03_images/01_ui/transparent.png
+:img-background: ./03_images/01_ui/background_blue2.png
 :padding: 1
 :text-align: center
-:class-card: class-prog6
 
-*<div class="class-card-center toc_text_tight">{{ title_i_modmixed }}</div>*
+*<font color='grey'><font size='4'>{{ title_i_modmixed }}</font></font>*
 :::
+::::
+
+::::{grid} 3
+:gutter: 3
 
 :::{grid-item-card} 
 :link: 02_dialog-boxes/01_50_num_det.html
-:img-background: ./03_images/01_ui/transparent.png
+:img-background: ./03_images/01_ui/background_blue2.png
 :padding: 1
 :text-align: center
-:class-card: class-prog6
 
-*<div class="class-card-center toc_text_tight">{{ title_i_num_det }}</div>*
+*<font color='grey'><font size='4'>{{ title_i_num_det }}</font></font>*
 :::
 
 :::{grid-item-card}
-:link: 02_dialog-boxes/01_51_num_det_individ.html
-:img-background: ./03_images/01_ui/transparent.png
+:link: 02_dialog-boxes/01_02_mod_divers_rich.html
+:img-background: ./03_images/01_ui/background_blue2.png
 :padding: 1
 :text-align: center
-:class-card: class-prog6
 
-*<div class="class-card-center toc_text_tight">{{ title_i_num_det_individ }}</div>*
+*<font color='grey'><font size='4'>{{ title_i_num_det_individ }}</font></font>*
 :::
 
 :::{grid-item-card}
 :link: 02_dialog-boxes/01_52_num_recap.html
-:img-background: ./03_images/01_ui/transparent.png
+:img-background: ./03_images/01_ui/background_blue2.png
 :padding: 1
 :text-align: center
-:class-card: class-prog6
 
-*<div class="class-card-center toc_text_tight">{{ title_i_num_recap }}</div>*
+*<font color='grey'><font size='4'>{{ title_i_num_recap }}</font></font>*
 :::
+::::
 
-:::::
+::::{grid} 3
+:gutter: 3
+
+:::{grid-item-card} 
+:link: 02_dialog-boxes/01_55_zi_overdispersed.html
+:img-background: ./03_images/01_ui/background_blue2.png
+:padding: 1
+:text-align: center
+
+*<font color='grey'><font size='4'>{{ title_i_overdispersion }}</font></font>* / *<font color='grey'><font size='4'>{{ title_i_zeroinflation }}</font></font>*
+
+:::
+::::
 
 ***
 
@@ -574,231 +549,205 @@ editor_options:
 ### Modelling Approaches
 <br>
 
-:::::{grid} 3
+::::{grid} 3
 :gutter: 3
-:class: wrapper
 
-:::{grid-item-card}
+:::{grid-item-card} 
 :link: 02_dialog-boxes/03_01_mod_inventory.html
-:img-background: ./03_images/01_ui/transparent.png
+:img-background: ./03_images/01_ui/background_green.png
 :padding: 1
 :text-align: center
-:class-card: class-prog7
 
-**<div class="class-card-center toc_text_tight">{{ name_mod_inventory }}</div>**
+**<font size='4'>{{ name_mod_inventory }}</font>**
 :::
 
 :::{grid-item-card}
 :link: 02_dialog-boxes/03_02_mod_divers_rich.html
-:img-background: ./03_images/01_ui/transparent.png
+:img-background: ./03_images/01_ui/background_green.png
 :padding: 1
 :text-align: center
-:class-card: class-prog7
 
-**<div class="class-card-center toc_text_tight">{{ name_mod_divers_rich }}</div>**
+**<font size='4'>{{ name_mod_divers_rich }}</font>**
 :::
 
 :::{grid-item-card}
 :link: 02_dialog-boxes/03_03_mod_occupancy.html
-:img-background: ./03_images/01_ui/transparent.png
+:img-background: ./03_images/01_ui/background_green.png
 :padding: 1
 :text-align: center
-:class-card: class-prog7
 
-**<div class="class-card-center toc_text_tight">{{ name_mod_occupancy }}</div>**
+**<font size='4'>{{ name_mod_occupancy }}</font>**
+:::
+::::
+
+::::{grid} 3
+:gutter: 3
+
+:::{grid-item-card}
+:img-background: ./03_images/01_ui/background_green.png
+:padding: 1
+:text-align: center
+
+*<font color='grey'><font size='4'>{{ name_mod_rai }}</font></font>*
 :::
 
 :::{grid-item-card}
-:link: 02_dialog-boxes/03_04_mod_rai.html
-:img-background: ./03_images/01_ui/transparent.png
+:img-background: ./03_images/01_ui/background_green.png
 :padding: 1
 :text-align: center
-:class-card: class-prog7
 
-**<div class="class-card-center toc_text_tight">{{ name_mod_rai }}</div>**
+*<font color='grey'><font size='4'>{{ name_mod_cr_cmr }}</font></font>*
 :::
 
 :::{grid-item-card}
-:link: 02_dialog-boxes/03_10_mod_cr_cmr.html
-:img-background: ./03_images/01_ui/transparent.png
+:img-background: ./03_images/01_ui/background_green.png
 :padding: 1
 :text-align: center
-:class-card: class-prog7
 
-**<div class="class-card-center toc_text_tight">{{ name_mod_cr_cmr }}</div>**
+*<font color='grey'><font size='4'>{{ name_mod_scr_secr }}</font></font>*
+:::
+
+::::
+
+::::{grid} 3
+:gutter: 3
+
+:::{grid-item-card}
+:img-background: ./03_images/01_ui/background_green.png
+:padding: 1
+:text-align: center
+
+*<font color='grey'><font size='4'>{{ name_mod_smr }}</font></font>*
 :::
 
 :::{grid-item-card}
-:link: 02_dialog-boxes/03_11_mod_scr_secr.html
-:img-background: ./03_images/01_ui/transparent.png
+:img-background: ./03_images/01_ui/background_green.png
 :padding: 1
 :text-align: center
-:class-card: class-prog7
 
-**<div class="class-card-center toc_text_tight">{{ name_mod_scr_secr }}</div>**
+*<font color='grey'><font size='4'>{{ name_mod_sc }}</font></font>*
 :::
 
 :::{grid-item-card}
-:link: 02_dialog-boxes/03_13_mod_smr.html
-:img-background: ./03_images/01_ui/transparent.png
+:img-background: ./03_images/01_ui/background_green.png
 :padding: 1
 :text-align: center
-:class-card: class-prog7
 
-**<div class="class-card-center toc_text_tight">{{ name_mod_smr }}</div>**
+*<font color='grey'><font size='4'>{{ name_mod_catspim }}</font></font>*
+:::
+::::
+
+::::{grid} 3
+:gutter: 3
+
+:::{grid-item-card}
+:img-background: ./03_images/01_ui/background_green.png
+:padding: 1
+:text-align: center
+
+*<font color='grey'><font size='4'>{{ name_mod_2flankspim }}</font></font>*
 :::
 
 :::{grid-item-card}
-:link: 02_dialog-boxes/03_14_mod_sc.html
-:img-background: ./03_images/01_ui/transparent.png
+:img-background: ./03_images/01_ui/background_green.png
 :padding: 1
 :text-align: center
-:class-card: class-prog7
 
-**<div class="class-card-center toc_text_tight">{{ name_mod_sc }}</div>**
+*<font color='grey'><font size='4'>{{ name_mod_rem }}</font></font>*
 :::
 
 :::{grid-item-card}
-:link: 02_dialog-boxes/03_15_mod_catspim.html
-:img-background: ./03_images/01_ui/transparent.png
+:img-background: ./03_images/01_ui/background_green.png
 :padding: 1
 :text-align: center
-:class-card: class-prog7
 
-**<div class="class-card-center toc_text_tight">{{ name_mod_catspim }}</div>**
+*<font color='grey'><font size='4'>{{ name_mod_rest }}</font></font>*
+:::
+::::
+
+::::{grid} 3
+:gutter: 3
+
+:::{grid-item-card}
+:img-background: ./03_images/01_ui/background_green.png
+:padding: 1
+:text-align: center
+
+*<font color='grey'><font size='4'>{{ name_mod_tifc }}</font></font>*
 :::
 
 :::{grid-item-card}
-:link: 02_dialog-boxes/03_16_mod_2flankspim.html
-:img-background: ./03_images/01_ui/transparent.png
+:img-background: ./03_images/01_ui/background_green.png
 :padding: 1
 :text-align: center
-:class-card: class-prog7
 
-**<div class="class-card-center toc_text_tight">{{ name_mod_2flankspim }}</div>**
+*<font color='grey'><font size='4'>{{ name_mod_ds }}</font></font>*
+:::
+:::{grid-item-card}
+:img-background: ./03_images/01_ui/background_green.png
+:padding: 1
+:text-align: center
+
+*<font color='grey'><font size='4'>{{ name_mod_tte }}</font></font>*
+:::
+::::
+
+::::{grid} 3
+:gutter: 3
+
+:::{grid-item-card}
+:img-background: ./03_images/01_ui/background_green.png
+:padding: 1
+:text-align: center
+
+*<font color='grey'><font size='4'>{{ name_mod_ste }}</font></font>*
 :::
 
 :::{grid-item-card}
-:link: 02_dialog-boxes/03_17_mod_rem.html
-:img-background: ./03_images/01_ui/transparent.png
+:img-background: ./03_images/01_ui/background_green.png
 :padding: 1
 :text-align: center
-:class-card: class-prog7
 
-**<div class="class-card-center toc_text_tight">{{ name_mod_rem }}</div>**
-:::
-
-:::{grid-item-card}
-:link: 02_dialog-boxes/03_18_mod_rest.html
-:img-background: ./03_images/01_ui/transparent.png
-:padding: 1
-:text-align: center
-:class-card: class-prog7
-
-**<div class="class-card-center toc_text_tight">{{ name_mod_rest }}</div>**
-:::
-
-:::{grid-item-card}
-:link: 02_dialog-boxes/03_19_mod_tifc.html
-:img-background: ./03_images/01_ui/transparent.png
-:padding: 1
-:text-align: center
-:class-card: class-prog7
-
-**<div class="class-card-center toc_text_tight">{{ name_mod_tifc }}</div>**
-:::
-
-:::{grid-item-card}
-:link: 02_dialog-boxes/03_20_mod_ds.html
-:img-background: ./03_images/01_ui/transparent.png
-:padding: 1
-:text-align: center
-:class-card: class-prog7
-
-**<div class="class-card-center toc_text_tight">{{ name_mod_ds }}</div>**
-:::
-
-:::{grid-item-card}
-:link: 02_dialog-boxes/03_21_mod_tte.html
-:img-background: ./03_images/01_ui/transparent.png
-:padding: 1
-:text-align: center
-:class-card: class-prog7
-
-**<div class="class-card-center toc_text_tight">{{ name_mod_tte }}</div>**
-:::
-
-:::{grid-item-card}
-:link: 02_dialog-boxes/03_22_mod_ste.html
-:img-background: ./03_images/01_ui/transparent.png
-:padding: 1
-:text-align: center
-:class-card: class-prog7
-
-**<div class="class-card-center toc_text_tight">{{ name_mod_ste }}</div>**
-:::
-
-:::{grid-item-card}
-:link: 02_dialog-boxes/03_23_mod_is.html
-:img-background: ./03_images/01_ui/transparent.png
-:padding: 1
-:text-align: center
-:class-card: class-prog7
-
-**<div class="class-card-center toc_text_tight">{{ name_mod_is }}</div>**
+*<font color='grey'><font size='4'>{{ name_mod_is }}</font></font>*
 :::
 
 :::{grid-item-card}
 :link: 02_dialog-boxes/03_24_mod_behaviour.html
-:img-background: ./03_images/01_ui/transparent.png
+:img-background: ./03_images/01_ui/background_green.png
 :padding: 1
 :text-align: center
-:class-card: class-prog7
 
-**<div class="class-card-center toc_text_tight">{{ name_mod_behaviour }}</div>**
+*<font color='grey'><font size='4'>{{ name_mod_behaviour }}</font></font>*
 :::
 
-:::::
+::::
 
 ***
 
 (toc_ref_glossary)=
 ## References / Glossary
 
-:::::{grid} 3
+::::{grid} 3
 :gutter: 3
-:class: wrapper
 
-(toc_ref)=
-::::{grid-item-card} 
+:::{grid-item-card} 
 :link: 02_dialog-boxes/08_references.html
 :img-background: ./03_images/01_ui/background_grey.png
 :padding: 1
 :text-align: center
 
-**<div class="class-card-center toc_text_tight">References</div>**
-::::
+**<font size='4'>References</font>**
+:::
 
-(toc_glossary)=
-::::{grid-item-card}
+:::{grid-item-card}
 :link: 02_dialog-boxes/09_glossary.html
 :img-background: ./03_images/01_ui/background_grey.png
 :padding: 1
 :text-align: center
 
-**<div class="class-card-center toc_text_tight">Glossary</div>**
+**<font size='4'>Glossary</font>**
 :::
 
-(toc_other_resource_lib)=
-::::{grid-item-card}
-:link: 02_dialog-boxes/10_other_resource_lib.html
-:img-background: ./03_images/01_ui/background_grey.png
-:padding: 1
-:text-align: center
-
-**<div class="class-card-center toc_text_tight">Other resources libraries</div>**
-:::
-
-:::::
+::::
 
 ***

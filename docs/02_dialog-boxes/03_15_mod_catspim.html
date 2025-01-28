@@ -16,8 +16,8 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
-  <!-- 
-    this give us a css class that will be invisible only if js is disabled 
+  <!--
+    this give us a css class that will be invisible only if js is disabled
   -->
   <noscript>
     <style>
@@ -27,29 +27,23 @@
   </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="../_static/class-prog.css?v=e0b0bc6d" />
-    <link rel="stylesheet" type="text/css" href="../_static/colours.css?v=9897dbfc" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=5e97e934" />
-    <link rel="stylesheet" type="text/css" href="../_static/iframe.css?v=2a601663" />
-    <link rel="stylesheet" type="text/css" href="../_static/scratch_backup.css?v=5f02f252" />
-    <link rel="stylesheet" type="text/css" href="../_static/test.css?v=32d70693" />
-    <link rel="stylesheet" type="text/css" href="../_static/tooltips.css?v=4de49550" />
-    <link rel="stylesheet" type="text/css" href="../_static/youtube.css?v=70faa909" />
+    <link rel="stylesheet" type="text/css" href="../_static/tippy.css?v=7a364cf7" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=703e16d2" />
   
   <!-- So that users can add custom icons -->
-  <script src="../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
     <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
@@ -63,9 +57,22 @@
     <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-PJDP7DQ9Q0"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-PJDP7DQ9Q0');
+            </script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-PJDP7DQ9Q0');
+            </script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = '02_dialog-boxes/03_15_mod_catspim';</script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -113,154 +120,6 @@
 
   
     <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
-<div class="bd-header__inner bd-page-width">
-  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
-    <span class="fa-solid fa-bars"></span>
-  </button>
-  
-  
-  <div class=" navbar-header-items__start">
-    
-      <div class="navbar-item">
-
-  
-    
-  
-
-<a class="navbar-brand logo" href="../index.html">
-  
-  
-  
-  
-  
-    
-    
-      
-    
-    
-    <img src="../_static/logo.png" class="logo__image only-light" alt="Remote Camera Decision Support Tool - Concept Library - Home"/>
-    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="Remote Camera Decision Support Tool - Concept Library - Home"/>
-  
-  
-</a></div>
-    
-  </div>
-  
-  <div class=" navbar-header-items">
-    
-    <div class="me-auto navbar-header-items__center">
-      
-        <div class="navbar-item">
-<nav>
-  <ul class="bd-navbar-elements navbar-nav">
-    
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="00_test/00_test_img.html">
-    <no title>
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-external" href="https://ab-rcsc.github.io/rc-decision-support-tool">
-    <b>Home</b> 
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/">
-    Concept library
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/09_glossary.html">
-    Glossary
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/08_references.html">
-    References
-  </a>
-</li>
-
-  </ul>
-</nav></div>
-      
-    </div>
-    
-    
-    <div class="navbar-header-items__end">
-      
-        <div class="navbar-item navbar-persistent--container">
-          
-
-<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
- <i class="fa-solid fa-magnifying-glass"></i>
- <span class="search-button__default-text">Search</span>
- <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-</button>
-        </div>
-      
-      
-        <div class="navbar-item"><ul class="navbar-icon-links"
-    aria-label="Icon Links">
-        <li class="nav-item">
-          
-          
-          
-          
-          
-          
-          
-          
-          <a href="https://github.com/AB-RCSC/rc-decision-support-tool" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-github-square fa-lg" aria-hidden="true"></i>
-            <span class="sr-only">GitHub</span></a>
-        </li>
-        <li class="nav-item">
-          
-          
-          
-          
-          
-          
-          
-          
-          <a href="https://ab-rcsc.github.io/RCSC-WildCAM_Remote-Camera-Survey-Guidelines-and-Metadata-Standards/" title="Survey Guidelines / Metadata Standards" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="../_static/logo_survguide_metadata.png" class="icon-link-image" alt="Survey Guidelines / Metadata Standards"/></a>
-        </li>
-</ul></div>
-      
-        <div class="navbar-item">
-
-  <div class="tocsection sourcelink">
-    <a href="../_sources/02_dialog-boxes/03_15_mod_catspim.md">
-      <i class="fa-solid fa-file-lines"></i> Show Source
-    </a>
-  </div>
-</div>
-      
-    </div>
-    
-  </div>
-  
-  
-    <div class="navbar-persistent--mobile">
-
-<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
- <i class="fa-solid fa-magnifying-glass"></i>
- <span class="search-button__default-text">Search</span>
- <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-</button>
-    </div>
-  
-
-  
-</div>
-
     </header>
   
 
@@ -279,103 +138,20 @@
   <div class="sidebar-header-items sidebar-primary__section">
     
     
-      <div class="sidebar-header-items__center">
-        
-          
-          
-            <div class="navbar-item">
-<nav>
-  <ul class="bd-navbar-elements navbar-nav">
     
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="00_test/00_test_img.html">
-    <no title>
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-external" href="https://ab-rcsc.github.io/rc-decision-support-tool">
-    <b>Home</b> 
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/">
-    Concept library
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/09_glossary.html">
-    Glossary
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/08_references.html">
-    References
-  </a>
-</li>
-
-  </ul>
-</nav></div>
-          
-        
-      </div>
-    
-    
-    
-      <div class="sidebar-header-items__end">
-        
-          <div class="navbar-item"><ul class="navbar-icon-links"
-    aria-label="Icon Links">
-        <li class="nav-item">
-          
-          
-          
-          
-          
-          
-          
-          
-          <a href="https://github.com/AB-RCSC/rc-decision-support-tool" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-github-square fa-lg" aria-hidden="true"></i>
-            <span class="sr-only">GitHub</span></a>
-        </li>
-        <li class="nav-item">
-          
-          
-          
-          
-          
-          
-          
-          
-          <a href="https://ab-rcsc.github.io/RCSC-WildCAM_Remote-Camera-Survey-Guidelines-and-Metadata-Standards/" title="Survey Guidelines / Metadata Standards" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="../_static/logo_survguide_metadata.png" class="icon-link-image" alt="Survey Guidelines / Metadata Standards"/></a>
-        </li>
-</ul></div>
-        
-          <div class="navbar-item">
-
-  <div class="tocsection sourcelink">
-    <a href="../_sources/02_dialog-boxes/03_15_mod_catspim.md">
-      <i class="fa-solid fa-file-lines"></i> Show Source
-    </a>
-  </div>
-</div>
-        
-      </div>
     
   </div>
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -396,11 +172,7 @@
                   
   <section class="tex2jax_ignore mathjax_ignore" id="spatial-partial-identity-model-categorical-spim-catspim">
 <span id="i-mod-catspim"></span><h1>Spatial Partial Identity Model (Categorical SPIM; catSPIM)<a class="headerlink" href="#spatial-partial-identity-model-categorical-spim-catspim" title="Link to this heading">#</a></h1>
-<!--
-:::{hint}
-replace me with text
-:::
--->
+<p><strong>Categorical partial identity model (catSPIM) (Augustine et al., 2019; Sun et al., 2022)</strong>: A method used to estimate the <a class="reference internal" href="09_glossary.html#density"><span class="std std-ref">density</span></a> of partially marked populations in which the ‘spatial locations of where partial identity samples are captured to probabilistically resolve their complete identities’ (Augustine et al., 2018, 2019). catSPIM models use partial identity traits (e.g., sex class, antler points) to help infer individual identities (Augustine et al., 2019; Sun et al., 2022). catSPIM is an extension of the SC model (Chandler &amp; Royle, 2013).</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Assumptions, Pros, Cons</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
@@ -412,20 +184,17 @@ replace me with text
 <div class="sd-card-title sd-font-weight-bold docutils">
 Assumptions</div>
 <ul class="simple">
-<li><p class="sd-card-text">Same as <a href="09_glossary.html#mod_scr" target="_blank" data-bs-toggle="tooltip" data-bs-title="Spatially explicit capture-recapture (SECR) / Spatial capture-recapture (SCR) (Borchers & Efford, 2008; Efford, 2004; Royle & Young, 2008; Royle et al., 2009): The SECR (or SCR) method is used to estimate the density of marked populations; an extension of traditional capture-recapture (CR; Karanth, 1995; Karanth & Nichols, 1998) models (Karanth, 1995; Karanth & Nichols, 1998) that explicitly accounts for camera location and animal movement (Burgar et al., 2018). SECR models use spatially referenced individual capture histories to infer where animals' home range centres are, assuming that detection probability decreases with increasing distance between cameras and home range centres (Clarke et al., 2023). SECR models can be implemented using different statistical frameworks, including Bayesian estimation (Royle and Young, 2008; Morin et al., 2022).">SCR<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a> (Augustine et al., 2019; Sun et al., 2022; Clarke et al., 2023)</p>
-<ul>
+<li><p class="sd-card-text">Same as SC (Augustine et al., 2019; Sun et al., 2022; Clarke et al., 2023)</p></li>
 <li><p class="sd-card-text">Camera must be close enough together that animals are detected at multiple cameras (Chandler &amp; Royle, 2013; Clarke et al., 2023)</p></li>
 <li><p class="sd-card-text">Demographic closure (i.e., no births or deaths) (Chandler &amp; Royle, 2013; Clarke et al., 2023)</p></li>
 <li><p class="sd-card-text">Geographic closure (i.e., no immigration or emigration) (Chandler &amp; Royle, 2013; Clarke et al., 2023)</p></li>
-<li><p class="sd-card-text"><a href="09_glossary.html#independent_detections" target="_blank" data-bs-toggle="tooltip" data-bs-title="Independent detections: Detections that are deemed to be independent based on a user-defined threshold (e.g., 30 minutes).">Detections are independent<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a> (Chandler &amp; Royle, 2013; Clarke et al., 2023)</p></li>
-</ul>
-</li>
+<li><p class="sd-card-text">Detections are <a class="reference internal" href="09_glossary.html#independent-detections"><span class="std std-ref">independent</span></a> (Chandler &amp; Royle, 2013; Clarke et al., 2023)</p></li>
 <li><p class="sd-card-text">Activity centres are randomly dispersed (Chandler &amp; Royle, 2013; Clarke et al., 2023)</p></li>
 <li><p class="sd-card-text">Activity centres are stationary (Chandler &amp; Royle, 2013; Clarke et al., 2023)</p></li>
-<li><p class="sd-card-text">Each categorical identifier (e.g., male/female, collared/not collared, etc) has fixed number of possibilities (Sun et al., 2022)</p></li>
+<li><p class="sd-card-text">Each categorical identifier (e.g., male*/female, collared**/not collared, etc) has fixed number of possibilities (Sun et al., 2022)</p></li>
 <li><p class="sd-card-text">All possible values of categorical identifiers occur in the population with probabilities that can be estimated (Augustine et al., 2019; Sun et al., 2022; Clarke et al., 2023)</p></li>
 <li><p class="sd-card-text">Every individual is assigned ‘full categorical identity’ (i.e., ‘set of traits given all categorical identifiers and possibilities’) (Augustine et al., 2019; Clarke et al., 2023)</p></li>
-<li><p class="sd-card-text">Individuals’ identifying traits do not change during the <a href="09_glossary.html#survey" target="_blank" data-bs-toggle="tooltip" data-bs-title="Survey: A unique deployment period (temporal extent) within a project (recorded as 'Survey Name').">survey<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a> (e.g., antlers present*/absent) (Augustine et al., 2019)</p></li>
+<li><p class="sd-card-text">Individuals’ identifying traits do not change during the <a class="reference internal" href="09_glossary.html#survey"><span class="std std-ref">survey</span></a> (e.g., antlers present*/absent) (Augustine et al., 2019)</p></li>
 </ul>
 </div>
 </div>
@@ -436,7 +205,7 @@ Assumptions</div>
 <div class="sd-card-title sd-font-weight-bold docutils">
 Pros</div>
 <ul class="simple">
-<li><p class="sd-card-text">May produce more <a href="09_glossary.html#precision" target="_blank" data-bs-toggle="tooltip" data-bs-title="Precision: Uncertainty in estimates (Hammond et al., 2021)' (Clarke et al., 2023).">precise<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a> and less <a href="09_glossary.html#bias" target="_blank" data-bs-toggle="tooltip" data-bs-title="Bias: A skewed or altered perspective. Biased data refers to data that may be inaccurate or unevenly portrayed (usually in favour of specific variables) and is therefore not as robust.' (Kemp et al., 2022).">biased<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a> <a href="09_glossary.html#obj_density" target="_blank" data-bs-toggle="tooltip" data-bs-title="Density: The number of individuals per unit area (Wearn & Glover-Kapfer, 2017)">density<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a> estimates than <a href="09_glossary.html#mod_sc" target="_blank" data-bs-toggle="tooltip" data-bs-title="Spatial count (SC) model / Unmarked spatial capture-recapture (Chandler & Royle, 2013): A method used to estimate the density of unmarked populations; similar to SECR (Borchers & Efford, 2008; Efford, 2004; Royle & Young, 2008; Royle et al., 2009); however, SC models account for individuals' unknown identities using the spatial pattern of detections (Chandler & Royle, 2013; Sun et al., 2022). SC uses trap-specific counts to estimate the location and number of activity centres to estimate density.">SC<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a> with less information (Sun et al., 2022; Clarke et al., 2023)</p></li>
+<li><p class="sd-card-text">May produce more precise and less biased <a class="reference internal" href="09_glossary.html#density"><span class="std std-ref">density</span></a> estimates than SC with less information (Sun et al., 2022; Clarke et al., 2023)</p></li>
 </ul>
 </div>
 </div>
@@ -447,9 +216,9 @@ Pros</div>
 <div class="sd-card-title sd-font-weight-bold docutils">
 Cons</div>
 <ul class="simple">
-<li><p class="sd-card-text">Sensitive to non-independent movement (e.g., group-travel); can cause  and <a href="09_glossary.html#bias" target="_blank" data-bs-toggle="tooltip" data-bs-title="Bias: A skewed or altered perspective. Biased data refers to data that may be inaccurate or unevenly portrayed (usually in favour of specific variables) and is therefore not as robust.' (Kemp et al., 2022).">bias<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a> estimates (Sun et al., 2022; Clarke et al., 2023); may limit application to solitary species only (Sun et al., 2022; Clarke et al., 2023)</p></li>
-<li><p class="sd-card-text">May produce be less reliable/<a href="09_glossary.html#accurate" target="_blank" data-bs-toggle="tooltip" data-bs-title="Accuracy: How close a measured or estimated value is to the true value' (Clarke et al., 2023).">accurate<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a> estimates for high-<a href="09_glossary.html#obj_density" target="_blank" data-bs-toggle="tooltip" data-bs-title="Density: The number of individuals per unit area (Wearn & Glover-Kapfer, 2017)">density<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a> populations (Sun et al., 2022; Clarke et al., 2023)</p></li>
-<li><p class="sd-card-text">Too few categorical identifiers*/ possibilities can result in mis-assignments and overestimating <a href="09_glossary.html#obj_density" target="_blank" data-bs-toggle="tooltip" data-bs-title="Density: The number of individuals per unit area (Wearn & Glover-Kapfer, 2017)">density<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a> (Augustine et al., 2019; Parmenter et al., 2003; Clarke et al., 2023)</p></li>
+<li><p class="sd-card-text">Sensitive to non-independent movement (e.g., group-travel); can cause over-dispersion and bias estimates (Sun et al., 2022; Clarke et al., 2023); may limit application to solitary species only (Sun et al., 2022; Clarke et al., 2023)</p></li>
+<li><p class="sd-card-text">May produce be less reliable*/accurate estimates for high-<a class="reference internal" href="09_glossary.html#density"><span class="std std-ref">density</span></a> populations (Sun et al., 2022; Clarke et al., 2023)</p></li>
+<li><p class="sd-card-text">Too few categorical identifiers*/ possibilities can result in mis-assignments and overestimating <a class="reference internal" href="09_glossary.html#density"><span class="std std-ref">density</span></a> (Augustine et al., 2019; Parmenter et al., 2003; Clarke et al., 2023)</p></li>
 </ul>
 </div>
 </div>
@@ -471,10 +240,10 @@ Overview</label><div class="sd-tab-content docutils">
 In-depth</label><div class="sd-tab-content docutils">
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><strong>This content was adapted from: The Density Handbook</strong>, “<a class="reference external" href="https://www.researchgate.net/publication/368601884_Using_Camera_Traps_to_Estimate_Medium_and_Large_Mammal_Density_Comparison_of_Methods_and_Recommendations_for_Wildlife_Managers">Using Camera Traps to Estimate Medium and Large Mammal Density: Comparison of Methods and Recommendations for Wildlife Managers</a>” (Clarke et al., 2023)</p>
+<p><strong>This content was adapted from</strong>: The Density Handbook, “<a class="reference external" href="https://www.researchgate.net/publication/368601884_Using_Camera_Traps_to_Estimate_Medium_and_Large_Mammal_Density_Comparison_of_Methods_and_Recommendations_for_Wildlife_Managers">Using Camera Traps to Estimate Medium and Large Mammal Density: Comparison of Methods and Recommendations for Wildlife Managers</a>” (Clarke et al., 2023)</p>
 </div>
-<p>The categorical spatial partial identity model (catSPIM) is an extension of the spatial count (SC; see <a class="sd-sphinx-override sd-badge sd-outline-primary sd-text-primary reference external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/03_14_mod_sc.html"><span>Spatial count</span></a>) model. It was originally developed for use with genetic capture-recapture studies, but can also be applied to camera trap studies (Augustine et al., 2019). Here, we will discuss the camera trap catSPIM.</p>
-<p>Camera trap SC uses the number and location of unmarked animal detections to infer the number and location of activity (or home range) centres, which can then be used to infer population density (see <em>How the Model Works</em> in <a class="sd-sphinx-override sd-badge sd-outline-primary sd-text-primary reference external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/03_14_mod_sc.html"><span>Spatial count</span></a>). With SC, individual identities are not known and cannot be resolved with any certainty. The catSPIM incorporates categorical information (i.e., information that can be divided into distinct groups) into the SC model to partially-resolve unmarked animals’ identities. Said differently: instead of viewing animals as completely unidentifiable and relying exclusively on model parameters to tease individuals apart, as SC does, the catSPIM uses model parameters and suites of traits to help distinguish animals – even if incompletely (Sun et al., 2022). Thus, catSPIM can be thought of as “SC+”: an SC model augmented with categorical identifiers.</p>
+<p>The categorical spatial partial identity model (catSPIM) is an extension of the spatial count (SC; see <em>2.2.1 Spatial Count</em> [in Clarke et al. 2023]) model. It was originally developed for use with genetic capture-recapture studies, but can also be applied to camera trap studies (Augustine et al., 2019). Here, we will discuss the camera trap catSPIM.</p>
+<p>Camera trap SC uses the number and location of unmarked animal detections to infer the number and location of activity (or home range) centres, which can then be used to infer population density (see <em>How the Model Works</em> in the SC section [in Clarke et al. 2023]). With SC, individual identities are not known and cannot be resolved with any certainty. The catSPIM incorporates categorical information (i.e., information that can be divided into distinct groups) into the SC model to partially-resolve unmarked animals’ identities. Said differently: instead of viewing animals as completely unidentifiable and relying exclusively on model parameters to tease individuals apart, as SC does, the catSPIM uses model parameters and suites of traits to help distinguish animals – even if incompletely (Sun et al., 2022). Thus, catSPIM can be thought of as “SC+”: an SC model augmented with categorical identifiers.</p>
 <p>Examples of categorical identifiers include sex, age class, colour type, markings and antler point count (Augustine et al., 2019, Sun et al., 2022). Each categorical identifier (e.g., sex) has a fixed number of possibilities (e.g., male/female). Every animal detection is assigned a “full categorical identity,” or a set of traits given all categorical identifiers and possibilities (Augustine et al., 2019).</p>
 <p>Categorical identifiers are used to partially-distinguish unmarked animals in three ways:</p>
 <ol class="arabic simple">
@@ -482,67 +251,16 @@ In-depth</label><div class="sd-tab-content docutils">
 <li><p>Categorical probabilistic identity association. This means that animals that share categorical identifiers are more likely to be the same individual (Augustine et al., 2019). The catSPIM’s power to resolve individuals’ identities increases with the number of categorical identifiers in a full categorical identity and the number of possibilities per categorical identifier, since individuals become increasingly unique (Sun et al., 2022).</p></li>
 <li><p>Spatial probabilistic identity association. The spatial pattern of detections and the size of animals’ home ranges limit which detections can be assigned to the same individuals (Augustine et al., 2019). As a simple example: an adult, female, collared elk is detected at two camera traps, many home ranges apart. We can deduce that the elk captured at one camera is not likely to be the same as the elk captured at the other camera, since it is improbable an individual elk would travel that far.</p></li>
 </ol>
-<h2 class="rubric" id="simulations-and-field-experiments-clarke-et-al-2023">Simulations and Field Experiments (Clarke et al., 2023)</h2>
+<h2 class="rubric" id="simulations-and-field-experiments-clarke-et-al-2023">Simulations and Field Experiments Clarke et al., 2023</h2>
 <p>Sun et al. (2022) tested the catSPIM on two caribou populations in the Alberta oil sands region. They found that, compared to SC, the catSPIM was more precise and consistent year-to-year – but that it was still fairly imprecise. The catSPIM may also have produced overestimates of density in this system. Any overestimates would likely have been caused by misassigning identities (more specifically, by assigning identities to individuals that didn’t exist – that is, individuals that were in the augmented population <em>𝑀</em> but not the actual population <em>𝑁</em>; see How the Model Works in the SC section) and could be mitigated by increasing the number of categorical identifiers used (Sun et al., 2022). The researchers used three categorical identifiers for this study: sex (male/female), presence of collars (collared/not collared) and antler point count (0 to 17), which they suggest is too few (Sun et al., 2022).</p>
 <p>Field data-based simulations showed that the catSPIM was less biased and more precise than SC (Sun et al., 2022).</p>
-<p><strong>Box 2</strong>. Note the distinction between SPIMs and spatial mark-resight (SMR; see <a class="sd-sphinx-override sd-badge sd-outline-primary sd-text-primary reference external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/03_13_mod_smr.html"><span>Spatial mark-resight</span></a>) models: SPIMs are for partially-identifying sets of images (two-flank SPIMs) or individuals that are themselves partially-marked, whereas SMR deals with partially-marked populations in which some animals are uniquely marked and identifiable and others are unmarked and unidentifiable.</p>
+<p><strong>Box 2</strong>. Note the distinction between SPIMs and spatial mark-resight (SMR; see 2.3.1 Spatial Mark-Resight [in Clarke et al. 2023]
+) models: SPIMs are for partially-identifying sets of images (two-flank SPIMs) or individuals that are themselves partially-marked, whereas SMR deals with partially-marked populations in which some animals are uniquely marked and identifiable and others are unmarked and unidentifiable.</p>
 </div>
 <input id="sd-tab-item-2" name="sd-tab-set-0" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-2">
 Visual resources</label><div class="sd-tab-content docutils">
-<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
-<div class="sd-row sd-row-cols-3 sd-row-cols-xs-3 sd-row-cols-sm-3 sd-row-cols-md-3 sd-row-cols-lg-3 docutils">
-<div class="sd-col sd-d-flex-row docutils">
-<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
-<div class="sd-card-body docutils">
-<div class="sd-card-title sd-font-weight-bold docutils">
-rtxt_figure2_ref_id</div>
-<figure class="align-default">
-<img alt="../_images/figure2_filename.png" class="img-grid" src="../_images/figure2_filename.png" />
-</figure>
-</div>
-</div>
-</div>
-<div class="sd-col sd-d-flex-row docutils">
-<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
-<div class="sd-card-body docutils">
-<div class="sd-card-title sd-font-weight-bold docutils">
-rtxt_figure3_ref_id</div>
-<figure class="align-default">
-<img alt="../_images/figure3_filename.png" class="img-grid" src="../_images/figure3_filename.png" />
-</figure>
-</div>
-</div>
-</div>
-<div class="sd-col sd-d-flex-row docutils">
-<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
-<div class="sd-card-body docutils">
-<div class="sd-card-title sd-font-weight-bold docutils">
-rtxt_vid1_ref_id</div>
-<div class="iframe-container-vid"><iframe class="iframe-responsive-vid" src="vid1_url"></iframe></div>
-</div>
-</div>
-</div>
-<div class="sd-col sd-d-flex-row docutils">
-<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
-<div class="sd-card-body docutils">
-<div class="sd-card-title sd-font-weight-bold docutils">
-rtxt_vid2_ref_id</div>
-<div class="iframe-container-vid"><iframe class="iframe-responsive-vid" src="vid2_url"></iframe></div>
-</div>
-</div>
-</div>
-<div class="sd-col sd-d-flex-row docutils">
-<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
-<div class="sd-card-body docutils">
-<div class="sd-card-title sd-font-weight-bold docutils">
-rtxt_vid3_ref_id</div>
-<div class="iframe-container-vid"><iframe class="iframe-responsive-vid" src="vid3_url"></iframe></div>
-</div>
-</div>
-</div>
-</div>
-</div>
+<p>Check back in the future!</p>
 </div>
 <input id="sd-tab-item-3" name="sd-tab-set-0" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-3">
@@ -568,14 +286,100 @@ Analytical tools &amp; Resources</label><div class="sd-tab-content docutils">
 <td class="text-left"><p><a class="reference external" href="https://rdrr.io/github/benaug/SPIM">https://rdrr.io/github/benaug/SPIM</a></p></td>
 <td class="text-left"><p>Augustine, B. C., Royle, J. A., Murphy, S. M., Chandler, R. B., Cox, J. J., &amp; Kelly, M. J. (2019). Spatial Capture-Recapture for Categorically Marked Populations with an Application to Genetic Capture-Recapture. <em>Ecosphere, 10</em>(4) e02627-n/a. <a class="reference external" href="https://doi.org/10.1002/ecs2.2627">https://doi.org/10.1002/ecs2.2627</a></p></td>
 </tr>
+<tr class="row-odd"><td class="text-left"><p>resource2_type</p></td>
+<td class="text-left"><p>resource2_name</p></td>
+<td class="text-left"><p>resource2_note</p></td>
+<td class="text-left"><p>resource2_url</p></td>
+<td class="text-left"><p>ref_bib_resource2_ref_id</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>resource3_type</p></td>
+<td class="text-left"><p>resource3_name</p></td>
+<td class="text-left"><p>resource3_note</p></td>
+<td class="text-left"><p>resource3_url</p></td>
+<td class="text-left"><p>ref_bib_resource3_ref_id</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>resource4_type</p></td>
+<td class="text-left"><p>resource4_name</p></td>
+<td class="text-left"><p>resource4_note</p></td>
+<td class="text-left"><p>resource4_url</p></td>
+<td class="text-left"><p>ref_bib_resource4_ref_id</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>resource5_type</p></td>
+<td class="text-left"><p>resource5_name</p></td>
+<td class="text-left"><p>resource5_note</p></td>
+<td class="text-left"><p>resource5_url</p></td>
+<td class="text-left"><p>ref_bib_resource5_ref_id</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>resource6_type</p></td>
+<td class="text-left"><p>resource6_name</p></td>
+<td class="text-left"><p>resource6_note</p></td>
+<td class="text-left"><p>resource6_url</p></td>
+<td class="text-left"><p>ref_bib_resource6_ref_id</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>resource7_type</p></td>
+<td class="text-left"><p>resource7_name</p></td>
+<td class="text-left"><p>resource7_note</p></td>
+<td class="text-left"><p>resource7_url</p></td>
+<td class="text-left"><p>ref_bib_resource7_ref_id</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>resource8_type</p></td>
+<td class="text-left"><p>resource8_name</p></td>
+<td class="text-left"><p>resource8_note</p></td>
+<td class="text-left"><p>resource8_url</p></td>
+<td class="text-left"><p>ref_bib_resource8_ref_id</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>resource9_type</p></td>
+<td class="text-left"><p>resource9_name</p></td>
+<td class="text-left"><p>resource9_note</p></td>
+<td class="text-left"><p>resource9_url</p></td>
+<td class="text-left"><p>ref_bib_resource9_ref_id</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>resource10_type</p></td>
+<td class="text-left"><p>resource10_name</p></td>
+<td class="text-left"><p>resource10_note</p></td>
+<td class="text-left"><p>resource10_url</p></td>
+<td class="text-left"><p>ref_bib_resource10_ref_id</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>resource11_type</p></td>
+<td class="text-left"><p>resource11_name</p></td>
+<td class="text-left"><p>resource11_note</p></td>
+<td class="text-left"><p>resource11_url</p></td>
+<td class="text-left"><p>ref_bib_resource11_ref_id</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>resource12_type</p></td>
+<td class="text-left"><p>resource12_name</p></td>
+<td class="text-left"><p>resource12_note</p></td>
+<td class="text-left"><p>resource12_url</p></td>
+<td class="text-left"><p>ref_bib_resource12_ref_id</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>resource13_type</p></td>
+<td class="text-left"><p>resource13_name</p></td>
+<td class="text-left"><p>resource13_note</p></td>
+<td class="text-left"><p>resource13_url</p></td>
+<td class="text-left"><p>ref_bib_resource13_ref_id</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>resource14_type</p></td>
+<td class="text-left"><p>resource14_name</p></td>
+<td class="text-left"><p>resource14_note</p></td>
+<td class="text-left"><p>resource14_url</p></td>
+<td class="text-left"><p>ref_bib_resource14_ref_id</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>resource15_type</p></td>
+<td class="text-left"><p>resource15_name</p></td>
+<td class="text-left"><p>resource15_note</p></td>
+<td class="text-left"><p>resource15_url</p></td>
+<td class="text-left"><p>ref_bib_resource15_ref_id</p></td>
+</tr>
 </tbody>
 </table>
 </div>
-<!-- END_RESOURCE_TABLE -->
 </div>
 <input id="sd-tab-item-5" name="sd-tab-set-0" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-5">
 References</label><div class="sd-tab-content docutils">
+<p>Augustine, B. C., Royle, J. A., Murphy, S. M., Chandler, R. B., Cox, J. J., &amp; Kelly, M. J. (2019). Spatial Capture-Recapture for Categorically Marked Populations with an Application to Genetic Capture-Recapture. <em>Ecosphere, 10</em>(4) e02627-n/a. <a class="reference external" href="https://doi.org/10.1002/ecs2.2627">https://doi.org/10.1002/ecs2.2627</a></p>
+<p>Clarke, J., Bohm, H., Burton, C., Constantinou, A. (2023). <em>Using Camera Traps to Estimate Medium and Large Mammal Density: Comparison of Methods and Recommendations for Wildlife Managers</em>. <a class="reference external" href="https://doi.org/10.13140/RG.2.2.18364.72320">https://doi.org/10.13140/RG.2.2.18364.72320</a></p>
+<p>Sun, C., Burgar, J. M., Fisher, J. T., &amp; Burton, A. C. (2022). A Cautionary Tale Comparing Spatial Count and Partial Identity Models for Estimating Densities of Threatened and Unmarked Populations. <em>Global Ecology and Conservation, 38</em>, e02268. <a class="reference external" href="https://doi.org/10.1016/j.gecco.2022.e02268">https://doi.org/10.1016/j.gecco.2022.e02268</a></p>
 </div>
 </div>
 </section>
@@ -621,25 +425,11 @@ References</label><div class="sd-tab-content docutils">
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
-<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
-  
-    <div class="footer-items__start">
-      
-        <div class="footer-item">
-
-  <p class="copyright">
-    
-      © Copyright 2024.
-      <br/>
-    
-  </p>
-</div>
-      
-    </div>
   
   
   
