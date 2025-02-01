@@ -1,0 +1,403 @@
+/* MAIN */
+
+/* Target the content container */
+/*set the article content max width to the same width as the top navigation bar.*/
+
+/*https://pydata-sphinx-theme.readthedocs.io/en/stable/user_guide/styling.html*/
+/*https://developer.mozilla.org/en-US/docs/Web/CSS/display*/
+/*https://pydata-sphinx-theme.readthedocs.io/en/stable/user_guide/static_assets.html*/
+/*https://sphinx-design.readthedocs.io/en/pydata-theme/css_variables.html*/
+/*https://sphinx-design.readthedocs.io/en/pydata-theme/css_classes.html*/
+/*https://jupyterbook.org/en/stable/content/components.html#custom-div-blocks*/
+/*Block quoteshttps://jupyter-notebook.readthedocs.io/en/stable/custom_css.html*/
+/*    font-family: Helvetica Neue;/*
+/*    font-style: italic;/*
+/*https://pydata-sphinx-theme.readthedocs.io/en/v0.9.0/user_guide/customizing.html*/
+
+/*If you’d like the article content to take up more width than its default, use the max-width CSS property with the following selectors*/
+
+.bd-main .bd-content .bd-article-container {
+    max-width: 95%;
+    background-color: white;
+}
+
+.bd-content .sd-card .sd-card-body {
+    background-color: unset !important;
+}
+
+.bd-page-width {
+    max-width: 93%;
+}
+
+.bd-main {
+    display: flex;
+    flex-direction: row-reverse; /* Reverse the order of main content and sidebar */
+}
+
+.card-whitesmoke {
+  --sd-color-card-background: whitesmoke;
+  border: 1px solid #ccc;
+}
+
+html {
+  --pst-font-size-base: 16px;
+  --pst-font-size-h1: 24px;
+  --pst-font-size-h2: 22px;
+  --pst-font-size-h3: 20px;
+  --pst-font-weight-h1: bold;
+  --pst-font-weight-h2: bold;
+  --pst-font-weight-h3: normal;
+  --pst-line-height-h1: 1;
+  --pst-font-color-h2: #2F5496;
+  --pst-sidebar-font-size: 14px;
+  --pst-sidebar-secondary: 14px;
+  line-height-body: 1.3;
+  toc-item-padding-y: 0.25rem;
+  nav-icon-column-gap: 1.5rem;
+}
+
+body {
+    background: whitesmoke;
+}
+
+div.img_grid {
+  :width: 100%;
+  :align: center;
+}
+
+.grid-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+/*  gap: 10px;*/
+  gutter: 3	
+}
+
+
+/* Block Quotes*/
+blockquote {
+  color: white;
+  border-left: 150px solid  white;
+  border-right: 150px solid  white;
+  background-color: white;
+  padding: 5px;
+}
+
+root {
+/*   font awesome icons */
+  --pst-icon-check-circle: "\f058"; // fas fa-check-circle
+  --pst-icon-info-circle: "\f05a"; // fas fa-info-circle
+  --pst-icon-exclamation-triangle: "\f071"; // fas fa-exclamation-triangle
+  --pst-icon-exclamation-circle: "\f06a"; // fas fa-exclamation-circle
+  --pst-icon-times-circle: "\f057"; // fas fa-times-circle
+  --pst-icon-lightbulb: "\f0eb"; // fas fa-lightbulb
+/*   admonitions */
+  --pst-icon-admonition-default: var(--pst-icon-info-circle);
+  --pst-icon-admonition-note: var(--pst-icon-info-circle);
+  --pst-icon-admonition-attention: var(--pst-icon-exclamation-circle);
+  --pst-icon-admonition-caution: var(--pst-icon-exclamation-triangle);
+  --pst-icon-admonition-warning: var(--pst-icon-exclamation-triangle);
+  --pst-icon-admonition-danger: var(--pst-icon-exclamation-triangle);
+  --pst-icon-admonition-error: var(--pst-icon-times-circle);
+  --pst-icon-admonition-hint: var(--pst-icon-lightbulb);
+  --pst-icon-admonition-tip: var(--pst-icon-lightbulb);
+  --pst-icon-admonition-important: var(--pst-icon-exclamation-circle);
+}
+
+
+/* PROG */
+
+.class-card-center {
+    text-align: center; /* horizontal */
+    line-height: 1.15;
+    font-size: 0.3 rem;
+    margin-top: 0;
+}
+
+.class-prog1 {
+    display: flex;
+    align-items: center; /* vertically */
+    justify-content: center;  /* horizontal */
+    height: 130px;
+    padding: 1px;
+  --sd-color-card-background: #F7F056;
+}
+
+.class-prog2 {
+    display: flex;
+    align-items: center; /* vertically */
+    justify-content: center;  /* horizontal */
+    text-align: center; /* horizontal */
+    height: 130px;
+    padding: 1px;
+  --sd-color-card-background: #F7CB45;
+}
+
+.class-prog3 {
+    display: flex;
+    align-items: center; /* vertically */
+    justify-content: center;  /* horizontal */
+    text-align: center; /* horizontal */
+    height: 130px;
+    padding: 1px;
+  --sd-color-card-background: #F7CB45;
+}
+
+.class-prog4 {
+    display: flex;
+    align-items: center; /* vertically */
+    justify-content: center;  /* horizontal */
+    text-align: center; /* horizontal */
+    height: 130px;
+    padding: 1px;
+  --sd-color-card-background: #D9CCE3;
+}
+
+.class-prog5 {
+    display: flex;
+    align-items: center; /* vertically */
+    justify-content: center;  /* horizontal */
+    text-align: center; /* horizontal */
+    height: 130px;
+    padding: 1px;
+  --sd-color-card-background: #EEDD88;
+}
+
+.class-prog6 {
+    display: flex;
+    align-items: center; /* vertically */
+    justify-content: center;  /* horizontal */
+    text-align: center; /* horizontal */
+    height: 130px;
+    padding: 1px;
+  --sd-color-card-background: #7BAFDE;
+}
+
+.class-prog7 {
+    display: flex;
+    align-items: center; /* vertically */
+    justify-content: center;  /* horizontal */
+    text-align: center; /* horizontal */
+    height: 130px;
+    padding: 1px;
+  --sd-color-card-background: #CCDDAA;
+}
+
+.class-prog-999{
+    display: flex;
+    align-items: center; /* vertically */
+    justify-content: center;  /* horizontal */
+    text-align: center; /* horizontal */
+    height: 130px;
+    padding: 1px;
+  --sd-color-card-background: #DDDDDD;
+}
+
+
+
+
+/* COLOURS */
+/*not sure which of these works for you; also blue can just be the default colour/*
+.opt-button-blue {
+    white-space: normal;
+    font-size: 14px !important;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 10px;
+    --sd-color-card-background: #DAE8FC;
+}
+
+.opt-button-grey {
+    white-space: normal;
+    font-size: 14px !important;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 10px;
+    --sd-color-card-background: #F5F5F5;
+}
+
+.class-opt-button-blue {
+  --sd-color-card-background: #DAE8FC;
+}
+
+.class-opt-button-blue {
+  --sd-color-card-background: #DAE8FC;
+}
+
+
+
+/* TOOLTIPS */
+
+.tooltip-inner {
+    max-width: 400px !important; //define whatever width you want
+}
+
+.btn-bd-tip {
+  --bs-btn-padding-x: 0;
+  --bs-btn-padding-y: 0;
+  --bs-btn-border-width: 1px;
+  --bs-btn-border-radius: 1px;
+  --bs-btn-font-weight: 475;
+  --bs-btn-font-size: .95em;
+  --bs-btn-color: var(--bs-white);
+  --bs-btn-bg: var(--bs-white);
+  --bs-btn-border-color: var(--bs-white);
+  --bs-btn-hover-color: var(--bs-white);
+  --bs-btn-hover-bg: #{shade-color($bd-blue-700, 10%)};
+  --bs-btn-hover-border-color: #{shade-color($bd-blue-700, 10%)};
+  --bs-btn-focus-shadow-rgb: var(--bd-blue-700-rgb);
+  --bs-btn-active-color: var(--bs-btn-hover-color);
+  --bs-btn-active-bg: #{shade-color($bd-blue-700, 20%)};
+  --bs-btn-active-border-color: #{shade-color($bd-blue-700, 20%)};
+}
+
+.btn-bd-tip-info-hidden {
+  --bs-btn-margin-top: -0.25rem !important;
+  --bs-btn-padding-x: 0rem;
+  --bs-btn-padding-y: 0rem;
+  --bs-btn-padding-x-sm: 0;
+  --bs-btn-padding-y-sm: 0;
+  --bs-btn-border-radius: 0;
+  --bs-btn-border-width: 10;
+  --bs-btn-font-weight: 600;
+  --bs-btn-font-size: .9em;
+  --bs-btn-color: var(--bs-white);
+  --bs-btn-bg: var(--bs-white);
+  --bs-btn-border-color: var(--bs-white);
+  --bs-btn-hover-color: var(--bs-white);
+  --bs-btn-hover-bg: #{shade-color($bd-blue-700, 10%)};
+  --bs-btn-hover-border-color: #{shade-color($bd-blue-700, 10%)};
+  --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+  --bs-btn-active-color: var(--bs-btn-hover-color);
+  --bs-btn-active-bg: #{shade-color($bd-violet, 20%)};
+  --bs-btn-active-border-color: #{shade-color($bd-violet, 20%)};
+}
+
+.btn-bd-hidden {
+  --bs-btn-padding-x: 0;
+  --bs-btn-padding-y: 0;
+  --bs-btn-border-width: 0px;
+  --bs-btn-border-radius: 0px;
+  --bs-btn-font-size: .95em;
+  --bs-btn-color: var(--bs-white);
+  --bs-btn-bg: var(--bs-white);
+}
+.btn-bd-text2 {
+  --bs-btn-margin-top: -0.25rem !important;
+  --bs-btn-padding-x: 0rem;
+  --bs-btn-padding-y: 0rem;
+  --bs-btn-padding-x-sm: 0;
+  --bs-btn-padding-y-sm: 0;
+  --bs-btn-border-radius: 0;
+  --bs-btn-border-width: 10;
+  --bs-btn-font-weight: 600;
+  --bs-btn-font-size: .9em;
+  --bs-btn-color: var(--bs-white);
+  --bs-btn-bg: var(--bs-white);
+  --bs-btn-border-color: var(--bs-white);
+  --bs-btn-hover-color: var(--bs-white);
+  --bs-btn-hover-bg: #{shade-color($bd-blue-700, 10%)};
+  --bs-btn-hover-border-color: #{shade-color($bd-blue-700, 10%)};
+  --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+  --bs-btn-active-color: var(--bs-btn-hover-color);
+  --bs-btn-active-bg: #{shade-color($bd-violet, 20%)};
+  --bs-btn-active-border-color: #{shade-color($bd-violet, 20%)};
+}
+
+
+/* IFRAME */
+
+.iframe-container-vid {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+}
+
+/* Then style the iframe to fit in the container div with full height and width */
+.iframe-responsive-vid2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  loading: lazy;
+  allow: "accelerometer; autoplay;
+        encrypted-media; gyroscope;
+        picture-in-picture";
+  allowfullscreen
+}
+
+.iframe-responsive-vid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  loading: lazy;
+  allow: "accelerometer; autoplay;
+        encrypted-media; gyroscope;
+        picture-in-picture";
+}
+
+.iframe-responsive-vid-strict {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  loading: lazy;
+  allow: "accelerometer; autoplay;
+        encrypted-media; gyroscope;
+        picture-in-picture";
+  referrerpolicy: "strict-origin-when-cross-origin";
+}
+
+.iframe-container-shiny {
+  position: relative;
+  width: 100%;
+  height: 900;
+}
+
+.iframe-responsive-shiny {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  loading: lazy;
+  allow: "accelerometer; autoplay; clipboard-write;
+        encrypted-media; gyroscope;
+        picture-in-picture";
+}
+
+/* YOUTUBE */
+
+div.admonition.admonition-youtube {
+  border-color: hsl(0deg 100% 50%); /* YouTube red */
+}
+
+div.admonition.admonition-youtube > .admonition-title {
+  background-color: hsl(0deg 99% 18%);
+  color: white;
+}
+
+div.admonition.admonition-youtube > .admonition-title::after {
+  color: hsl(0deg 100% 50%);
+  content: "\f26c"; /* fa-solid fa-tv */
+}
+
+.insert_youtube {  
+    background-image: url("/03_images/03_icons/watch-on-youtube.png");  
+    width: 44px;  
+    height: 44px;  
+}

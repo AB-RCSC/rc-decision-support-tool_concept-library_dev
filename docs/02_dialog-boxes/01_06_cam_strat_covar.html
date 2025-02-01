@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Stratified by covariates &#8212; Remote Camera Decision Support Tool - Concept Library</title>
+    <title>Camera arrangement - Stratified by covariates &#8212; Remote Camera Decision Support Tool - Concept Library</title>
   
   
   
@@ -33,11 +33,11 @@
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="../_static/tippy.css?v=7a364cf7" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=703e16d2" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=9bd6c0e5" />
+    <link rel="stylesheet" type="text/css" href="../_static/scratch_backup.css?v=ed3b7673" />
   
   <!-- So that users can add custom icons -->
   <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -57,22 +57,9 @@
     <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
-    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-PJDP7DQ9Q0"></script>
-    <script>
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){ dataLayer.push(arguments); }
-                gtag('js', new Date());
-                gtag('config', 'G-PJDP7DQ9Q0');
-            </script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){ dataLayer.push(arguments); }
-                gtag('js', new Date());
-                gtag('config', 'G-PJDP7DQ9Q0');
-            </script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = '02_dialog-boxes/01_06_cam_strat_covar';</script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -120,6 +107,154 @@
 
   
     <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Remote Camera Decision Support Tool - Concept Library - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="Remote Camera Decision Support Tool - Concept Library - Home"/>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class=" navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://ab-rcsc.github.io/rc-decision-support-tool">
+    <b>Home</b> 
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/">
+    Concept library
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/08_references.html">
+    References
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/09_glossary.html">
+    Glossary
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/10_other_resource_lib.html">
+    Other resources
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/AB-RCSC/rc-decision-support-tool" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-github-square fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://ab-rcsc.github.io/RCSC-WildCAM_Remote-Camera-Survey-Guidelines-and-Metadata-Standards/" title="Survey Guidelines / Metadata Standards" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="../_static/logo_survguide_metadata.png" class="icon-link-image" alt="Survey Guidelines / Metadata Standards"/></a>
+        </li>
+</ul></div>
+      
+        <div class="navbar-item">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/02_dialog-boxes/01_06_cam_strat_covar.md"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+</div>
+
     </header>
   
 
@@ -138,7 +273,95 @@
   <div class="sidebar-header-items sidebar-primary__section">
     
     
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
     
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://ab-rcsc.github.io/rc-decision-support-tool">
+    <b>Home</b> 
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/">
+    Concept library
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/08_references.html">
+    References
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/09_glossary.html">
+    Glossary
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://ab-rcsc.github.io/rc-decision-support-tool_concept-library/02_dialog-boxes/10_other_resource_lib.html">
+    Other resources
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/AB-RCSC/rc-decision-support-tool" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-github-square fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://ab-rcsc.github.io/RCSC-WildCAM_Remote-Camera-Survey-Guidelines-and-Metadata-Standards/" title="Survey Guidelines / Metadata Standards" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="../_static/logo_survguide_metadata.png" class="icon-link-image" alt="Survey Guidelines / Metadata Standards"/></a>
+        </li>
+</ul></div>
+        
+          <div class="navbar-item">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/02_dialog-boxes/01_06_cam_strat_covar.md"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div></div>
+        
+      </div>
     
   </div>
   
@@ -170,26 +393,82 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="stratified-by-covariates">
-<span id="i-cam-strat-covar"></span><h1>Stratified by covariates<a class="headerlink" href="#stratified-by-covariates" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="camera-arrangement-stratified-by-covariates">
+<span id="i-cam-strat-covar"></span><h1>Camera arrangement - Stratified by covariates<a class="headerlink" href="#camera-arrangement-stratified-by-covariates" title="Link to this heading">#</a></h1>
+<!--
+:::{hint}
+replace me with text
+:::
+-->
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-0">
 Overview</label><div class="sd-tab-content docutils">
-<p>This question relates to the number of cameras you might need, since this will depend on the number of different “strata” you might hope to include (if you are “stratifying” locations). Stratifying is a useful approach when you are interested in assessing the effect of a particular variable(s) and/or accounting for confounding variable(s) that could lead to biased results if not addressed. For example, when determining species diversity in an area, you may be interested in assessing the effects of habitat types while also accounting for distance to roads.</p>
-<p>In a stratified design, the study area is divided into smaller strata according to distinct features (e.g., habitat types, disturbance classes). These strata can then be sampled non-randomly or randomly. Non-random sampling] means that the different strata are sampled in proportion to specific criteria, as determined by the study objective (e.g., behaviour). For example, more cameras may be placed in strata that are more likely to detect the species of interest, such as in mixed wood forest to monitor moose behaviour. Conversely, in a <a class="reference internal" href="09_glossary.html#sampledesign-stratified-random"><span class="std std-ref">stratified random design </span></a>, the different strata are sampled in proportion to their availability in the study area (e.g., 75% of your camera sites would occur in mixed wood forests if this habitat type make-ups 75% of your study area). While a <a class="reference internal" href="09_glossary.html#sampledesign-random"><span class="std std-ref">random design</span></a> may lead to fewer overall species detections, it does help ensure that all strata (e.g., habitat types) within the study area are represented in your sampling.</p>
-<p>The number (and selection of) strata appropriate for a given study area will depend on the <a class="reference internal" href="09_glossary.html#survey-objectives"><span class="std std-ref">study objectives</span></a>, landscape diversity, spatial scale, <a class="reference internal" href="09_glossary.html#target-species"><span class="std std-ref">Target Species</span></a>, and available resources. For example, a study estimating abundance of a species that is wide-ranging and patchily distributed across a study area with a diversity of habitat types will typically have more strata than that for the same species in a simpler landscape or species distribution. Sampling effort (e.g., number of cameras, camera days) will increase with the number of strata. Wearn &amp; Glover-Kapfer (2017) recommended at least 20 camera locations, and ideally 50 locations, per strata for reasonably precise estimates of species diversity, richness, relative abundance, and behaviours.</p>
+<p>This question relates to the number of cameras you might need, since this will depend on the number of different “<a href="09_glossary.html#strata" target="_blank" data-bs-toggle="tooltip" data-bs-title="Strata: (plural of stratum) the 'division in an organized system based on the characteristics of that system' (Morrison et al., 2008)">strata<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a>” you might hope to include (if you are “stratifying” locations). Stratifying is a useful approach when you are interested in assessing the effect of a particular variable(s) and/or accounting for confounding variable(s) that could lead to biased results if not addressed. For example, when determining species diversity in an area, you may be interested in assessing the effects of habitat types while also accounting for distance to roads.</p>
+<p>In a stratified design, the study area is divided into smaller <a href="09_glossary.html#strata" target="_blank" data-bs-toggle="tooltip" data-bs-title="Strata: (plural of stratum) the 'division in an organized system based on the characteristics of that system' (Morrison et al., 2008)">strata<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a> according to distinct features (e.g., habitat types, disturbance classes). These <a href="09_glossary.html#strata" target="_blank" data-bs-toggle="tooltip" data-bs-title="Strata: (plural of stratum) the 'division in an organized system based on the characteristics of that system' (Morrison et al., 2008)">strata<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a> can then be sampled non-randomly or randomly. Non-random sampling] means that the different <a href="09_glossary.html#strata" target="_blank" data-bs-toggle="tooltip" data-bs-title="Strata: (plural of stratum) the 'division in an organized system based on the characteristics of that system' (Morrison et al., 2008)">strata<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a> are sampled in proportion to specific criteria, as determined by the study objective (e.g., behaviour). For example, more cameras may be placed in <a href="09_glossary.html#strata" target="_blank" data-bs-toggle="tooltip" data-bs-title="Strata: (plural of stratum) the 'division in an organized system based on the characteristics of that system' (Morrison et al., 2008)">strata<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a> that are more likely to detect the species of interest, such as in mixed wood forest to monitor moose behaviour. Conversely, in a , the different <a href="09_glossary.html#strata" target="_blank" data-bs-toggle="tooltip" data-bs-title="Strata: (plural of stratum) the 'division in an organized system based on the characteristics of that system' (Morrison et al., 2008)">strata<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a> are sampled in proportion to their availability in the study area (e.g., 75% of your camera sites would occur in mixed wood forests if this habitat type make-ups 75% of your study area). While a  may lead to fewer overall species detections, it does help ensure that all <a href="09_glossary.html#strata" target="_blank" data-bs-toggle="tooltip" data-bs-title="Strata: (plural of stratum) the 'division in an organized system based on the characteristics of that system' (Morrison et al., 2008)">strata<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a> (e.g., habitat types) within the study area are represented in your sampling.</p>
+<p>The number (and selection of) <a href="09_glossary.html#strata" target="_blank" data-bs-toggle="tooltip" data-bs-title="Strata: (plural of stratum) the 'division in an organized system based on the characteristics of that system' (Morrison et al., 2008)">strata<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a> appropriate for a given study area will depend on the , landscape diversity, spatial scale, <a href="09_glossary.html#target_species" target="_blank" data-bs-toggle="tooltip" data-bs-title="Target Species: The common name(s) of the species that the survey was designed to detect.">Target Species<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a>, and available resources. For example, a study estimating abundance of a species that is wide-ranging and patchily distributed across a study area with a diversity of habitat types will typically have more <a href="09_glossary.html#strata" target="_blank" data-bs-toggle="tooltip" data-bs-title="Strata: (plural of stratum) the 'division in an organized system based on the characteristics of that system' (Morrison et al., 2008)">strata<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a> than that for the same species in a simpler landscape or species distribution. Sampling effort (e.g., number of cameras, camera days) will increase with the number of <a href="09_glossary.html#strata" target="_blank" data-bs-toggle="tooltip" data-bs-title="Strata: (plural of stratum) the 'division in an organized system based on the characteristics of that system' (Morrison et al., 2008)">strata<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a>. Wearn &amp; Glover-Kapfer (2017) recommended at least 20 camera locations (ideally 50 locations) per <a href="09_glossary.html#strata" target="_blank" data-bs-toggle="tooltip" data-bs-title="Strata: (plural of stratum) the 'division in an organized system based on the characteristics of that system' (Morrison et al., 2008)">strata<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a> for reasonably precise estimates of species diversity, richness, relative abundance, and behaviours.</p>
 </div>
 <input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-1">
 In-depth</label><div class="sd-tab-content docutils">
 <p>Camera locations and their spatial arrangements are integral components of any study design and strongly influence detection probability and likelihood of species occurrence.</p>
-<p>In a stratified non-random study design, more cameras may be strategically placed in strata known or suspected to have higher activity, that are more common, and/or that have higher expected variance within a stratum. By allocating sampling effort in strata that have higher likelihood of detection, are larger, and/or more variable, overall effort may be reduced and precision of estimates improved. However, there are several important disadvantages to using a non-random study design, including the possibility of missing individuals/species/behaviours entirely, and the inability to make inferences to the entire study area.</p>
-<p>Generally, a stratified random placement is recommended for species diversity and richness, relative abundance, and behaviour objectives; however, the optimal design for a given study will be influenced by the expected variation in detection probabilities, available resources, and the relative importance of the pros and cons for each design. For example, an optimal study design may be considered that that provides the greatest precision for the lowest cost. Stratification may help minimize detection bias, optimize sampling effort, and ultimately result in more precise estimates. However, a stratified random study design may not adequately address some biases in detection probability due to environmental factors (e.g., vegetation denseness) and require subsequently correcting for these biases in a statistical framework. Standardizing other sampling components (e.g., camera set-up protocols) as much may help reduce some other study-specific biases.</p>
-<p>It may not always be possible to address biases of confounding variables in the study design phase (e.g., using stratification, complex hierarchically structured designs) or by using standardized field and reporting protocols over time and space. Examples of these instances include when collecting data on multiple species concurrently across seasons, or when using data from different studies and sampling protocols. To address these situations, one needs to either correct for the metric of interest (e.g., relative abundance) or using use covariates in an advanced statistics framework to address known or suspected confounding variables. A covariate can be an independent variable (i.e., a variable you manipulate or change in your study because it is of direct interest). It can be instead though an unwanted, “confounding” variable that, if not accounted for, can lead to biased, and/or result in inaccurate conclusions. A common approach to correct for detection biases when estimating relative abundance, for instance, is to quantify effective detection range for example (e.g., Hofmeester et al., 2017; Rowcliffe et al., 2011). Alternatively, covariates can be used in simple multiple linear regression models and/or much more complex hierarchal (or structured) models. For example, detection probability can be modeled with covariates to obtain separate estimates for different study-specific factors introducing detection biases (e.g., habitat type, season, sex). Regression models have the limitation of only addressing single processes, and therefore are unable to differentiate between detection and ecological processes (e.g., movement versus abundance), while interpretation of hierarchical models may be complicated. Refer to Gilbert et al. (2020) and Wilgenburg et al. (2020) for examples of hierarchical models. See Esteveo et al. (2017) for fitting of habitat covariates in co-occurrence models to estimate occupancy and detection of one species in the presence of another.</p>
+<p>In a stratified non-random study design, more cameras may be strategically placed in <a href="09_glossary.html#strata" target="_blank" data-bs-toggle="tooltip" data-bs-title="Strata: (plural of stratum) the 'division in an organized system based on the characteristics of that system' (Morrison et al., 2008)">strata<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a> known or suspected to have higher activity, that are more common, and/or that have higher expected variance within a . By allocating sampling effort in <a href="09_glossary.html#strata" target="_blank" data-bs-toggle="tooltip" data-bs-title="Strata: (plural of stratum) the 'division in an organized system based on the characteristics of that system' (Morrison et al., 2008)">strata<button type="button" class="btn btn-bd-tip-info-hidden btn-sm position-relative">.<span class="position-absolute top-0 start-100 translate-middle"><svg version="4.0.0.63c5cb3" width="10.0px" height="10.0px" class="sd-material-icon sd-material-icon-info sd-text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg></span></button></a> that have higher likelihood of detection, are larger, and/or more variable, overall effort may be reduced and precision of estimates improved. However, there are several important disadvantages to using a non-random study design, including the possibility of missing individuals/species/behaviours entirely, and the inability to make inferences to the entire study area.</p>
+<p>Generally, a stratified random placement is recommended for species diversity and richness, relative abundance, and behaviour objectives; however, the optimal design for a given study will be influenced by the expected variation in detection probabilities, available resources, and the relative importance of the pros and cons for each design. For example, an optimal study design may be considered that that provides the greatest precision for the lowest cost. Stratification may help minimize detection bias, optimize sampling effort, and ultimately result in more precise estimates. However, a stratified random study design may not adequately address some biases in detection probability due to environmental factors (e.g., vegetation denseness) and require subsequently correcting for these biases in a statistical framework. Standardizing other sampling components (e.g., camera set-up protocols) as much may help reduce some other study-specific biases.
+It may not always be possible to address biases of confounding variables in the study design phase (e.g., using stratification, complex hierarchically structured designs) or by using standardized field and reporting protocols over time and space. Examples of these instances include when collecting data on multiple species concurrently across seasons, or when using data from different studies and sampling protocols. To address these situations, one needs to either correct for the metric of interest (e.g., relative abundance) or using use covariates in an advanced statistics framework to address known or suspected confounding variables. A covariate can be an independent variable (i.e., a variable you manipulate or change in your study because it is of direct interest). It can be instead though an unwanted, “confounding” variable that, if not accounted for, can lead to biased, and/or result in inaccurate conclusions. A common approach to correct for detection biases when estimating relative abundance, for instance, is to quantify effective detection range for example (e.g., <a href="./08_references.html#hofmeester_et_al_2017" target="_blank">Hofmeester et al., 2017</a>; <a href="./08_references.html#rowcliffe_et_al_2011" target="_blank">Rowcliffe et al., 2011</a>). Alternatively, covariates can be used in simple multiple linear regression models and/or much more complex hierarchal (or structured) models. For example, detection probability can be modeled with covariates to obtain separate estimates for different study-specific factors introducing detection biases (e.g., habitat type, season, sex). Regression models have the limitation of only addressing single processes, and therefore are unable to differentiate between detection and ecological processes (e.g., movement versus abundance), while interpretation of hierarchal models may be complicated. Refer to Gilbert et al. (2020) and Wilgenburg et al. (2020) for examples of hierarchal models. See Esteveo et al. (2017) for fitting of habitat covariates in co-occurrence models to estimate occupancy and detection of one species in the presence of another.</p>
 </div>
 <input id="sd-tab-item-2" name="sd-tab-set-0" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-2">
+Visual resources</label><div class="sd-tab-content docutils">
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-3 sd-row-cols-xs-3 sd-row-cols-sm-3 sd-row-cols-md-3 sd-row-cols-lg-3 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+rtxt_figure2_ref_id</div>
+<figure class="align-default">
+<img alt="../_images/figure2_filename.png" class="img-grid" src="../_images/figure2_filename.png" />
+</figure>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+rtxt_figure3_ref_id</div>
+<figure class="align-default">
+<img alt="../_images/figure3_filename.png" class="img-grid" src="../_images/figure3_filename.png" />
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<input id="sd-tab-item-3" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-3">
+Shiny apps/Widgets</label><div class="sd-tab-content docutils">
+<p>Check back in the future!</p>
+</div>
+<input id="sd-tab-item-4" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-4">
+Analytical tools &amp; Resources</label><div class="sd-tab-content docutils">
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Type</p></th>
+<th class="head text-left"><p>Name</p></th>
+<th class="head text-left"><p>Note</p></th>
+<th class="head text-left"><p>URL</p></th>
+<th class="head text-left"><p>Reference</p></th>
+</tr>
+</thead>
+</table>
+</div>
+<!-- END_RESOURCE_TABLE -->
+</div>
+<input id="sd-tab-item-5" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-5">
 References</label><div class="sd-tab-content docutils">
 <p>Estevo, C. A., Nagy-Reis, M. B., &amp; Nichols, J. D. (2017). When habitat matters: Habitat preferences can modulate co-occurrence patterns of similar sympatric species. <em>PLOS ONE, 12</em>(7), e0179489. <a class="reference external" href="https://doi.org/10.1371/journal.pone.0179489">https://doi.org/10.1371/journal.pone.0179489</a></p>
 <p>Gilbert, N. A., Clare, J. D. J., Stenglein, J. L., &amp; Zuckerberg, B. (2020). Abundance Estimation of Unmarked Animals based on Camera-Trap Data. <em>Conservation Biology, 35</em>(1), 88-100. <a class="reference external" href="https://doi.org/10.1111/cobi.13517">https://doi.org/10.1111/cobi.13517</a></p>
@@ -247,6 +526,20 @@ References</label><div class="sd-tab-content docutils">
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+</div>
+      
+    </div>
   
   
   
